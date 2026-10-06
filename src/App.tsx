@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Dashboard } from './components/Dashboard';
+import { BoardMockExam } from './components/BoardMockExam';
 import { FlashcardViewer } from './components/FlashcardViewer';
 import { QuestionBank } from './components/QuestionBank';
 import { Calculators } from './components/Calculators';
@@ -19,7 +20,7 @@ const INITIAL_STATS: UserStats = {
 };
 
 export const App: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'dashboard' | 'chapters' | 'flashcards' | 'questions' | 'calculators' | 'trials'>('dashboard');
+  const [activeTab, setActiveTab] = useState<'dashboard' | 'chapters' | 'flashcards' | 'questions' | 'calculators' | 'trials' | 'exam'>('dashboard');
 
   // LocalStorage state persistence
   const [userStats, setUserStats] = useState<UserStats>(() => {
@@ -108,6 +109,7 @@ export const App: React.FC = () => {
         {activeTab === 'dashboard' && (
           <Dashboard userStats={userStats} onNavigate={setActiveTab} />
         )}
+        {activeTab === 'exam' && <BoardMockExam />}
         {activeTab === 'flashcards' && (
           <FlashcardViewer
             bookmarkedCards={userStats.bookmarkedFlashcards}

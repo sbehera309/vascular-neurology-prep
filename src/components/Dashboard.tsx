@@ -6,7 +6,7 @@ import { Sparkles, HelpCircle, Calculator, BookOpen, Flame, Award, Zap } from 'l
 
 interface DashboardProps {
   userStats: UserStats;
-  onNavigate: (tab: 'dashboard' | 'chapters' | 'flashcards' | 'questions' | 'calculators' | 'trials') => void;
+  onNavigate: (tab: 'dashboard' | 'chapters' | 'flashcards' | 'questions' | 'calculators' | 'trials' | 'exam') => void;
 }
 
 export const Dashboard: React.FC<DashboardProps> = ({ userStats, onNavigate }) => {
@@ -40,16 +40,16 @@ export const Dashboard: React.FC<DashboardProps> = ({ userStats, onNavigate }) =
 
           <div className="flex flex-wrap gap-3 pt-2">
             <button
+              onClick={() => onNavigate('exam')}
+              className="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs shadow-lg shadow-amber-500/25 flex items-center gap-2 transition-all active:scale-95"
+            >
+              <Award className="w-4 h-4" /> Start Board Simulation Exam
+            </button>
+            <button
               onClick={() => onNavigate('flashcards')}
               className="px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-white font-bold text-xs shadow-lg shadow-cyan-500/25 flex items-center gap-2 transition-all"
             >
               <Sparkles className="w-4 h-4" /> Practice Flashcards
-            </button>
-            <button
-              onClick={() => onNavigate('questions')}
-              className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-750 text-slate-200 font-bold text-xs border border-slate-700 flex items-center gap-2 transition-all"
-            >
-              <HelpCircle className="w-4 h-4 text-cyan-400" /> Start Practice Quiz
             </button>
           </div>
         </div>

@@ -1,14 +1,15 @@
 import React from 'react';
-import { Home, BookOpen, Sparkles, HelpCircle, Calculator, Award } from 'lucide-react';
+import { Home, BookOpen, Sparkles, HelpCircle, Calculator, Award, GraduationCap } from 'lucide-react';
 
 interface NavbarProps {
-  activeTab: 'dashboard' | 'chapters' | 'flashcards' | 'questions' | 'calculators' | 'trials';
-  onNavigate: (tab: 'dashboard' | 'chapters' | 'flashcards' | 'questions' | 'calculators' | 'trials') => void;
+  activeTab: 'dashboard' | 'chapters' | 'flashcards' | 'questions' | 'calculators' | 'trials' | 'exam';
+  onNavigate: (tab: 'dashboard' | 'chapters' | 'flashcards' | 'questions' | 'calculators' | 'trials' | 'exam') => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ activeTab, onNavigate }) => {
   const navItems = [
     { id: 'dashboard', label: 'Home', icon: Home },
+    { id: 'exam', label: 'Mock Exam', icon: GraduationCap },
     { id: 'flashcards', label: 'Flashcards', icon: Sparkles },
     { id: 'questions', label: 'Q-Bank', icon: HelpCircle },
     { id: 'calculators', label: 'Calculators', icon: Calculator },
@@ -44,7 +45,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onNavigate }) => {
                 <button
                   key={item.id}
                   onClick={() => onNavigate(item.id)}
-                  className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                  className={`px-3 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
                     isActive
                       ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30'
                       : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800'
@@ -61,7 +62,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onNavigate }) => {
 
       {/* Bottom Tab Bar for Mobile Navigation */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 backdrop-blur-lg bg-slate-900/95 border-t border-slate-800 px-2 py-2 shadow-2xl">
-        <div className="grid grid-cols-6 gap-1">
+        <div className="grid grid-cols-7 gap-1">
           {navItems.map(item => {
             const Icon = item.icon;
             const isActive = activeTab === item.id;
@@ -69,12 +70,12 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onNavigate }) => {
               <button
                 key={item.id}
                 onClick={() => onNavigate(item.id)}
-                className={`flex flex-col items-center justify-center py-1.5 px-1 rounded-xl transition-all ${
+                className={`flex flex-col items-center justify-center py-1.5 px-0.5 rounded-xl transition-all ${
                   isActive ? 'text-cyan-400 bg-slate-800/80 font-bold' : 'text-slate-400 font-medium'
                 }`}
               >
-                <Icon className="w-5 h-5 mb-0.5" />
-                <span className="text-[9px] truncate w-full text-center">{item.label}</span>
+                <Icon className="w-4 h-4 mb-0.5" />
+                <span className="text-[8px] truncate w-full text-center">{item.label}</span>
               </button>
             );
           })}
