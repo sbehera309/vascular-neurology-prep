@@ -26,7 +26,7 @@ export interface PracticeQuestion {
   keyTakeaway: string;
   tags: string[];
   hint?: string;
-  source?: 'Past Board Exam' | 'Syllabus Notes' | 'Landmark Trial' | 'Guideline Recommendation';
+  source?: 'Past Board Exam' | 'Syllabus Notes' | 'Landmark Trial' | 'Guideline Recommendation' | 'Neuroimaging Case';
   imageUrl?: string;
   imageCaption?: string;
 }

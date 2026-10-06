@@ -38,7 +38,7 @@ export const questionsData: PracticeQuestion[] = [
       "Wake-up Stroke"
     ],
     "hint": "LKN is determined by when the patient was last witnessed at baseline, not when symptoms were first discovered.",
-    "source": "Past Board Exam"
+    "source": "Guideline Recommendation"
   },
   {
     "id": "q-2",
@@ -116,7 +116,7 @@ export const questionsData: PracticeQuestion[] = [
       "Hypoglycemia"
     ],
     "hint": "Identify the mandatory rapid bedside point-of-care test required before any neuroimaging or thrombolytic administration.",
-    "source": "Past Board Exam"
+    "source": "Guideline Recommendation"
   },
   {
     "id": "q-4",
@@ -155,7 +155,7 @@ export const questionsData: PracticeQuestion[] = [
       "Blood Pressure Control"
     ],
     "hint": "High blood pressure significantly elevates the risk of symptomatic intracranial hemorrhage during thrombolysis.",
-    "source": "Past Board Exam"
+    "source": "Guideline Recommendation"
   },
   {
     "id": "q-5",
@@ -194,7 +194,7 @@ export const questionsData: PracticeQuestion[] = [
       "INR"
     ],
     "hint": "Check the therapeutic threshold cutoff for INR beyond which tPA increases sICH risk exponentially.",
-    "source": "Past Board Exam"
+    "source": "Guideline Recommendation"
   },
   {
     "id": "q-6",
@@ -233,7 +233,7 @@ export const questionsData: PracticeQuestion[] = [
       "Emergency Protocol"
     ],
     "hint": "Patients taking ACE inhibitors have impaired bradykinin breakdown, predisposing them to mucosal swelling during tPA infusion.",
-    "source": "Past Board Exam"
+    "source": "Guideline Recommendation"
   },
   {
     "id": "q-7",
@@ -272,7 +272,7 @@ export const questionsData: PracticeQuestion[] = [
       "Post-tPA Management"
     ],
     "hint": "Pre-tPA limit is < 185/110 mmHg; post-tPA limit for 24 hours is 5 mmHg lower.",
-    "source": "Past Board Exam"
+    "source": "Guideline Recommendation"
   },
   {
     "id": "q-8",
@@ -350,7 +350,7 @@ export const questionsData: PracticeQuestion[] = [
       "Visual Fields"
     ],
     "hint": "The occipital pole has collateral supply from the terminal branches of another major anterior circulation vessel.",
-    "source": "Past Board Exam"
+    "source": "Syllabus Notes"
   },
   {
     "id": "q-10",
@@ -428,7 +428,7 @@ export const questionsData: PracticeQuestion[] = [
       "Anterior Choroidal Artery"
     ],
     "hint": "Deep branch of ICA supplying posterior limb of internal capsule, optic tract, and lateral geniculate body.",
-    "source": "Past Board Exam"
+    "source": "Syllabus Notes"
   },
   {
     "id": "q-12",
@@ -584,7 +584,7 @@ export const questionsData: PracticeQuestion[] = [
       "Neuroanatomy"
     ],
     "hint": "Densely packed corticospinal fibers pass through this capsular region between the thalamus and basal ganglia.",
-    "source": "Past Board Exam"
+    "source": "Syllabus Notes"
   },
   {
     "id": "q-16",
@@ -662,7 +662,7 @@ export const questionsData: PracticeQuestion[] = [
       "Non-Atherosclerotic"
     ],
     "hint": "Non-inflammatory arterial dysplasia classically displaying alternating beads and aneurysms on angiography.",
-    "source": "Past Board Exam"
+    "source": "Syllabus Notes"
   },
   {
     "id": "q-18",
@@ -701,7 +701,7 @@ export const questionsData: PracticeQuestion[] = [
       "LVO"
     ],
     "hint": "Extended window trials (6-24 hours) demonstrate benefit when clinical deficit far outweighs the dead ischemic core.",
-    "source": "Past Board Exam"
+    "source": "Landmark Trial"
   },
   {
     "id": "q-19",
@@ -740,7 +740,7 @@ export const questionsData: PracticeQuestion[] = [
       "Acute Stroke Protocol"
     ],
     "hint": "Standard guidelines advocate combining IV thrombolysis with endovascular clot retrieval within the early window.",
-    "source": "Past Board Exam"
+    "source": "Guideline Recommendation"
   },
   {
     "id": "q-20",
@@ -779,7 +779,7 @@ export const questionsData: PracticeQuestion[] = [
       "Secondary Prevention"
     ],
     "hint": "Recall the trial that showed periprocedural stroke risks of stenting outweighed any long-term benefit compared to intensive medical therapy.",
-    "source": "Past Board Exam"
+    "source": "Landmark Trial"
   },
   {
     "id": "q-21",
@@ -857,7 +857,7 @@ export const questionsData: PracticeQuestion[] = [
       "Vasculopathy"
     ],
     "hint": "Hyperventilation-induced TIAs in a young patient with basal ganglia collateral vascular net on angiogram.",
-    "source": "Past Board Exam"
+    "source": "Syllabus Notes"
   },
   {
     "id": "q-23",
@@ -896,7 +896,7 @@ export const questionsData: PracticeQuestion[] = [
       "Surgical Management"
     ],
     "hint": "NASCET established clear thresholds for 70-99% vs 50-69% vs < 50% symptomatic ICA stenosis.",
-    "source": "Past Board Exam"
+    "source": "Landmark Trial"
   },
   {
     "id": "q-24",
@@ -974,7 +974,7 @@ export const questionsData: PracticeQuestion[] = [
       "Landmark Trials"
     ],
     "hint": "High RoPE score in a young patient with an atrial septal aneurysm strongly favors percutaneous structural intervention.",
-    "source": "Past Board Exam"
+    "source": "Landmark Trial"
   },
   {
     "id": "q-26",
@@ -1013,7 +1013,7 @@ export const questionsData: PracticeQuestion[] = [
       "DOACs"
     ],
     "hint": "Consider the major fatal bleeding complication (intracranial hemorrhage) that DOACs significantly reduce compared to Warfarin.",
-    "source": "Past Board Exam"
+    "source": "Landmark Trial"
   },
   {
     "id": "q-27",
@@ -1091,7 +1091,7 @@ export const questionsData: PracticeQuestion[] = [
       "DOACs"
     ],
     "hint": "Monoclonal antibody fragment targeting direct thrombin inhibitor binding.",
-    "source": "Past Board Exam"
+    "source": "Guideline Recommendation"
   },
   {
     "id": "q-29",
@@ -1130,7 +1130,7 @@ export const questionsData: PracticeQuestion[] = [
       "Vasospasm"
     ],
     "hint": "Name the specific oral calcium channel blocker mandated for 21 days post-aneurysmal SAH.",
-    "source": "Past Board Exam"
+    "source": "Guideline Recommendation"
   },
   {
     "id": "q-30",
@@ -1169,7 +1169,7 @@ export const questionsData: PracticeQuestion[] = [
       "STOP Trial"
     ],
     "hint": "TCD velocity >= 200 cm/s indicates severe intracranial arterial stenosis and high stroke risk requiring transfusion therapy.",
-    "source": "Past Board Exam"
+    "source": "Landmark Trial"
   },
   {
     "id": "q-31",
@@ -1208,7 +1208,7 @@ export const questionsData: PracticeQuestion[] = [
       "Venous Stroke"
     ],
     "hint": "Venous hemorrhagic transformation is driven by outflow obstruction, which anticoagulation resolves.",
-    "source": "Past Board Exam"
+    "source": "Guideline Recommendation"
   },
   {
     "id": "q-32",
@@ -1247,7 +1247,7 @@ export const questionsData: PracticeQuestion[] = [
       "Differential Diagnosis"
     ],
     "hint": "Normal CSF in a patient with thunderclap headache and reversible arterial spasm strongly favors RCVS over PACNS.",
-    "source": "Past Board Exam"
+    "source": "Syllabus Notes"
   },
   {
     "id": "q-33",
@@ -1286,7 +1286,7 @@ export const questionsData: PracticeQuestion[] = [
       "Neuro-ICU"
     ],
     "hint": "Large surgical bone flap removal performed within 48 hours relieves life-threatening cerebral herniation.",
-    "source": "Past Board Exam"
+    "source": "Landmark Trial"
   },
   {
     "id": "q-34",
@@ -1325,7 +1325,7 @@ export const questionsData: PracticeQuestion[] = [
       "CHANCE/POINT Trials"
     ],
     "hint": "Short-term dual antiplatelet window is strictly recommended for 21 days following minor non-cardioembolic stroke.",
-    "source": "Past Board Exam"
+    "source": "Landmark Trial"
   },
   {
     "id": "q-35",
@@ -1364,7 +1364,7 @@ export const questionsData: PracticeQuestion[] = [
       "Prognosis"
     ],
     "hint": "Independent in daily living and self-care, but unable to resume all pre-stroke complex activities corresponds to mRS 1.",
-    "source": "Past Board Exam"
+    "source": "Syllabus Notes"
   },
   {
     "id": "q-36",
@@ -1442,7 +1442,7 @@ export const questionsData: PracticeQuestion[] = [
       "Acute CT"
     ],
     "hint": "Focus on the high-attenuation bright vessel traveling along the MCA pathway on non-contrast CT.",
-    "source": "Past Board Exam",
+    "source": "Neuroimaging Case",
     "imageUrl": "/images/ct_dense_mca.jpg",
     "imageCaption": "Non-Contrast Head CT: Hyperdense vessel sign in the right middle cerebral artery (M1 segment)."
   },
@@ -1483,7 +1483,7 @@ export const questionsData: PracticeQuestion[] = [
       "Thrombectomy"
     ],
     "hint": "Analyze the size difference between the red ischemic core and the larger green hypoperfused penumbral tissue.",
-    "source": "Past Board Exam",
+    "source": "Neuroimaging Case",
     "imageUrl": "/images/ct_perfusion_map.jpg",
     "imageCaption": "CT Perfusion Map: Ischemic Core (red) vs Penumbra Tmax Delay (green/yellow)."
   },
@@ -1524,7 +1524,7 @@ export const questionsData: PracticeQuestion[] = [
       "Intracranial Hemorrhage"
     ],
     "hint": "Identify the bright spot of contrast extravasation inside the dark dense blood collection.",
-    "source": "Past Board Exam",
+    "source": "Neuroimaging Case",
     "imageUrl": "/images/cta_spot_sign.jpg",
     "imageCaption": "CTA Head: Basal ganglia ICH with positive CTA Spot Sign (contrast extravasation)."
   },
@@ -1565,7 +1565,7 @@ export const questionsData: PracticeQuestion[] = [
       "Angiography"
     ],
     "hint": "Look for the dense cloud or hazy net of collateral vessels supplying the basal brain region.",
-    "source": "Past Board Exam",
+    "source": "Neuroimaging Case",
     "imageUrl": "/images/mra_moyamoya.jpg",
     "imageCaption": "Cerebral Angiogram (DSA): Distal ICA occlusion with 'Puff of Smoke' collaterals."
   }

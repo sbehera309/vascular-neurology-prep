@@ -22,11 +22,25 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const [showHint, setShowHint] = useState<boolean>(false);
   const [filterChapter, setFilterChapter] = useState<number | 'all'>('all');
-  const [filterSource, setFilterSource] = useState<'all' | 'Past Board Exam' | 'Syllabus Notes' | 'Landmark Trial' | 'Guideline Recommendation'>('all');
+  const [filterSource, setFilterSource] = useState<'all' | 'Past Board Exam' | 'Neuroimaging Case' | 'Syllabus Notes' | 'Landmark Trial' | 'Guideline Recommendation'>('all');
+
+  const sourceCounts = {
+    all: questionsData.length,
+    'Past Board Exam': questionsData.filter(q => q.source === 'Past Board Exam' && !q.imageUrl).length,
+    'Neuroimaging Case': questionsData.filter(q => !!q.imageUrl || q.source === 'Neuroimaging Case').length,
+    'Landmark Trial': questionsData.filter(q => q.source === 'Landmark Trial').length,
+    'Guideline Recommendation': questionsData.filter(q => q.source === 'Guideline Recommendation').length,
+    'Syllabus Notes': questionsData.filter(q => q.source === 'Syllabus Notes').length,
+  };
 
   const filteredQuestions = questionsData.filter(q => {
     if (filterChapter !== 'all' && q.chapterId !== filterChapter) return false;
-    if (filterSource !== 'all' && (q.source || 'Syllabus Notes') !== filterSource) return false;
+    if (filterSource !== 'all') {
+      if (filterSource === 'Neuroimaging Case') {
+        return !!q.imageUrl || q.source === 'Neuroimaging Case';
+      }
+      return (q.source || 'Syllabus Notes') === filterSource;
+    }
     return true;
   });
 
@@ -66,7 +80,14 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
     }
   };
 
-  const renderSourceBadge = (source?: string) => {
+  const renderSourceBadge = (source?: string, imageUrl?: string) => {
+    if (imageUrl || source === 'Neuroimaging Case') {
+      return (
+        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">
+          <Eye className="w-3.5 h-3.5" /> Clinical Neuroimaging Case
+        </span>
+      );
+    }
     switch (source) {
       case 'Past Board Exam':
         return (
@@ -136,11 +157,12 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
             }}
             className="bg-slate-900 border border-slate-700 text-xs text-slate-200 rounded-xl px-3 py-2 focus:ring-cyan-500 font-medium"
           >
-            <option value="all">All Sources ({questionsData.length})</option>
-            <option value="Past Board Exam">🎓 Past Board Exams</option>
-            <option value="Syllabus Notes">📚 Syllabus Notes</option>
-            <option value="Landmark Trial">🔬 Landmark Trials</option>
-            <option value="Guideline Recommendation">📋 AHA/ASA Guidelines</option>
+            <option value="all">All Sources ({sourceCounts.all})</option>
+            <option value="Past Board Exam">🎓 Past Board Exams ({sourceCounts['Past Board Exam']})</option>
+            <option value="Neuroimaging Case">📷 Neuroimaging & Radiology ({sourceCounts['Neuroimaging Case']})</option>
+            <option value="Landmark Trial">🔬 Landmark Trials ({sourceCounts['Landmark Trial']})</option>
+            <option value="Guideline Recommendation">📋 AHA/ASA Guidelines ({sourceCounts['Guideline Recommendation']})</option>
+            <option value="Syllabus Notes">📚 Syllabus Notes ({sourceCounts['Syllabus Notes']})</option>
           </select>
 
           {/* Chapter Filter */}
@@ -219,7 +241,7 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
             {/* Source & Tags Header */}
             <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-700/60 pb-4">
               {/* Question Source Indicator */}
-              {renderSourceBadge(currentQuestion.source)}
+              {renderSourceBadge(currentQuestion.source, currentQuestion.imageUrl)}
 
               {/* Topic Tags (Non-spoiling) */}
               <div className="flex flex-wrap gap-1.5">
