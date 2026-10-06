@@ -204,9 +204,29 @@ export const BoardMockExam: React.FC = () => {
           {/* Question Vignette Card */}
           <div className="bg-slate-800/90 rounded-3xl border border-slate-700/80 p-6 md:p-8 space-y-6 shadow-xl">
             {/* Vignette */}
-            <p className="text-xs md:text-sm text-slate-200 leading-relaxed font-normal bg-slate-900/50 p-5 rounded-2xl border border-slate-700/40">
-              {currentQuestion.vignette}
-            </p>
+            <div className="bg-slate-900/50 p-5 rounded-2xl border border-slate-700/40 space-y-3">
+              <p className="text-xs md:text-sm text-slate-200 leading-relaxed font-normal">
+                {currentQuestion.vignette}
+              </p>
+
+              {/* Clinical Imaging Figure */}
+              {currentQuestion.imageUrl && (
+                <div className="mt-3 bg-slate-950 p-4 rounded-2xl border border-slate-700/80 shadow-2xl flex flex-col items-center space-y-2">
+                  <div className="relative group max-w-xl w-full overflow-hidden rounded-xl border border-slate-800 bg-black flex justify-center">
+                    <img
+                      src={currentQuestion.imageUrl}
+                      alt={currentQuestion.imageCaption || "Clinical Neuroimaging Figure"}
+                      className="w-full h-auto max-h-[400px] object-contain rounded-xl"
+                    />
+                  </div>
+                  {currentQuestion.imageCaption && (
+                    <span className="text-xs text-slate-400 text-center italic font-medium pt-1">
+                      📷 Figure: {currentQuestion.imageCaption}
+                    </span>
+                  )}
+                </div>
+              )}
+            </div>
 
             {/* Question */}
             <h2 className="text-sm md:text-base font-bold text-slate-100">

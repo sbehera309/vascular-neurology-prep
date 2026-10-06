@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { questionsData } from '../data/questions';
 import { PracticeQuestion } from '../types';
-import { CheckCircle2, XCircle, Bookmark, HelpCircle, ArrowRight, Lightbulb, GraduationCap, BookOpen, FlaskConical, ClipboardList } from 'lucide-react';
+import { CheckCircle2, XCircle, Bookmark, HelpCircle, ArrowRight, Lightbulb, GraduationCap, BookOpen, FlaskConical, ClipboardList, Eye } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 interface QuestionBankProps {
@@ -232,11 +232,32 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
             </div>
 
             {/* Clinical Vignette */}
-            <div className="bg-slate-900/60 p-5 rounded-2xl border border-slate-700/50 space-y-2">
+            <div className="bg-slate-900/60 p-5 rounded-2xl border border-slate-700/50 space-y-3">
               <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-400 block">Clinical Presentation</span>
               <p className="text-sm md:text-base text-slate-200 leading-relaxed font-normal">
                 {currentQuestion.vignette}
               </p>
+
+              {/* Clinical Imaging Figure */}
+              {currentQuestion.imageUrl && (
+                <div className="mt-4 bg-slate-950 p-4 md:p-5 rounded-2xl border border-slate-700/80 shadow-2xl flex flex-col items-center space-y-2">
+                  <div className="relative group max-w-xl w-full overflow-hidden rounded-xl border border-slate-800 bg-black flex justify-center">
+                    <img
+                      src={currentQuestion.imageUrl}
+                      alt={currentQuestion.imageCaption || "Board Clinical Radiology Figure"}
+                      className="w-full h-auto max-h-[460px] object-contain rounded-xl transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute top-2 right-2 px-2.5 py-1 rounded-lg bg-black/80 backdrop-blur-md text-[10px] font-extrabold text-cyan-300 flex items-center gap-1.5 border border-cyan-500/40 shadow-lg">
+                      <Eye className="w-3.5 h-3.5" /> Clinical Neuroimaging Figure
+                    </div>
+                  </div>
+                  {currentQuestion.imageCaption && (
+                    <span className="text-xs text-slate-400 text-center italic font-medium pt-1">
+                      📷 Figure: {currentQuestion.imageCaption}
+                    </span>
+                  )}
+                </div>
+              )}
             </div>
 
             {/* Question Stem */}
