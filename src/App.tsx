@@ -7,26 +7,50 @@ import { QuestionBank } from './components/QuestionBank';
 import { Calculators } from './components/Calculators';
 import { TrialExplorer } from './components/TrialExplorer';
 import { ChapterReader } from './components/ChapterReader';
-import { UserStats } from './types';
+import { UserProfileModal } from './components/UserProfileModal';
+import { UserStats, UserProfile, ExamAttempt } from './types';
 
 const INITIAL_STATS: UserStats = {
+  profile: {
+    id: 'user-default',
+    name: 'Dr. Vascular Neurologist',
+    email: 'fellow@stroke-prep.org',
+    targetExamDate: '2026-10-15',
+    role: 'Vascular Neurology Fellow',
+    institution: 'Academic Medical Center',
+    isLoggedIn: false,
+    createdAt: new Date().toISOString(),
+  },
   completedQuestions: {},
   flashcardMastery: {},
   bookmarkedFlashcards: [],
   bookmarkedQuestions: [],
   bookmarkedChapters: [],
+  examAttempts: [],
   streakDays: 1,
   lastStudyDate: new Date().toISOString().split('T')[0],
 };
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'dashboard' | 'chapters' | 'flashcards' | 'questions' | 'calculators' | 'trials' | 'exam'>('dashboard');
+  const [isProfileModalOpen, setIsProfileModalOpen] = useState<boolean>(false);
 
   // LocalStorage state persistence
   const [userStats, setUserStats] = useState<UserStats>(() => {
     try {
       const saved = localStorage.getItem('vascneuro_prep_stats');
-      return saved ? JSON.parse(saved) : INITIAL_STATS;
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        return {
+          ...INITIAL_STATS,
+          ...parsed,
+          profile: {
+            ...INITIAL_STATS.profile,
+            ...(parsed.profile || {}),
+          },
+        };
+      }
+      return INITIAL_STATS;
     } catch {
       return INITIAL_STATS;
     }
@@ -40,6 +64,17 @@ export const App: React.FC = () => {
     }
   }, [userStats]);
 
+  // Handle Profile Update
+  const handleUpdateProfile = (profileUpdates: Partial<UserProfile>) => {
+    setUserStats(prev => ({
+      ...prev,
+      profile: {
+        ...prev.profile,
+        ...profileUpdates,
+      },
+    }));
+  };
+
   // Flashcard Mastery
   const handleUpdateMastery = (cardId: string, rating: 'again' | 'hard' | 'good' | 'easy') => {
     setUserStats(prev => ({
@@ -47,7 +82,7 @@ export const App: React.FC = () => {
       flashcardMastery: {
         ...prev.flashcardMastery,
         [cardId]: rating,
-      }
+      },
     }));
   };
 
@@ -96,20 +131,72 @@ export const App: React.FC = () => {
       ...prev,
       completedQuestions: {
         ...prev.completedQuestions,
-        [questionId]: { selectedOption, isCorrect },
-      }
+        [questionId]: {
+          selectedOption,
+          isCorrect,
+          timestamp: new Date().toISOString(),
+        },
+      },
     }));
+  };
+
+  // Save Exam Attempt
+  const handleSaveExamAttempt = (attempt: ExamAttempt) => {
+    setUserStats(prev => ({
+      ...prev,
+      examAttempts: [attempt, ...(prev.examAttempts || [])],
+    }));
+  };
+
+  // Reset Progress Options
+  const handleResetProgress = (type: 'all' | 'questions' | 'exams' | 'flashcards') => {
+    setUserStats(prev => {
+      if (type === 'questions') {
+        return { ...prev, completedQuestions: {} };
+      }
+      if (type === 'exams') {
+        return { ...prev, examAttempts: [] };
+      }
+      if (type === 'flashcards') {
+        return { ...prev, flashcardMastery: {}, bookmarkedFlashcards: [] };
+      }
+      return {
+        ...INITIAL_STATS,
+        profile: prev.profile,
+      };
+    });
+  };
+
+  // Import Backup Data
+  const handleImportData = (imported: UserStats) => {
+    if (imported && typeof imported === 'object') {
+      setUserStats(prev => ({
+        ...prev,
+        ...imported,
+        profile: {
+          ...prev.profile,
+          ...(imported.profile || {}),
+        },
+      }));
+    }
   };
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 pb-20 md:pb-12">
-      <Navbar activeTab={activeTab} onNavigate={setActiveTab} />
+      <Navbar
+        activeTab={activeTab}
+        onNavigate={setActiveTab}
+        userProfile={userStats.profile}
+        onOpenProfileModal={() => setIsProfileModalOpen(true)}
+      />
 
       <main className="max-w-6xl mx-auto px-4 py-6 md:py-8">
         {activeTab === 'dashboard' && (
           <Dashboard userStats={userStats} onNavigate={setActiveTab} />
         )}
-        {activeTab === 'exam' && <BoardMockExam />}
+        {activeTab === 'exam' && (
+          <BoardMockExam onSaveExamAttempt={handleSaveExamAttempt} />
+        )}
         {activeTab === 'flashcards' && (
           <FlashcardViewer
             bookmarkedCards={userStats.bookmarkedFlashcards}
@@ -135,6 +222,16 @@ export const App: React.FC = () => {
           />
         )}
       </main>
+
+      {/* User Profile, Account & Analytics Modal */}
+      <UserProfileModal
+        isOpen={isProfileModalOpen}
+        onClose={() => setIsProfileModalOpen(false)}
+        userStats={userStats}
+        onUpdateProfile={handleUpdateProfile}
+        onResetProgress={handleResetProgress}
+        onImportData={handleImportData}
+      />
     </div>
   );
 };

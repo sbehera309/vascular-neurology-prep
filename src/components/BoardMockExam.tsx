@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { questionsData } from '../data/questions';
-import { PracticeQuestion } from '../types';
+import { PracticeQuestion, ExamAttempt } from '../types';
 import { Clock, Flag, CheckCircle2, XCircle, Award, RotateCcw, ChevronLeft, ChevronRight, LayoutGrid } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
-export const BoardMockExam: React.FC = () => {
+interface BoardMockExamProps {
+  onSaveExamAttempt?: (attempt: ExamAttempt) => void;
+}
+
+export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt }) => {
   const [examStarted, setExamStarted] = useState<boolean>(false);
   const [examFinished, setExamFinished] = useState<boolean>(false);
   const [examTimeRemaining, setExamTimeRemaining] = useState<number>(3600); // 60 minutes (3600s)
@@ -67,6 +71,25 @@ export const BoardMockExam: React.FC = () => {
   const finishExam = () => {
     setExamFinished(true);
     setExamStarted(false);
+
+    // Calculate score & record attempt
+    const totalQ = examQuestions.length;
+    const correctC = examQuestions.filter(q => userAnswers[q.id] === q.correctOptionId).length;
+    const pct = totalQ > 0 ? Math.round((correctC / totalQ) * 100) : 0;
+    const pass = pct >= 75;
+
+    if (onSaveExamAttempt) {
+      onSaveExamAttempt({
+        id: `exam-${Date.now()}`,
+        timestamp: new Date().toISOString(),
+        durationSeconds: 3600 - examTimeRemaining,
+        totalQuestions: totalQ,
+        correctCount: correctC,
+        percentage: pct,
+        passed: pass,
+      });
+    }
+
     confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 } });
   };
 

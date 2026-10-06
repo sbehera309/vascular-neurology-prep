@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { questionsData } from '../data/questions';
-import { PracticeQuestion } from '../types';
-import { CheckCircle2, XCircle, Bookmark, HelpCircle, ArrowRight, Lightbulb, GraduationCap, BookOpen, FlaskConical, ClipboardList, Eye } from 'lucide-react';
+import { PracticeQuestion, QuestionAttempt } from '../types';
+import { CheckCircle2, XCircle, Bookmark, HelpCircle, ArrowRight, Lightbulb, GraduationCap, BookOpen, FlaskConical, ClipboardList, Eye, Filter } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 interface QuestionBankProps {
-  completedQuestions: Record<string, { selectedOption: string; isCorrect: boolean }>;
+  completedQuestions: Record<string, QuestionAttempt>;
   onCompleteQuestion: (questionId: string, selectedOption: string, isCorrect: boolean) => void;
   bookmarkedQuestions: string[];
   onToggleBookmarkQuestion: (questionId: string) => void;
 }
 
 export const QuestionBank: React.FC<QuestionBankProps> = ({
-  completedQuestions: _completedQuestions,
+  completedQuestions,
   onCompleteQuestion,
   bookmarkedQuestions,
   onToggleBookmarkQuestion,
@@ -21,8 +21,11 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const [showHint, setShowHint] = useState<boolean>(false);
+
+  // Filters State
   const [filterChapter, setFilterChapter] = useState<number | 'all'>('all');
   const [filterSource, setFilterSource] = useState<'all' | 'Past Board Exam' | 'Neuroimaging Case' | 'Syllabus Notes' | 'Landmark Trial' | 'Guideline Recommendation'>('all');
+  const [filterStatus, setFilterStatus] = useState<'all' | 'unanswered' | 'incorrect' | 'correct'>('all');
 
   const sourceCounts = {
     all: questionsData.length,
@@ -33,18 +36,50 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
     'Syllabus Notes': questionsData.filter(q => q.source === 'Syllabus Notes').length,
   };
 
+  const statusCounts = {
+    all: questionsData.length,
+    unanswered: questionsData.filter(q => !completedQuestions[q.id]).length,
+    correct: questionsData.filter(q => completedQuestions[q.id]?.isCorrect).length,
+    incorrect: questionsData.filter(q => completedQuestions[q.id] && !completedQuestions[q.id].isCorrect).length,
+  };
+
   const filteredQuestions = questionsData.filter(q => {
+    // Chapter filter
     if (filterChapter !== 'all' && q.chapterId !== filterChapter) return false;
+
+    // Source filter
     if (filterSource !== 'all') {
       if (filterSource === 'Neuroimaging Case') {
-        return !!q.imageUrl || q.source === 'Neuroimaging Case';
+        if (!q.imageUrl && q.source !== 'Neuroimaging Case') return false;
+      } else if ((q.source || 'Syllabus Notes') !== filterSource) {
+        return false;
       }
-      return (q.source || 'Syllabus Notes') === filterSource;
     }
+
+    // Status filter (unanswered, correct, incorrect)
+    const attempt = completedQuestions[q.id];
+    if (filterStatus === 'unanswered' && attempt) return false;
+    if (filterStatus === 'correct' && (!attempt || !attempt.isCorrect)) return false;
+    if (filterStatus === 'incorrect' && (!attempt || attempt.isCorrect)) return false;
+
     return true;
   });
 
   const currentQuestion: PracticeQuestion | undefined = filteredQuestions[currentIndex];
+
+  // Auto-restore previous user attempt if already answered
+  useEffect(() => {
+    if (currentQuestion && completedQuestions[currentQuestion.id]) {
+      const attempt = completedQuestions[currentQuestion.id];
+      setSelectedOption(attempt.selectedOption);
+      setIsSubmitted(true);
+      setShowHint(false);
+    } else {
+      setSelectedOption(null);
+      setIsSubmitted(false);
+      setShowHint(false);
+    }
+  }, [currentIndex, currentQuestion?.id, completedQuestions]);
 
   const handleSelectOption = (optionId: string) => {
     if (isSubmitted) return;
@@ -63,9 +98,6 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
   };
 
   const handleNextQuestion = () => {
-    setSelectedOption(null);
-    setIsSubmitted(false);
-    setShowHint(false);
     if (currentIndex < filteredQuestions.length - 1) {
       setCurrentIndex(prev => prev + 1);
     }
@@ -73,26 +105,24 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
 
   const handlePrevQuestion = () => {
     if (currentIndex > 0) {
-      setSelectedOption(null);
-      setIsSubmitted(false);
-      setShowHint(false);
       setCurrentIndex(prev => prev - 1);
     }
   };
 
-  const renderSourceBadge = (source?: string, imageUrl?: string) => {
-    if (imageUrl || source === 'Neuroimaging Case') {
+  const renderSourceBadge = (source?: string, hasImage?: boolean) => {
+    if (hasImage || source === 'Neuroimaging Case') {
       return (
-        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">
-          <Eye className="w-3.5 h-3.5" /> Clinical Neuroimaging Case
+        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-extrabold bg-indigo-500/20 text-indigo-300 border border-indigo-500/40 shadow-sm">
+          <Eye className="w-3.5 h-3.5 text-indigo-400" /> Neuroimaging & Radiology Case
         </span>
       );
     }
+
     switch (source) {
       case 'Past Board Exam':
         return (
           <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold bg-amber-500/15 text-amber-300 border border-amber-500/30">
-            <GraduationCap className="w-3.5 h-3.5" /> Past Board Exam Recall
+            <GraduationCap className="w-3.5 h-3.5" /> Past Board Exam Question
           </span>
         );
       case 'Landmark Trial':
@@ -117,11 +147,9 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
     }
   };
 
-  // Helper to filter out spoiler tags before answer submission
+  // Safe non-spoiler tags display helper
   const getSafeDisplayTags = (q: PracticeQuestion, submitted: boolean) => {
     if (submitted) return q.tags;
-    
-    // Hide tags that match any option text or contain specific diagnosis answers
     const optionTexts = q.options.map(o => o.text.toLowerCase());
     return q.tags.filter(tag => {
       const lowerTag = tag.toLowerCase();
@@ -132,28 +160,40 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
 
   return (
     <div className="space-y-6 max-w-4xl mx-auto">
-      {/* Question Bank Header & Filters */}
+      {/* Question Bank Header & Filters Bar */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-slate-800/80 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
         <div>
           <h1 className="text-xl font-bold text-slate-100 flex items-center gap-2">
-            <HelpCircle className="w-5 h-5 text-cyan-400" /> Vascular Neurology Board Questions
+            <HelpCircle className="w-5 h-5 text-cyan-400" /> Vascular Neurology Question Bank
           </h1>
           <p className="text-xs text-slate-400 mt-0.5">
-            Board-style clinical vignettes with hints, source badges & rationales ({filteredQuestions.length} matching)
+            Board-style clinical vignettes with hints, radiology figures & rationale ({filteredQuestions.length} matching)
           </p>
         </div>
 
         {/* Filters Grid */}
         <div className="flex flex-wrap items-center gap-2">
+          {/* Status Filter (Unanswered, Correct, Incorrect) */}
+          <select
+            value={filterStatus}
+            onChange={e => {
+              setFilterStatus(e.target.value as any);
+              setCurrentIndex(0);
+            }}
+            className="bg-slate-900 border border-slate-700 text-xs text-slate-200 rounded-xl px-3 py-2 focus:ring-cyan-500 font-medium"
+          >
+            <option value="all">All Progress Statuses ({statusCounts.all})</option>
+            <option value="unanswered">⏳ Unanswered ({statusCounts.unanswered})</option>
+            <option value="correct">✓ Correct ({statusCounts.correct})</option>
+            <option value="incorrect">✗ Incorrect ({statusCounts.incorrect})</option>
+          </select>
+
           {/* Source Filter */}
           <select
             value={filterSource}
             onChange={e => {
               setFilterSource(e.target.value as any);
               setCurrentIndex(0);
-              setSelectedOption(null);
-              setIsSubmitted(false);
-              setShowHint(false);
             }}
             className="bg-slate-900 border border-slate-700 text-xs text-slate-200 rounded-xl px-3 py-2 focus:ring-cyan-500 font-medium"
           >
@@ -171,11 +211,8 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
             onChange={e => {
               setFilterChapter(e.target.value === 'all' ? 'all' : Number(e.target.value));
               setCurrentIndex(0);
-              setSelectedOption(null);
-              setIsSubmitted(false);
-              setShowHint(false);
             }}
-            className="bg-slate-900 border border-slate-700 text-xs text-slate-200 rounded-xl px-3 py-2 focus:ring-cyan-500 font-medium max-w-[200px]"
+            className="bg-slate-900 border border-slate-700 text-xs text-slate-200 rounded-xl px-3 py-2 focus:ring-cyan-500 font-medium max-w-[190px]"
           >
             <option value="all">All Chapters</option>
             <option value={1}>Ch 1: Code Stroke Assessment</option>
@@ -205,12 +242,13 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
 
       {filteredQuestions.length === 0 ? (
         <div className="bg-slate-800/80 rounded-3xl border border-slate-700 p-12 text-center space-y-3">
+          <Filter className="w-8 h-8 text-slate-500 mx-auto" />
           <p className="text-slate-300 font-semibold text-base">No questions match the selected filter criteria.</p>
           <button
-            onClick={() => { setFilterChapter('all'); setFilterSource('all'); }}
+            onClick={() => { setFilterChapter('all'); setFilterSource('all'); setFilterStatus('all'); }}
             className="px-4 py-2 bg-cyan-500 text-white font-bold text-xs rounded-xl hover:bg-cyan-400"
           >
-            Reset Filters
+            Reset All Filters
           </button>
         </div>
       ) : currentQuestion && (
@@ -226,9 +264,19 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
             </div>
 
             <div className="flex items-center space-x-3">
+              {completedQuestions[currentQuestion.id] && (
+                <span className={`inline-flex items-center gap-1 font-bold ${completedQuestions[currentQuestion.id].isCorrect ? 'text-emerald-400' : 'text-rose-400'}`}>
+                  {completedQuestions[currentQuestion.id].isCorrect ? (
+                    <><CheckCircle2 className="w-3.5 h-3.5" /> Previously Answered Correctly</>
+                  ) : (
+                    <><XCircle className="w-3.5 h-3.5" /> Previously Answered Incorrectly</>
+                  )}
+                </span>
+              )}
+
               <button
                 onClick={() => onToggleBookmarkQuestion(currentQuestion.id)}
-                className="flex items-center gap-1.5 text-slate-400 hover:text-amber-400 transition-colors font-medium"
+                className="flex items-center gap-1.5 text-slate-400 hover:text-amber-400 transition-colors font-medium ml-2"
               >
                 <Bookmark className={`w-4 h-4 ${bookmarkedQuestions.includes(currentQuestion.id) ? 'fill-amber-400 text-amber-400' : ''}`} />
                 <span>{bookmarkedQuestions.includes(currentQuestion.id) ? 'Bookmarked' : 'Bookmark'}</span>
@@ -241,7 +289,7 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
             {/* Source & Tags Header */}
             <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-700/60 pb-4">
               {/* Question Source Indicator */}
-              {renderSourceBadge(currentQuestion.source, currentQuestion.imageUrl)}
+              {renderSourceBadge(currentQuestion.source, !!currentQuestion.imageUrl)}
 
               {/* Topic Tags (Non-spoiling) */}
               <div className="flex flex-wrap gap-1.5">
@@ -318,101 +366,141 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
                 const isSelected = selectedOption === option.id;
                 const isCorrect = option.id === currentQuestion.correctOptionId;
 
-                let optionStyle = 'bg-slate-900/80 text-slate-200 border-slate-700 hover:border-slate-500';
-
-                if (isSubmitted) {
+                let optionStyle = 'bg-slate-900/90 border-slate-700 hover:border-slate-600 text-slate-200';
+                if (isSelected && !isSubmitted) {
+                  optionStyle = 'bg-cyan-950/50 border-cyan-500 text-cyan-200 shadow-md shadow-cyan-500/10';
+                } else if (isSubmitted) {
                   if (isCorrect) {
-                    optionStyle = 'bg-emerald-500/20 text-emerald-200 border-emerald-500 font-semibold';
+                    optionStyle = 'bg-emerald-950/50 border-emerald-500 text-emerald-200 font-medium';
                   } else if (isSelected && !isCorrect) {
-                    optionStyle = 'bg-rose-500/20 text-rose-200 border-rose-500 font-semibold';
+                    optionStyle = 'bg-rose-950/50 border-rose-500 text-rose-200';
                   } else {
-                    optionStyle = 'bg-slate-900/40 text-slate-500 border-slate-800 opacity-60';
+                    optionStyle = 'bg-slate-900/40 border-slate-800 text-slate-400 opacity-60';
                   }
-                } else if (isSelected) {
-                  optionStyle = 'bg-cyan-500/20 text-cyan-200 border-cyan-500 font-semibold shadow-md';
                 }
 
                 return (
                   <button
                     key={option.id}
-                    onClick={() => handleSelectOption(option.id)}
                     disabled={isSubmitted}
-                    className={`w-full text-left p-4 rounded-2xl border text-xs md:text-sm transition-all flex items-start space-x-3 ${optionStyle}`}
+                    onClick={() => handleSelectOption(option.id)}
+                    className={`w-full p-4 rounded-2xl border text-left text-xs md:text-sm transition-all flex items-start space-x-3 ${optionStyle}`}
                   >
-                    <span className={`w-6 h-6 rounded-lg font-bold flex items-center justify-center shrink-0 text-xs ${
-                      isSubmitted && isCorrect ? 'bg-emerald-500 text-white' :
-                      isSubmitted && isSelected && !isCorrect ? 'bg-rose-500 text-white' :
-                      isSelected ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-slate-400'
-                    }`}>
+                    <span
+                      className={`w-6 h-6 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 border ${
+                        isSelected
+                          ? isSubmitted
+                            ? isCorrect
+                              ? 'bg-emerald-500 text-white border-emerald-400'
+                              : 'bg-rose-500 text-white border-rose-400'
+                            : 'bg-cyan-500 text-white border-cyan-400'
+                          : 'bg-slate-800 border-slate-700 text-slate-400'
+                      }`}
+                    >
                       {option.id}
                     </span>
-                    <span className="leading-snug">{option.text}</span>
+
+                    <span className="flex-1 leading-relaxed">{option.text}</span>
+
+                    {isSubmitted && isCorrect && (
+                      <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 ml-2" />
+                    )}
+                    {isSubmitted && isSelected && !isCorrect && (
+                      <XCircle className="w-5 h-5 text-rose-400 shrink-0 ml-2" />
+                    )}
                   </button>
                 );
               })}
             </div>
 
-            {/* Navigation & Submit Buttons */}
-            <div className="flex items-center justify-between pt-4 border-t border-slate-700/60">
+            {/* Action Submit Button */}
+            {!isSubmitted ? (
+              <div className="pt-2">
+                <button
+                  disabled={!selectedOption}
+                  onClick={handleSubmitAnswer}
+                  className={`w-full py-3.5 rounded-2xl font-bold text-sm transition-all shadow-lg ${
+                    selectedOption
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white shadow-cyan-500/20'
+                      : 'bg-slate-800 text-slate-500 border border-slate-700 cursor-not-allowed'
+                  }`}
+                >
+                  Confirm Answer & Submit
+                </button>
+              </div>
+            ) : (
+              /* Answer Rationale & Key Takeaway */
+              <div className="space-y-4 pt-4 border-t border-slate-700/80 animate-fadeIn">
+                <div
+                  className={`p-5 rounded-2xl border space-y-3 ${
+                    selectedOption === currentQuestion.correctOptionId
+                      ? 'bg-emerald-950/30 border-emerald-500/40 text-emerald-200'
+                      : 'bg-rose-950/30 border-rose-500/40 text-rose-200'
+                  }`}
+                >
+                  <div className="flex items-center space-x-2 font-extrabold text-sm">
+                    {selectedOption === currentQuestion.correctOptionId ? (
+                      <>
+                        <CheckCircle2 className="w-5 h-5 text-emerald-400" />
+                        <span className="text-emerald-300">Correct! Choice {currentQuestion.correctOptionId} is the right answer.</span>
+                      </>
+                    ) : (
+                      <>
+                        <XCircle className="w-5 h-5 text-rose-400" />
+                        <span className="text-rose-300">Incorrect. Correct Answer: Choice {currentQuestion.correctOptionId}</span>
+                      </>
+                    )}
+                  </div>
+
+                  <p className="text-xs md:text-sm leading-relaxed text-slate-200">
+                    {currentQuestion.explanation}
+                  </p>
+                </div>
+
+                {/* Key Board Takeaway Box */}
+                <div className="bg-cyan-950/40 border border-cyan-500/40 p-4 rounded-2xl text-xs space-y-1.5 shadow-sm">
+                  <span className="font-extrabold text-cyan-300 uppercase tracking-wider block text-[11px]">
+                    🎓 Key Board Takeaway:
+                  </span>
+                  <p className="text-slate-100 font-semibold leading-relaxed">
+                    {currentQuestion.keyTakeaway}
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {/* Navigation Footer */}
+            <div className="flex items-center justify-between pt-4 border-t border-slate-700/60 text-xs">
               <button
-                onClick={handlePrevQuestion}
                 disabled={currentIndex === 0}
-                className="px-4 py-2.5 rounded-xl bg-slate-900 text-slate-400 text-xs font-semibold disabled:opacity-40 hover:text-slate-200 transition-colors"
+                onClick={handlePrevQuestion}
+                className={`px-4 py-2 rounded-xl font-bold transition-all ${
+                  currentIndex === 0
+                    ? 'text-slate-600 cursor-not-allowed'
+                    : 'text-slate-300 hover:bg-slate-700'
+                }`}
               >
-                Previous
+                ← Previous Question
               </button>
 
-              {!isSubmitted ? (
-                <button
-                  onClick={handleSubmitAnswer}
-                  disabled={!selectedOption}
-                  className="px-6 py-3 rounded-xl bg-cyan-500 text-white text-xs font-bold shadow-lg shadow-cyan-500/25 disabled:opacity-40 hover:bg-cyan-400 transition-all"
-                >
-                  Submit Answer
-                </button>
-              ) : (
-                <button
-                  onClick={handleNextQuestion}
-                  disabled={currentIndex === filteredQuestions.length - 1}
-                  className="px-6 py-3 rounded-xl bg-cyan-500 text-white text-xs font-bold shadow-lg shadow-cyan-500/25 flex items-center gap-1.5 hover:bg-cyan-400 transition-all"
-                >
-                  Next Question <ArrowRight className="w-4 h-4" />
-                </button>
-              )}
+              <span className="text-slate-400 font-medium">
+                {currentIndex + 1} / {filteredQuestions.length}
+              </span>
+
+              <button
+                disabled={currentIndex === filteredQuestions.length - 1}
+                onClick={handleNextQuestion}
+                className={`px-4 py-2 rounded-xl font-bold transition-all flex items-center gap-1.5 ${
+                  currentIndex === filteredQuestions.length - 1
+                    ? 'text-slate-600 cursor-not-allowed'
+                    : 'bg-cyan-500 text-white hover:bg-cyan-400 shadow-md'
+                }`}
+              >
+                <span>Next Question</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
             </div>
           </div>
-
-          {/* Detailed Explanation Banner */}
-          {isSubmitted && (
-            <div className="bg-slate-800/90 rounded-3xl border border-slate-700/80 p-6 space-y-4 animate-fadeIn shadow-xl">
-              <div className="flex items-center justify-between border-b border-slate-700/60 pb-3">
-                {selectedOption === currentQuestion.correctOptionId ? (
-                  <div className="flex items-center gap-2 text-emerald-400 font-extrabold text-sm">
-                    <CheckCircle2 className="w-5 h-5" /> Correct Answer!
-                  </div>
-                ) : (
-                  <div className="flex items-center gap-2 text-rose-400 font-extrabold text-sm">
-                    <XCircle className="w-5 h-5" /> Incorrect — Correct Option is ({currentQuestion.correctOptionId})
-                  </div>
-                )}
-              </div>
-
-              <div className="space-y-3 text-xs md:text-sm text-slate-300 leading-relaxed pt-1">
-                <h4 className="font-bold text-slate-100 uppercase tracking-wider text-xs flex items-center gap-1.5">
-                  <BookOpen className="w-4 h-4 text-cyan-400" /> Detailed Board Rationale:
-                </h4>
-                <p className="whitespace-pre-line text-slate-200 leading-relaxed">{currentQuestion.explanation}</p>
-              </div>
-
-              {/* Key Board Takeaway */}
-              <div className="bg-cyan-950/60 p-4 rounded-2xl border border-cyan-500/30 text-xs text-cyan-200 font-medium mt-2 shadow-inner">
-                <span className="font-extrabold text-cyan-300 block mb-1 uppercase tracking-wider text-[11px]">
-                  💡 High-Yield Board Takeaway:
-                </span>
-                {currentQuestion.keyTakeaway}
-              </div>
-            </div>
-          )}
         </div>
       )}
     </div>

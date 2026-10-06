@@ -63,12 +63,43 @@ export interface Chapter {
   topics: HighYieldTopic[];
 }
 
+export interface UserProfile {
+  id: string;
+  name: string;
+  email: string;
+  targetExamDate?: string;
+  role?: string;
+  institution?: string;
+  avatarUrl?: string;
+  isLoggedIn: boolean;
+  createdAt: string;
+}
+
+export interface ExamAttempt {
+  id: string;
+  timestamp: string;
+  durationSeconds: number;
+  totalQuestions: number;
+  correctCount: number;
+  percentage: number;
+  passed: boolean;
+  chapterScores?: Record<number, { correct: number; total: number }>;
+}
+
+export interface QuestionAttempt {
+  selectedOption: string;
+  isCorrect: boolean;
+  timestamp?: string;
+}
+
 export interface UserStats {
-  completedQuestions: Record<string, { selectedOption: string; isCorrect: boolean }>;
+  profile: UserProfile;
+  completedQuestions: Record<string, QuestionAttempt>;
   flashcardMastery: Record<string, 'again' | 'hard' | 'good' | 'easy'>;
   bookmarkedFlashcards: string[];
   bookmarkedQuestions: string[];
   bookmarkedChapters: number[];
+  examAttempts: ExamAttempt[];
   streakDays: number;
   lastStudyDate: string;
 }

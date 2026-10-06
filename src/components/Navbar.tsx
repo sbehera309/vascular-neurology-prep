@@ -1,12 +1,20 @@
 import React from 'react';
-import { Home, BookOpen, Sparkles, HelpCircle, Calculator, Award, GraduationCap } from 'lucide-react';
+import { Home, BookOpen, Sparkles, HelpCircle, Calculator, Award, GraduationCap, ShieldCheck } from 'lucide-react';
+import { UserProfile } from '../types';
 
 interface NavbarProps {
   activeTab: 'dashboard' | 'chapters' | 'flashcards' | 'questions' | 'calculators' | 'trials' | 'exam';
   onNavigate: (tab: 'dashboard' | 'chapters' | 'flashcards' | 'questions' | 'calculators' | 'trials' | 'exam') => void;
+  userProfile?: UserProfile;
+  onOpenProfileModal: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ activeTab, onNavigate }) => {
+export const Navbar: React.FC<NavbarProps> = ({
+  activeTab,
+  onNavigate,
+  userProfile,
+  onOpenProfileModal
+}) => {
   const navItems = [
     { id: 'dashboard', label: 'Home', icon: Home },
     { id: 'exam', label: 'Mock Exam', icon: GraduationCap },
@@ -20,7 +28,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onNavigate }) => {
   return (
     <>
       {/* Top Navbar for Desktop */}
-      <header className="sticky top-0 z-50 backdrop-blur-md bg-slate-900/90 border-b border-slate-800">
+      <header className="sticky top-0 z-40 backdrop-blur-md bg-slate-900/90 border-b border-slate-800">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           {/* Logo */}
           <div
@@ -57,11 +65,29 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onNavigate }) => {
               );
             })}
           </nav>
+
+          {/* User Account / Profile Button */}
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={onOpenProfileModal}
+              className="flex items-center space-x-2 px-3 py-1.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 border border-slate-700 transition-all text-xs font-bold text-slate-200 shadow-sm"
+            >
+              <div className="w-6 h-6 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 text-white flex items-center justify-center font-extrabold text-xs">
+                {userProfile?.name ? userProfile.name.charAt(0).toUpperCase() : 'U'}
+              </div>
+              <span className="hidden sm:inline-block max-w-[110px] truncate">
+                {userProfile?.isLoggedIn ? userProfile.name.split(' ')[0] : 'Sign In'}
+              </span>
+              {userProfile?.isLoggedIn && (
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+              )}
+            </button>
+          </div>
         </div>
       </header>
 
       {/* Bottom Tab Bar for Mobile Navigation */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 backdrop-blur-lg bg-slate-900/95 border-t border-slate-800 px-2 py-2 shadow-2xl">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 backdrop-blur-lg bg-slate-900/95 border-t border-slate-800 px-2 py-2 shadow-2xl">
         <div className="grid grid-cols-7 gap-1">
           {navItems.map(item => {
             const Icon = item.icon;
