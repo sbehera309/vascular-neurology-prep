@@ -3200,170 +3200,6 @@ export const questionsData: PracticeQuestion[] = [
     "source": "Past Board Exam"
   },
   {
-    "id": "q-img-1",
-    "chapterId": 2,
-    "chapterTitle": "Initial Stroke Evaluation & Thrombolysis",
-    "vignette": "A 66-year-old male presents 45 minutes after acute right-sided weakness and expressive aphasia. Initial non-contrast head CT is performed immediately upon ED arrival and is shown below.",
-    "question": "What radiological sign is present in the right Sylvian fissure, and what is its clinical significance?",
-    "options": [
-      {
-        "id": "A",
-        "text": "Hyperdense MCA Sign; indicates acute intraluminal thrombus in the M1 segment"
-      },
-      {
-        "id": "B",
-        "text": "Empty Delta Sign; indicates superior sagittal sinus thrombosis"
-      },
-      {
-        "id": "C",
-        "text": "Spot Sign; indicates active intracerebral bleeding"
-      },
-      {
-        "id": "D",
-        "text": "Crescent Sign; indicates carotid dissection"
-      },
-      {
-        "id": "E",
-        "text": "Normal falx cerebri calcification"
-      }
-    ],
-    "correctOptionId": "A",
-    "explanation": "The Hyperdense MCA Sign (or Dense Vessel Sign) on non-contrast CT represents acute thromboembolism in the M1 MCA segment. It has > 95% specificity for LVO and predicts poor response to IV tPA alone, strongly supporting endovascular thrombectomy evaluation.",
-    "keyTakeaway": "Hyperdense MCA Sign on non-contrast CT = acute M1 occlusion -> high risk for LVO & thrombectomy candidate.",
-    "tags": [
-      "Neuroimaging",
-      "Dense MCA Sign",
-      "Acute CT"
-    ],
-    "hint": "Focus on the high-attenuation bright vessel traveling along the MCA pathway on non-contrast CT.",
-    "source": "Neuroimaging Case",
-    "imageUrl": "/images/ct_dense_mca.jpg",
-    "imageCaption": "Non-Contrast Head CT: Hyperdense vessel sign in the right middle cerebral artery (M1 segment)."
-  },
-  {
-    "id": "q-img-2",
-    "chapterId": 8,
-    "chapterTitle": "Endovascular Thrombectomy & LVO",
-    "vignette": "A 74-year-old female presents 10 hours after last seen normal with dense left hemiplegia. CTA demonstrates a right M1 MCA occlusion. Automated CT Perfusion (CTP) map is shown below.",
-    "question": "Based on the CTP mismatch finding (small core, large penumbra), what is the indicated management per DAWN / DEFUSE 3 guidelines?",
-    "options": [
-      {
-        "id": "A",
-        "text": "Proceed with mechanical thrombectomy"
-      },
-      {
-        "id": "B",
-        "text": "Administer IV Alteplase only"
-      },
-      {
-        "id": "C",
-        "text": "Initiate IV Heparin infusion"
-      },
-      {
-        "id": "D",
-        "text": "Perform emergent carotid endarterectomy"
-      },
-      {
-        "id": "E",
-        "text": "Decompressive hemicraniectomy within 24 hours"
-      }
-    ],
-    "correctOptionId": "A",
-    "explanation": "DAWN and DEFUSE 3 established that in the 6-24 hour extended window, mechanical thrombectomy significantly improves functional independence in LVO stroke patients with favorable perfusion mismatch (small ischemic core CBF < 30% vs large hypoperfused penumbra Tmax > 6s).",
-    "keyTakeaway": "CT Perfusion Core-Penumbra mismatch in 6-24h window -> Mechanical Thrombectomy (DAWN/DEFUSE 3).",
-    "tags": [
-      "Neuroimaging",
-      "CT Perfusion",
-      "Thrombectomy"
-    ],
-    "hint": "Analyze the size difference between the red ischemic core and the larger green hypoperfused penumbral tissue.",
-    "source": "Neuroimaging Case",
-    "imageUrl": "/images/ct_perfusion_map.jpg",
-    "imageCaption": "CT Perfusion Map: Ischemic Core (red) vs Penumbra Tmax Delay (green/yellow)."
-  },
-  {
-    "id": "q-img-3",
-    "chapterId": 13,
-    "chapterTitle": "Spontaneous Intracranial Hemorrhage",
-    "vignette": "A 68-year-old male presents with acute left basal ganglia hemorrhage and rapid neurological decline. Stat CTA head is performed and shown below.",
-    "question": "What key radiological finding is identified by the arrow within the hematoma, and what does it predict?",
-    "options": [
-      {
-        "id": "A",
-        "text": "Spot Sign; indicates active contrast extravasation and predicts high risk of hematoma expansion"
-      },
-      {
-        "id": "B",
-        "text": "Empty Delta Sign; indicates venous sinus thrombosis"
-      },
-      {
-        "id": "C",
-        "text": "Puff of Smoke; indicates Moyamoya vasculopathy"
-      },
-      {
-        "id": "D",
-        "text": "String of Beads; indicates Fibromuscular Dysplasia"
-      },
-      {
-        "id": "E",
-        "text": "Asymptomatic choroid plexus calcification"
-      }
-    ],
-    "correctOptionId": "A",
-    "explanation": "The CTA Spot Sign is defined as one or more tiny high-attenuation foci of contrast extravasation within an acute ICH. It has > 80% sensitivity for predicting hematoma expansion and correlated with 30-day mortality.",
-    "keyTakeaway": "CTA Spot Sign = Active contrast extravasation in ICH -> Predicts rapid hematoma expansion.",
-    "tags": [
-      "Neuroimaging",
-      "Spot Sign",
-      "Intracranial Hemorrhage"
-    ],
-    "hint": "Identify the bright spot of contrast extravasation inside the dark dense blood collection.",
-    "source": "Neuroimaging Case",
-    "imageUrl": "/images/cta_spot_sign.jpg",
-    "imageCaption": "CTA Head: Basal ganglia ICH with positive CTA Spot Sign (contrast extravasation)."
-  },
-  {
-    "id": "q-img-4",
-    "chapterId": 10,
-    "chapterTitle": "Monogenic & Rare Vasculopathies",
-    "vignette": "A 12-year-old female presents with recurrent transient episodes of right arm weakness and speech arrest during crying. Catheter digital subtraction angiography (DSA) is shown below.",
-    "question": "What classic angiographic pattern is demonstrated in the basal ganglia region?",
-    "options": [
-      {
-        "id": "A",
-        "text": "Moyamoya disease; bilateral distal ICA steno-occlusion with 'puff of smoke' collateral network"
-      },
-      {
-        "id": "B",
-        "text": "Fibromuscular Dysplasia; 'string of beads' appearance"
-      },
-      {
-        "id": "C",
-        "text": "Arteriovenous Malformation; high-flow nidus"
-      },
-      {
-        "id": "D",
-        "text": "Primary Angiitis of the CNS; multifocal beaded stenoses"
-      },
-      {
-        "id": "E",
-        "text": "Internal carotid artery dissection"
-      }
-    ],
-    "correctOptionId": "A",
-    "explanation": "Moyamoya Disease is characterized on conventional cerebral angiography by progressive occlusion of the internal carotid artery bifurcations and proximal ACA/MCA, with a hazy, net-like proliferation of lenticulostriate collaterals creating a 'puff of smoke' (moyamoya in Japanese).",
-    "keyTakeaway": "Moyamoya Angiography = Bilateral ICA bifurcation occlusion + 'Puff of smoke' basal lenticulostriate collaterals.",
-    "tags": [
-      "Neuroimaging",
-      "Moyamoya",
-      "Angiography"
-    ],
-    "hint": "Look for the dense cloud or hazy net of collateral vessels supplying the basal brain region.",
-    "source": "Neuroimaging Case",
-    "imageUrl": "/images/mra_moyamoya.jpg",
-    "imageCaption": "Cerebral Angiogram (DSA): Distal ICA occlusion with 'Puff of Smoke' collaterals."
-  },
-  {
     "id": "q-175",
     "chapterId": 10,
     "chapterTitle": "Monogenic & Rare Vasculopathies",
@@ -8198,5 +8034,1000 @@ export const questionsData: PracticeQuestion[] = [
     ],
     "hint": "Focus on core evidence-based protocols for Landmark Clinical Trials Master Summary.",
     "source": "Landmark Trial"
+  },
+  {
+    "id": "img-q-1",
+    "chapterId": 1,
+    "chapterTitle": "Emergency Code Stroke Assessment",
+    "vignette": "A 66-year-old male presents 45 minutes after acute right-sided weakness and expressive aphasia. Initial non-contrast head CT is performed immediately upon ED arrival and is shown below.",
+    "question": "What radiological sign is present in the right Sylvian fissure, and what is its acute clinical significance?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Hyperdense MCA Sign; indicates acute intraluminal thrombus in the M1 segment"
+      },
+      {
+        "id": "B",
+        "text": "Empty Delta Sign; indicates superior sagittal sinus thrombosis"
+      },
+      {
+        "id": "C",
+        "text": "CTA Spot Sign; indicates active arterial contrast extravasation"
+      },
+      {
+        "id": "D",
+        "text": "Puff of Smoke Sign; indicates basal collateral vascular network"
+      },
+      {
+        "id": "E",
+        "text": "Insular Ribbon Sign; indicates chronic parenchymal encephalomalacia"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "The Hyperdense MCA Sign appears on non-contrast CT as a high-attenuation (bright) linear structure within the Sylvian fissure, caused by acute intraluminal red blood cell-rich thrombus in the M1 segment. It is an early sign of large vessel occlusion (LVO) associated with severe deficits and poor outcomes unless recanalized via thrombolysis or endovascular thrombectomy.",
+    "keyTakeaway": "Hyperdense MCA sign on NCCT = Acute intraluminal thrombus in M1 MCA segment -> Screen immediately for mechanical thrombectomy.",
+    "tags": [
+      "NCCT",
+      "Hyperdense MCA",
+      "LVO Screening"
+    ],
+    "hint": "Look for a bright, high-attenuation tubular structure representing acute clot in the proximal middle cerebral artery.",
+    "source": "Neuroimaging Case",
+    "imageUrl": "/images/ct_dense_mca.jpg",
+    "imageCaption": "Initial Non-Contrast Head CT axial slice at the level of the basal ganglia."
+  },
+  {
+    "id": "img-q-2",
+    "chapterId": 8,
+    "chapterTitle": "Endovascular Thrombectomy & LVO",
+    "vignette": "A 71-year-old female presents 9 hours after last known well with right hemiparesis and global aphasia (NIHSS 18). Automated CT perfusion (CTP) software analysis is performed and displayed below.",
+    "question": "Based on the CT perfusion parameters, what is the interpretation regarding core vs penumbra, and is the patient eligible for mechanical thrombectomy under DEFUSE-3 / DAWN criteria?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Target mismatch present (small ischemic core rCBF < 30%, large hypoperfused penumbra Tmax > 6s); ELIGIBLE for mechanical thrombectomy"
+      },
+      {
+        "id": "B",
+        "text": "Completed infarction with no salvageable penumbra; INELIGIBLE for thrombectomy"
+      },
+      {
+        "id": "C",
+        "text": "Normal brain perfusion without focal deficit"
+      },
+      {
+        "id": "D",
+        "text": "Global cerebral hypoperfusion secondary to cardiogenic shock"
+      },
+      {
+        "id": "E",
+        "text": "Venous congestion secondary to sagittal sinus occlusion"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "CT Perfusion maps quantify ischemic core (rCBF < 30%) and total hypoperfused territory (Tmax > 6s). The difference represents salvageable ischemic penumbra. Under DEFUSE-3 (6-16h) and DAWN (6-24h) criteria, patients with a target mismatch (mismatch ratio >= 1.8, mismatch volume >= 15 mL, core < 70 mL) derive dramatic clinical benefit from endovascular thrombectomy.",
+    "keyTakeaway": "CTP Mismatch = Small core (rCBF < 30%) + Large penumbra (Tmax > 6s) -> Proceed urgently to Mechanical Thrombectomy in 6-24h window.",
+    "tags": [
+      "CT Perfusion",
+      "Ischemic Penumbra",
+      "DEFUSE-3"
+    ],
+    "hint": "Compare the small dark ischemic core volume against the surrounding hypoperfused tissue volume.",
+    "source": "Neuroimaging Case",
+    "imageUrl": "/images/ct_perfusion_map.jpg",
+    "imageCaption": "CT Perfusion (CTP) color map showing cerebral blood flow (rCBF) and transit time delay (Tmax)."
+  },
+  {
+    "id": "img-q-3",
+    "chapterId": 10,
+    "chapterTitle": "Monogenic & Rare Vasculopathies",
+    "vignette": "A 28-year-old female presents with recurrent TIAs and progressive cognitive decline. 3D Time-of-Flight (TOF) Magnetic Resonance Angiography (MRA) is obtained and shown below.",
+    "question": "What angiographic pattern is demonstrated, and what is the definitive long-term treatment of choice to prevent stroke recurrence?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Moyamoya Disease ('Puff of Smoke' collateral network); Surgical revascularization (STA-MCA bypass or EDAS)"
+      },
+      {
+        "id": "B",
+        "text": "Carotid Artery Dissection; 6 months of oral anticoagulation"
+      },
+      {
+        "id": "C",
+        "text": "Fibromuscular Dysplasia ('String of Beads'); Percutaneous balloon angioplasty"
+      },
+      {
+        "id": "D",
+        "text": "Primary CNS Vasculitis; High-dose IV methylprednisolone and cyclophosphamide"
+      },
+      {
+        "id": "E",
+        "text": "Atherosclerotic ICA occlusion; High-intensity Atorvastatin 80 mg daily"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Moyamoya disease is a progressive steno-occlusive arteriopathy of the terminal internal carotid arteries and proximal Circle of Willis. The compensatory lenticulostriate parenchymal collaterals produce the characteristic 'puff of smoke' appearance on angiogram. Surgical revascularization (direct STA-MCA bypass or indirect EDAS/EDAM) is the definitive therapy.",
+    "keyTakeaway": "Moyamoya Disease = Terminal ICA occlusion + 'Puff of Smoke' collaterals -> Treat with surgical revascularization.",
+    "tags": [
+      "Moyamoya",
+      "MRA",
+      "Puff of Smoke"
+    ],
+    "hint": "Identify the hazy, cloud-like net of basal lenticulostriate collateral vessels compensating for ICA occlusion.",
+    "source": "Neuroimaging Case",
+    "imageUrl": "/images/mra_moyamoya.jpg",
+    "imageCaption": "3D Time-of-Flight (TOF) Magnetic Resonance Angiography (MRA) head max intensity projection."
+  },
+  {
+    "id": "img-q-4",
+    "chapterId": 13,
+    "chapterTitle": "Spontaneous Intracranial Hemorrhage",
+    "vignette": "A 58-year-old male with acute hypertensive basal ganglia ICH undergoes emergency CT Angiography (CTA) within 2 hours of arrival, as shown below.",
+    "question": "What radiological finding is demonstrated within the parenchymal hematoma, and what clinical risk does it predict?",
+    "options": [
+      {
+        "id": "A",
+        "text": "CTA Spot Sign; predicts active ongoing hematoma expansion and clinical deterioration"
+      },
+      {
+        "id": "B",
+        "text": "Hyperdense MCA Sign; predicts acute ischemic infarction"
+      },
+      {
+        "id": "C",
+        "text": "Empty Delta Sign; predicts venous sinus thrombosis"
+      },
+      {
+        "id": "D",
+        "text": "Target Sign; predicts brain abscess formation"
+      },
+      {
+        "id": "E",
+        "text": "Pneumocephalus; predicts skull base fracture"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "The CTA Spot Sign is defined as one or more foci of contrast extravasation within an acute intraparenchymal hematoma on CTA. It is a strong independent predictor of hematoma expansion, early neurological decline, and 30-day mortality. Its presence guides aggressive blood pressure lowering and intensive monitoring.",
+    "keyTakeaway": "CTA Spot Sign = Active contrast extravasation in ICH -> High risk of rapid hematoma expansion.",
+    "tags": [
+      "CTA Spot Sign",
+      "ICH Expansion",
+      "Radiology"
+    ],
+    "hint": "Identify the bright spot of contrast contrast material pooling inside the dense hematoma cavity.",
+    "source": "Neuroimaging Case",
+    "imageUrl": "/images/cta_spot_sign.jpg",
+    "imageCaption": "Computed Tomography Angiography (CTA) Head axial slice through the basal ganglia."
+  },
+  {
+    "id": "img-q-5",
+    "chapterId": 3,
+    "chapterTitle": "Vascular Neuroanatomy",
+    "vignette": "A 64-year-old female presents 2 hours after acute onset of right face/arm weakness and sensory loss. Diffusion-Weighted Imaging (DWI b=1000) MRI brain is shown below.",
+    "question": "What pathophysiology produces the hyperintense signal on DWI, and what is the corresponding signal on the ADC map?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Cytotoxic edema restricting microscopic water diffusion; Hypointense (dark) on ADC map"
+      },
+      {
+        "id": "B",
+        "text": "Vasogenic edema; Hyperintense (bright) on ADC map"
+      },
+      {
+        "id": "C",
+        "text": "Chronic gliosis; Isointense on ADC map"
+      },
+      {
+        "id": "D",
+        "text": "Subarachnoid blood deposition; Hyperintense on ADC map"
+      },
+      {
+        "id": "E",
+        "text": "Arterial calcification; No signal on ADC map"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Acute cerebral ischemia causes Na+/K+-ATPase pump failure, resulting in influx of extracellular water into cells (cytotoxic edema). This restricts microscopic Brownian motion of water molecules, yielding bright hyperintensity on DWI and dark hypointensity on the corresponding Apparent Diffusion Coefficient (ADC) map.",
+    "keyTakeaway": "Restricted Diffusion = Bright on DWI + Dark on ADC map (Cytotoxic edema from acute cell death).",
+    "tags": [
+      "DWI MRI",
+      "Restricted Diffusion",
+      "Cytotoxic Edema"
+    ],
+    "hint": "Recall how cellular energy failure shifts extracellular water into swollen cells, restricting Brownian movement.",
+    "source": "Neuroimaging Case",
+    "imageUrl": "/images/dwi_adc_stroke.jpg",
+    "imageCaption": "Diffusion-Weighted Imaging (DWI b=1000) MRI brain axial section."
+  },
+  {
+    "id": "img-q-6",
+    "chapterId": 10,
+    "chapterTitle": "Monogenic & Rare Vasculopathies",
+    "vignette": "An 82-year-old female with progressive mild cognitive impairment presents after a transient episode of numbness. Susceptibility-Weighted Imaging (SWI) MRI is displayed below.",
+    "question": "What radiological finding is demonstrated, and what underlying pathology does it indicate under the Boston Criteria v2.0?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Multiple lobar cortical/subcortical microbleeds; Cerebral Amyloid Angiopathy (CAA)"
+      },
+      {
+        "id": "B",
+        "text": "Deep basal ganglia hypertensive lacunes; Lipohyalinosis"
+      },
+      {
+        "id": "C",
+        "text": "Multiple cavernous malformations; Familial Cavernomatosis"
+      },
+      {
+        "id": "D",
+        "text": "Neurocysticercosis lesions; Parasitic infection"
+      },
+      {
+        "id": "E",
+        "text": "Multiple sclerosis black holes; Demyelination"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "SWI and T2*-GRE MRI sequences are highly sensitive to paramagnetic hemosiderin breakdown products ('blooming artifact'). The presence of multiple punctate microbleeds restricted strictly to the lobar cortical and subcortical regions in an elderly patient fulfills the Boston Criteria for Probable Cerebral Amyloid Angiopathy (CAA), carrying a high risk for lobar ICH.",
+    "keyTakeaway": "Lobar Microbleeds on SWI/GRE = Cerebral Amyloid Angiopathy (CAA) -> High lobar ICH risk (avoid long-term anticoagulation if possible).",
+    "tags": [
+      "SWI MRI",
+      "Microbleeds",
+      "Cerebral Amyloid Angiopathy"
+    ],
+    "hint": "Note the strict lobar cortical distribution of tiny dark signal dropouts representing old microhemorrhages.",
+    "source": "Neuroimaging Case",
+    "imageUrl": "/images/swi_caa_microbleeds.jpg",
+    "imageCaption": "Susceptibility-Weighted Imaging (SWI) MRI brain axial slice."
+  },
+  {
+    "id": "img-q-7",
+    "chapterId": 14,
+    "chapterTitle": "Subarachnoid Hemorrhage & Aneurysms",
+    "vignette": "A 49-year-old female presents with sudden onset 'worst headache of life' accompanied by nausea and neck stiffness. Non-contrast head CT is shown below.",
+    "question": "What is the diagnosis, and what Modified Fisher Grade / vasospasm risk does this scan represent?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Aneurysmal Subarachnoid Hemorrhage (SAH); Modified Fisher Grade 3 (thick focal subarachnoid blood in basal cisterns with high vasospasm risk)"
+      },
+      {
+        "id": "B",
+        "text": "Epidural Hematoma; Low vasospasm risk"
+      },
+      {
+        "id": "C",
+        "text": "Acute Ischemic MCA Infarction; No vasospasm risk"
+      },
+      {
+        "id": "D",
+        "text": "Subdural Hematoma; Low vasospasm risk"
+      },
+      {
+        "id": "E",
+        "text": "Normal Non-Contrast CT head; Normal vasospasm risk"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "The non-contrast CT shows hyperdense (bright white) acute blood filling the suprasellar and basal subarachnoid cisterns. Dense diffuse subarachnoid blood corresponds to a high Modified Fisher Grade (Grade 3/4), carrying a significant risk of delayed cerebral ischemia (DCI) from arterial vasospasm between days 4-14.",
+    "keyTakeaway": "Basal Cistern SAH on NCCT = Aneurysmal SAH -> Start oral Nimodipine 60 mg q4h for 21 days to mitigate DCI.",
+    "tags": [
+      "SAH",
+      "Basal Cisterns",
+      "Modified Fisher"
+    ],
+    "hint": "Look for dense white hyperattenuating blood outlining the star-shaped suprasellar cistern and Sylvian fissures.",
+    "source": "Neuroimaging Case",
+    "imageUrl": "/images/ct_sah_basal_cisterns.jpg",
+    "imageCaption": "Non-Contrast Head CT axial slice at the level of the suprasellar cistern."
+  },
+  {
+    "id": "img-q-8",
+    "chapterId": 16,
+    "chapterTitle": "Cerebral Venous Thrombosis",
+    "vignette": "A 31-year-old postpartum female presents with severe progressive headache, papilledema, and new-onset focal motor seizure. Contrast-enhanced CT Venogram (CTV) is shown below.",
+    "question": "What pathognomonic radiological sign is present, and what is the immediate treatment of choice even if venous hemorrhagic transformation is noted?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Empty Delta Sign; Therapeutic anticoagulation with LMWH or IV Unfractionated Heparin"
+      },
+      {
+        "id": "B",
+        "text": "CTA Spot Sign; Immediate IV Tranexamic Acid"
+      },
+      {
+        "id": "C",
+        "text": "Hyperdense MCA Sign; IV Tenecteplase thrombolysis"
+      },
+      {
+        "id": "D",
+        "text": "Puff of Smoke; Surgical bypass"
+      },
+      {
+        "id": "E",
+        "text": "Double Rim Sign; Surgical abscess drainage"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "The 'Empty Delta Sign' on contrast CT venography or post-contrast T1 MRI is pathognomonic for Superior Sagittal Sinus Thrombosis. It consists of a central dark triangular non-enhancing filling defect (thrombus) surrounded by contrast-enhancing dural sinus collateral walls. AHA/EFNS guidelines mandate therapeutic anticoagulation (LMWH/heparin) as first-line therapy.",
+    "keyTakeaway": "Empty Delta Sign = Superior Sagittal Sinus Thrombosis -> Treat with Full Therapeutic Anticoagulation (LMWH/Heparin).",
+    "tags": [
+      "Empty Delta Sign",
+      "CVST",
+      "CT Venogram"
+    ],
+    "hint": "Identify the central non-enhancing triangular clot defect inside the posterior dural sinus.",
+    "source": "Neuroimaging Case",
+    "imageUrl": "/images/mrv_empty_delta.jpg",
+    "imageCaption": "Contrast-enhanced CT Venogram (CTV) axial section."
+  },
+  {
+    "id": "img-q-9",
+    "chapterId": 10,
+    "chapterTitle": "Monogenic & Rare Vasculopathies",
+    "vignette": "A 42-year-old male presents with recurrent subcortical ischemic strokes, migraine with aura, and mood disturbance. Family history reveals early dementia in his father. Axial FLAIR MRI is shown below.",
+    "question": "What neuroimaging hallmark of CADASIL is demonstrated, and what gene mutation confirms the diagnosis?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Confluent FLAIR hyperintensities involving the anterior temporal lobes and external capsule; NOTCH3 mutation"
+      },
+      {
+        "id": "B",
+        "text": "Periventricular Dawson fingers; HLA-DRB1 mutation"
+      },
+      {
+        "id": "C",
+        "text": "Bilateral thalamic hyperintensities; GLA gene mutation"
+      },
+      {
+        "id": "D",
+        "text": "Parieto-occipital vasogenic edema; COL4A1 mutation"
+      },
+      {
+        "id": "E",
+        "text": "Cerebellar atrophy; HTRA1 mutation"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "CADASIL (Cerebral Autosomal Dominant Arteriopathy with Subcortical Infarcts and Leukoencephalopathy) is caused by missense mutations in the NOTCH3 gene on chromosome 19p13. Characteristically, FLAIR MRI displays symmetric confluent subcortical white matter hyperintensities with pathognomonic involvement of the anterior temporal poles and external capsule.",
+    "keyTakeaway": "CADASIL = Temporal pole white matter hyperintensities on FLAIR + NOTCH3 gene mutation.",
+    "tags": [
+      "CADASIL",
+      "FLAIR MRI",
+      "NOTCH3"
+    ],
+    "hint": "Look for prominent hyperintense white matter signal abnormalities localized in the anterior temporal pole.",
+    "source": "Neuroimaging Case",
+    "imageUrl": "/images/flair_cadasil.jpg",
+    "imageCaption": "Fluid-Attenuated Inversion Recovery (FLAIR) MRI brain axial section."
+  },
+  {
+    "id": "img-q-10",
+    "chapterId": 11,
+    "chapterTitle": "Carotid & Vertebral Stenosis",
+    "vignette": "A 38-year-old male presents with sudden neck pain, right Horner syndrome, and transient left hemiparesis following a chiropractic neck manipulation. Catheter Digital Subtraction Angiogram (DSA) is shown below.",
+    "question": "What angiographic feature is demonstrated in the internal carotid artery, and what is the primary pathophysiological mechanism?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Flame-shaped arterial occlusion / 'String Sign'; Cervical internal carotid artery dissection"
+      },
+      {
+        "id": "B",
+        "text": "Concentric arterial stenosis; Takayasu arteritis"
+      },
+      {
+        "id": "C",
+        "text": "String of beads appearance; Fibromuscular dysplasia"
+      },
+      {
+        "id": "D",
+        "text": "Atherosclerotic ulcerated plaque; Atherosclerosis"
+      },
+      {
+        "id": "E",
+        "text": "Pseudoaneurysm sac; Mycotic aneurysm"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Carotid artery dissection occurs when blood penetrates an intimal tear, creating an intramural hematoma within the vessel wall. On catheter DSA or CTA, this appears as smooth tapering luminal narrowing ('string sign') ending in a flame-shaped distal occlusion. Horner syndrome results from disruption of ascending oculosympathetic fibers.",
+    "keyTakeaway": "Flame-shaped tapering / String Sign on Angiography = Cervical Carotid Artery Dissection.",
+    "tags": [
+      "Dissection",
+      "String Sign",
+      "DSA Angiography"
+    ],
+    "hint": "Note the smooth, progressive luminal tapering of the cervical ICA resembling a flame tip.",
+    "source": "Neuroimaging Case",
+    "imageUrl": "/images/dsa_dissection.jpg",
+    "imageCaption": "Digital Subtraction Angiography (DSA) lateral projection of right cervical internal carotid artery."
+  },
+  {
+    "id": "img-q-11",
+    "chapterId": 1,
+    "chapterTitle": "Emergency Code Stroke Assessment",
+    "vignette": "A 59-year-old patient presents 90 minutes post-stroke onset. Non-contrast head CT shows subtle loss of gray-white matter differentiation in the lateral insular cortex.",
+    "question": "What early ischemic NCCT radiological sign does this represent, and how does it affect the ASPECTS score?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Insular Ribbon Sign; reduces ASPECTS score by 1 point for the insular cortex region"
+      },
+      {
+        "id": "B",
+        "text": "Hyperdense MCA Sign; reduces ASPECTS by 3 points"
+      },
+      {
+        "id": "C",
+        "text": "Disappearing Basal Ganglia Sign; reduces ASPECTS by 5 points"
+      },
+      {
+        "id": "D",
+        "text": "Sulcal effacement; indicates hemorrhagic transformation"
+      },
+      {
+        "id": "E",
+        "text": "Midline shift; indicates brain death"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "The 'Insular Ribbon Sign' is an early ischemic NCCT sign caused by cytotoxic edema in the insular cortex (supplied by M2 MCA branches). Because the insula has limited collateral blood supply, it becomes hypodense early. On the 10-point ASPECTS scoring system, loss of insular ribbon subtracts 1 point.",
+    "keyTakeaway": "Insular Ribbon Sign = Early ischemic hypoattenuation of insular cortex -> Subtract 1 point from ASPECTS.",
+    "tags": [
+      "Insular Ribbon",
+      "NCCT",
+      "ASPECTS"
+    ],
+    "hint": "Loss of normal distinction between the insular cortex gray matter and adjacent extreme capsule white matter.",
+    "source": "Neuroimaging Case"
+  },
+  {
+    "id": "img-q-12",
+    "chapterId": 2,
+    "chapterTitle": "Initial Stroke Evaluation & Thrombolysis",
+    "vignette": "A patient with unknown time of onset ('Wake-up stroke') is evaluated with MRI. DWI shows a bright hyperintense lesion in the left motor cortex, while FLAIR shows NO signal hyperintensity in the same region.",
+    "question": "What is the interpretation of this 'DWI-FLAIR Mismatch', and what did the landmark WAKE-UP trial demonstrate regarding treatment?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Stroke onset is highly likely < 4.5 hours; IV Thrombolysis (Alteplase) significantly improves functional outcome"
+      },
+      {
+        "id": "B",
+        "text": "Stroke onset is > 24 hours; Thrombolysis is strictly contraindicated"
+      },
+      {
+        "id": "C",
+        "text": "Lesion is chronic encephalomalacia; No treatment indicated"
+      },
+      {
+        "id": "D",
+        "text": "Lesion represents vasogenic tumor edema; Start IV Dexamethasone"
+      },
+      {
+        "id": "E",
+        "text": "Lesion represents artifact; Repeat MRI in 48 hours"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "DWI changes occur within minutes of ischemia, whereas FLAIR hyperintensity takes 4.5 to 6 hours to develop. A positive DWI lesion with negative FLAIR ('DWI-FLAIR Mismatch') indicates stroke onset < 4.5h. The WAKE-UP trial proved IV Alteplase improves 90-day functional outcomes in wake-up strokes with DWI-FLAIR mismatch.",
+    "keyTakeaway": "DWI-FLAIR Mismatch = Stroke onset < 4.5h in wake-up stroke -> Qualifies for IV Thrombolysis (WAKE-UP trial).",
+    "tags": [
+      "DWI-FLAIR Mismatch",
+      "Wake-up Stroke",
+      "WAKE-UP Trial"
+    ],
+    "hint": "DWI becomes positive immediately while FLAIR requires at least 4.5 hours to turn bright.",
+    "source": "Neuroimaging Case"
+  },
+  {
+    "id": "img-q-13",
+    "chapterId": 18,
+    "chapterTitle": "Neuro-ICU & Hemodynamic Management",
+    "vignette": "A 52-year-old male with severe MCA infarction develops acute lethargy 30 hours post-onset. NCCT shows dark ischemic hypoattenuation involving > 50% of the MCA territory with compression of the lateral ventricle and sulcal effacement.",
+    "question": "What is the diagnosis, and what intervention within 48 hours is life-saving?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Malignant MCA Infarction; Emergency Decompressive Hemicraniectomy"
+      },
+      {
+        "id": "B",
+        "text": "Lacunar Infarction; High-dose Aspirin"
+      },
+      {
+        "id": "C",
+        "text": "Epidural Hematoma; Burr hole evacuation"
+      },
+      {
+        "id": "D",
+        "text": "Normal Pressure Hydrocephalus; Ventriculoperitoneal shunt"
+      },
+      {
+        "id": "E",
+        "text": "Central Pontine Myelinolysis; Hypertonic saline"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Malignant MCA infarction is severe ischemic stroke involving > 50% MCA territory leading to massive space-occupying edema, midline shift, and uncal herniation. Landmark trials (DECIMAL, DESTINY, HAMLET) proved decompressive hemicraniectomy within 48h reduces mortality from 80% to 30% in patients <= 60 years.",
+    "keyTakeaway": "Malignant MCA Stroke = Severe cerebral edema > 50% MCA territory -> Decompressive Hemicraniectomy < 48h.",
+    "tags": [
+      "Malignant MCA",
+      "Decompressive Hemicraniectomy",
+      "Neuro-ICU"
+    ],
+    "hint": "Extensive hemispheric edema causing ventricular compression and herniation risk.",
+    "source": "Neuroimaging Case"
+  },
+  {
+    "id": "img-q-14",
+    "chapterId": 17,
+    "chapterTitle": "Vascular Malformations & Vasculitis",
+    "vignette": "A 35-year-old male presents with a first seizure. T2-weighted MRI brain shows a discrete 2 cm 'popcorn-like' reticulated lesion in the frontal lobe surrounded by a complete rim of dark hypointensity.",
+    "question": "What vascular malformation is demonstrated by this classic 'popcorn' appearance with hemosiderin rim?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Cavernous Malformation (Cavernoma)"
+      },
+      {
+        "id": "B",
+        "text": "Arteriovenous Malformation (AVM)"
+      },
+      {
+        "id": "C",
+        "text": "Developmental Venous Anomaly (DVA)"
+      },
+      {
+        "id": "D",
+        "text": "Capillary Telangiectasia"
+      },
+      {
+        "id": "E",
+        "text": "Dural Arteriovenous Fistula (dAVF)"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Cavernous malformations (cavernomas) consist of dilated sinusoid vascular channels without intervening neural parenchyma. On T2-weighted MRI, they characteristically present as a 'popcorn-like' or 'mulberry-like' reticulated central core of mixed signal intensity surrounded by a dark peripheral ring of hemosiderin blooming.",
+    "keyTakeaway": "Cavernoma on MRI = 'Popcorn-like' reticulated core with dark peripheral hemosiderin ring on T2/GRE.",
+    "tags": [
+      "Cavernoma",
+      "T2 MRI",
+      "Popcorn Lesion"
+    ],
+    "hint": "Classic reticulated lesion appearance with surrounding dark hemosiderin signal drop on T2 MRI.",
+    "source": "Neuroimaging Case"
+  },
+  {
+    "id": "img-q-15",
+    "chapterId": 15,
+    "chapterTitle": "Pediatric Stroke & Hematology",
+    "vignette": "A 9-year-old child with Sickle Cell Disease (HbSS) undergoes routine annual screening Transcranial Doppler (TCD) ultrasound.",
+    "question": "What spectral TCD flow velocity threshold in the MCA or distal ICA defines an abnormal result requiring chronic transfusion therapy under STOP trial guidelines?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Time-Averaged Mean Maximum Velocity (TAMMV) >= 200 cm/s"
+      },
+      {
+        "id": "B",
+        "text": "TAMMV >= 100 cm/s"
+      },
+      {
+        "id": "C",
+        "text": "TAMMV >= 50 cm/s"
+      },
+      {
+        "id": "D",
+        "text": "Peak Systolic Velocity <= 30 cm/s"
+      },
+      {
+        "id": "E",
+        "text": "Resistive Index >= 0.90"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "The landmark STOP trial established that TCD screening measuring Time-Averaged Mean Maximum Velocity (TAMMV) >= 200 cm/s in the distal ICA or MCA trunk identifies children with Sickle Cell Disease at high risk for ischemic stroke (> 10%/year). Initiating chronic blood transfusion therapy reduces primary stroke risk by 90%.",
+    "keyTakeaway": "STOP Trial TCD Criteria: TAMMV >= 200 cm/s = High stroke risk -> Start Chronic Transfusion Prophylaxis.",
+    "tags": [
+      "TCD",
+      "Sickle Cell",
+      "STOP Trial"
+    ],
+    "hint": "The 200 cm/s flow velocity cutoff defining critical arterial stenosis in sickle cell vasculopathy.",
+    "source": "Neuroimaging Case"
+  },
+  {
+    "id": "img-q-16",
+    "chapterId": 11,
+    "chapterTitle": "Carotid & Vertebral Stenosis",
+    "vignette": "A 44-year-old female with cryptogenic embolic stroke is found on CTA neck to have a thin, shelf-like intimal projection along the posterior wall of the carotid bulb without calcification.",
+    "question": "What vascular anomaly is present, and why does it carry a high risk of recurrent stroke in young adults?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Carotid Web (Atypical Fibromuscular Dysplasia); causes local blood stasis and thrombosis in the recess downstream"
+      },
+      {
+        "id": "B",
+        "text": "Atherosclerotic ulcerated plaque; causes lipid core rupture"
+      },
+      {
+        "id": "C",
+        "text": "Carotid body tumor; causes mechanical compression"
+      },
+      {
+        "id": "D",
+        "text": "Takayasu arteritis; causes diffuse pan-cortical arteritis"
+      },
+      {
+        "id": "E",
+        "text": "Subclavian steal syndrome; causes retrograde vertebral flow"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "A Carotid Web is an atypical variant of fibromuscular dysplasia appearing as a thin, shelf-like intimal membrane projecting into the posterior carotid bulb lumen. Blood flow behind the web becomes stagnant, forming thrombi that embolize intracranial arteries. Standard management involves CEA or stenting to prevent recurrences.",
+    "keyTakeaway": "Carotid Web = Shelf-like intimal projection in carotid bulb -> Local blood stasis causes recurrent embolic stroke.",
+    "tags": [
+      "Carotid Web",
+      "CTA Neck",
+      "Cryptogenic Stroke"
+    ],
+    "hint": "Identify the thin shelf-like intimal defect in the posterior carotid bulb creating a stagnant vascular pocket.",
+    "source": "Neuroimaging Case"
+  },
+  {
+    "id": "img-q-17",
+    "chapterId": 17,
+    "chapterTitle": "Vascular Malformations & Vasculitis",
+    "vignette": "A 36-year-old male with acute cognitive decline undergoes High-Resolution Vessel Wall MRI (VWMRI). The scan shows smooth, concentric, circumferential vessel wall enhancement and thickening of multiple Circle of Willis branches.",
+    "question": "Which neurovascular etiology does concentric smooth vessel wall enhancement on VWMRI differentiate from eccentric plaque enhancement?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Primary CNS Vasculitis (or active inflammatory arteritis)"
+      },
+      {
+        "id": "B",
+        "text": "Intracranial Atherosclerosis (eccentric non-uniform enhancement)"
+      },
+      {
+        "id": "C",
+        "text": "Reversible Cerebral Vasoconstriction Syndrome (RCVS; no wall enhancement)"
+      },
+      {
+        "id": "D",
+        "text": "Arterial Dissection (intramural hematoma crescent)"
+      },
+      {
+        "id": "E",
+        "text": "Moyamoya Disease (smooth vessel narrowing without enhancement)"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "High-Resolution Vessel Wall MRI (VWMRI) distinguishes vasculopathy etiologies: Primary CNS Vasculitis produces smooth, concentric (circumferential) vessel wall enhancement and uniform thickening. In contrast, Intracranial Atherosclerosis causes eccentric (non-uniform) wall thickening with focal plaque enhancement, while RCVS typically lacks wall enhancement.",
+    "keyTakeaway": "VWMRI Wall Enhancement: Concentric smooth enhancement = Vasculitis; Eccentric non-uniform enhancement = Atherosclerosis.",
+    "tags": [
+      "VWMRI",
+      "Vasculitis",
+      "Vessel Wall Imaging"
+    ],
+    "hint": "Concentric 360-degree uniform vessel wall enhancement is characteristic of active transmural inflammation.",
+    "source": "Neuroimaging Case"
+  },
+  {
+    "id": "img-q-18",
+    "chapterId": 5,
+    "chapterTitle": "Posterior Circulation & Brainstem Syndromes",
+    "vignette": "A 74-year-old comatose patient presents with sudden quadriparesis and pinpoint pupils. Non-contrast head CT demonstrates a bright hyperdense signal along the pre-pontine midline.",
+    "question": "What radiological sign is present, and what emergency diagnostic procedure must be performed next?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Dense Basilar Artery Sign; CTA Head/Neck to confirm acute Basilar Artery Occlusion (BAO)"
+      },
+      {
+        "id": "B",
+        "text": "Hyperdense MCA Sign; CTA for MCA occlusion"
+      },
+      {
+        "id": "C",
+        "text": "Empty Delta Sign; MR Venography"
+      },
+      {
+        "id": "D",
+        "text": "CTA Spot Sign; Hematoma evacuation"
+      },
+      {
+        "id": "E",
+        "text": "Insular Ribbon Sign; Lumbar Puncture"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "The 'Dense Basilar Artery Sign' on NCCT indicates acute intraluminal thrombus in the basilar artery. Acute basilar artery occlusion (BAO) is a catastrophic neurovascular emergency causing brainstem ischemia, coma, and high mortality. Immediate CTA/MRA followed by emergency endovascular thrombectomy is required.",
+    "keyTakeaway": "Dense Basilar Sign on NCCT = Acute Basilar Artery Occlusion -> Emergency CTA and endovascular thrombectomy.",
+    "tags": [
+      "Dense Basilar",
+      "Basilar Occlusion",
+      "Posterior Circulation"
+    ],
+    "hint": "Hyperdense signal in the prepontine cistern representing acute thrombus in the main basilar trunk.",
+    "source": "Neuroimaging Case"
+  },
+  {
+    "id": "img-q-19",
+    "chapterId": 14,
+    "chapterTitle": "Subarachnoid Hemorrhage & Aneurysms",
+    "vignette": "A 50-year-old patient with prior SAH presents 8 days later with acute left hemiparesis. Catheter cerebral angiography reveals severe segmental narrowing of the M1 MCA and A1 ACA branches.",
+    "question": "What condition is present, and what intra-arterial therapy can be administered during catheter angiography for refractory cases?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Aneurysmal Vasospasm / Delayed Cerebral Ischemia (DCI); Intra-arterial Verapamil/Nicardipine infusion or balloon angioplasty"
+      },
+      {
+        "id": "B",
+        "text": "Atherosclerotic stenosis; Intracranial stenting"
+      },
+      {
+        "id": "C",
+        "text": "Primary CNS Vasculitis; IV Cyclophosphamide"
+      },
+      {
+        "id": "D",
+        "text": "Moyamoya Disease; EDAS surgery"
+      },
+      {
+        "id": "E",
+        "text": "Mycotic aneurysm; High-dose IV Penicillin"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Cerebral vasospasm typically occurs between days 4-14 post-SAH due to spasmogenic breakdown products of subarachnoid blood. When medical management (euvolenia, induced hypertension) fails, endovascular intra-arterial vasodilator infusion (Verapamil, Nicardipine, Milrinone) or transluminal balloon angioplasty is indicated.",
+    "keyTakeaway": "Refractory SAH Vasospasm = Treat endovascularly with Intra-arterial Vasodilators or Balloon Angioplasty.",
+    "tags": [
+      "Vasospasm",
+      "Angiography",
+      "Intra-arterial Verapamil"
+    ],
+    "hint": "Severe post-SAH arterial narrowing managed in the neuro-interventional suite with vasodilator infusions.",
+    "source": "Neuroimaging Case"
+  },
+  {
+    "id": "img-q-20",
+    "chapterId": 13,
+    "chapterTitle": "Spontaneous Intracranial Hemorrhage",
+    "vignette": "An 80-year-old patient presents with acute lobar intracerebral hemorrhage. Gradient Recoil Echo (GRE) MRI reveals extensive linear signal drop along the cerebral cortical sulci without focal parenchymal hematoma.",
+    "question": "What radiological finding is demonstrated by this superficial cortical hemosiderin deposition?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Cortical Superficial Siderosis (cSS); indicative of Cerebral Amyloid Angiopathy and high future lobar ICH risk"
+      },
+      {
+        "id": "B",
+        "text": "Deep lacunar infarction; indicative of lipohyalinosis"
+      },
+      {
+        "id": "C",
+        "text": "Acute subdural hematoma; indicative of bridging vein tear"
+      },
+      {
+        "id": "D",
+        "text": "Cavernous malformation; indicative of familial cavernomas"
+      },
+      {
+        "id": "E",
+        "text": "Bacterial meningitis; indicative of leptomeningeal infection"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Cortical Superficial Siderosis (cSS) appears on T2*-GRE / SWI MRI as curvilinear hypointense signal drop lining the cerebral convexities, caused by chronic or recurrent bleeding into the subarachnoid space from amyloid-laden cortical vessels. It is a key feature of the Boston Criteria v2.0 for CAA.",
+    "keyTakeaway": "Cortical Superficial Siderosis (cSS) on GRE/SWI = High-risk feature of Cerebral Amyloid Angiopathy (CAA).",
+    "tags": [
+      "Superficial Siderosis",
+      "CAA",
+      "GRE MRI"
+    ],
+    "hint": "Curvilinear dark hemosiderin staining along the cortical gyri and sulci.",
+    "source": "Neuroimaging Case"
+  },
+  {
+    "id": "img-q-21",
+    "chapterId": 17,
+    "chapterTitle": "Vascular Malformations & Vasculitis",
+    "vignette": "A 24-year-old male presents with acute intracerebral hemorrhage. Digital Subtraction Angiography (DSA) reveals a complex tangle of abnormal dysplastic blood vessels fed by dilated nutrient arteries and draining prematurely into enlarged cortical veins.",
+    "question": "What lesion is demonstrated, and what system is used to grade surgical resection risk?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Brain Arteriovenous Malformation (AVM); Spetzler-Martin Grading System (Size, Eloquence, Venous Drainage)"
+      },
+      {
+        "id": "B",
+        "text": "Dural Arteriovenous Fistula (dAVF); Hunt and Hess Scale"
+      },
+      {
+        "id": "C",
+        "text": "Cavernous Malformation; ICH Score"
+      },
+      {
+        "id": "D",
+        "text": "Developmental Venous Anomaly (DVA); ASPECTS Score"
+      },
+      {
+        "id": "E",
+        "text": "Vein of Galen Malformation; Modified Rankin Scale"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Brain Arteriovenous Malformations (AVMs) consist of an abnormal vessel tangle (nidus) with direct arteriovenous shunting without an intervening capillary bed. Surgical resection morbidity/mortality is predicted by the Spetzler-Martin Grade (Score 1-5 based on nidus size <3cm/3-6cm/>6cm, eloquent cortex location, and deep venous drainage).",
+    "keyTakeaway": "Brain AVM = Arteriovenous nidus with early venous drainage -> Grade using Spetzler-Martin scale.",
+    "tags": [
+      "AVM",
+      "Spetzler-Martin",
+      "Angiography"
+    ],
+    "hint": "High-flow vascular nidus with rapid early filling of hypertrophied draining veins.",
+    "source": "Neuroimaging Case"
+  },
+  {
+    "id": "img-q-22",
+    "chapterId": 13,
+    "chapterTitle": "Spontaneous Intracranial Hemorrhage",
+    "vignette": "A 70-year-old trauma patient presents after a fall. NCCT shows a high-attenuation crescent-shaped extra-axial fluid collection crossing cranial suture lines.",
+    "question": "What lesion is present, and what vascular structure is disrupted?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Subdural Hematoma (SDH); disruption of cortical bridging veins"
+      },
+      {
+        "id": "B",
+        "text": "Epidural Hematoma (EDH); laceration of Middle Meningeal Artery"
+      },
+      {
+        "id": "C",
+        "text": "Subarachnoid Hemorrhage (SAH); rupture of saccular aneurysm"
+      },
+      {
+        "id": "D",
+        "text": "Intraparenchymal Hemorrhage; lipohyalinosis of penetrating arteries"
+      },
+      {
+        "id": "E",
+        "text": "Cephalohematoma; subperiosteal blood collection"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Subdural hematomas (SDH) result from tearing of bridging veins between the cerebral cortex and dural sinuses. On non-contrast CT, SDH appears as a crescentic extra-axial hyperdensity that spreads freely across cranial suture lines (unlike epidural hematomas which are limited by suture attachments).",
+    "keyTakeaway": "Subdural Hematoma = Crescentic extra-axial hyperdensity crossing sutures (bridging vein tear).",
+    "tags": [
+      "Subdural Hematoma",
+      "NCCT",
+      "Bridging Veins"
+    ],
+    "hint": "Crescentic shape following the dural contour and crossing cranial suture lines.",
+    "source": "Neuroimaging Case"
+  },
+  {
+    "id": "img-q-23",
+    "chapterId": 8,
+    "chapterTitle": "Endovascular Thrombectomy & LVO",
+    "vignette": "A 67-year-old male undergoes mechanical thrombectomy for M1 MCA occlusion. Post-procedure catheter DSA demonstrates complete recanalization of the target vessel with 100% perfusion of the distal vascular territory.",
+    "question": "What Thrombolysis in Cerebral Infarction (TICI) score represents this optimal complete angiographic reperfusion?",
+    "options": [
+      {
+        "id": "A",
+        "text": "TICI 3 (Complete 100% reperfusion)"
+      },
+      {
+        "id": "B",
+        "text": "TICI 2b (Partial reperfusion >= 50%)"
+      },
+      {
+        "id": "C",
+        "text": "TICI 2a (Partial reperfusion < 50%)"
+      },
+      {
+        "id": "D",
+        "text": "TICI 1 (Minimal penetration without distal branch perfusion)"
+      },
+      {
+        "id": "E",
+        "text": "TICI 0 (No perfusion)"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "The modified TICI scale evaluates reperfusion post-thrombectomy: TICI 3 indicates 100% complete restoration of perfusion with normal distal branch filling. TICI 2b (>= 50% territory) and TICI 3 represent successful endovascular recanalization.",
+    "keyTakeaway": "TICI 3 = Complete 100% angiographic reperfusion after mechanical thrombectomy.",
+    "tags": [
+      "TICI 3",
+      "Thrombectomy",
+      "Reperfusion"
+    ],
+    "hint": "Grade for complete, prompt 100% arterial flow restoration.",
+    "source": "Neuroimaging Case"
+  },
+  {
+    "id": "img-q-24",
+    "chapterId": 18,
+    "chapterTitle": "Neuro-ICU & Hemodynamic Management",
+    "vignette": "A 45-year-old patient suffering cardiac arrest is resuscitated after 25 minutes. NCCT head at 24 hours displays loss of gray-white differentiation, diffuse cerebral edema, and hyperdensity of the falx and tentorium relative to hypodense brain parenchyma.",
+    "question": "What radiological sign of severe hypoxic-ischemic encephalopathy (HIE) is demonstrated?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Reversal Sign (Pseudo-subarachnoid hemorrhage sign)"
+      },
+      {
+        "id": "B",
+        "text": "Empty Delta Sign"
+      },
+      {
+        "id": "C",
+        "text": "CTA Spot Sign"
+      },
+      {
+        "id": "D",
+        "text": "Puff of Smoke Sign"
+      },
+      {
+        "id": "E",
+        "text": "Insular Ribbon Sign"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "The 'Reversal Sign' (or pseudo-subarachnoid hemorrhage sign) on NCCT is seen in severe global hypoxic-ischemic encephalopathy (HIE). Diffuse cerebral edema decreases cerebral cortical attenuation, making the dura, falx, tentorium, and basal cisterns appear abnormally hyperdense by contrast comparison.",
+    "keyTakeaway": "Reversal Sign on NCCT = Severe global Hypoxic-Ischemic Encephalopathy (poor neurological prognosis).",
+    "tags": [
+      "Reversal Sign",
+      "Hypoxic Brain Injury",
+      "NCCT"
+    ],
+    "hint": "Diffuse cortical swelling causing cerebral hypodensity relative to the bright dural folds.",
+    "source": "Neuroimaging Case"
+  },
+  {
+    "id": "img-q-25",
+    "chapterId": 16,
+    "chapterTitle": "Cerebral Venous Thrombosis",
+    "vignette": "A 33-year-old female taking oral contraceptives presents with parasagittal hemorrhagic infarction and bilateral leg weakness. MRI FLAIR shows non-visualization of the internal cerebral veins and straight sinus flow void.",
+    "question": "What deep venous thrombosis entity is present, and what anatomical structures are classically affected?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Deep Cerebral Venous Thrombosis (Vein of Galen / Straight Sinus); affects bilateral thalami and basal ganglia"
+      },
+      {
+        "id": "B",
+        "text": "Transverse sinus thrombosis; affects temporal lobe"
+      },
+      {
+        "id": "C",
+        "text": "Cavernous sinus thrombosis; affects CN III, IV, VI, V1"
+      },
+      {
+        "id": "D",
+        "text": "Sigmoid sinus thrombosis; affects cerebellar hemisphere"
+      },
+      {
+        "id": "E",
+        "text": "Cortical vein thrombosis; affects isolated gyri"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Deep Cerebral Venous Thrombosis involves the Internal Cerebral Veins, Vein of Galen, and Straight Sinus. Because these veins drain the deep gray structures, thrombosis classically produces bilateral thalamic and basal ganglia edema/infarction (often with hemorrhagic transformation), presenting with rapid coma or movement disorders.",
+    "keyTakeaway": "Deep Cerebral Venous Thrombosis = Bilateral thalamic edema/infarction on MRI (Vein of Galen / Straight Sinus occlusion).",
+    "tags": [
+      "Deep Venous Thrombosis",
+      "Bilateral Thalami",
+      "Vein of Galen"
+    ],
+    "hint": "Occlusion of deep venous system draining the bilateral thalami and internal capsules.",
+    "source": "Neuroimaging Case"
   }
 ];
