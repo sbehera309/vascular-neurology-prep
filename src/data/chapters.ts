@@ -2,18 +2,95 @@ import { Chapter } from '../types';
 
 export const chaptersData: Chapter[] = [
   {
+    id: 1,
+    title: "Chapter 1: Overview & Emergency Code Stroke Assessment",
+    description: "Code Stroke activation, NIHSS scoring, stroke mimics, and acute triage workflow.",
+    iconName: "Clock",
+    topics: [
+      {
+        title: "Emergency Code Stroke Workflow & Triage",
+        content: [
+          "Rapid assessment of Last Known Normal (LKN) or Time of Symptom Discovery is the single most critical initial timestamp in acute stroke evaluation.",
+          "Target Emergency Time Metrics (AHA/ASA Target: Stroke Guidelines):",
+          "  - Door-to-CT completion: < 25 minutes",
+          "  - Door-to-CT interpretation: < 45 minutes",
+          "  - Door-to-Needle time (IV thrombolysis): < 45-60 minutes",
+          "  - Door-to-Puncture time (Mechanical Thrombectomy): < 90 minutes (direct presentation) or < 60 minutes (transfer)."
+        ],
+        pearls: [
+          "If the patient woke up with stroke symptoms, Last Known Normal (LKN) is defined as the time the patient was last seen awake and at baseline before going to sleep!"
+        ]
+      },
+      {
+        title: "NIHSS (National Institutes of Health Stroke Scale)",
+        content: [
+          "Quantitative 15-item quantitative stroke severity scale ranging from 0 to 42 points.",
+          "Items evaluated:",
+          "  1a. Level of Consciousness (0-3)",
+          "  1b. LOC Questions (0-2)",
+          "  1c. LOC Commands (0-2)",
+          "  2. Best Gaze (0-2)",
+          "  3. Visual Fields (0-3)",
+          "  4. Facial Palsy (0-3)",
+          "  5a/b. Motor Arm - Left/Right (0-4)",
+          "  6a/b. Motor Leg - Left/Right (0-4)",
+          "  7. Limb Ataxia (0-2)",
+          "  8. Sensory (0-2)",
+          "  9. Best Language / Aphasia (0-3)",
+          "  10. Dysarthria (0-2)",
+          "  11. Extinction / Inattention (Hemineglect) (0-2)"
+        ],
+        bullets: [
+          "NIHSS Severity Categories: 0-4 (Minor/Mild stroke), 5-15 (Moderate stroke), 16-20 (Moderate-Severe stroke), 21-42 (Severe stroke).",
+          "NIHSS Bias: The NIHSS is heavily weighted toward anterior circulation and left hemispheric strokes (language items). Posterior circulation strokes (vertigo, ataxia, isolated cranial neuropathies) may have low NIHSS scores despite high clinical severity!"
+        ]
+      },
+      {
+        title: "Stroke Mimics & Differential Diagnosis",
+        content: [
+          "Approximately 20-30% of emergency code stroke activations are stroke mimics.",
+          "Common Mimics:",
+          "  - Hypoglycemia / Hyperglycemia: Always check fingerstick blood glucose immediately!",
+          "  - Post-ictal Todd's Paralysis: Focal neurological deficit following a seizure (often accompanied by confusion).",
+          "  - Complex Migraine / Migraine with Aura: History of headache, scintillating scotomas, spreading sensory symptoms.",
+          "  - Functional Neurological Disorder (Conversion Disorder): Non-anatomical motor/sensory deficits (e.g., positive Hoover's sign for leg weakness).",
+          "  - Structural Lesions: Brain tumors, subdural hematoma, cerebral abscess, MS plaques."
+        ]
+      }
+    ]
+  },
+  {
     id: 2,
-    title: "Chapter 2: Initial Stroke Evaluation",
-    description: "Pre-treatment diagnostic criteria and laboratory requirements.",
+    title: "Chapter 2: Initial Stroke Evaluation & Diagnostics",
+    description: "Pre-treatment diagnostic criteria, blood pressure goals, and laboratory requirements.",
     iconName: "Stethoscope",
     topics: [
       {
-        title: "Essential Pre-treatment Workup",
+        title: "Essential Pre-treatment Workup & Laboratory Requirements",
         content: [
-          "The only lab test required before treatment with IV tPA/TNK is finger-stick blood glucose (unless the patient is on anticoagulation)."
+          "The ONLY laboratory test required BEFORE initiating treatment with IV tPA (Alteplase) or Tenecteplase (TNK) is a finger-stick blood glucose (unless the patient is known or suspected to be on oral anticoagulants or have a pre-existing severe coagulopathy).",
+          "Thrombolysis should NOT be delayed while awaiting routine CBC, PT/INR, PTT, or cardiac markers if there is no clinical suspicion of baseline coagulopathy."
+        ],
+        bullets: [
+          "Fingerstick Blood Glucose: Must be > 50 mg/dL (2.8 mmol/L) to exclude hypoglycemia.",
+          "Platelet Count Threshold: Must be ≥ 100,000/μL.",
+          "INR Threshold: Must be ≤ 1.7 if on Warfarin.",
+          "aPTT Threshold: Must be in normal range if on Unfractionated Heparin (UFH) within 48 hours.",
+          "DOAC Exclusion: Full-dose Factor Xa inhibitor or Direct Thrombin Inhibitor within 48 hours is a contraindication to IV tPA/TNK unless specific lab assays (anti-Xa level < 0.5 U/mL or ecarin clotting time) are normal."
         ],
         pearls: [
-          "Hypoglycemia (<50 mg/dL) can mimic acute stroke syndromes. Always verify blood glucose prior to thrombolysis!"
+          "Do not delay tPA/TNK infusion for pending lab results (like PT/INR or troponin) unless the patient is taking anticoagulants or has a known bleeding disorder!"
+        ]
+      },
+      {
+        title: "Acute Blood Pressure Management Before & After Thrombolysis",
+        content: [
+          "Pre-tPA Blood Pressure Target: Blood pressure MUST be lowered to < 185/110 mmHg BEFORE initiating IV tPA/TNK infusion.",
+          "Post-tPA Blood Pressure Target: Blood pressure MUST be maintained < 180/105 mmHg for at least the first 24 hours post-thrombolysis.",
+          "Monitoring Protocol: Monitor BP every 15 minutes for 2 hours from start of tPA, then every 30 minutes for 6 hours, then every 1 hour for 16 hours (total 24 hours)."
+        ],
+        bullets: [
+          "First-line IV Agents: Labetalol 10-20 mg IV push over 1-2 min (may repeat once), Nicardipine IV infusion (5 mg/hr, titrate by 2.5 mg/hr q5-15 min to max 15 mg/hr), or Clevidipine IV infusion (1-2 mg/hr)."
         ]
       }
     ]
@@ -325,9 +402,60 @@ export const chaptersData: Chapter[] = [
     ]
   },
   {
+    id: 11,
+    title: "Chapter 11: Special Populations (Pediatric, Pregnancy & Young Adult)",
+    description: "Pediatric stroke, fetal circulation, cyanotic CHD, pregnancy, PRES, RCVS, and CVST.",
+    iconName: "User",
+    topics: [
+      {
+        title: "Pediatric Stroke & Fetal Circulation",
+        content: [
+          "Neonatal Stroke (0-28 days): Highest incidence of pediatric stroke. Most common presentation is focal seizures. Left MCA stroke is most common.",
+          "Fetal Circulation Physiology: Oxygenated blood from placenta via umbilical vein -> IVC -> RA -> passes through PFO to LA -> LV -> ascending aorta -> brain. Deoxygenated blood returns via SVC -> RA -> RV -> bypasses lungs via PDA -> descending aorta -> umbilical arteries.",
+          "Pediatric Arterial Ischemic Stroke (AIS): Arteriopathy (Focal Cerebral Arteriopathy of Childhood - FCA) is the #1 cause of AIS in children (29d - 18y). VZV vasculopathy causes 30% of childhood AIS!"
+        ]
+      },
+      {
+        title: "Pregnancy & Postpartum Cerebrovascular Disorders",
+        content: [
+          "Pregnancy & postpartum women carry a 3x higher risk of stroke (highest risk in late 3rd trimester and 6 weeks postpartum due to venous stasis, hypercoagulability, and arterial stiffness).",
+          "Preeclampsia & Eclampsia: New-onset HTN (BP > 140/90) after 20 weeks with proteinuria/edema. Tx: Delivery, IV Labetalol/Hydralazine, IV Magnesium Sulfate (prevents eclamptic seizures).",
+          "Posterior Reversible Encephalopathy Syndrome (PRES): Headaches, altered mental status, visual changes, seizures. MRI: Symmetrical vasogenic edema in parietal and occipital white matter.",
+          "Cerebral Venous Sinus Thrombosis (CVST): Transverse & Superior Sagittal Sinus most common. Headaches (90%), seizures, papilledema. CT: Empty delta sign. Tx: Therapeutic LMWH or Heparin even in the presence of venous hemorrhagic infarction!"
+        ]
+      }
+    ]
+  },
+  {
+    id: 12,
+    title: "Chapter 12: Complications of Stroke",
+    description: "Cerebral edema, malignant MCA, DHC, hemorrhagic transformation, and post-stroke epilepsy.",
+    iconName: "AlertCircle",
+    topics: [
+      {
+        title: "Cerebral Edema & Decompressive Hemicraniectomy",
+        content: [
+          "Cytotoxic Edema peaks at days 3-5 post-large cortical stroke (> 1/3 MCA territory).",
+          "Management: Head of bed 30°, hyperventilation (PaCO2 target 30-35 mmHg), IV Mannitol (0.5-1 g/kg) or 3% Hypertonic Saline.",
+          "Decompressive Hemicraniectomy (DHC): Proven life-saving intervention for Malignant MCA Infarcts in patients < 60 years within 48 hours of onset. ARR 50% reduction in mortality!"
+        ]
+      },
+      {
+        title: "Hemorrhagic Transformation (HT1, HT2, PH1, PH2)",
+        content: [
+          "Classification:",
+          "  - HT1 (Hemorrhagic Infarction 1): Small hyperdense petechiae along margins of infarct.",
+          "  - HT2: Confluent petechiae within infarct area without mass effect.",
+          "  - PH1 (Parenchymal Hematoma 1): Blood occupies < 30% of infarct area with mild mass effect.",
+          "  - PH2: Blood occupies > 30% of infarct area with significant mass effect."
+        ]
+      }
+    ]
+  },
+  {
     id: 13,
     title: "Chapter 13: Intracranial Hemorrhage (ICH)",
-    description: "Etilogy, ICH score, BP management, spot sign, and ICH clinical trials.",
+    description: "Etiology, ICH score, BP management, spot sign, and ICH clinical trials.",
     iconName: "AlertTriangle",
     topics: [
       {
@@ -486,6 +614,51 @@ export const chaptersData: Chapter[] = [
           "Ticagrelor (Brilinta): Direct-acting, reversible P2Y12 inhibitor (does not require CYP activation). CHANCE II trial showed lower stroke risk in CYP2C19 loss-of-function carriers treated with ticagrelor + ASA vs clopidogrel + ASA.",
           "Warfarin: Inhibits Vitamin K epoxide reductase (Factors II, VII, IX, X, Protein C & S). Factor VII has shortest half-life (6 hrs), Factor II longest (50 hrs). Reversal: PCC (4-factor prothrombin complex concentrate) + IV Vitamin K.",
           "DOAC Reversal Agents: Idarucizumab (Praxbind) for Dabigatran; Andexanet alfa for Factor Xa inhibitors (Apixaban, Rivaroxaban)."
+        ]
+      }
+    ]
+  },
+  {
+    id: 20,
+    title: "Chapter 20: Stroke Systems of Care & Hospital Designations",
+    description: "PSC, CSC, Acute Stroke Ready, and Thrombectomy-Capable designations.",
+    iconName: "Building",
+    topics: [
+      {
+        title: "Stroke Center Certification Tiers",
+        content: [
+          "Acute Stroke Ready Hospital (ASRH): Initial evaluation, stabilization, and IV thrombolytic administration before transferring to PSC/CSC.",
+          "Primary Stroke Center (PSC): Implemented best practice guidelines, 24/7 stroke team, dedicated stroke unit.",
+          "Thrombectomy-Capable Stroke Center (TSC): Performs emergency mechanical thrombectomies 24/7 without needing full CSC status.",
+          "Comprehensive Stroke Center (CSC): Highest certification tier. Handles complex stroke, neuro-ICU care, endovascular thrombectomy, neurosurgical clipping/coiling, 24/7 neuro-IR and dedicated NCCU."
+        ]
+      }
+    ]
+  },
+  {
+    id: 21,
+    title: "Chapter 21: Perioperative Stroke & Ethics",
+    description: "Pre-procedure antiplatelet/anticoagulation hold times, bridging protocols, and bioethics.",
+    iconName: "Shield",
+    topics: [
+      {
+        title: "Perioperative Anticoagulant & Antiplatelet Management",
+        content: [
+          "Warfarin Holding Protocols:",
+          "  - Low bleeding risk procedure: Do not stop Warfarin.",
+          "  - Intermediate / High bleeding risk: Stop Warfarin 5 days prior (INR 2-3) or 3-4 days prior (INR 1.5-1.9). Check INR day prior to procedure.",
+          "  - Bridging with LMWH/UFH: Indicated ONLY if patient has high thromboembolic risk (mechanical heart valve, AFib with high CHADS score, recent VTE < 3 months). Stop LMWH 24h before procedure; stop UFH 4h before.",
+          "DOAC Holding Protocols: Stop 1-2 days prior to procedure (longer if renal impairment). Bridging is NOT required due to rapid onset/offset.",
+          "Aspirin & Plavix: Continue Aspirin for minor dental, cataract, derm, and GI procedures. Stop Plavix 7-10 days prior to moderate-to-high bleeding risk procedures."
+        ]
+      },
+      {
+        title: "Medical Ethics Principles in Stroke Care",
+        content: [
+          "Beneficence: Acting in the patient's best interest.",
+          "Non-maleficence: Do no harm.",
+          "Autonomy: Respecting patient self-determination and surrogate decision-making.",
+          "Justice: Equitable distribution of healthcare resources."
         ]
       }
     ]

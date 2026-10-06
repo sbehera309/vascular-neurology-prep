@@ -12,7 +12,7 @@ export const ChapterReader: React.FC<ChapterReaderProps> = ({
   onToggleBookmarkChapter,
 }) => {
   const [searchTerm, setSearchTerm] = useState<string>('');
-  const [expandedChapterId, setExpandedChapterId] = useState<number | null>(2); // Default to Chapter 2
+  const [expandedChapterId, setExpandedChapterId] = useState<number | null>(1); // Default to Chapter 2
 
   const filteredChapters = chaptersData.filter(ch => {
     if (!searchTerm) return true;
