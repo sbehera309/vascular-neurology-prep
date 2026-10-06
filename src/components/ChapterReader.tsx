@@ -65,7 +65,7 @@ export const ChapterReader: React.FC<ChapterReaderProps> = ({
                 className="p-5 flex items-center justify-between cursor-pointer hover:bg-slate-750 transition-colors"
               >
                 <div className="flex items-center space-x-3">
-                  <span className="w-8 h-8 rounded-xl bg-cyan-950 text-cyan-400 font-bold text-xs flex items-center justify-center border border-cyan-800 shrink-0">
+                  <span className="px-2.5 h-8 rounded-xl bg-cyan-950 text-cyan-400 font-extrabold text-xs flex items-center justify-center border border-cyan-800 shrink-0 whitespace-nowrap">
                     Ch {chapter.id}
                   </span>
                   <div>
