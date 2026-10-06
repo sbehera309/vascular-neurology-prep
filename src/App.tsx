@@ -6,7 +6,6 @@ import { QuestionBank } from './components/QuestionBank';
 import { Calculators } from './components/Calculators';
 import { TrialExplorer } from './components/TrialExplorer';
 import { ChapterReader } from './components/ChapterReader';
-import { VercelDeployGuide } from './components/VercelDeployGuide';
 import { UserStats } from './types';
 
 const INITIAL_STATS: UserStats = {
@@ -20,7 +19,7 @@ const INITIAL_STATS: UserStats = {
 };
 
 export const App: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'dashboard' | 'chapters' | 'flashcards' | 'questions' | 'calculators' | 'trials' | 'deploy'>('dashboard');
+  const [activeTab, setActiveTab] = useState<'dashboard' | 'chapters' | 'flashcards' | 'questions' | 'calculators' | 'trials'>('dashboard');
 
   // LocalStorage state persistence
   const [userStats, setUserStats] = useState<UserStats>(() => {
@@ -133,7 +132,6 @@ export const App: React.FC = () => {
             onToggleBookmarkChapter={handleToggleBookmarkChapter}
           />
         )}
-        {activeTab === 'deploy' && <VercelDeployGuide />}
       </main>
     </div>
   );

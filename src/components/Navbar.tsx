@@ -1,9 +1,9 @@
 import React from 'react';
-import { Home, BookOpen, Sparkles, HelpCircle, Calculator, Award, UploadCloud } from 'lucide-react';
+import { Home, BookOpen, Sparkles, HelpCircle, Calculator, Award } from 'lucide-react';
 
 interface NavbarProps {
-  activeTab: 'dashboard' | 'chapters' | 'flashcards' | 'questions' | 'calculators' | 'trials' | 'deploy';
-  onNavigate: (tab: 'dashboard' | 'chapters' | 'flashcards' | 'questions' | 'calculators' | 'trials' | 'deploy') => void;
+  activeTab: 'dashboard' | 'chapters' | 'flashcards' | 'questions' | 'calculators' | 'trials';
+  onNavigate: (tab: 'dashboard' | 'chapters' | 'flashcards' | 'questions' | 'calculators' | 'trials') => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ activeTab, onNavigate }) => {
@@ -56,19 +56,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onNavigate }) => {
               );
             })}
           </nav>
-
-          {/* Deploy Button */}
-          <button
-            onClick={() => onNavigate('deploy')}
-            className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
-              activeTab === 'deploy'
-                ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30'
-                : 'bg-slate-800 text-slate-300 hover:bg-slate-750 border border-slate-700'
-            }`}
-          >
-            <UploadCloud className="w-4 h-4 text-cyan-400" />
-            <span className="hidden sm:inline">Vercel Deploy</span>
-          </button>
         </div>
       </header>
 
