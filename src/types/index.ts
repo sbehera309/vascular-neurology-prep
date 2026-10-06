@@ -25,6 +25,8 @@ export interface PracticeQuestion {
   explanation: string;
   keyTakeaway: string;
   tags: string[];
+  hint?: string;
+  source?: 'Past Board Exam' | 'Syllabus Notes' | 'Landmark Trial' | 'Guideline Recommendation';
 }
 
 export interface ClinicalTrial {
