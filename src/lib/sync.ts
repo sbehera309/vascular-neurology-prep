@@ -5,6 +5,7 @@ import {
   signOut as firebaseSignOut,
   updateProfile,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   User as FirebaseUser
 } from 'firebase/auth';
 import { doc, setDoc, onSnapshot } from 'firebase/firestore';
@@ -65,6 +66,14 @@ export const loginWithEmail = async (email: string, pass: string) => {
   }
   const userCredential = await signInWithEmailAndPassword(auth, email, pass);
   return userCredential.user;
+};
+
+// Send Password Reset Email
+export const resetPasswordEmail = async (email: string) => {
+  if (!isCloudConfigured) {
+    throw new Error('Firebase authentication is not active in environment.');
+  }
+  await sendPasswordResetEmail(auth, email);
 };
 
 // Sign In with Google Popup

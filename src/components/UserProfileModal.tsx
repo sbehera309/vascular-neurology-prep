@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { UserStats, UserProfile } from '../types';
-import { User, X, LogIn, LogOut, Award, Calendar, BarChart3, Download, Upload, Trash2, Mail, Sparkles, Cloud, Lock, Globe } from 'lucide-react';
+import { User, X, LogIn, LogOut, Award, Calendar, BarChart3, Download, Upload, Trash2, Mail, Sparkles, Cloud, Lock, Globe, Eye, EyeOff, KeyRound, CheckCircle2 } from 'lucide-react';
 import { questionsData } from '../data/questions';
-import { registerWithEmail, loginWithEmail, loginWithGoogle, logoutCloudUser } from '../lib/sync';
+import { registerWithEmail, loginWithEmail, loginWithGoogle, logoutCloudUser, resetPasswordEmail } from '../lib/sync';
 import { isCloudConfigured } from '../lib/firebase';
 
 interface UserProfileModalProps {
@@ -23,7 +23,8 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
   onImportData
 }) => {
   const [activeTab, setActiveTab] = useState<'profile' | 'analytics' | 'history' | 'data'>('profile');
-  const [authMode, setAuthMode] = useState<'login' | 'register' | 'view'>(userStats.profile.isLoggedIn ? 'view' : 'login');
+  const [authMode, setAuthMode] = useState<'login' | 'register' | 'forgot' | 'view'>(userStats.profile.isLoggedIn ? 'view' : 'login');
+  const [showPassword, setShowPassword] = useState<boolean>(false);
   
   // Auth Form State
   const [name, setName] = useState(userStats.profile.name || 'Dr. Vascular Neurologist');
@@ -34,6 +35,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
   const [institution, setInstitution] = useState(userStats.profile.institution || 'Academic Medical Center');
   
   const [authError, setAuthError] = useState<string | null>(null);
+  const [resetSuccess, setResetSuccess] = useState<string | null>(null);
   const [isAuthLoading, setIsAuthLoading] = useState<boolean>(false);
 
   if (!isOpen) return null;
@@ -56,6 +58,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
   const handleCloudRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setAuthError(null);
+    setResetSuccess(null);
     setIsAuthLoading(true);
 
     try {
@@ -92,6 +95,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
   const handleCloudLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setAuthError(null);
+    setResetSuccess(null);
     setIsAuthLoading(true);
 
     try {
@@ -118,8 +122,29 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
     }
   };
 
+  const handlePasswordReset = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setAuthError(null);
+    setResetSuccess(null);
+    setIsAuthLoading(true);
+
+    try {
+      if (isCloudConfigured) {
+        await resetPasswordEmail(email);
+        setResetSuccess(`Password reset email sent to ${email}. Please check your inbox or spam folder.`);
+      } else {
+        setResetSuccess('Local storage mode active. Password reset link is not required.');
+      }
+    } catch (err: any) {
+      setAuthError(err.message || 'Failed to send password reset email.');
+    } finally {
+      setIsAuthLoading(false);
+    }
+  };
+
   const handleGoogleLogin = async () => {
     setAuthError(null);
+    setResetSuccess(null);
     setIsAuthLoading(true);
 
     try {
@@ -350,36 +375,47 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
                 </div>
               ) : (
                 <div className="space-y-4">
-                  {/* Auth Mode Tabs */}
-                  <div className="flex items-center gap-2 bg-slate-800/80 p-1 rounded-xl border border-slate-700">
-                    <button
-                      type="button"
-                      onClick={() => setAuthMode('login')}
-                      className={`flex-1 py-2 text-xs font-bold rounded-lg transition-all ${
-                        authMode === 'login' ? 'bg-cyan-500 text-white shadow-md' : 'text-slate-400 hover:text-slate-200'
-                      }`}
-                    >
-                      Sign In
-                    </button>
+                  {/* Auth Mode Navigation Tabs */}
+                  {authMode !== 'forgot' && (
+                    <div className="flex items-center gap-2 bg-slate-800/80 p-1 rounded-xl border border-slate-700">
+                      <button
+                        type="button"
+                        onClick={() => { setAuthMode('login'); setAuthError(null); setResetSuccess(null); }}
+                        className={`flex-1 py-2 text-xs font-bold rounded-lg transition-all ${
+                          authMode === 'login' ? 'bg-cyan-500 text-white shadow-md' : 'text-slate-400 hover:text-slate-200'
+                        }`}
+                      >
+                        Sign In
+                      </button>
 
-                    <button
-                      type="button"
-                      onClick={() => setAuthMode('register')}
-                      className={`flex-1 py-2 text-xs font-bold rounded-lg transition-all ${
-                        authMode === 'register' ? 'bg-cyan-500 text-white shadow-md' : 'text-slate-400 hover:text-slate-200'
-                      }`}
-                    >
-                      Create Account
-                    </button>
-                  </div>
-
-                  {authError && (
-                    <div className="p-3 rounded-xl bg-rose-950/40 border border-rose-500/30 text-rose-200 text-xs">
-                      ⚠️ {authError}
+                      <button
+                        type="button"
+                        onClick={() => { setAuthMode('register'); setAuthError(null); setResetSuccess(null); }}
+                        className={`flex-1 py-2 text-xs font-bold rounded-lg transition-all ${
+                          authMode === 'register' ? 'bg-cyan-500 text-white shadow-md' : 'text-slate-400 hover:text-slate-200'
+                        }`}
+                      >
+                        Create Account
+                      </button>
                     </div>
                   )}
 
-                  {authMode === 'login' ? (
+                  {authError && (
+                    <div className="p-3 rounded-xl bg-rose-950/40 border border-rose-500/30 text-rose-200 text-xs flex items-center gap-2">
+                      <X className="w-4 h-4 text-rose-400 shrink-0" />
+                      <span>{authError}</span>
+                    </div>
+                  )}
+
+                  {resetSuccess && (
+                    <div className="p-3.5 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-200 text-xs flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                      <span>{resetSuccess}</span>
+                    </div>
+                  )}
+
+                  {/* SIGN IN FORM */}
+                  {authMode === 'login' && (
                     <form onSubmit={handleCloudLogin} className="space-y-4">
                       <div>
                         <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">
@@ -399,19 +435,36 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
                       </div>
 
                       <div>
-                        <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">
-                          Password
-                        </label>
+                        <div className="flex items-center justify-between mb-1">
+                          <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider">
+                            Password
+                          </label>
+                          <button
+                            type="button"
+                            onClick={() => { setAuthMode('forgot'); setAuthError(null); setResetSuccess(null); }}
+                            className="text-[11px] font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
+                          >
+                            Forgot Password?
+                          </button>
+                        </div>
                         <div className="relative">
                           <Lock className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
                           <input
-                            type="password"
+                            type={showPassword ? "text" : "password"}
                             required
                             value={password}
                             onChange={e => setPassword(e.target.value)}
                             placeholder="••••••••"
-                            className="w-full bg-slate-800 border border-slate-700 rounded-xl pl-9 pr-3 py-2 text-xs text-slate-100 focus:ring-cyan-500"
+                            className="w-full bg-slate-800 border border-slate-700 rounded-xl pl-9 pr-10 py-2 text-xs text-slate-100 focus:ring-cyan-500"
                           />
+                          <button
+                            type="button"
+                            onClick={() => setShowPassword(prev => !prev)}
+                            className="absolute right-3 top-2.5 text-slate-400 hover:text-slate-200 transition-colors p-0.5"
+                            title={showPassword ? "Hide password" : "Show password"}
+                          >
+                            {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                          </button>
                         </div>
                       </div>
 
@@ -424,7 +477,60 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
                         {isAuthLoading ? 'Signing in...' : 'Sign In to Sync Progress'}
                       </button>
                     </form>
-                  ) : (
+                  )}
+
+                  {/* FORGOT PASSWORD FORM */}
+                  {authMode === 'forgot' && (
+                    <form onSubmit={handlePasswordReset} className="space-y-4 bg-slate-800/40 p-5 rounded-2xl border border-slate-700/80">
+                      <div className="flex items-center space-x-2 border-b border-slate-700/60 pb-3">
+                        <KeyRound className="w-5 h-5 text-cyan-400" />
+                        <h3 className="text-sm font-bold text-white">Reset Candidate Password</h3>
+                      </div>
+
+                      <p className="text-xs text-slate-300 leading-relaxed">
+                        Enter your candidate email address below and we will send you an official password recovery link.
+                      </p>
+
+                      <div>
+                        <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">
+                          Email Address
+                        </label>
+                        <div className="relative">
+                          <Mail className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
+                          <input
+                            type="email"
+                            required
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
+                            placeholder="doctor@hospital.org"
+                            className="w-full bg-slate-800 border border-slate-700 rounded-xl pl-9 pr-3 py-2 text-xs text-slate-100 focus:ring-cyan-500"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-2 pt-1">
+                        <button
+                          type="submit"
+                          disabled={isAuthLoading}
+                          className="flex-1 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-xs rounded-xl shadow-lg transition-all flex items-center justify-center gap-2"
+                        >
+                          <Mail className="w-4 h-4" />
+                          {isAuthLoading ? 'Sending link...' : 'Send Password Reset Link'}
+                        </button>
+
+                        <button
+                          type="button"
+                          onClick={() => { setAuthMode('login'); setAuthError(null); setResetSuccess(null); }}
+                          className="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-bold rounded-xl transition-colors"
+                        >
+                          Back to Sign In
+                        </button>
+                      </div>
+                    </form>
+                  )}
+
+                  {/* REGISTER FORM */}
+                  {authMode === 'register' && (
                     <form onSubmit={handleCloudRegister} className="space-y-4">
                       <div>
                         <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">
@@ -467,13 +573,21 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
                         <div className="relative">
                           <Lock className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
                           <input
-                            type="password"
+                            type={showPassword ? "text" : "password"}
                             required
                             value={password}
                             onChange={e => setPassword(e.target.value)}
                             placeholder="Create password"
-                            className="w-full bg-slate-800 border border-slate-700 rounded-xl pl-9 pr-3 py-2 text-xs text-slate-100 focus:ring-cyan-500"
+                            className="w-full bg-slate-800 border border-slate-700 rounded-xl pl-9 pr-10 py-2 text-xs text-slate-100 focus:ring-cyan-500"
                           />
+                          <button
+                            type="button"
+                            onClick={() => setShowPassword(prev => !prev)}
+                            className="absolute right-3 top-2.5 text-slate-400 hover:text-slate-200 transition-colors p-0.5"
+                            title={showPassword ? "Hide password" : "Show password"}
+                          >
+                            {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                          </button>
                         </div>
                       </div>
 
@@ -528,22 +642,24 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
                   )}
 
                   {/* 1-Click Google Sign In */}
-                  <div className="pt-2 border-t border-slate-800 space-y-3">
-                    <button
-                      type="button"
-                      onClick={handleGoogleLogin}
-                      disabled={isAuthLoading}
-                      className="w-full py-2.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-2"
-                    >
-                      <svg className="w-4 h-4" viewBox="0 0 24 24">
-                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
-                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
-                      </svg>
-                      Sign In with Google
-                    </button>
-                  </div>
+                  {authMode !== 'forgot' && (
+                    <div className="pt-2 border-t border-slate-800 space-y-3">
+                      <button
+                        type="button"
+                        onClick={handleGoogleLogin}
+                        disabled={isAuthLoading}
+                        className="w-full py-2.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-2"
+                      >
+                        <svg className="w-4 h-4" viewBox="0 0 24 24">
+                          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
+                          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+                        </svg>
+                        Sign In with Google
+                      </button>
+                    </div>
+                  )}
                 </div>
               )}
             </div>
