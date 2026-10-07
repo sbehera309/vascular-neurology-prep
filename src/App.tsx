@@ -9,6 +9,7 @@ import { TrialExplorer } from './components/TrialExplorer';
 import { ChapterReader } from './components/ChapterReader';
 import { UserProfileModal } from './components/UserProfileModal';
 import { UserStats, UserProfile, ExamAttempt } from './types';
+import { syncStatsToCloud, subscribeToCloudStats, onAuthChange } from './lib/sync';
 
 const INITIAL_STATS: UserStats = {
   profile: {
@@ -56,13 +57,54 @@ export const App: React.FC = () => {
     }
   });
 
+  // Save to LocalStorage and Sync to Cloud on change
   useEffect(() => {
     try {
       localStorage.setItem('vascneuro_prep_stats', JSON.stringify(userStats));
+      if (userStats.profile.isLoggedIn && userStats.profile.id) {
+        syncStatsToCloud(userStats.profile.id, userStats);
+      }
     } catch (e) {
-      console.error('Failed to save progress to localStorage', e);
+      console.error('Failed to save progress', e);
     }
   }, [userStats]);
+
+  // Subscribe to Firebase Auth and Cloud Database Sync
+  useEffect(() => {
+    const unsubscribeAuth = onAuthChange((firebaseUser) => {
+      if (firebaseUser) {
+        setUserStats(prev => ({
+          ...prev,
+          profile: {
+            ...prev.profile,
+            id: firebaseUser.uid,
+            name: firebaseUser.displayName || prev.profile.name,
+            email: firebaseUser.email || prev.profile.email,
+            avatarUrl: firebaseUser.photoURL || undefined,
+            isLoggedIn: true,
+          },
+        }));
+
+        // Subscribe to real-time cloud stats for this user
+        const unsubscribeCloud = subscribeToCloudStats(firebaseUser.uid, (cloudStats) => {
+          if (cloudStats) {
+            setUserStats(prev => ({
+              ...prev,
+              ...cloudStats,
+              profile: {
+                ...prev.profile,
+                ...(cloudStats.profile || {}),
+              },
+            }));
+          }
+        });
+
+        return () => unsubscribeCloud();
+      }
+    });
+
+    return () => unsubscribeAuth();
+  }, []);
 
   // Handle Profile Update
   const handleUpdateProfile = (profileUpdates: Partial<UserProfile>) => {
