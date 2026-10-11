@@ -17,10 +17,15 @@ export const syncStatsToCloud = async (userId: string, stats: UserStats): Promis
   if (!isCloudConfigured || !userId) return false;
   try {
     const userRef = doc(db, 'users', userId);
-    await setDoc(userRef, {
+    const payload: any = {
       ...stats,
       updatedAt: new Date().toISOString()
-    }, { merge: true });
+    };
+    // Safety protection: do not overwrite existing cloud questions if local payload is completely empty
+    if (!stats.completedQuestions || Object.keys(stats.completedQuestions).length === 0) {
+      delete payload.completedQuestions;
+    }
+    await setDoc(userRef, payload, { merge: true });
     return true;
   } catch (error) {
     console.warn('Cloud sync error (falling back to localStorage):', error);

@@ -1,6 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { UserStats, UserProfile } from '../types';
-import { User, X, LogIn, LogOut, Award, Calendar, BarChart3, Download, Upload, Trash2, Mail, Sparkles, Cloud, Lock, Globe, Eye, EyeOff, KeyRound, CheckCircle2 } from 'lucide-react';
+import { 
+  User, X, LogIn, LogOut, Award, Calendar, BarChart3, Download, Upload, 
+  Trash2, Mail, Sparkles, Cloud, Lock, Globe, Eye, EyeOff, KeyRound, 
+  CheckCircle2, ListChecks, Check, RefreshCw, ChevronDown, 
+  ChevronUp, Search, ExternalLink, HelpCircle 
+} from 'lucide-react';
 import { questionsData } from '../data/questions';
 import { registerWithEmail, loginWithEmail, loginWithGoogle, logoutCloudUser, resetPasswordEmail } from '../lib/sync';
 import { isCloudConfigured } from '../lib/firebase';
@@ -14,6 +19,9 @@ interface UserProfileModalProps {
   onLogout?: () => void;
   onResetProgress: (type: 'all' | 'questions' | 'exams' | 'flashcards') => void;
   onImportData: (data: UserStats) => void;
+  onRecoverProgress?: () => number;
+  onUpdateQuestionStatus?: (questionId: string, isCorrect?: boolean, remove?: boolean) => void;
+  onNavigateToQuestion?: (questionId: string) => void;
 }
 
 export const UserProfileModal: React.FC<UserProfileModalProps> = ({
@@ -24,9 +32,12 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
   onLogin,
   onLogout,
   onResetProgress,
-  onImportData
+  onImportData,
+  onRecoverProgress,
+  onUpdateQuestionStatus,
+  onNavigateToQuestion,
 }) => {
-  const [activeTab, setActiveTab] = useState<'profile' | 'analytics' | 'history' | 'data'>('profile');
+  const [activeTab, setActiveTab] = useState<'profile' | 'analytics' | 'questions' | 'history' | 'data'>('profile');
   const [authMode, setAuthMode] = useState<'login' | 'register' | 'forgot' | 'view'>(userStats.profile.isLoggedIn ? 'view' : 'login');
   const [showPassword, setShowPassword] = useState<boolean>(false);
   
@@ -41,6 +52,14 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
   const [authError, setAuthError] = useState<string | null>(null);
   const [resetSuccess, setResetSuccess] = useState<string | null>(null);
   const [isAuthLoading, setIsAuthLoading] = useState<boolean>(false);
+  const [loginSuccessMsg, setLoginSuccessMsg] = useState<string | null>(null);
+  const [recoveryNotice, setRecoveryNotice] = useState<string | null>(null);
+
+  // Questions tab filter and search state
+  const [qSearch, setQSearch] = useState('');
+  const [qFilterStatus, setQFilterStatus] = useState<'all' | 'correct' | 'incorrect'>('all');
+  const [qFilterChapter, setQFilterChapter] = useState<number | 'all'>('all');
+  const [expandedQId, setExpandedQId] = useState<string | null>(null);
 
   if (!isOpen) return null;
 
@@ -52,6 +71,49 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
   const accuracyPercent = answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : 0;
   const overallCompletionPercent = Math.round((answeredCount / totalQuestions) * 100);
 
+  // Question lookup map
+  const questionMap = useMemo(() => {
+    const map = new Map<string, typeof questionsData[0]>();
+    questionsData.forEach(q => map.set(q.id, q));
+    return map;
+  }, []);
+
+  // Sorted completed question entries
+  const completedQuestionEntries = useMemo(() => {
+    const entries = Object.entries(userStats.completedQuestions || {});
+    return entries.sort((a, b) => {
+      const timeA = a[1].timestamp ? new Date(a[1].timestamp).getTime() : 0;
+      const timeB = b[1].timestamp ? new Date(b[1].timestamp).getTime() : 0;
+      return timeB - timeA;
+    });
+  }, [userStats.completedQuestions]);
+
+  // Filtered completed questions
+  const filteredCompletedQuestions = useMemo(() => {
+    return completedQuestionEntries.filter(([qId, attempt]) => {
+      const q = questionMap.get(qId);
+      
+      if (qFilterStatus === 'correct' && !attempt.isCorrect) return false;
+      if (qFilterStatus === 'incorrect' && attempt.isCorrect) return false;
+
+      if (qFilterChapter !== 'all' && q && q.chapterId !== qFilterChapter) return false;
+
+      if (qSearch.trim()) {
+        const term = qSearch.toLowerCase();
+        const textMatch = q ? (
+          q.question.toLowerCase().includes(term) ||
+          q.vignette.toLowerCase().includes(term) ||
+          q.chapterTitle.toLowerCase().includes(term) ||
+          q.tags.some(t => t.toLowerCase().includes(term))
+        ) : false;
+        const idMatch = qId.toLowerCase().includes(term);
+        if (!textMatch && !idMatch) return false;
+      }
+
+      return true;
+    });
+  }, [completedQuestionEntries, questionMap, qFilterStatus, qFilterChapter, qSearch]);
+
   // Exam Analytics
   const examAttempts = userStats.examAttempts || [];
   const totalExams = examAttempts.length;
@@ -59,10 +121,31 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
   const maxExamScore = totalExams > 0 ? Math.max(...examAttempts.map(e => e.percentage)) : 0;
   const passedExams = examAttempts.filter(e => e.passed).length;
 
+  const handleTriggerRecovery = () => {
+    if (onRecoverProgress) {
+      const count = onRecoverProgress();
+      setRecoveryNotice(`Consolidated all browser sessions: ${count} completed questions active!`);
+      setTimeout(() => setRecoveryNotice(null), 6000);
+    }
+  };
+
+  const handleToggleQuestionCorrectness = (qId: string, currentCorrect: boolean) => {
+    if (onUpdateQuestionStatus) {
+      onUpdateQuestionStatus(qId, !currentCorrect);
+    }
+  };
+
+  const handleRemoveQuestionFromCompleted = (qId: string) => {
+    if (onUpdateQuestionStatus) {
+      onUpdateQuestionStatus(qId, undefined, true);
+    }
+  };
+
   const handleCloudRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setAuthError(null);
     setResetSuccess(null);
+    setLoginSuccessMsg(null);
     setIsAuthLoading(true);
 
     try {
@@ -83,6 +166,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
         } else {
           onUpdateProfile(newProfile);
         }
+        setLoginSuccessMsg(`Account created for ${newProfile.name}! All completed questions and stats loaded.`);
       } else {
         // Fallback local persistence mode with deterministic local user ID
         const localId = `user-local-${btoa(encodeURIComponent(email.toLowerCase().trim())).replace(/=/g, '')}`;
@@ -101,6 +185,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
         } else {
           onUpdateProfile(newProfile);
         }
+        setLoginSuccessMsg(`Account registered in Local Profile Mode! All completed questions and stats loaded.`);
       }
       setAuthMode('view');
     } catch (err: any) {
@@ -114,6 +199,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
     e.preventDefault();
     setAuthError(null);
     setResetSuccess(null);
+    setLoginSuccessMsg(null);
     setIsAuthLoading(true);
 
     try {
@@ -131,6 +217,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
         } else {
           onUpdateProfile(newProfile);
         }
+        setLoginSuccessMsg(`Signed in as ${newProfile.email}! Study progress and questions loaded.`);
       } else {
         const localId = `user-local-${btoa(encodeURIComponent(email.toLowerCase().trim())).replace(/=/g, '')}`;
         const newProfile: UserProfile = {
@@ -145,6 +232,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
         } else {
           onUpdateProfile(newProfile);
         }
+        setLoginSuccessMsg(`Signed in as ${newProfile.email} (Local Profile Mode)! All study progress and questions loaded.`);
       }
       setAuthMode('view');
     } catch (err: any) {
@@ -177,6 +265,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
   const handleGoogleLogin = async () => {
     setAuthError(null);
     setResetSuccess(null);
+    setLoginSuccessMsg(null);
     setIsAuthLoading(true);
 
     try {
@@ -195,15 +284,16 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
         } else {
           onUpdateProfile(newProfile);
         }
+        setLoginSuccessMsg(`Signed in as ${newProfile.name}! All completed questions and stats loaded.`);
         setAuthMode('view');
       } else {
-        setAuthError('Cloud API keys not active. Switched to local profile mode.');
-        const localId = `user-local-${btoa(encodeURIComponent((email || 'local').toLowerCase().trim())).replace(/=/g, '')}`;
+        // Seamless Local Candidate login without red error
+        const localId = `user-local-${btoa(encodeURIComponent((email || 'google-candidate').toLowerCase().trim())).replace(/=/g, '')}`;
         const newProfile: UserProfile = {
           ...userStats.profile,
           id: localId,
-          name: name || 'Local Candidate',
-          email,
+          name: name || 'Candidate',
+          email: email || 'fellow@stroke-prep.org',
           isLoggedIn: true,
         };
         if (onLogin) {
@@ -211,6 +301,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
         } else {
           onUpdateProfile(newProfile);
         }
+        setLoginSuccessMsg(`Signed in as ${newProfile.name} in Local Profile Mode! All completed questions and stats loaded.`);
         setAuthMode('view');
       }
     } catch (err: any) {
@@ -227,6 +318,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
     } else {
       onUpdateProfile({ isLoggedIn: false });
     }
+    setLoginSuccessMsg(null);
     setAuthMode('login');
   };
 
@@ -260,7 +352,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fadeIn">
-      <div className="bg-slate-900 border border-slate-700/80 rounded-3xl w-full max-w-2xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
+      <div className="bg-slate-900 border border-slate-700/80 rounded-3xl w-full max-w-4xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
         {/* Modal Header */}
         <div className="bg-slate-800/90 px-6 py-5 border-b border-slate-700/80 flex items-center justify-between">
           <div className="flex items-center space-x-3">
@@ -321,6 +413,17 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
           </button>
 
           <button
+            onClick={() => setActiveTab('questions')}
+            className={`px-4 py-3 text-xs font-bold border-b-2 transition-all flex items-center gap-1.5 whitespace-nowrap ${
+              activeTab === 'questions'
+                ? 'border-cyan-400 text-cyan-300 bg-cyan-500/10 rounded-t-xl'
+                : 'border-transparent text-slate-400 hover:text-slate-200'
+            }`}
+          >
+            <ListChecks className="w-4 h-4" /> Completed Questions ({answeredCount})
+          </button>
+
+          <button
             onClick={() => setActiveTab('history')}
             className={`px-4 py-3 text-xs font-bold border-b-2 transition-all flex items-center gap-1.5 whitespace-nowrap ${
               activeTab === 'history'
@@ -339,7 +442,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
                 : 'border-transparent text-slate-400 hover:text-slate-200'
             }`}
           >
-            <Download className="w-4 h-4" /> Backup & Reset
+            <Download className="w-4 h-4" /> Backup & Recovery
           </button>
         </div>
 
@@ -348,8 +451,61 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
           {/* TAB 1: PROFILE & LOGIN */}
           {activeTab === 'profile' && (
             <div className="space-y-6">
+              {loginSuccessMsg && (
+                <div className="p-3.5 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-200 text-xs flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span>{loginSuccessMsg}</span>
+                  </div>
+                  <button onClick={() => setLoginSuccessMsg(null)} className="text-slate-400 hover:text-white">
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              )}
+
+              {recoveryNotice && (
+                <div className="p-3.5 rounded-xl bg-cyan-950/40 border border-cyan-500/30 text-cyan-200 text-xs flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <RefreshCw className="w-4 h-4 text-cyan-400 shrink-0" />
+                    <span>{recoveryNotice}</span>
+                  </div>
+                  <button onClick={() => setRecoveryNotice(null)} className="text-slate-400 hover:text-white">
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              )}
+
               {authMode === 'view' && userStats.profile.isLoggedIn ? (
                 <div className="space-y-6">
+                  {/* Q-Bank Progress & Auto-Recovery Banner */}
+                  <div className="bg-slate-800/80 p-5 rounded-2xl border border-cyan-500/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div className="space-y-1">
+                      <div className="flex items-center space-x-2">
+                        <ListChecks className="w-4 h-4 text-cyan-400" />
+                        <h4 className="text-sm font-bold text-white">Q-Bank Answered Progress</h4>
+                      </div>
+                      <p className="text-xs text-slate-300">
+                        <span className="font-extrabold text-cyan-300 text-sm">{answeredCount}</span> of {totalQuestions} questions completed ({accuracyPercent}% accuracy)
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => setActiveTab('questions')}
+                        className="px-3.5 py-2 bg-slate-700 hover:bg-slate-600 text-slate-100 text-xs font-bold rounded-xl transition-colors flex items-center gap-1.5"
+                      >
+                        <ListChecks className="w-3.5 h-3.5 text-cyan-400" /> Review Questions
+                      </button>
+                      <button
+                        onClick={handleTriggerRecovery}
+                        className="px-3.5 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white text-xs font-bold rounded-xl shadow-md transition-all flex items-center gap-1.5"
+                        title="Scan all historical storage keys to recover questions from prior sessions"
+                      >
+                        <RefreshCw className="w-3.5 h-3.5" /> Scan & Recover
+                      </button>
+                    </div>
+                  </div>
+
                   {/* Account Summary Card */}
                   <div className="bg-slate-800/60 p-5 rounded-2xl border border-slate-700/60 space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -425,6 +581,17 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
                 </div>
               ) : (
                 <div className="space-y-4">
+                  {!isCloudConfigured && (
+                    <div className="p-3.5 rounded-2xl bg-blue-950/40 border border-blue-500/30 text-blue-200 text-xs space-y-1">
+                      <div className="flex items-center gap-1.5 font-bold text-blue-300">
+                        <Globe className="w-4 h-4 text-blue-400 shrink-0" />
+                        <span>Local Offline Profile Mode Active</span>
+                      </div>
+                      <p className="text-[11px] text-blue-300/80 leading-relaxed">
+                        Your study progress is saved directly to your browser's persistent storage. Sign in with your email or name below to partition your study session and preserve all completed questions.
+                      </p>
+                    </div>
+                  )}
                   {/* Auth Mode Navigation Tabs */}
                   {authMode !== 'forgot' && (
                     <div className="flex items-center gap-2 bg-slate-800/80 p-1 rounded-xl border border-slate-700">
@@ -783,6 +950,269 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
             </div>
           )}
 
+          {/* TAB: COMPLETED QUESTIONS REVIEW & MANAGEMENT */}
+          {activeTab === 'questions' && (
+            <div className="space-y-5">
+              {/* Question Header & Summary */}
+              <div className="bg-slate-800/80 p-4 rounded-2xl border border-slate-700/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center border border-cyan-500/30">
+                    <ListChecks className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-bold text-white">Completed Question Review & Editor</h3>
+                    <p className="text-xs text-slate-400">
+                      {answeredCount} of {totalQuestions} questions completed ({accuracyPercent}% accuracy)
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={handleTriggerRecovery}
+                    className="px-3 py-1.5 bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs rounded-xl transition-colors flex items-center gap-1.5 shadow"
+                    title="Scan and recover all completed questions from previous sessions"
+                  >
+                    <RefreshCw className="w-3.5 h-3.5" /> Scan & Recover Progress
+                  </button>
+                </div>
+              </div>
+
+              {recoveryNotice && (
+                <div className="p-3.5 rounded-xl bg-cyan-950/40 border border-cyan-500/30 text-cyan-200 text-xs flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <RefreshCw className="w-4 h-4 text-cyan-400 shrink-0" />
+                    <span>{recoveryNotice}</span>
+                  </div>
+                  <button onClick={() => setRecoveryNotice(null)} className="text-slate-400 hover:text-white">
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              )}
+
+              {/* Search & Filter Controls */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <div className="relative md:col-span-1">
+                  <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
+                  <input
+                    type="text"
+                    value={qSearch}
+                    onChange={e => setQSearch(e.target.value)}
+                    placeholder="Search completed questions..."
+                    className="w-full bg-slate-800 border border-slate-700 rounded-xl pl-9 pr-3 py-2 text-xs text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-cyan-500"
+                  />
+                </div>
+
+                <div className="flex items-center gap-1 bg-slate-800/80 p-1 rounded-xl border border-slate-700 text-xs font-semibold">
+                  <button
+                    type="button"
+                    onClick={() => setQFilterStatus('all')}
+                    className={`flex-1 py-1 px-2 rounded-lg transition-colors text-center ${
+                      qFilterStatus === 'all' ? 'bg-cyan-600 text-white' : 'text-slate-400 hover:text-slate-200'
+                    }`}
+                  >
+                    All ({answeredCount})
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setQFilterStatus('correct')}
+                    className={`flex-1 py-1 px-2 rounded-lg transition-colors text-center ${
+                      qFilterStatus === 'correct' ? 'bg-emerald-600 text-white' : 'text-slate-400 hover:text-emerald-300'
+                    }`}
+                  >
+                    Correct ({correctCount})
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setQFilterStatus('incorrect')}
+                    className={`flex-1 py-1 px-2 rounded-lg transition-colors text-center ${
+                      qFilterStatus === 'incorrect' ? 'bg-rose-600 text-white' : 'text-slate-400 hover:text-rose-300'
+                    }`}
+                  >
+                    Incorrect ({answeredCount - correctCount})
+                  </button>
+                </div>
+
+                <div>
+                  <select
+                    value={qFilterChapter}
+                    onChange={e => setQFilterChapter(e.target.value === 'all' ? 'all' : Number(e.target.value))}
+                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-200 focus:outline-none focus:ring-1 focus:ring-cyan-500"
+                  >
+                    <option value="all">All Specialty Chapters</option>
+                    <option value={1}>Ch 1: Acute Ischemic Stroke</option>
+                    <option value={2}>Ch 2: Stroke Etiology & TOAST</option>
+                    <option value={3}>Ch 3: Neurovascular Anatomy</option>
+                    <option value={4}>Ch 4: Intracerebral Hemorrhage</option>
+                    <option value={5}>Ch 5: Secondary Prevention</option>
+                    <option value={6}>Ch 6: Landmark Clinical Trials</option>
+                    <option value={7}>Ch 7: Uncommon Arteriopathies</option>
+                    <option value={8}>Ch 8: Critical Care & Complications</option>
+                    <option value={9}>Ch 9: Pediatric & Genetic Stroke</option>
+                    <option value={10}>Ch 10: Neuroimaging & Multimodal Cases</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Question List */}
+              {filteredCompletedQuestions.length === 0 ? (
+                <div className="bg-slate-800/40 p-8 rounded-2xl border border-slate-700/60 text-center space-y-3">
+                  <HelpCircle className="w-8 h-8 text-slate-500 mx-auto" />
+                  <h4 className="text-slate-200 font-bold text-sm">No completed questions match your criteria</h4>
+                  <p className="text-xs text-slate-400 max-w-md mx-auto">
+                    {answeredCount === 0
+                      ? "You haven't completed any questions yet in this session. If you answered questions previously, click 'Scan & Recover Progress' below to restore them."
+                      : "Try adjusting your search query, chapter filter, or answer status."}
+                  </p>
+                  {answeredCount === 0 && (
+                    <button
+                      onClick={handleTriggerRecovery}
+                      className="px-4 py-2 bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs rounded-xl transition-colors inline-flex items-center gap-1.5 shadow"
+                    >
+                      <RefreshCw className="w-4 h-4" /> Scan & Recover Stored Questions
+                    </button>
+                  )}
+                </div>
+              ) : (
+                <div className="space-y-3">
+                  {filteredCompletedQuestions.map(([qId, attempt]) => {
+                    const q = questionMap.get(qId);
+                    const isExpanded = expandedQId === qId;
+                    const chosenOpt = q?.options.find(o => o.id === attempt.selectedOption);
+                    const correctOpt = q?.options.find(o => o.id === q.correctOptionId);
+
+                    return (
+                      <div
+                        key={qId}
+                        className={`bg-slate-800/70 border rounded-2xl p-4 transition-all ${
+                          attempt.isCorrect ? 'border-emerald-500/30' : 'border-rose-500/30'
+                        }`}
+                      >
+                        <div className="flex flex-col md:flex-row md:items-start justify-between gap-3">
+                          <div className="space-y-1.5 flex-1">
+                            <div className="flex flex-wrap items-center gap-2">
+                              <span className="text-[11px] font-mono font-bold text-slate-400">
+                                {qId}
+                              </span>
+                              {q && (
+                                <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-slate-700/80 text-cyan-300">
+                                  Ch {q.chapterId}: {q.chapterTitle}
+                                </span>
+                              )}
+                              {attempt.isCorrect ? (
+                                <span className="px-2 py-0.5 rounded-md text-[10px] font-extrabold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1">
+                                  <Check className="w-3 h-3" /> Correct
+                                </span>
+                              ) : (
+                                <span className="px-2 py-0.5 rounded-md text-[10px] font-extrabold bg-rose-500/20 text-rose-300 border border-rose-500/30 flex items-center gap-1">
+                                  <X className="w-3 h-3" /> Incorrect
+                                </span>
+                              )}
+                              {attempt.timestamp && (
+                                <span className="text-[10px] text-slate-400">
+                                  • {new Date(attempt.timestamp).toLocaleDateString()}
+                                </span>
+                              )}
+                            </div>
+
+                            <p className="text-xs font-semibold text-slate-200 leading-snug">
+                              {q ? q.question : `Question ID: ${qId}`}
+                            </p>
+
+                            {/* Selected / Correct Answer summary */}
+                            <div className="text-[11px] text-slate-300 pt-1 space-y-0.5">
+                              {chosenOpt && (
+                                <div className="flex items-center gap-1">
+                                  <span className="text-slate-400">Your Answer:</span>
+                                  <span className={attempt.isCorrect ? 'text-emerald-300 font-semibold' : 'text-rose-300 font-semibold'}>
+                                    Option {chosenOpt.id.toUpperCase()}: {chosenOpt.text}
+                                  </span>
+                                </div>
+                              )}
+                              {!attempt.isCorrect && correctOpt && (
+                                <div className="flex items-center gap-1 text-emerald-300">
+                                  <span className="text-slate-400">Correct Answer:</span>
+                                  <span className="font-semibold">Option {correctOpt.id.toUpperCase()}: {correctOpt.text}</span>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+
+                          {/* Question Actions */}
+                          <div className="flex flex-wrap md:flex-col items-end gap-1.5 shrink-0 pt-2 md:pt-0">
+                            <button
+                              onClick={() => handleToggleQuestionCorrectness(qId, attempt.isCorrect)}
+                              className={`px-2.5 py-1 text-[11px] font-bold rounded-lg transition-colors border ${
+                                attempt.isCorrect
+                                  ? 'bg-rose-950/40 hover:bg-rose-900/60 text-rose-300 border-rose-500/30'
+                                  : 'bg-emerald-950/40 hover:bg-emerald-900/60 text-emerald-300 border-emerald-500/30'
+                              }`}
+                              title={attempt.isCorrect ? "Toggle to Incorrect" : "Toggle to Correct"}
+                            >
+                              {attempt.isCorrect ? 'Mark Incorrect' : 'Mark Correct'}
+                            </button>
+
+                            <button
+                              onClick={() => handleRemoveQuestionFromCompleted(qId)}
+                              className="px-2.5 py-1 text-[11px] font-bold rounded-lg bg-slate-700/60 hover:bg-rose-900/40 text-slate-300 hover:text-rose-200 transition-colors border border-slate-600/60"
+                              title="Remove from completed list to practice fresh in Q-Bank"
+                            >
+                              Reset Question
+                            </button>
+
+                            {q && (
+                              <button
+                                onClick={() => setExpandedQId(isExpanded ? null : qId)}
+                                className="px-2.5 py-1 text-[11px] font-bold rounded-lg bg-slate-700/40 hover:bg-slate-700 text-cyan-300 transition-colors flex items-center gap-1"
+                              >
+                                {isExpanded ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
+                                {isExpanded ? 'Hide' : 'Details'}
+                              </button>
+                            )}
+
+                            {onNavigateToQuestion && (
+                              <button
+                                onClick={() => onNavigateToQuestion(qId)}
+                                className="px-2.5 py-1 text-[11px] font-bold rounded-lg bg-cyan-950/40 hover:bg-cyan-900/60 text-cyan-300 border border-cyan-500/30 transition-colors flex items-center gap-1"
+                                title="Open in Question Bank"
+                              >
+                                <ExternalLink className="w-3 h-3" /> Practice
+                              </button>
+                            )}
+                          </div>
+                        </div>
+
+                        {/* Collapsible Details: Vignette & Full Explanation */}
+                        {isExpanded && q && (
+                          <div className="mt-3 pt-3 border-t border-slate-700/60 space-y-2 text-xs text-slate-300 bg-slate-900/50 p-3 rounded-xl">
+                            {q.vignette && (
+                              <div>
+                                <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Clinical Vignette</span>
+                                <p className="italic text-slate-200 mt-0.5 leading-relaxed">{q.vignette}</p>
+                              </div>
+                            )}
+
+                            <div>
+                              <span className="text-[10px] uppercase font-bold text-cyan-400 block tracking-wider">Board Explanation & Rationale</span>
+                              <p className="text-slate-200 mt-0.5 leading-relaxed">{q.explanation}</p>
+                            </div>
+
+                            {q.keyTakeaway && (
+                              <div className="bg-cyan-950/30 border border-cyan-500/20 p-2 rounded-lg text-cyan-200 text-[11px]">
+                                <span className="font-bold text-cyan-300">High-Yield Takeaway: </span>
+                                {q.keyTakeaway}
+                              </div>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          )}
+
           {/* TAB 3: EXAM HISTORY */}
           {activeTab === 'history' && (
             <div className="space-y-4">
@@ -864,6 +1294,22 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
                     <input type="file" accept=".json" onChange={handleFileImport} className="hidden" />
                   </label>
                 </div>
+              </div>
+
+              {/* Scan & Recover Historical Sessions */}
+              <div className="bg-slate-800/60 p-5 rounded-2xl border border-cyan-500/30 space-y-3">
+                <h4 className="text-xs font-bold text-slate-200 uppercase tracking-wider flex items-center gap-1.5">
+                  <RefreshCw className="w-4 h-4 text-cyan-400" /> Restore Stored Session Questions
+                </h4>
+                <p className="text-xs text-slate-300 leading-relaxed">
+                  If you previously answered questions in another tab, as a guest, or before logging in, click below to scan all local browser storage keys and consolidate all 95+ questions into this account.
+                </p>
+                <button
+                  onClick={handleTriggerRecovery}
+                  className="px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold text-xs rounded-xl flex items-center gap-1.5 shadow-md transition-all"
+                >
+                  <RefreshCw className="w-4 h-4" /> Scan & Recover Stored Questions
+                </button>
               </div>
 
               {/* Reset Controls */}

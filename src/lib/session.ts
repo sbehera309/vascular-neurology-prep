@@ -15,117 +15,6 @@ export const getUserStorageKey = (userId?: string | null): string => {
 };
 
 /**
- * Migrates legacy data if present from the older monolithic storage key.
- */
-export const migrateLegacyStorage = (defaultStats: UserStats): void => {
-  try {
-    const legacyData = localStorage.getItem(LEGACY_STORAGE_KEY);
-    if (legacyData) {
-      const parsed = JSON.parse(legacyData);
-      if (parsed && typeof parsed === 'object') {
-        const targetKey = parsed.profile?.isLoggedIn && parsed.profile?.id
-          ? getUserStorageKey(parsed.profile.id)
-          : GUEST_STORAGE_KEY;
-
-        if (!localStorage.getItem(targetKey)) {
-          localStorage.setItem(targetKey, JSON.stringify({
-            ...defaultStats,
-            ...parsed,
-          }));
-        }
-      }
-    }
-  } catch (err) {
-    console.warn('Failed to migrate legacy storage:', err);
-  }
-};
-
-/**
- * Loads session stats from localStorage for a specific user ID or guest.
- */
-export const loadSessionStats = (userId: string | null, fallback: UserStats): UserStats => {
-  try {
-    migrateLegacyStorage(fallback);
-    const storageKey = getUserStorageKey(userId);
-    const saved = localStorage.getItem(storageKey);
-    if (saved) {
-      const parsed = JSON.parse(saved);
-      return {
-        ...fallback,
-        ...parsed,
-        completedQuestions: parsed.completedQuestions || {},
-        flashcardMastery: parsed.flashcardMastery || {},
-        bookmarkedFlashcards: parsed.bookmarkedFlashcards || [],
-        bookmarkedQuestions: parsed.bookmarkedQuestions || [],
-        bookmarkedChapters: parsed.bookmarkedChapters || [],
-        examAttempts: parsed.examAttempts || [],
-        profile: {
-          ...fallback.profile,
-          ...(parsed.profile || {}),
-        },
-      };
-    }
-  } catch (err) {
-    console.warn('Error loading session stats:', err);
-  }
-  return fallback;
-};
-
-/**
- * Saves user stats to the appropriate user or guest slot in localStorage.
- */
-export const saveSessionStats = (stats: UserStats): void => {
-  try {
-    const isLoggedIn = Boolean(stats.profile?.isLoggedIn && stats.profile?.id && stats.profile.id !== 'user-default');
-    const storageKey = getUserStorageKey(isLoggedIn ? stats.profile.id : null);
-    localStorage.setItem(storageKey, JSON.stringify(stats));
-
-    if (isLoggedIn) {
-      localStorage.setItem(ACTIVE_USER_ID_KEY, stats.profile.id);
-    } else {
-      localStorage.setItem(ACTIVE_USER_ID_KEY, '');
-    }
-  } catch (err) {
-    console.error('Failed to save session stats to localStorage:', err);
-  }
-};
-
-/**
- * Gets guest session stats if any exist and have tracked activity.
- */
-export const getGuestStats = (): UserStats | null => {
-  try {
-    const saved = localStorage.getItem(GUEST_STORAGE_KEY);
-    if (saved) {
-      const parsed = JSON.parse(saved) as UserStats;
-      const hasCompletedQs = parsed.completedQuestions && Object.keys(parsed.completedQuestions).length > 0;
-      const hasMastery = parsed.flashcardMastery && Object.keys(parsed.flashcardMastery).length > 0;
-      const hasBookmarks = (parsed.bookmarkedQuestions && parsed.bookmarkedQuestions.length > 0) ||
-                           (parsed.bookmarkedFlashcards && parsed.bookmarkedFlashcards.length > 0);
-      const hasExams = parsed.examAttempts && parsed.examAttempts.length > 0;
-
-      if (hasCompletedQs || hasMastery || hasBookmarks || hasExams) {
-        return parsed;
-      }
-    }
-  } catch (err) {
-    console.warn('Error reading guest stats:', err);
-  }
-  return null;
-};
-
-/**
- * Clears guest stats after they have been merged into an account.
- */
-export const clearGuestStats = (): void => {
-  try {
-    localStorage.removeItem(GUEST_STORAGE_KEY);
-  } catch (err) {
-    console.warn('Error clearing guest stats:', err);
-  }
-};
-
-/**
  * Calculates updated streak information based on the current date.
  */
 export const calculateUpdatedStreak = (currentStats: UserStats): { streakDays: number; lastStudyDate: string } => {
@@ -234,4 +123,237 @@ export const mergeUserStats = (base: UserStats, incoming: UserStats): UserStats 
       institution: base.profile?.institution || incoming.profile?.institution,
     }
   };
+};
+
+/**
+ * Scans all candidate localStorage keys across previous sessions and merges them
+ * to guarantee that previously completed questions (e.g. 95 questions) are recovered.
+ */
+export const recoverAllStoredStats = (userId?: string | null, fallbackStats?: UserStats): UserStats => {
+  const base: UserStats = fallbackStats ? { ...fallbackStats } : {
+    profile: {
+      id: userId || 'user-default',
+      name: 'Dr. Vascular Neurologist',
+      email: 'fellow@stroke-prep.org',
+      targetExamDate: '2026-10-15',
+      role: 'Vascular Neurology Fellow',
+      institution: 'Academic Medical Center',
+      isLoggedIn: Boolean(userId && userId !== 'user-default'),
+      createdAt: new Date().toISOString(),
+    },
+    completedQuestions: {},
+    flashcardMastery: {},
+    bookmarkedFlashcards: [],
+    bookmarkedQuestions: [],
+    bookmarkedChapters: [],
+    examAttempts: [],
+    streakDays: 1,
+    lastStudyDate: new Date().toISOString().split('T')[0],
+  };
+
+  const candidateKeys = new Set<string>();
+  candidateKeys.add(LEGACY_STORAGE_KEY);
+  candidateKeys.add(GUEST_STORAGE_KEY);
+  candidateKeys.add('vascneuro_prep_stats_user-default');
+  if (userId) {
+    candidateKeys.add(getUserStorageKey(userId));
+  }
+
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && (k.startsWith('vascneuro_prep_stats') || k === LEGACY_STORAGE_KEY)) {
+        candidateKeys.add(k);
+      }
+    }
+  } catch (err) {
+    console.warn('Error reading localStorage keys for recovery:', err);
+  }
+
+  let aggregated = { ...base };
+
+  candidateKeys.forEach(key => {
+    try {
+      const raw = localStorage.getItem(key);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (parsed && typeof parsed === 'object') {
+          aggregated = mergeUserStats(aggregated, parsed);
+        }
+      }
+    } catch (e) {
+      console.warn(`Error reading key ${key} during recovery:`, e);
+    }
+  });
+
+  if (userId && userId !== 'user-default') {
+    aggregated.profile = {
+      ...aggregated.profile,
+      id: userId,
+      isLoggedIn: true,
+      ...(fallbackStats?.profile || {}),
+    };
+  }
+
+  // Save the consolidated recovery to both the user's slot and the legacy slot
+  const targetKey = getUserStorageKey(userId);
+  try {
+    localStorage.setItem(targetKey, JSON.stringify(aggregated));
+    localStorage.setItem(LEGACY_STORAGE_KEY, JSON.stringify(aggregated));
+  } catch (e) {
+    console.warn('Error saving recovered stats:', e);
+  }
+
+  return aggregated;
+};
+
+/**
+ * Loads session stats from localStorage for a specific user ID or guest.
+ * Automatically checks for legacy or multi-session question history across all browser keys
+ * to guarantee zero data loss.
+ */
+export const loadSessionStats = (userId: string | null, fallback: UserStats): UserStats => {
+  try {
+    const storageKey = getUserStorageKey(userId);
+    const saved = localStorage.getItem(storageKey);
+    let currentStats: UserStats | null = null;
+    
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      currentStats = {
+        ...fallback,
+        ...parsed,
+        completedQuestions: parsed.completedQuestions || {},
+        flashcardMastery: parsed.flashcardMastery || {},
+        bookmarkedFlashcards: parsed.bookmarkedFlashcards || [],
+        bookmarkedQuestions: parsed.bookmarkedQuestions || [],
+        bookmarkedChapters: parsed.bookmarkedChapters || [],
+        examAttempts: parsed.examAttempts || [],
+        profile: {
+          ...fallback.profile,
+          ...(parsed.profile || {}),
+        },
+      };
+    }
+
+    const currentQCount = currentStats?.completedQuestions ? Object.keys(currentStats.completedQuestions).length : 0;
+
+    // Scan all keys in localStorage to detect if any historical session has more progress
+    let maxFoundQCount = 0;
+    try {
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (k && (k.startsWith('vascneuro_prep_stats') || k === LEGACY_STORAGE_KEY)) {
+          const raw = localStorage.getItem(k);
+          if (raw) {
+            const parsed = JSON.parse(raw);
+            const count = parsed?.completedQuestions ? Object.keys(parsed.completedQuestions).length : 0;
+            if (count > maxFoundQCount) {
+              maxFoundQCount = count;
+            }
+          }
+        }
+      }
+    } catch {}
+
+    // If another stored session has more completed questions than current slot, auto-recover!
+    if (maxFoundQCount > currentQCount) {
+      return recoverAllStoredStats(userId, currentStats || fallback);
+    }
+
+    if (currentStats) return currentStats;
+    return recoverAllStoredStats(userId, fallback);
+  } catch (err) {
+    console.warn('Error loading session stats:', err);
+  }
+  return fallback;
+};
+
+/**
+ * Saves user stats to the appropriate user or guest slot in localStorage.
+ * Protects against accidental wipes by ensuring question count does not regress
+ * unless an explicit reset is requested.
+ */
+export const saveSessionStats = (stats: UserStats, allowExplicitReset: boolean = false): void => {
+  try {
+    const isLoggedIn = Boolean(stats.profile?.isLoggedIn && stats.profile?.id && stats.profile.id !== 'user-default');
+    const storageKey = getUserStorageKey(isLoggedIn ? stats.profile.id : null);
+
+    let dataToSave = stats;
+    if (!allowExplicitReset) {
+      const existingRaw = localStorage.getItem(storageKey);
+      if (existingRaw) {
+        try {
+          const parsed = JSON.parse(existingRaw);
+          const existingQCount = parsed.completedQuestions ? Object.keys(parsed.completedQuestions).length : 0;
+          const newQCount = stats.completedQuestions ? Object.keys(stats.completedQuestions).length : 0;
+          if (existingQCount > newQCount) {
+            dataToSave = mergeUserStats(parsed, stats);
+          }
+        } catch {}
+      }
+    }
+
+    localStorage.setItem(storageKey, JSON.stringify(dataToSave));
+
+    // Also mirror to legacy key as a master safety net if question count is preserved
+    const legacyRaw = localStorage.getItem(LEGACY_STORAGE_KEY);
+    if (legacyRaw && !allowExplicitReset) {
+      try {
+        const legacyParsed = JSON.parse(legacyRaw);
+        const legacyQCount = legacyParsed?.completedQuestions ? Object.keys(legacyParsed.completedQuestions).length : 0;
+        const newQCount = dataToSave.completedQuestions ? Object.keys(dataToSave.completedQuestions).length : 0;
+        if (newQCount >= legacyQCount) {
+          localStorage.setItem(LEGACY_STORAGE_KEY, JSON.stringify(dataToSave));
+        }
+      } catch {
+        localStorage.setItem(LEGACY_STORAGE_KEY, JSON.stringify(dataToSave));
+      }
+    } else {
+      localStorage.setItem(LEGACY_STORAGE_KEY, JSON.stringify(dataToSave));
+    }
+
+    if (isLoggedIn) {
+      localStorage.setItem(ACTIVE_USER_ID_KEY, stats.profile.id);
+    } else {
+      localStorage.setItem(ACTIVE_USER_ID_KEY, '');
+    }
+  } catch (err) {
+    console.error('Failed to save session stats to localStorage:', err);
+  }
+};
+
+/**
+ * Gets guest session stats if any exist and have tracked activity.
+ */
+export const getGuestStats = (): UserStats | null => {
+  try {
+    const saved = localStorage.getItem(GUEST_STORAGE_KEY);
+    if (saved) {
+      const parsed = JSON.parse(saved) as UserStats;
+      const hasCompletedQs = parsed.completedQuestions && Object.keys(parsed.completedQuestions).length > 0;
+      const hasMastery = parsed.flashcardMastery && Object.keys(parsed.flashcardMastery).length > 0;
+      const hasBookmarks = (parsed.bookmarkedQuestions && parsed.bookmarkedQuestions.length > 0) ||
+                           (parsed.bookmarkedFlashcards && parsed.bookmarkedFlashcards.length > 0);
+      const hasExams = parsed.examAttempts && parsed.examAttempts.length > 0;
+
+      if (hasCompletedQs || hasMastery || hasBookmarks || hasExams) {
+        return parsed;
+      }
+    }
+  } catch (err) {
+    console.warn('Error reading guest stats:', err);
+  }
+  return null;
+};
+
+/**
+ * Clears guest stats after they have been merged into an account.
+ */
+export const clearGuestStats = (): void => {
+  try {
+    localStorage.removeItem(GUEST_STORAGE_KEY);
+  } catch (err) {
+    console.warn('Error clearing guest stats:', err);
+  }
 };

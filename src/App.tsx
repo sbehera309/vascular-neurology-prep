@@ -13,9 +13,9 @@ import { syncStatsToCloud, subscribeToCloudStats, onAuthChange } from './lib/syn
 import { 
   loadSessionStats, 
   saveSessionStats, 
-  getGuestStats, 
   clearGuestStats, 
   mergeUserStats, 
+  recoverAllStoredStats,
   calculateUpdatedStreak, 
   ACTIVE_USER_ID_KEY,
   getUserStorageKey 
@@ -90,41 +90,40 @@ export const App: React.FC = () => {
     return () => window.removeEventListener('storage', handleStorageChange);
   }, [userStats.profile.id, userStats.profile.isLoggedIn]);
 
-  // Handle explicit user login (merging any active guest/unauthenticated session into their account)
-  const handleLogin = useCallback((profile: UserProfile) => {
-    const guestData = getGuestStats() || (!userStats.profile.isLoggedIn ? userStats : null);
-    const existingUserData = loadSessionStats(profile.id, {
-      ...INITIAL_STATS,
-      profile,
-    });
+  // Dedicated function to update stats upon login
+  const updateStatsOnLogin = useCallback((profile: UserProfile) => {
+    // 1. Recover and aggregate all historical questions and data across all localStorage keys
+    const consolidated = recoverAllStoredStats(profile.id, userStats);
+    
+    // 2. Attach updated profile info
+    const finalStats: UserStats = {
+      ...consolidated,
+      profile: {
+        ...consolidated.profile,
+        ...profile,
+        isLoggedIn: true,
+      },
+    };
 
-    let finalStats: UserStats;
-    const hasGuestProgress = guestData && (
-      (guestData.completedQuestions && Object.keys(guestData.completedQuestions).length > 0) ||
-      (guestData.bookmarkedQuestions && guestData.bookmarkedQuestions.length > 0) ||
-      (guestData.bookmarkedFlashcards && guestData.bookmarkedFlashcards.length > 0) ||
-      (guestData.examAttempts && guestData.examAttempts.length > 0) ||
-      (guestData.flashcardMastery && Object.keys(guestData.flashcardMastery).length > 0)
-    );
+    // 3. Clear guest-only slot since it is now consolidated into this user
+    clearGuestStats();
 
-    if (hasGuestProgress) {
-      finalStats = mergeUserStats(existingUserData, guestData!);
-      finalStats.profile = { ...finalStats.profile, ...profile, isLoggedIn: true };
-      clearGuestStats();
-    } else {
-      finalStats = {
-        ...existingUserData,
-        profile: { ...existingUserData.profile, ...profile, isLoggedIn: true },
-      };
-    }
-
+    // 4. Update React state and write to storage
     setUserStats(finalStats);
     saveSessionStats(finalStats);
 
+    // 5. If cloud sync is enabled, sync to Firestore
     if (profile.id && profile.id !== 'user-default') {
       syncStatsToCloud(profile.id, finalStats);
     }
+
+    return finalStats;
   }, [userStats]);
+
+  // Handle explicit user login
+  const handleLogin = useCallback((profile: UserProfile) => {
+    updateStatsOnLogin(profile);
+  }, [updateStatsOnLogin]);
 
   // Handle user logout (switching to clean guest session and preserving user data)
   const handleLogout = useCallback(() => {
@@ -174,29 +173,8 @@ export const App: React.FC = () => {
           createdAt: new Date().toISOString(),
         };
 
-        // Merge any active guest questions/progress into the newly logged-in account
-        setUserStats(prev => {
-          const guestData = getGuestStats() || (!prev.profile.isLoggedIn ? prev : null);
-          const localExisting = loadSessionStats(firebaseUser.uid, { ...INITIAL_STATS, profile: cloudProfile });
-          let merged = localExisting;
-
-          const hasGuestProgress = guestData && (
-            (guestData.completedQuestions && Object.keys(guestData.completedQuestions).length > 0) ||
-            (guestData.bookmarkedQuestions && guestData.bookmarkedQuestions.length > 0) ||
-            (guestData.examAttempts && guestData.examAttempts.length > 0) ||
-            (guestData.flashcardMastery && Object.keys(guestData.flashcardMastery).length > 0)
-          );
-
-          if (hasGuestProgress) {
-            merged = mergeUserStats(localExisting, guestData!);
-            clearGuestStats();
-          }
-
-          merged.profile = { ...merged.profile, ...cloudProfile, isLoggedIn: true };
-          saveSessionStats(merged);
-          syncStatsToCloud(firebaseUser.uid, merged);
-          return merged;
-        });
+        // When Firebase user signs in, immediately run updateStatsOnLogin
+        updateStatsOnLogin(cloudProfile);
 
         // Real-time Cloud listener with merge protection to prevent overwriting local progress
         unsubscribeCloud = subscribeToCloudStats(firebaseUser.uid, (cloudStats) => {
@@ -215,7 +193,7 @@ export const App: React.FC = () => {
       unsubscribeAuth();
       if (unsubscribeCloud) unsubscribeCloud();
     };
-  }, []);
+  }, [updateStatsOnLogin]);
 
   // Handle Profile Update
   const handleUpdateProfile = (profileUpdates: Partial<UserProfile>) => {
@@ -320,24 +298,68 @@ export const App: React.FC = () => {
     }));
   };
 
-  // Reset Progress Options
+  // Reset Progress Options (with allowExplicitReset flag for storage safety)
   const handleResetProgress = (type: 'all' | 'questions' | 'exams' | 'flashcards') => {
     setUserStats(prev => {
+      let newStats: UserStats;
       if (type === 'questions') {
-        return { ...prev, completedQuestions: {} };
+        newStats = { ...prev, completedQuestions: {} };
+      } else if (type === 'exams') {
+        newStats = { ...prev, examAttempts: [] };
+      } else if (type === 'flashcards') {
+        newStats = { ...prev, flashcardMastery: {}, bookmarkedFlashcards: [] };
+      } else {
+        newStats = {
+          ...INITIAL_STATS,
+          profile: prev.profile,
+        };
       }
-      if (type === 'exams') {
-        return { ...prev, examAttempts: [] };
-      }
-      if (type === 'flashcards') {
-        return { ...prev, flashcardMastery: {}, bookmarkedFlashcards: [] };
-      }
-      return {
-        ...INITIAL_STATS,
-        profile: prev.profile,
-      };
+      saveSessionStats(newStats, true);
+      return newStats;
     });
   };
+
+  // Recover historical progress across all sessions
+  const handleRecoverProgress = useCallback((): number => {
+    const activeId = userStats.profile.isLoggedIn ? userStats.profile.id : null;
+    const recovered = recoverAllStoredStats(activeId, userStats);
+    setUserStats(recovered);
+    saveSessionStats(recovered);
+    if (activeId && activeId !== 'user-default') {
+      syncStatsToCloud(activeId, recovered);
+    }
+    return Object.keys(recovered.completedQuestions || {}).length;
+  }, [userStats]);
+
+  // Update specific question status or remove it from completed list
+  const handleUpdateQuestionStatus = useCallback((questionId: string, isCorrect?: boolean, remove?: boolean) => {
+    setUserStats(prev => {
+      const updatedCompleted = { ...prev.completedQuestions };
+      if (remove) {
+        delete updatedCompleted[questionId];
+      } else if (isCorrect !== undefined) {
+        const existing = updatedCompleted[questionId] || {
+          selectedOption: '',
+          isCorrect,
+          timestamp: new Date().toISOString(),
+        };
+        updatedCompleted[questionId] = {
+          ...existing,
+          isCorrect,
+          timestamp: new Date().toISOString(),
+        };
+      }
+      const newStats: UserStats = {
+        ...prev,
+        completedQuestions: updatedCompleted,
+      };
+      saveSessionStats(newStats);
+      if (newStats.profile.isLoggedIn && newStats.profile.id && newStats.profile.id !== 'user-default') {
+        syncStatsToCloud(newStats.profile.id, newStats);
+      }
+      return newStats;
+    });
+  }, []);
 
   // Import Backup Data
   const handleImportData = (imported: UserStats) => {
@@ -408,6 +430,12 @@ export const App: React.FC = () => {
         onLogout={handleLogout}
         onResetProgress={handleResetProgress}
         onImportData={handleImportData}
+        onRecoverProgress={handleRecoverProgress}
+        onUpdateQuestionStatus={handleUpdateQuestionStatus}
+        onNavigateToQuestion={(qId) => {
+          setIsProfileModalOpen(false);
+          setActiveTab('questions');
+        }}
       />
     </div>
   );
