@@ -162,8 +162,8 @@ export const recoverAllStoredStats = (userId?: string | null, fallbackStats?: Us
   try {
     for (let i = 0; i < localStorage.length; i++) {
       const k = localStorage.key(i);
-      if (!k) continue;
-      if (k.startsWith('vascneuro') || k === LEGACY_STORAGE_KEY) {
+      if (!k || k === ACTIVE_USER_ID_KEY || k === 'vascneuro_registered_accounts') continue;
+      if (k.startsWith('vascneuro_prep_stats') || k === LEGACY_STORAGE_KEY) {
         candidateKeys.add(k);
       } else {
         const raw = localStorage.getItem(k);
@@ -181,14 +181,14 @@ export const recoverAllStoredStats = (userId?: string | null, fallbackStats?: Us
   candidateKeys.forEach(key => {
     try {
       const raw = localStorage.getItem(key);
-      if (raw) {
+      if (raw && raw.trim().startsWith('{')) {
         const parsed = JSON.parse(raw);
-        if (parsed && typeof parsed === 'object') {
+        if (parsed && typeof parsed === 'object' && (parsed.completedQuestions || parsed.profile || parsed.examAttempts)) {
           aggregated = mergeUserStats(aggregated, parsed);
         }
       }
-    } catch (e) {
-      console.warn(`Error reading key ${key} during recovery:`, e);
+    } catch {
+      // Silently ignore non-JSON or corrupted values
     }
   });
 
@@ -249,9 +249,9 @@ export const loadSessionStats = (userId: string | null, fallback: UserStats): Us
     try {
       for (let i = 0; i < localStorage.length; i++) {
         const k = localStorage.key(i);
-        if (!k) continue;
+        if (!k || k === ACTIVE_USER_ID_KEY || k === 'vascneuro_registered_accounts') continue;
         const raw = localStorage.getItem(k);
-        if (raw && (k.startsWith('vascneuro') || raw.includes('completedQuestions'))) {
+        if (raw && raw.trim().startsWith('{') && (k.startsWith('vascneuro_prep_stats') || raw.includes('completedQuestions'))) {
           try {
             const parsed = JSON.parse(raw);
             const count = parsed?.completedQuestions ? Object.keys(parsed.completedQuestions).length : 0;

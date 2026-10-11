@@ -68,13 +68,11 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
   const [qFilterChapter, setQFilterChapter] = useState<number | 'all'>('all');
   const [expandedQId, setExpandedQId] = useState<string | null>(null);
 
-  if (!isOpen) return null;
-
   // Q-Bank Analytics calculations
   const totalQuestions = questionsData.length;
   const completedEntries = Object.values(userStats.completedQuestions || {});
   const answeredCount = completedEntries.length;
-  const correctCount = completedEntries.filter(e => e.isCorrect).length;
+  const correctCount = completedEntries.filter(e => e?.isCorrect).length;
   const accuracyPercent = answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : 0;
   const overallCompletionPercent = Math.round((answeredCount / totalQuestions) * 100);
 
@@ -89,8 +87,8 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
   const completedQuestionEntries = useMemo(() => {
     const entries = Object.entries(userStats.completedQuestions || {});
     return entries.sort((a, b) => {
-      const timeA = a[1].timestamp ? new Date(a[1].timestamp).getTime() : 0;
-      const timeB = b[1].timestamp ? new Date(b[1].timestamp).getTime() : 0;
+      const timeA = a[1]?.timestamp ? new Date(a[1].timestamp).getTime() : 0;
+      const timeB = b[1]?.timestamp ? new Date(b[1].timestamp).getTime() : 0;
       return timeB - timeA;
     });
   }, [userStats.completedQuestions]);
@@ -100,18 +98,18 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
     return completedQuestionEntries.filter(([qId, attempt]) => {
       const q = questionMap.get(qId);
       
-      if (qFilterStatus === 'correct' && !attempt.isCorrect) return false;
-      if (qFilterStatus === 'incorrect' && attempt.isCorrect) return false;
+      if (qFilterStatus === 'correct' && !attempt?.isCorrect) return false;
+      if (qFilterStatus === 'incorrect' && attempt?.isCorrect) return false;
 
       if (qFilterChapter !== 'all' && q && q.chapterId !== qFilterChapter) return false;
 
       if (qSearch.trim()) {
         const term = qSearch.toLowerCase();
         const textMatch = q ? (
-          q.question.toLowerCase().includes(term) ||
-          q.vignette.toLowerCase().includes(term) ||
-          q.chapterTitle.toLowerCase().includes(term) ||
-          q.tags.some(t => t.toLowerCase().includes(term))
+          Boolean(q.question && q.question.toLowerCase().includes(term)) ||
+          Boolean(q.vignette && q.vignette.toLowerCase().includes(term)) ||
+          Boolean(q.chapterTitle && q.chapterTitle.toLowerCase().includes(term)) ||
+          Boolean(Array.isArray(q.tags) && q.tags.some(t => t && t.toLowerCase().includes(term)))
         ) : false;
         const idMatch = qId.toLowerCase().includes(term);
         if (!textMatch && !idMatch) return false;
@@ -345,6 +343,8 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
       };
     }
   };
+
+  if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fadeIn">
