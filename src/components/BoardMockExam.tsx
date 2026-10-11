@@ -7,11 +7,16 @@ import confetti from 'canvas-confetti';
 interface BoardMockExamProps {
   onSaveExamAttempt?: (attempt: ExamAttempt) => void;
   onBatchCompleteQuestions?: (attempts: Record<string, QuestionAttempt>) => void;
+  onNavigateToChapter?: (chapterId: number) => void;
 }
 
 export type ExamLengthOption = 25 | 50 | 100 | 200;
 
-export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt, onBatchCompleteQuestions }) => {
+export const BoardMockExam: React.FC<BoardMockExamProps> = ({ 
+  onSaveExamAttempt, 
+  onBatchCompleteQuestions,
+  onNavigateToChapter 
+}) => {
   const [examStarted, setExamStarted] = useState<boolean>(false);
   const [examFinished, setExamFinished] = useState<boolean>(false);
   
@@ -544,9 +549,21 @@ export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt,
                     <div className="flex items-center justify-between text-xs">
                       <div className="flex items-center gap-2">
                         <span className="font-bold text-slate-300">Question {idx + 1}</span>
-                        <span className="text-[10px] text-cyan-400 px-2 py-0.5 rounded-full bg-cyan-950 border border-cyan-800">
-                          {q.chapterTitle}
-                        </span>
+                        {onNavigateToChapter ? (
+                          <button
+                            type="button"
+                            onClick={() => onNavigateToChapter(q.chapterId)}
+                            className="text-[10px] text-cyan-400 hover:text-cyan-200 px-2 py-0.5 rounded-full bg-cyan-950 border border-cyan-800 hover:border-cyan-600 transition-colors flex items-center gap-1"
+                            title={`Read Chapter ${q.chapterId}: ${q.chapterTitle}`}
+                          >
+                            <BookOpen className="w-3 h-3" />
+                            <span>Ch {q.chapterId}: {q.chapterTitle}</span>
+                          </button>
+                        ) : (
+                          <span className="text-[10px] text-cyan-400 px-2 py-0.5 rounded-full bg-cyan-950 border border-cyan-800">
+                            {q.chapterTitle}
+                          </span>
+                        )}
                         {q.source && (
                           <span className="text-[10px] text-slate-400 italic">
                             Source: {q.source}
@@ -581,6 +598,18 @@ export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt,
                         <div className="bg-cyan-950/40 p-2.5 rounded-xl border border-cyan-800/40 text-cyan-200">
                           <strong className="text-cyan-400 block text-[11px]">Board Takeaway:</strong>
                           {q.keyTakeaway}
+                        </div>
+                      )}
+                      {onNavigateToChapter && (
+                        <div className="flex justify-end pt-1">
+                          <button
+                            type="button"
+                            onClick={() => onNavigateToChapter(q.chapterId)}
+                            className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-slate-700 text-[11px] font-bold rounded-xl transition-all flex items-center gap-1.5 shadow-sm"
+                          >
+                            <BookOpen className="w-3.5 h-3.5 text-cyan-400" />
+                            <span>Study Chapter {q.chapterId} Syllabus Notes</span>
+                          </button>
                         </div>
                       )}
                     </div>

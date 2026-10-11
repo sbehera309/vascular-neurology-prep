@@ -10,6 +10,7 @@ interface QuestionBankProps {
   bookmarkedQuestions: string[];
   onToggleBookmarkQuestion: (questionId: string) => void;
   targetQuestionId?: string | null;
+  onNavigateToChapter?: (chapterId: number) => void;
 }
 
 export const QuestionBank: React.FC<QuestionBankProps> = ({
@@ -18,6 +19,7 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
   bookmarkedQuestions,
   onToggleBookmarkQuestion,
   targetQuestionId,
+  onNavigateToChapter,
 }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -278,7 +280,19 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
                 Question {currentIndex + 1} of {filteredQuestions.length}
               </span>
               <span className="text-slate-500">|</span>
-              <span className="text-slate-400 font-medium">{currentQuestion.chapterTitle}</span>
+              {onNavigateToChapter ? (
+                <button
+                  type="button"
+                  onClick={() => onNavigateToChapter(currentQuestion.chapterId)}
+                  className="text-slate-400 hover:text-cyan-300 font-medium hover:underline transition-colors flex items-center gap-1"
+                  title={`Click to read Chapter ${currentQuestion.chapterId}: ${currentQuestion.chapterTitle}`}
+                >
+                  <BookOpen className="w-3.5 h-3.5 text-cyan-400" />
+                  <span>{currentQuestion.chapterTitle}</span>
+                </button>
+              ) : (
+                <span className="text-slate-400 font-medium">{currentQuestion.chapterTitle}</span>
+              )}
             </div>
 
             <div className="flex items-center space-x-3">
@@ -496,6 +510,56 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
                     {currentQuestion.keyTakeaway}
                   </p>
                 </div>
+
+                {/* Direct Link to Chapter Syllabus Notes (especially prominent if incorrect) */}
+                {onNavigateToChapter && (
+                  <div className={`p-4 rounded-2xl border flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-md transition-all ${
+                    selectedOption !== currentQuestion.correctOptionId
+                      ? 'bg-amber-950/30 border-amber-500/40'
+                      : 'bg-slate-900/80 border-cyan-500/30'
+                  }`}>
+                    <div className="flex items-start sm:items-center space-x-3">
+                      <div className={`p-2 rounded-xl border shrink-0 ${
+                        selectedOption !== currentQuestion.correctOptionId
+                          ? 'bg-amber-500/20 text-amber-300 border-amber-500/30'
+                          : 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30'
+                      }`}>
+                        <BookOpen className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <span className={`text-[10px] font-extrabold uppercase tracking-wider block ${
+                          selectedOption !== currentQuestion.correctOptionId
+                            ? 'text-amber-400'
+                            : 'text-cyan-400'
+                        }`}>
+                          {selectedOption !== currentQuestion.correctOptionId
+                            ? 'Recommended Study Reference for this Topic'
+                            : 'Syllabus Chapter Notes'}
+                        </span>
+                        <p className="text-xs sm:text-sm font-bold text-slate-100 mt-0.5">
+                          Chapter {currentQuestion.chapterId}: {currentQuestion.chapterTitle}
+                        </p>
+                        <p className="text-[11px] text-slate-400 mt-0.5">
+                          Review high-yield clinical pearls, anatomy tables, and trial guidelines for this topic.
+                        </p>
+                      </div>
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={() => onNavigateToChapter(currentQuestion.chapterId)}
+                      className={`px-3.5 py-2 font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-md active:scale-95 shrink-0 ${
+                        selectedOption !== currentQuestion.correctOptionId
+                          ? 'bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold shadow-amber-500/20'
+                          : 'bg-cyan-600 hover:bg-cyan-500 text-white shadow-cyan-600/20'
+                      }`}
+                      title={`Jump to Chapter ${currentQuestion.chapterId} in Syllabus Notes`}
+                    >
+                      <span>Read Chapter {currentQuestion.chapterId}</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                )}
 
                 {/* Retake / Change Answer Button */}
                 <div className="flex justify-end pt-1">

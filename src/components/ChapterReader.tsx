@@ -1,18 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { chaptersData } from '../data/chapters';
 import { Search, BookOpen, ChevronDown, ChevronRight, Zap, Bookmark } from 'lucide-react';
 
 interface ChapterReaderProps {
   bookmarkedChapters: number[];
   onToggleBookmarkChapter: (chapterId: number) => void;
+  targetChapterId?: number | null;
 }
 
 export const ChapterReader: React.FC<ChapterReaderProps> = ({
   bookmarkedChapters,
   onToggleBookmarkChapter,
+  targetChapterId,
 }) => {
   const [searchTerm, setSearchTerm] = useState<string>('');
-  const [expandedChapterId, setExpandedChapterId] = useState<number | null>(1); // Default to Chapter 2
+  const [expandedChapterId, setExpandedChapterId] = useState<number | null>(1);
+
+  useEffect(() => {
+    if (targetChapterId) {
+      setSearchTerm('');
+      setExpandedChapterId(targetChapterId);
+      setTimeout(() => {
+        const elem = document.getElementById(`chapter-${targetChapterId}`);
+        if (elem) {
+          elem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, [targetChapterId]);
 
   const filteredChapters = chaptersData.filter(ch => {
     if (!searchTerm) return true;
@@ -57,6 +72,7 @@ export const ChapterReader: React.FC<ChapterReaderProps> = ({
           return (
             <div
               key={chapter.id}
+              id={`chapter-${chapter.id}`}
               className="bg-slate-800/80 rounded-2xl border border-slate-700/60 overflow-hidden transition-all"
             >
               {/* Chapter Title Header */}

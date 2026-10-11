@@ -4,7 +4,7 @@ import {
   User, X, LogIn, LogOut, Award, Calendar, BarChart3, Download, Upload, 
   Trash2, Mail, Sparkles, Cloud, Lock, Globe, Eye, EyeOff, KeyRound, 
   CheckCircle2, ListChecks, Check, RefreshCw, ChevronDown, 
-  ChevronUp, Search, ExternalLink, HelpCircle 
+  ChevronUp, Search, ExternalLink, HelpCircle, BookOpen 
 } from 'lucide-react';
 import { questionsData } from '../data/questions';
 import { registerWithEmail, loginWithEmail, loginWithGoogle, logoutCloudUser, resetPasswordEmail } from '../lib/sync';
@@ -28,6 +28,7 @@ interface UserProfileModalProps {
   onRecoverProgress?: () => number;
   onUpdateQuestionStatus?: (questionId: string, isCorrect?: boolean, remove?: boolean) => void;
   onNavigateToQuestion?: (questionId: string) => void;
+  onNavigateToChapter?: (chapterId: number) => void;
 }
 
 export const UserProfileModal: React.FC<UserProfileModalProps> = ({
@@ -42,6 +43,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
   onRecoverProgress,
   onUpdateQuestionStatus,
   onNavigateToQuestion,
+  onNavigateToChapter,
 }) => {
   const [activeTab, setActiveTab] = useState<'profile' | 'analytics' | 'questions' | 'history' | 'data'>('profile');
   const [authMode, setAuthMode] = useState<'login' | 'register' | 'forgot' | 'view'>(userStats.profile.isLoggedIn ? 'view' : 'login');
@@ -1121,11 +1123,21 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
                               <span className="text-[11px] font-mono font-bold text-slate-400">
                                 {qId}
                               </span>
-                              {q && (
+                              {q && onNavigateToChapter ? (
+                                <button
+                                  type="button"
+                                  onClick={() => onNavigateToChapter(q.chapterId)}
+                                  className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-slate-700/80 text-cyan-300 hover:text-cyan-100 hover:bg-slate-600 transition-colors flex items-center gap-1"
+                                  title={`Click to read Chapter ${q.chapterId}: ${q.chapterTitle}`}
+                                >
+                                  <BookOpen className="w-2.5 h-2.5 text-cyan-400" />
+                                  <span>Ch {q.chapterId}: {q.chapterTitle}</span>
+                                </button>
+                              ) : q ? (
                                 <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-slate-700/80 text-cyan-300">
                                   Ch {q.chapterId}: {q.chapterTitle}
                                 </span>
-                              )}
+                              ) : null}
                               {attempt.isCorrect ? (
                                 <span className="px-2 py-0.5 rounded-md text-[10px] font-extrabold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1">
                                   <Check className="w-3 h-3" /> Correct
@@ -1204,6 +1216,16 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
                                 title="Open in Question Bank"
                               >
                                 <ExternalLink className="w-3 h-3" /> Practice
+                              </button>
+                            )}
+
+                            {onNavigateToChapter && q && (
+                              <button
+                                onClick={() => onNavigateToChapter(q.chapterId)}
+                                className="px-2.5 py-1 text-[11px] font-bold rounded-lg bg-slate-700/60 hover:bg-slate-700 text-cyan-300 border border-slate-600/60 transition-colors flex items-center gap-1"
+                                title={`Read Chapter ${q.chapterId}: ${q.chapterTitle}`}
+                              >
+                                <BookOpen className="w-3 h-3 text-cyan-400" /> Ch {q.chapterId} Notes
                               </button>
                             )}
                           </div>

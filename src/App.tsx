@@ -46,6 +46,7 @@ export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'dashboard' | 'chapters' | 'flashcards' | 'questions' | 'calculators' | 'trials' | 'exam'>('dashboard');
   const [isProfileModalOpen, setIsProfileModalOpen] = useState<boolean>(false);
   const [targetQuestionId, setTargetQuestionId] = useState<string | null>(null);
+  const [targetChapterId, setTargetChapterId] = useState<number | null>(null);
 
   // LocalStorage state persistence keyed by session/user
   const [userStats, setUserStats] = useState<UserStats>(() => {
@@ -392,6 +393,13 @@ export const App: React.FC = () => {
     }
   };
 
+  // Navigate to specific syllabus chapter
+  const handleNavigateToChapter = useCallback((chapterId: number) => {
+    setTargetChapterId(chapterId);
+    setIsProfileModalOpen(false);
+    setActiveTab('chapters');
+  }, []);
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 pb-20 md:pb-12">
       <Navbar
@@ -409,6 +417,7 @@ export const App: React.FC = () => {
           <BoardMockExam 
             onSaveExamAttempt={handleSaveExamAttempt}
             onBatchCompleteQuestions={handleBatchCompleteQuestions}
+            onNavigateToChapter={handleNavigateToChapter}
           />
         )}
         {activeTab === 'flashcards' && (
@@ -426,6 +435,7 @@ export const App: React.FC = () => {
             bookmarkedQuestions={userStats.bookmarkedQuestions}
             onToggleBookmarkQuestion={handleToggleBookmarkQuestion}
             targetQuestionId={targetQuestionId}
+            onNavigateToChapter={handleNavigateToChapter}
           />
         )}
         {activeTab === 'calculators' && <Calculators />}
@@ -434,6 +444,7 @@ export const App: React.FC = () => {
           <ChapterReader
             bookmarkedChapters={userStats.bookmarkedChapters}
             onToggleBookmarkChapter={handleToggleBookmarkChapter}
+            targetChapterId={targetChapterId}
           />
         )}
       </main>
@@ -455,6 +466,7 @@ export const App: React.FC = () => {
           setIsProfileModalOpen(false);
           setActiveTab('questions');
         }}
+        onNavigateToChapter={handleNavigateToChapter}
       />
     </div>
   );
