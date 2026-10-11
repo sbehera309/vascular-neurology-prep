@@ -1,36 +1,77 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { questionsData } from '../data/questions';
 import { PracticeQuestion, ExamAttempt } from '../types';
-import { Clock, Flag, CheckCircle2, XCircle, Award, RotateCcw, ChevronLeft, ChevronRight, LayoutGrid } from 'lucide-react';
+import { Clock, Flag, CheckCircle2, XCircle, Award, RotateCcw, ChevronLeft, ChevronRight, LayoutGrid, Filter, BookOpen, Sparkles, Check, AlertCircle } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 interface BoardMockExamProps {
   onSaveExamAttempt?: (attempt: ExamAttempt) => void;
 }
 
+export type ExamLengthOption = 25 | 50 | 100 | 200;
+
 export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt }) => {
   const [examStarted, setExamStarted] = useState<boolean>(false);
   const [examFinished, setExamFinished] = useState<boolean>(false);
-  const [examTimeRemaining, setExamTimeRemaining] = useState<number>(3600); // 60 minutes (3600s)
+  
+  // Configurable Exam Mode & Length
+  const [examLength, setExamLength] = useState<ExamLengthOption>(50);
+  const [selectedDomain, setSelectedDomain] = useState<string>('all');
+  
+  const [examTimeRemaining, setExamTimeRemaining] = useState<number>(3600); // in seconds
+  const [initialDuration, setInitialDuration] = useState<number>(3600);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const [userAnswers, setUserAnswers] = useState<Record<string, string>>({});
   const [flaggedQuestions, setFlaggedQuestions] = useState<string[]>([]);
   const [showReviewGrid, setShowReviewGrid] = useState<boolean>(false);
+  const [reviewFilter, setReviewFilter] = useState<'all' | 'incorrect' | 'flagged'>('all');
 
-  // Exam Questions Set (50 board questions)
+  // Exam Questions Set
   const [examQuestions, setExamQuestions] = useState<PracticeQuestion[]>([]);
 
+  const domainOptions = [
+    { id: 'all', label: 'All Topics (ABPN Blueprint Balanced)', desc: 'Official weighted breakdown across all 21 chapters' },
+    { id: 'acute', label: 'Acute Stroke & Thrombolysis / EVT (Ch 1, 2, 8)', chapters: [1, 2, 8] },
+    { id: 'anatomy', label: 'Vascular Anatomy & Brainstem Syndromes (Ch 3, 4)', chapters: [3, 4] },
+    { id: 'pathology', label: 'Pathophysiology & Vasculopathy (Ch 6, 7)', chapters: [6, 7] },
+    { id: 'cardiology', label: 'Clinical Cardiology & Embolism (Ch 9)', chapters: [9] },
+    { id: 'genetics', label: 'Genetics, Pediatrics & Special Populations (Ch 10, 11)', chapters: [10, 11] },
+    { id: 'hemorrhage', label: 'ICH, SAH & Vascular Malformations (Ch 13, 14)', chapters: [13, 14] },
+    { id: 'hematology', label: 'Hematology, Coagulation & Thrombophilia (Ch 15)', chapters: [15] },
+    { id: 'imaging', label: 'Neuroradiology, MRI & Ultrasonography (Ch 16)', chapters: [16] },
+    { id: 'rehab', label: 'Pharmacology, Rehabilitation, Cognition & Ethics (Ch 17, 18, 19, 20, 21)', chapters: [17, 18, 19, 20, 21] },
+  ];
+
   const startExam = () => {
-    // Select 50 questions or full set
-    const shuffled = [...questionsData].sort(() => 0.5 - Math.random());
-    setExamQuestions(shuffled.slice(0, 50));
+    let pool: PracticeQuestion[] = [];
+
+    if (selectedDomain === 'all') {
+      // Balance according to official ABPN blueprint:
+      // Treatment 30%, Causes 20%, Evaluation 15%, Prevention/Epidemiology 10%, Clinical features 10%, Basic Science 5%, Complications 5%, Rehab 5%
+      pool = [...questionsData].sort(() => 0.5 - Math.random());
+    } else {
+      const selected = domainOptions.find(d => d.id === selectedDomain);
+      if (selected && selected.chapters) {
+        pool = questionsData.filter(q => selected.chapters.includes(q.chapterId)).sort(() => 0.5 - Math.random());
+      } else {
+        pool = [...questionsData].sort(() => 0.5 - Math.random());
+      }
+    }
+
+    // Allocate time: 72 seconds per question (~1.2 min per question)
+    const count = Math.min(examLength, pool.length);
+    const calculatedSeconds = count * 72;
+
+    setExamQuestions(pool.slice(0, count));
     setUserAnswers({});
     setFlaggedQuestions([]);
     setCurrentQuestionIndex(0);
-    setExamTimeRemaining(3600);
+    setInitialDuration(calculatedSeconds);
+    setExamTimeRemaining(calculatedSeconds);
     setExamStarted(true);
     setExamFinished(false);
     setShowReviewGrid(false);
+    setReviewFilter('all');
   };
 
   // Timer countdown
@@ -52,8 +93,12 @@ export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt 
   }, [examStarted, examFinished]);
 
   const formatTime = (seconds: number) => {
-    const m = Math.floor(seconds / 60);
+    const h = Math.floor(seconds / 3600);
+    const m = Math.floor((seconds % 3600) / 60);
     const s = seconds % 60;
+    if (h > 0) {
+      return `${h}h ${m.toString().padStart(2, '0')}m ${s.toString().padStart(2, '0')}s`;
+    }
     return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
   };
 
@@ -72,17 +117,16 @@ export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt 
     setExamFinished(true);
     setExamStarted(false);
 
-    // Calculate score & record attempt
     const totalQ = examQuestions.length;
     const correctC = examQuestions.filter(q => userAnswers[q.id] === q.correctOptionId).length;
     const pct = totalQ > 0 ? Math.round((correctC / totalQ) * 100) : 0;
-    const pass = pct >= 75;
+    const pass = pct >= 70; // 70% standard ABPN subspecialty passing benchmark
 
     if (onSaveExamAttempt) {
       onSaveExamAttempt({
         id: `exam-${Date.now()}`,
         timestamp: new Date().toISOString(),
-        durationSeconds: 3600 - examTimeRemaining,
+        durationSeconds: initialDuration - examTimeRemaining,
         totalQuestions: totalQ,
         correctCount: correctC,
         percentage: pct,
@@ -90,7 +134,9 @@ export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt 
       });
     }
 
-    confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 } });
+    if (pass) {
+      confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } });
+    }
   };
 
   const currentQuestion = examQuestions[currentQuestionIndex];
@@ -99,7 +145,20 @@ export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt 
   const totalQuestions = examQuestions.length;
   const correctCount = examQuestions.filter(q => userAnswers[q.id] === q.correctOptionId).length;
   const scorePercent = totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0;
-  const isPassed = scorePercent >= 75;
+  const isPassed = scorePercent >= 70;
+  const timeSpentSeconds = initialDuration - examTimeRemaining;
+  const pacePerQuestion = totalQuestions > 0 ? Math.round(timeSpentSeconds / totalQuestions) : 0;
+
+  // Review questions filtered
+  const reviewQuestions = examQuestions.filter(q => {
+    if (reviewFilter === 'incorrect') {
+      return userAnswers[q.id] !== q.correctOptionId;
+    }
+    if (reviewFilter === 'flagged') {
+      return flaggedQuestions.includes(q.id);
+    }
+    return true;
+  });
 
   return (
     <div className="space-y-6 max-w-4xl mx-auto pb-12">
@@ -110,29 +169,83 @@ export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt 
             <Award className="w-8 h-8" />
           </div>
           <div>
-            <span className="px-3 py-1 rounded-full text-xs font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 uppercase tracking-wider">
-              ABPN Certification Format
-            </span>
-            <h1 className="text-2xl md:text-3xl font-extrabold text-white mt-2">
+            <div className="flex items-center justify-center gap-2">
+              <span className="px-3 py-1 rounded-full text-xs font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 uppercase tracking-wider">
+                ABPN Vascular Neurology Certification Format
+              </span>
+              <span className="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                {questionsData.length} Question Pool
+              </span>
+            </div>
+            <h1 className="text-2xl md:text-3xl font-extrabold text-white mt-3">
               Vascular Neurology Board Mock Exam
             </h1>
             <p className="text-xs md:text-sm text-slate-300 max-w-lg mx-auto mt-2 leading-relaxed">
-              Simulate the official ABPN Vascular Neurology certification exam. 50 randomized board questions, 60-minute countdown timer, question flagging, and detailed subspecialty breakdown report.
+              Timed simulation featuring authentic board-style vignettes, clinical neuroimaging, trial evidence, and pharmacology questions from Futrell & Jamieson and the Essential Study Guide.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-lg mx-auto text-left text-xs bg-slate-900/60 p-4 rounded-2xl border border-slate-700/50">
+          {/* Exam Length Selection */}
+          <div className="max-w-xl mx-auto space-y-2 text-left">
+            <label className="text-xs font-bold text-slate-300 block uppercase tracking-wider">
+              1. Select Exam Length:
+            </label>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              {[
+                { count: 25, label: '25 Questions', time: '30 min', desc: 'Quick Quiz' },
+                { count: 50, label: '50 Questions', time: '60 min', desc: 'Standard Mock' },
+                { count: 100, label: '100 Questions', time: '120 min', desc: 'Half-Length' },
+                { count: 200, label: '200 Questions', time: '240 min', desc: 'Full ABPN Exam' }
+              ].map(opt => (
+                <button
+                  key={opt.count}
+                  type="button"
+                  onClick={() => setExamLength(opt.count as ExamLengthOption)}
+                  className={`p-3 rounded-2xl border text-left transition-all ${
+                    examLength === opt.count
+                      ? 'bg-cyan-500/20 border-cyan-400 text-cyan-200 ring-2 ring-cyan-500/50'
+                      : 'bg-slate-900/80 border-slate-700/70 text-slate-400 hover:border-slate-600'
+                  }`}
+                >
+                  <strong className="block text-sm font-bold text-slate-100">{opt.label}</strong>
+                  <span className="text-[11px] text-cyan-400 font-semibold">{opt.time}</span>
+                  <span className="block text-[10px] text-slate-400 mt-0.5">{opt.desc}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Category / Blueprint Selection */}
+          <div className="max-w-xl mx-auto space-y-2 text-left">
+            <label className="text-xs font-bold text-slate-300 block uppercase tracking-wider">
+              2. Select Focus Track:
+            </label>
+            <select
+              value={selectedDomain}
+              onChange={(e) => setSelectedDomain(e.target.value)}
+              className="w-full bg-slate-900 border border-slate-700 text-xs text-slate-200 rounded-xl px-4 py-3 focus:ring-cyan-500 focus:border-cyan-500"
+            >
+              {domainOptions.map(d => (
+                <option key={d.id} value={d.id}>
+                  {d.label}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Exam Summary Metrics */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-xl mx-auto text-left text-xs bg-slate-900/60 p-4 rounded-2xl border border-slate-700/50">
             <div>
-              <span className="text-slate-400 font-semibold block">Questions</span>
-              <strong className="text-slate-100 text-sm">50 Questions</strong>
+              <span className="text-slate-400 font-semibold block">Questions Selected</span>
+              <strong className="text-slate-100 text-sm">{examLength} Questions</strong>
             </div>
             <div>
-              <span className="text-slate-400 font-semibold block">Time Limit</span>
-              <strong className="text-slate-100 text-sm">60 Minutes</strong>
+              <span className="text-slate-400 font-semibold block">Time Allotted</span>
+              <strong className="text-slate-100 text-sm">{formatTime(examLength * 72)}</strong>
             </div>
             <div>
-              <span className="text-slate-400 font-semibold block">Passing Score</span>
-              <strong className="text-cyan-400 text-sm">75% Score</strong>
+              <span className="text-slate-400 font-semibold block">Passing Threshold</span>
+              <strong className="text-cyan-400 text-sm">70% Score</strong>
             </div>
           </div>
 
@@ -140,7 +253,7 @@ export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt 
             onClick={startExam}
             className="px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-white font-extrabold text-sm rounded-2xl shadow-xl shadow-cyan-500/30 transition-all active:scale-95"
           >
-            Start Board Simulation Exam
+            Launch Board Simulation ({examLength} Questions)
           </button>
         </div>
       )}
@@ -149,7 +262,7 @@ export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt 
       {examStarted && currentQuestion && (
         <div className="space-y-4">
           {/* Top Timer & Status Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-3 bg-slate-800/90 px-5 py-3.5 rounded-2xl border border-slate-700/60">
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-slate-800/90 px-5 py-3.5 rounded-2xl border border-slate-700/60 shadow-lg">
             <div className="flex items-center space-x-3">
               <span className="text-xs font-bold text-slate-300">
                 Question <strong className="text-cyan-400">{currentQuestionIndex + 1}</strong> of {totalQuestions}
@@ -173,7 +286,7 @@ export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt 
                 onClick={() => setShowReviewGrid(prev => !prev)}
                 className="p-2 rounded-xl bg-slate-900 text-slate-300 border border-slate-700 text-xs font-semibold flex items-center gap-1 hover:text-cyan-400"
               >
-                <LayoutGrid className="w-4 h-4" /> Grid
+                <LayoutGrid className="w-4 h-4" /> Navigator
               </button>
 
               <div className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl font-mono text-xs font-bold ${
@@ -194,7 +307,7 @@ export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt 
                 </span>
               </div>
 
-              <div className="grid grid-cols-10 gap-1.5 max-h-48 overflow-y-auto p-1">
+              <div className="grid grid-cols-10 gap-1.5 max-h-56 overflow-y-auto p-1">
                 {examQuestions.map((q, idx) => {
                   const isAnswered = !!userAnswers[q.id];
                   const isFlagged = flaggedQuestions.includes(q.id);
@@ -228,6 +341,9 @@ export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt 
           <div className="bg-slate-800/90 rounded-3xl border border-slate-700/80 p-6 md:p-8 space-y-6 shadow-xl">
             {/* Vignette */}
             <div className="bg-slate-900/50 p-5 rounded-2xl border border-slate-700/40 space-y-3">
+              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 uppercase tracking-wider">
+                {currentQuestion.chapterTitle}
+              </span>
               <p className="text-xs md:text-sm text-slate-200 leading-relaxed font-normal">
                 {currentQuestion.vignette}
               </p>
@@ -244,7 +360,7 @@ export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt 
                   </div>
                   {currentQuestion.imageCaption && (
                     <span className="text-xs text-slate-400 text-center italic font-medium pt-1">
-                      📷 Figure: {currentQuestion.imageCaption}
+                      ðŸ“· Figure: {currentQuestion.imageCaption}
                     </span>
                   )}
                 </div>
@@ -332,38 +448,92 @@ export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt 
               <h2 className="text-3xl font-black mt-1">
                 {isPassed ? 'PASSED - CONGRATULATIONS!' : 'NEEDS FURTHER REVIEW'}
               </h2>
+              <p className="text-xs text-slate-300 mt-1">
+                Passing threshold is 70% (ABPN Vascular Neurology Standard)
+              </p>
             </div>
 
-            <div className="p-6 bg-slate-900/90 rounded-2xl max-w-sm mx-auto border border-slate-700/60 text-center">
-              <span className="text-5xl font-extrabold text-cyan-400">{scorePercent}%</span>
-              <div className="mt-1 text-xs text-slate-300 font-semibold">
-                {correctCount} / {totalQuestions} Correct Answers
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-lg mx-auto text-left text-xs bg-slate-900/90 p-4 rounded-2xl border border-slate-700/60">
+              <div className="text-center sm:text-left">
+                <span className="text-slate-400 font-semibold block">Score</span>
+                <strong className="text-3xl font-extrabold text-cyan-400">{scorePercent}%</strong>
+              </div>
+              <div className="text-center sm:text-left">
+                <span className="text-slate-400 font-semibold block">Correct Answers</span>
+                <strong className="text-slate-100 text-lg">{correctCount} / {totalQuestions}</strong>
+              </div>
+              <div className="text-center sm:text-left">
+                <span className="text-slate-400 font-semibold block">Average Pace</span>
+                <strong className="text-slate-100 text-lg">{pacePerQuestion}s / question</strong>
               </div>
             </div>
 
             <button
-              onClick={startExam}
+              onClick={() => {
+                setExamStarted(false);
+                setExamFinished(false);
+              }}
               className="px-6 py-3 bg-slate-800 hover:bg-slate-750 text-white font-bold text-xs rounded-xl border border-slate-700 inline-flex items-center gap-2 transition-all active:scale-95"
             >
-              <RotateCcw className="w-4 h-4 text-cyan-400" /> Retake Board Mock Exam
+              <RotateCcw className="w-4 h-4 text-cyan-400" /> Configure & Retake Exam
             </button>
           </div>
 
-          {/* Full Exam Review List */}
+          {/* Full Exam Review List with Filter */}
           <div className="bg-slate-800/80 p-6 rounded-3xl border border-slate-700/60 space-y-6">
-            <h3 className="text-base font-bold text-slate-100 border-b border-slate-700 pb-3">
-              Full Board Exam Question & Rationale Review
-            </h3>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-slate-700 pb-3">
+              <h3 className="text-base font-bold text-slate-100 flex items-center gap-2">
+                <BookOpen className="w-5 h-5 text-cyan-400" /> Question & Clinical Rationale Review
+              </h3>
+              
+              {/* Review Filter Pills */}
+              <div className="flex items-center gap-1.5 bg-slate-900 p-1 rounded-xl border border-slate-700 text-xs">
+                <button
+                  onClick={() => setReviewFilter('all')}
+                  className={`px-3 py-1 rounded-lg font-semibold transition-all ${
+                    reviewFilter === 'all' ? 'bg-cyan-500 text-white' : 'text-slate-400 hover:text-slate-200'
+                  }`}
+                >
+                  All ({examQuestions.length})
+                </button>
+                <button
+                  onClick={() => setReviewFilter('incorrect')}
+                  className={`px-3 py-1 rounded-lg font-semibold transition-all ${
+                    reviewFilter === 'incorrect' ? 'bg-rose-500 text-white' : 'text-slate-400 hover:text-rose-300'
+                  }`}
+                >
+                  Incorrect ({examQuestions.length - correctCount})
+                </button>
+                <button
+                  onClick={() => setReviewFilter('flagged')}
+                  className={`px-3 py-1 rounded-lg font-semibold transition-all ${
+                    reviewFilter === 'flagged' ? 'bg-amber-500 text-slate-950 font-bold' : 'text-slate-400 hover:text-amber-300'
+                  }`}
+                >
+                  Flagged ({flaggedQuestions.length})
+                </button>
+              </div>
+            </div>
 
             <div className="space-y-6">
-              {examQuestions.map((q, idx) => {
+              {reviewQuestions.map((q, idx) => {
                 const userAns = userAnswers[q.id];
                 const isCorrect = userAns === q.correctOptionId;
 
                 return (
                   <div key={q.id} className="bg-slate-900/70 p-5 rounded-2xl border border-slate-700/50 space-y-3">
                     <div className="flex items-center justify-between text-xs">
-                      <span className="font-bold text-slate-300">Question {idx + 1}</span>
+                      <div className="flex items-center gap-2">
+                        <span className="font-bold text-slate-300">Question {idx + 1}</span>
+                        <span className="text-[10px] text-cyan-400 px-2 py-0.5 rounded-full bg-cyan-950 border border-cyan-800">
+                          {q.chapterTitle}
+                        </span>
+                        {q.source && (
+                          <span className="text-[10px] text-slate-400 italic">
+                            Source: {q.source}
+                          </span>
+                        )}
+                      </div>
                       {isCorrect ? (
                         <span className="text-emerald-400 font-bold flex items-center gap-1">
                           <CheckCircle2 className="w-4 h-4" /> Correct
@@ -383,9 +553,17 @@ export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt 
                       <p><strong className="text-emerald-400">Correct Answer:</strong> Option {q.correctOptionId}</p>
                     </div>
 
-                    <div className="text-xs text-slate-400 leading-relaxed border-t border-slate-800 pt-2">
-                      <strong className="text-cyan-400 block mb-0.5">Rationale:</strong>
-                      {q.explanation}
+                    <div className="text-xs text-slate-400 leading-relaxed border-t border-slate-800 pt-2 space-y-2">
+                      <div>
+                        <strong className="text-cyan-400 block mb-0.5">Rationale:</strong>
+                        {q.explanation}
+                      </div>
+                      {q.keyTakeaway && (
+                        <div className="bg-cyan-950/40 p-2.5 rounded-xl border border-cyan-800/40 text-cyan-200">
+                          <strong className="text-cyan-400 block text-[11px]">Board Takeaway:</strong>
+                          {q.keyTakeaway}
+                        </div>
+                      )}
                     </div>
                   </div>
                 );
@@ -397,3 +575,4 @@ export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt 
     </div>
   );
 };
+

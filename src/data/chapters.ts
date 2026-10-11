@@ -1,4 +1,4 @@
-import { Chapter } from '../types';
+﻿import { Chapter } from '../types';
 
 export const chaptersData: Chapter[] = [
   {
@@ -73,8 +73,8 @@ export const chaptersData: Chapter[] = [
         ],
         bullets: [
           "Fingerstick Blood Glucose: Must be > 50 mg/dL (2.8 mmol/L) to exclude hypoglycemia.",
-          "Platelet Count Threshold: Must be ≥ 100,000/μL.",
-          "INR Threshold: Must be ≤ 1.7 if on Warfarin.",
+          "Platelet Count Threshold: Must be â‰¥ 100,000/Î¼L.",
+          "INR Threshold: Must be â‰¤ 1.7 if on Warfarin.",
           "aPTT Threshold: Must be in normal range if on Unfractionated Heparin (UFH) within 48 hours.",
           "DOAC Exclusion: Full-dose Factor Xa inhibitor or Direct Thrombin Inhibitor within 48 hours is a contraindication to IV tPA/TNK unless specific lab assays (anti-Xa level < 0.5 U/mL or ecarin clotting time) are normal."
         ],
@@ -246,7 +246,7 @@ export const chaptersData: Chapter[] = [
           "Blood Pressure Targets: AHA recommendation for stroke/TIA patients is SBP < 130/80 mmHg.",
           "Atrial Fibrillation: Increases stroke risk 5-fold.",
           "Diabetes Mellitus: Increases stroke risk 1.5 - 3x. Glycemic target HbA1c < 7.0%.",
-          "Hyperlipidemia: AHA target for TIA/stroke patients with atherosclerotic disease is high-potency statin targeting LDL < 70 mg/dL (or ≥50% LDL reduction).",
+          "Hyperlipidemia: AHA target for TIA/stroke patients with atherosclerotic disease is high-potency statin targeting LDL < 70 mg/dL (or â‰¥50% LDL reduction).",
           "Smoking: 2-4x increased risk of stroke/SAH. Smoking + oral contraceptive pills (OCP) increases stroke risk 7.2x!"
         ]
       }
@@ -364,7 +364,7 @@ export const chaptersData: Chapter[] = [
         title: "Atrial Fibrillation & Anticoagulation",
         content: [
           "AFib increases embolic stroke risk 5-fold (4.5% annual risk without AC). Left Atrial Appendage (LAA) is the site of >90% of thrombi in non-valvular AFib.",
-          "CHA₂DS₂-VASc Score: Congestive HF (+1), HTN (+1), Age >= 75 (+2), Diabetes (+1), Stroke/TIA (+2), Vascular disease (+1), Age 65-74 (+1), Sex Category Female (+1). Score >= 2 in men or >= 3 in women requires oral anticoagulation.",
+          "CHAâ‚‚DSâ‚‚-VASc Score: Congestive HF (+1), HTN (+1), Age >= 75 (+2), Diabetes (+1), Stroke/TIA (+2), Vascular disease (+1), Age 65-74 (+1), Sex Category Female (+1). Score >= 2 in men or >= 3 in women requires oral anticoagulation.",
           "DOACs vs Warfarin: DOACs (Apixaban, Rivaroxaban, Dabigatran, Edoxaban) are non-inferior or superior to Warfarin with significantly LOWER rates of Intracranial Hemorrhage (ICH)!"
         ],
         bullets: [
@@ -436,7 +436,7 @@ export const chaptersData: Chapter[] = [
         title: "Cerebral Edema & Decompressive Hemicraniectomy",
         content: [
           "Cytotoxic Edema peaks at days 3-5 post-large cortical stroke (> 1/3 MCA territory).",
-          "Management: Head of bed 30°, hyperventilation (PaCO2 target 30-35 mmHg), IV Mannitol (0.5-1 g/kg) or 3% Hypertonic Saline.",
+          "Management: Head of bed 30Â°, hyperventilation (PaCO2 target 30-35 mmHg), IV Mannitol (0.5-1 g/kg) or 3% Hypertonic Saline.",
           "Decompressive Hemicraniectomy (DHC): Proven life-saving intervention for Malignant MCA Infarcts in patients < 60 years within 48 hours of onset. ARR 50% reduction in mortality!"
         ]
       },
@@ -664,3 +664,4 @@ export const chaptersData: Chapter[] = [
     ]
   }
 ];
+

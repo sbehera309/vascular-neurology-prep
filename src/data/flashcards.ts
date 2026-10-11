@@ -1,4 +1,4 @@
-import { Flashcard } from '../types';
+﻿import { Flashcard } from '../types';
 
 export const flashcardsData: Flashcard[] = [
   {
@@ -1998,5 +1998,731 @@ export const flashcardsData: Flashcard[] = [
     "answer": "Atorvastatin 80 mg daily.",
     "explanation": "Reduces recurrent stroke risk by 16%.",
     "highYieldTag": "SPARCL"
+  },
+  {
+    "id": "fc-fj-1",
+    "chapterId": 6,
+    "chapterTitle": "Chapter 6: Stroke Pathophysiology",
+    "question": "What is the threshold of CBF for electrical failure vs membrane pump failure?",
+    "answer": "Electrical failure occurs at 18â€“25 mL/100g/min; Membrane pump failure & infarction occur at <10â€“12 mL/100g/min.",
+    "explanation": "Between 10-12 and 18-25 mL/100g/min represents the ischemic penumbra.",
+    "highYieldTag": "CBF Thresholds"
+  },
+  {
+    "id": "fc-fj-2",
+    "chapterId": 6,
+    "chapterTitle": "Chapter 6: Stroke Pathophysiology",
+    "question": "How does cerebral autoregulation respond to ischemia once perfusion pressure drops below its lower limit?",
+    "answer": "Autoregulation fails: CBF falls linearly with perfusion pressure, CBV & MTT increase, and OEF increases.",
+    "explanation": "Oxygen extraction fraction (OEF) increases to maintain cerebral metabolic rate of oxygen (CMRO2).",
+    "highYieldTag": "Autoregulation"
+  },
+  {
+    "id": "fc-fj-3",
+    "chapterId": 6,
+    "chapterTitle": "Chapter 6: Stroke Pathophysiology",
+    "question": "What is the timeline and mechanism of Cytotoxic vs Vasogenic edema?",
+    "answer": "Cytotoxic: Minutes post-stroke, ATP depletion, Na+/K+ pump failure, intact BBB. Vasogenic: 24â€“72 hours, BBB breakdown by MMPs, extracellular fluid in white matter.",
+    "explanation": "Cytotoxic edema affects gray matter; vasogenic edema affects white matter.",
+    "highYieldTag": "Cerebral Edema"
+  },
+  {
+    "id": "fc-fj-4",
+    "chapterId": 3,
+    "chapterTitle": "Chapter 3: Vascular Neuroanatomy",
+    "question": "What is the parent vessel of the internal auditory (labyrinthine) artery?",
+    "answer": "Anterior Inferior Cerebellar Artery (AICA) in ~85% of cases (Basilar artery in 15%).",
+    "explanation": "AICA occlusion classically causes sudden deafness, vertigo, facial palsy, and ataxia.",
+    "highYieldTag": "Labyrinthine Artery"
+  },
+  {
+    "id": "fc-fj-5",
+    "chapterId": 3,
+    "chapterTitle": "Chapter 3: Vascular Neuroanatomy",
+    "question": "Which cranial nerves are in the cavernous sinus vs lateral dural wall?",
+    "answer": "Inside sinus lumen: CN VI and Internal Carotid Artery. In lateral dural wall: CN III, IV, V1, and V2. (V3 does NOT enter sinus).",
+    "explanation": "Abducens nerve (CN VI) is most vulnerable to intracavernous pathology.",
+    "highYieldTag": "Cavernous Sinus"
+  },
+  {
+    "id": "fc-fj-6",
+    "chapterId": 3,
+    "chapterTitle": "Chapter 3: Vascular Neuroanatomy",
+    "question": "What does an Artery of Percheron infarction look like on MRI?",
+    "answer": "Bilateral paramedian thalamic and rostral midbrain restricted diffusion.",
+    "explanation": "Arises as a solitary trunk from P1 segment of a single PCA supplying both medial thalami.",
+    "highYieldTag": "Artery of Percheron"
+  },
+  {
+    "id": "fc-fj-7",
+    "chapterId": 3,
+    "chapterTitle": "Chapter 3: Vascular Neuroanatomy",
+    "question": "What anatomical structure protects the macula during central retinal artery occlusion (CRAO)?",
+    "answer": "A patent Cilioretinal Artery (present in 15â€“20% of people, arising from short posterior ciliary arteries).",
+    "explanation": "Supplies the fovea/macula independently of the central retinal artery.",
+    "highYieldTag": "Cilioretinal Artery"
+  },
+  {
+    "id": "fc-fj-8",
+    "chapterId": 4,
+    "chapterTitle": "Chapter 4: Stroke Syndromes",
+    "question": "What clinical triad characterizes Anterior Choroidal Artery (AChA) stroke?",
+    "answer": "1. Contralateral hemiparesis (posterior limb internal capsule) 2. Contralateral homonymous hemianopia or sectoranopia (lateral geniculate body) 3. Preserved language/cognition.",
+    "explanation": "AChA arises from the supraclinoid ICA (C4/C5 segment).",
+    "highYieldTag": "Anterior Choroidal"
+  },
+  {
+    "id": "fc-fj-9",
+    "chapterId": 4,
+    "chapterTitle": "Chapter 4: Stroke Syndromes",
+    "question": "What are the features and localization of Gerstmann Syndrome?",
+    "answer": "Agraphia, Acalculia, Finger agnosia, and Right-left disorientation. Localizes to dominant angular gyrus.",
+    "explanation": "Supplied by middle cerebral artery inferior division branches.",
+    "highYieldTag": "Gerstmann"
+  },
+  {
+    "id": "fc-fj-10",
+    "chapterId": 4,
+    "chapterTitle": "Chapter 4: Stroke Syndromes",
+    "question": "What is the anatomical lesion in Alexia without Agraphia?",
+    "answer": "Left medial occipital lobe AND splenium of the corpus callosum.",
+    "explanation": "Right occipital visual input cannot reach the left hemisphere angular gyrus language area.",
+    "highYieldTag": "Alexia without Agraphia"
+  },
+  {
+    "id": "fc-fj-11",
+    "chapterId": 7,
+    "chapterTitle": "Chapter 7: Classification of Stroke & Vasculopathy",
+    "vignette": "",
+    "question": "What is the most common subtype and angiographic appearance of Fibromuscular Dysplasia (FMD)?",
+    "answer": "Medial fibroplasia (75â€“80% of cases), causing the 'string of beads' appearance, most often in the mid-third of cervical ICA (C1â€“C2).",
+    "explanation": "Bilateral in >60% of cases and associated with intracranial aneurysms.",
+    "highYieldTag": "FMD"
+  },
+  {
+    "id": "fc-fj-12",
+    "chapterId": 7,
+    "chapterTitle": "Chapter 7: Classification of Stroke & Vasculopathy",
+    "question": "What are the clinical hallmarks of Reversible Cerebral Vasoconstriction Syndrome (RCVS)?",
+    "answer": "Recurrent severe thunderclap headaches, normal CSF, reversible 'sausage-string' beading on MRA, responsive to CCBs (verapamil/nimodipine). Avoid steroids!",
+    "explanation": "Triggered by postpartum state, SSRIs, triptans, and sympathomimetics.",
+    "highYieldTag": "RCVS"
+  },
+  {
+    "id": "fc-fj-13",
+    "chapterId": 10,
+    "chapterTitle": "Chapter 10: Genetic Stroke Syndromes",
+    "question": "What gene, chromosome, and MRI hallmark define CADASIL?",
+    "answer": "NOTCH3 gene on chromosome 19p13; Autosomal dominant; Anterior temporal pole (O'Sullivan sign) and external capsule FLAIR hyperintensities; GOM on skin biopsy.",
+    "explanation": "Most common monogenic stroke cause; presents with migraine, strokes, and dementia.",
+    "highYieldTag": "CADASIL"
+  },
+  {
+    "id": "fc-fj-14",
+    "chapterId": 10,
+    "chapterTitle": "Chapter 10: Genetic Stroke Syndromes",
+    "question": "What clinical triad and gene mutation define CARASIL?",
+    "answer": "Premature alopecia (teen years), severe spondylosis/back pain, and young lacunar strokes; HTRA1 gene on chromosome 10q (Autosomal recessive).",
+    "explanation": "Unlike CADASIL, CARASIL lacks granular osmophilic material (GOM).",
+    "highYieldTag": "CARASIL"
+  },
+  {
+    "id": "fc-fj-15",
+    "chapterId": 10,
+    "chapterTitle": "Chapter 10: Genetic Stroke Syndromes",
+    "question": "What enzyme deficiency, inheritance, and clinical features define Fabry disease?",
+    "answer": "Alpha-galactosidase A (GLA gene, X-linked recessive); Acroparesthesias, angiokeratomas, hypohidrosis, renal failure, T1 pulvinar sign, and posterior circulation strokes.",
+    "explanation": "Leukocyte GLA enzyme assay is 100% sensitive in males.",
+    "highYieldTag": "Fabry Disease"
+  },
+  {
+    "id": "fc-fj-16",
+    "chapterId": 10,
+    "chapterTitle": "Chapter 10: Genetic Stroke Syndromes",
+    "question": "What gene mutation causes Ehlers-Danlos Syndrome Type IV (Vascular Type)?",
+    "answer": "COL3A1 gene on chromosome 2q31 encoding Type III procollagen (Autosomal dominant).",
+    "explanation": "Presents with thin translucent skin, visible veins, and catastrophic spontaneous arterial dissection/rupture.",
+    "highYieldTag": "EDS Type IV"
+  },
+  {
+    "id": "fc-fj-17",
+    "chapterId": 10,
+    "chapterTitle": "Chapter 10: Genetic Stroke Syndromes",
+    "question": "What is the clinical triad and characteristic MRI finding in Susac syndrome?",
+    "answer": "Triad: 1. Subacute encephalopathy 2. Branch retinal artery occlusions (BRAO) 3. Sensorineural hearing loss. MRI: 'Snowball' lesions in the central corpus callosum.",
+    "explanation": "Autoimmune microangiopathy affecting precapillary arterioles in young women.",
+    "highYieldTag": "Susac Syndrome"
+  },
+  {
+    "id": "fc-fj-18",
+    "chapterId": 19,
+    "chapterTitle": "Chapter 19: Pharmacology",
+    "question": "What is the antithrombotic recommendation for mechanical heart valves?",
+    "answer": "Warfarin (target INR 2.5 for aortic, 3.0 for mitral) PLUS low-dose aspirin 75-100 mg. DOACs are absolutely CONTRAINDICATED (RE-ALIGN trial).",
+    "explanation": "Dabigatran caused excess strokes and bleeding in mechanical valve patients.",
+    "highYieldTag": "Mechanical Valves"
+  },
+  {
+    "id": "fc-fj-19",
+    "chapterId": 19,
+    "chapterTitle": "Chapter 19: Pharmacology",
+    "question": "What is the specific FDA-approved reversal agent for dabigatran?",
+    "answer": "Idarucizumab (Praxbind) 5 g IV (humanized monoclonal Fab fragment with 350x higher affinity than thrombin).",
+    "explanation": "Rapidly binds both free and clot-bound dabigatran to restore normal hemostasis within minutes.",
+    "highYieldTag": "Idarucizumab"
+  },
+  {
+    "id": "fc-fj-20",
+    "chapterId": 19,
+    "chapterTitle": "Chapter 19: Pharmacology",
+    "question": "What is the guideline-recommended urgent reversal regimen for warfarin major bleeding?",
+    "answer": "4-Factor Prothrombin Complex Concentrate (4F-PCC: Kcentra) + Intravenous Vitamin K 10 mg.",
+    "explanation": "4F-PCC normalizes INR in 15-30 min; IV Vitamin K maintains sustained hepatic clotting factor synthesis.",
+    "highYieldTag": "Warfarin Reversal"
+  },
+  {
+    "id": "fc-fj-21",
+    "chapterId": 19,
+    "chapterTitle": "Chapter 19: Pharmacology",
+    "question": "Why should omeprazole be avoided with clopidogrel, and what is the preferred PPI?",
+    "answer": "Omeprazole inhibits CYP2C19, preventing bioactivation of clopidogrel; Pantoprazole does not inhibit CYP2C19 and is safe.",
+    "explanation": "Clopidogrel is a prodrug requiring CYP2C19 to convert to active antiplatelet form.",
+    "highYieldTag": "Clopidogrel & PPI"
+  },
+  {
+    "id": "fc-fj-22",
+    "chapterId": 14,
+    "chapterTitle": "Chapter 14: Vascular Malformations & Aneurysms",
+    "question": "What did the ARUBA trial conclude regarding unruptured brain AVMs?",
+    "answer": "Medical management alone is SUPERIOR to interventional eradication (intervention tripled stroke/death risk from 10% to 30%).",
+    "explanation": "Trial randomized patients with unruptured brain AVMs to medical vs interventional therapy.",
+    "highYieldTag": "ARUBA Trial"
+  },
+  {
+    "id": "fc-fj-23",
+    "chapterId": 13,
+    "chapterTitle": "Chapter 13: Intracranial Hemorrhage (ICH)",
+    "question": "What did the PATCH trial show regarding platelet transfusion in acute ICH on antiplatelets?",
+    "answer": "Platelet transfusion is HARMFUL: significantly increased odds of death and dependence (24% mortality vs 17% standard care).",
+    "explanation": "Platelet transfusion should NOT be routinely administered for spontaneous ICH in patients taking antiplatelet agents.",
+    "highYieldTag": "PATCH Trial"
+  },
+  {
+    "id": "fc-fj-24",
+    "chapterId": 13,
+    "chapterTitle": "Chapter 13: Intracranial Hemorrhage (ICH)",
+    "question": "What did the ATACH-2 trial demonstrate regarding acute intensive SBP lowering (<140 mmHg)?",
+    "answer": "No benefit in functional outcome or death compared to standard SBP lowering (140-179 mmHg), and significantly increased renal adverse events.",
+    "explanation": "Guideline target is SBP ~140 mmHg, avoiding aggressive drops <130 mmHg.",
+    "highYieldTag": "ATACH-2 Trial"
+  },
+  {
+    "id": "fc-fj-25",
+    "chapterId": 15,
+    "chapterTitle": "Chapter 15: Hematologic Disorders & Hypercoagulability",
+    "question": "What is the diagnostic laboratory paradox of Lupus Anticoagulant?",
+    "answer": "Prolongs aPTT and dRVVT in vitro (binds reagent phospholipids; fails to correct with normal plasma), but causes THROMBOSIS in vivo.",
+    "explanation": "Most common acquired thrombophilia; strongly associated with arterial and venous thrombosis.",
+    "highYieldTag": "Lupus Anticoagulant"
+  },
+  {
+    "id": "fc-fj-26",
+    "chapterId": 15,
+    "chapterTitle": "Chapter 15: Hematologic Disorders & Hypercoagulability",
+    "question": "What is the immediate management for Heparin-Induced Thrombocytopenia (HIT Type II)?",
+    "answer": "1. Discontinue ALL heparin 2. Start a direct thrombin inhibitor (Argatroban) 3. AVOID platelet transfusions (fuels white clot thrombosis).",
+    "explanation": "Caused by IgG antibodies to PF4-heparin complex, typically after 4-10 days of heparin.",
+    "highYieldTag": "HIT Type II"
+  },
+  {
+    "id": "fc-fj-27",
+    "chapterId": 16,
+    "chapterTitle": "Chapter 16: Neuroradiology & Neurovascular Imaging",
+    "question": "What is the MRI hemorrhage staging mnemonic and T1/T2 appearance?",
+    "answer": "Mnemonic: 'I Take Ink, Bleed Bleed, Die Die'. 1. Hyperacute (<24h): Iso/Bright (OxyHb) 2. Acute (1-3d): Iso/Dark (DeoxyHb) 3. Early Subacute (3-7d): Bright/Dark (Intracellular MetHb) 4. Late Subacute (7-14d): Bright/Bright (Extracellular MetHb) 5. Chronic (>14d): Dark/Dark (Hemosiderin).",
+    "explanation": "Dating depends on magnetic properties of iron in hemoglobin breakdown products.",
+    "highYieldTag": "MRI Hemorrhage Dating"
+  },
+  {
+    "id": "fc-fj-28",
+    "chapterId": 16,
+    "chapterTitle": "Chapter 16: Neuroradiology & Neurovascular Imaging",
+    "question": "What are the Carotid Duplex consensus criteria for >=70% internal carotid artery stenosis?",
+    "answer": "Peak Systolic Velocity (PSV) >230 cm/s, End Diastolic Velocity (EDV) >110 cm/s, and ICA/CCA PSV ratio >4.0.",
+    "explanation": "Correlates with NASCET surgical threshold for carotid endarterectomy.",
+    "highYieldTag": "Carotid Ultrasound Criteria"
+  },
+  {
+    "id": "fc-fj-29",
+    "chapterId": 16,
+    "chapterTitle": "Chapter 16: Neuroradiology & Neurovascular Imaging",
+    "question": "What Lindegaard ratio on Transcranial Doppler indicates severe cerebral vasospasm in SAH?",
+    "answer": "Lindegaard ratio (MCA mean velocity / Extracranial ICA mean velocity) >6.0.",
+    "explanation": "Differentiates true vasospasm (>6.0) from hyperdynamic hyperemia (<3.0).",
+    "highYieldTag": "Lindegaard Ratio"
+  },
+  {
+    "id": "fc-fj-30",
+    "chapterId": 18,
+    "chapterTitle": "Chapter 18: Stroke Rehabilitation",
+    "question": "What is the minimum motor criteria required for Constraint-Induced Movement Therapy (CIMT)?",
+    "answer": ">=20 degrees active wrist extension and >=10 degrees active extension of each finger (EXCITE trial).",
+    "explanation": "Ineffective in completely flaccid or severely contracted limbs.",
+    "highYieldTag": "CIMT Criteria"
+  }
+
+  ,
+  {
+    "id": "fc-fj-31",
+    "chapterId": 14,
+    "chapterTitle": "Chapter 14: Vascular Malformations & Aneurysms",
+    "question": "What is the Hunt and Hess classification scale for aneurysmal SAH?",
+    "answer": "Grade I: Asymptomatic/mild headache; Grade II: Moderate-severe headache + nuchal rigidity; Grade III: Drowsiness/confusion/mild deficit; Grade IV: Stupor/hemiparesis; Grade V: Deep coma/decerebrate.",
+    "explanation": "Grades I-II are considered good clinical grade; Grades IV-V are poor grade.",
+    "highYieldTag": "Hunt and Hess"
+  },
+  {
+    "id": "fc-fj-32",
+    "chapterId": 14,
+    "chapterTitle": "Chapter 14: Vascular Malformations & Aneurysms",
+    "question": "How does aneurysm size and location predict rupture risk in the ISUIA trial?",
+    "answer": "Posterior circulation & PCOM aneurysms have significantly higher rupture risk across all sizes than anterior circulation aneurysms (<7 mm anterior = 0% 5-year vs >25 mm = 40-50%).",
+    "explanation": "Size >=7 mm and posterior/PCOM location are major thresholds for interventional repair.",
+    "highYieldTag": "ISUIA Trial"
+  },
+  {
+    "id": "fc-fj-33",
+    "chapterId": 14,
+    "chapterTitle": "Chapter 14: Vascular Malformations & Aneurysms",
+    "question": "Why is surgical resection of a Developmental Venous Anomaly (DVA) contraindicated?",
+    "answer": "DVAs provide normal physiological venous drainage for adjacent brain parenchyma; surgical resection causes catastrophic venous infarction and hemorrhage.",
+    "explanation": "DVAs have a 'caput medusae' appearance and are benign.",
+    "highYieldTag": "DVA Contraindication"
+  },
+  {
+    "id": "fc-fj-34",
+    "chapterId": 14,
+    "chapterTitle": "Chapter 14: Vascular Malformations & Aneurysms",
+    "question": "What three variables are scored in the Spetzler-Martin AVM grading scale?",
+    "answer": "1. Size (<3 cm = 1, 3-6 cm = 2, >6 cm = 3) 2. Eloquence of adjacent brain (0 or 1) 3. Venous drainage pattern (superficial = 0, deep = 1). Total: Grade I to V.",
+    "explanation": "Predicts surgical morbidity and mortality; Grade VI is considered inoperable.",
+    "highYieldTag": "Spetzler-Martin"
+  },
+  {
+    "id": "fc-fj-35",
+    "chapterId": 8,
+    "chapterTitle": "Chapter 8: Acute Stroke Management & Secondary Prevention",
+    "question": "What are the blood pressure limits before and during/after IV tPA administration?",
+    "answer": "Must be <185/110 mmHg BEFORE initiating tPA, and kept <180/105 mmHg for at least 24 hours following infusion.",
+    "explanation": "Preferred emergency agents: IV Labetalol or IV Nicardipine.",
+    "highYieldTag": "tPA BP Goals"
+  },
+  {
+    "id": "fc-fj-36",
+    "chapterId": 8,
+    "chapterTitle": "Chapter 8: Acute Stroke Management & Secondary Prevention",
+    "question": "What extra exclusion criteria apply to IV tPA in the 3 to 4.5-hour window (ECASS III)?",
+    "answer": "1. Age >80 years 2. ANY oral anticoagulant use (regardless of INR) 3. Prior stroke PLUS diabetes mellitus 4. NIHSS >25 5. Infarct >1/3 MCA territory.",
+    "explanation": "In 0-3h window, warfarin is permitted if INR <=1.7.",
+    "highYieldTag": "ECASS III Exclusions"
+  },
+  {
+    "id": "fc-fj-37",
+    "chapterId": 8,
+    "chapterTitle": "Chapter 8: Acute Stroke Management & Secondary Prevention",
+    "question": "What are the extended window endovascular thrombectomy criteria in DAWN and DEFUSE 3?",
+    "answer": "DAWN: 6â€“24 hours with clinical-core mismatch. DEFUSE 3: 6â€“16 hours with perfusion-core mismatch (ischemic core <70 cc, mismatch ratio >=1.8, mismatch vol >=15 cc).",
+    "explanation": "Both demonstrated dramatic functional independence benefits (NNT ~2.8).",
+    "highYieldTag": "DAWN & DEFUSE 3"
+  },
+  {
+    "id": "fc-fj-38",
+    "chapterId": 8,
+    "chapterTitle": "Chapter 8: Acute Stroke Management & Secondary Prevention",
+    "question": "What is the recommended DAPT regimen and duration per CHANCE and POINT trials?",
+    "answer": "Aspirin + Clopidogrel initiated within 24h of minor stroke (NIHSS <=3) or high-risk TIA (ABCD2 >=4) for 21 DAYS, then switch to single antiplatelet.",
+    "explanation": "Extending DAPT beyond 21 days increases major bleeding without added ischemic reduction.",
+    "highYieldTag": "DAPT 21 Days"
+  },
+  {
+    "id": "fc-fj-39",
+    "chapterId": 8,
+    "chapterTitle": "Chapter 8: Acute Stroke Management & Secondary Prevention",
+    "question": "What is the ideal surgical timing for carotid endarterectomy (CEA) in symptomatic severe stenosis?",
+    "answer": "Within 2 WEEKS (14 days) of symptom onset (NNT = 5 within 2 weeks vs NNT = 125 after 2 weeks per NASCET/ECST).",
+    "explanation": "Early surgery prevents the high rate of early recurrent ischemic events.",
+    "highYieldTag": "CEA Timing"
+  },
+  {
+    "id": "fc-fj-40",
+    "chapterId": 8,
+    "chapterTitle": "Chapter 8: Acute Stroke Management & Secondary Prevention",
+    "question": "How does age influence CAS vs CEA selection according to the CREST trial?",
+    "answer": "Patients >70 years have significantly better outcomes with CEA (lower stroke risk); patients <70 years do equally well or slightly better with CAS.",
+    "explanation": "Aortic arch tortuosity and atherosclerosis in older patients increase catheter embolic risk in CAS.",
+    "highYieldTag": "CREST Age Effect"
+  },
+  {
+    "id": "fc-fj-41",
+    "chapterId": 9,
+    "chapterTitle": "Chapter 9: Clinical Cardiology & Stroke",
+    "question": "What is the RoPE score and how is it interpreted?",
+    "answer": "10-point score for cryptogenic stroke with PFO. Points for ABSENCE of vascular risks, cortical stroke, and young age. High score (9-10) = PFO is highly likely causal (73-88% PFO-attributable fraction).",
+    "explanation": "Young patients without vascular risks who have a PFO have the lowest recurrence rate.",
+    "highYieldTag": "RoPE Score"
+  },
+  {
+    "id": "fc-fj-42",
+    "chapterId": 11,
+    "chapterTitle": "Chapter 11: Special Populations (Pediatric, Pregnancy & Young Adult)",
+    "question": "What are the clinical features of Warfarin Embryopathy?",
+    "answer": "Nasal hypoplasia ('saddle nose'), stippled epiphyses (chondrodysplasia punctata), microcephaly, and optic atrophy from first-trimester exposure (weeks 6-12).",
+    "explanation": "LMWH does not cross placenta and is the anticoagulant of choice in pregnancy.",
+    "highYieldTag": "Warfarin Embryopathy"
+  },
+  {
+    "id": "fc-fj-43",
+    "chapterId": 11,
+    "chapterTitle": "Chapter 11: Special Populations (Pediatric, Pregnancy & Young Adult)",
+    "question": "What is the emergency management of severe preeclampsia / eclampsia?",
+    "answer": "1. Urgent parenteral BP control (IV Labetalol or Hydralazine, or oral nifedipine) 2. IV Magnesium Sulfate for seizure prevention (antidote: IV Calcium Gluconate 1 g).",
+    "explanation": "Definitive management is delivery of fetus and placenta.",
+    "highYieldTag": "Preeclampsia Management"
+  },
+  {
+    "id": "fc-fj-44",
+    "chapterId": 16,
+    "chapterTitle": "Chapter 16: Neuroradiology & Neurovascular Imaging",
+    "question": "What are the normal TCD blood flow directions through the transtemporal window?",
+    "answer": "MCA flows TOWARD the probe (depth 30-60 mm); ACA flows AWAY from the probe (depth 60-70 mm); PCA is bidirectional (P1 toward, P2 away).",
+    "explanation": "Terminal ICA bifurcation is bidirectional at depth 55-65 mm.",
+    "highYieldTag": "TCD Flow Directions"
+  },
+  {
+    "id": "fc-fj-45",
+    "chapterId": 16,
+    "chapterTitle": "Chapter 16: Neuroradiology & Neurovascular Imaging",
+    "question": "What does a high-resistance 'stump thump' waveform in the CCA indicate on carotid duplex?",
+    "answer": "Complete ipsilateral Internal Carotid Artery (ICA) occlusion.",
+    "explanation": "Loss of low-resistance forward diastolic flow into the intracranial circulation.",
+    "highYieldTag": "CCA Waveform Occlusion"
+  }
+  ,
+  {
+    "id": "fc-fj-46",
+    "chapterId": 4,
+    "chapterTitle": "Chapter 4: Stroke Syndromes",
+    "question": "What is the neuroanatomical deficit in Internuclear Ophthalmoplegia (INO)?",
+    "answer": "Ipsilateral adduction lag on horizontal gaze + contralateral abduction nystagmus; caused by lesion of the ipsilateral Medial Longitudinal Fasciculus (MLF).",
+    "explanation": "Named for the eye that fails to adduct; convergence is preserved.",
+    "highYieldTag": "INO"
+  },
+  {
+    "id": "fc-fj-47",
+    "chapterId": 4,
+    "chapterTitle": "Chapter 4: Stroke Syndromes",
+    "question": "What is the 'one-and-a-half syndrome'?",
+    "answer": "Complete horizontal gaze palsy in one direction ('one') + INO in the opposite direction ('half'); caused by unilateral pontine PPRF/CN VI nucleus + ipsilateral MLF lesion.",
+    "explanation": "Only preserved horizontal eye movement is abduction of the contralateral eye.",
+    "highYieldTag": "One-and-a-Half"
+  },
+  {
+    "id": "fc-fj-48",
+    "chapterId": 4,
+    "chapterTitle": "Chapter 4: Stroke Syndromes",
+    "question": "What is the triad of Balint syndrome and where does it localize?",
+    "answer": "1. Simultanagnosia 2. Optic ataxia 3. Ocular apraxia. Localizes to bilateral parieto-occipital watershed cortex.",
+    "explanation": "Typically occurs after severe systemic hypotension or cardiac arrest.",
+    "highYieldTag": "Balint Syndrome"
+  },
+  {
+    "id": "fc-fj-49",
+    "chapterId": 4,
+    "chapterTitle": "Chapter 4: Stroke Syndromes",
+    "question": "What is Anton syndrome and what happens to pupillary light reflexes?",
+    "answer": "Cortical blindness with denial of deficit (visual anosognosia) due to bilateral occipital infarcts; pupillary light reflexes are completely PRESERVED.",
+    "explanation": "Pupillary reflex arc leaves the optic tract before reaching the lateral geniculate and cortex.",
+    "highYieldTag": "Anton Syndrome"
+  },
+  {
+    "id": "fc-fj-50",
+    "chapterId": 5,
+    "chapterTitle": "Chapter 5: Epidemiology & Risk Factors",
+    "question": "What is the single most common cause of ischemic stroke worldwide?",
+    "answer": "Intracranial Atherosclerosis (ICAD), accounting for 30â€“50% of strokes in Asian, Hispanic, and Black populations.",
+    "explanation": "Worldwide population distribution makes ICAD the largest global stroke burden.",
+    "highYieldTag": "Global Stroke Burden"
+  },
+  {
+    "id": "fc-fj-51",
+    "chapterId": 9,
+    "chapterTitle": "Chapter 9: Clinical Cardiology & Stroke",
+    "question": "What is the embolic stroke risk of unanticoagulated cardioversion in atrial fibrillation?",
+    "answer": "Approximately 5% risk of thromboembolism without anticoagulation.",
+    "explanation": "Restored atrial contraction expels left atrial appendage thrombi after atrial stunning.",
+    "highYieldTag": "Cardioversion Risk"
+  },
+  {
+    "id": "fc-fj-52",
+    "chapterId": 9,
+    "chapterTitle": "Chapter 9: Clinical Cardiology & Stroke",
+    "question": "Why are tPA and therapeutic anticoagulation contraindicated in stroke from infective endocarditis?",
+    "answer": "Extremely high risk of fatal intracranial hemorrhage (>20%) from septic arteritis and mycotic aneurysm rupture.",
+    "explanation": "Native valve endocarditis should be treated with bactericidal antibiotics and surgical evaluation.",
+    "highYieldTag": "Endocarditis Stroke"
+  },
+  {
+    "id": "fc-fj-53",
+    "chapterId": 11,
+    "chapterTitle": "Chapter 11: Special Populations (Pediatric, Pregnancy & Young Adult)",
+    "question": "How often does noncontrast head CT miss acute ischemic stroke in children?",
+    "answer": "In over 50% of pediatric stroke cases; MRI with DWI is the mandatory imaging test of choice.",
+    "explanation": "Pediatric stroke presentations are frequently non-focal (seizures, irritability).",
+    "highYieldTag": "Pediatric Stroke CT"
+  },
+  {
+    "id": "fc-fj-54",
+    "chapterId": 11,
+    "chapterTitle": "Chapter 11: Special Populations (Pediatric, Pregnancy & Young Adult)",
+    "question": "What is the most sensitive test for Varicella Zoster Virus (VZV) vasculopathy in children?",
+    "answer": "Anti-VZV IgG/IgM antibody index in CSF (intrathecal antibody synthesis); more sensitive than CSF PCR in subacute cases.",
+    "explanation": "Occurs 2-6 weeks following chickenpox; virus invades large cerebral arteries via trigeminal nerve.",
+    "highYieldTag": "VZV Vasculopathy"
+  },
+  {
+    "id": "fc-fj-55",
+    "chapterId": 11,
+    "chapterTitle": "Chapter 11: Special Populations (Pediatric, Pregnancy & Young Adult)",
+    "question": "What inborn error of metabolism mimics nonaccidental head trauma with subdural hematomas?",
+    "answer": "Glutaric aciduria type 1 (GA1); autosomal recessive deficiency of glutaryl-CoA dehydrogenase causing macrocephaly and torn bridging veins.",
+    "explanation": "Must be ruled out before attributing unexplained subdurals solely to child abuse.",
+    "highYieldTag": "Glutaric Aciduria"
+  },
+  {
+    "id": "fc-fj-56",
+    "chapterId": 16,
+    "chapterTitle": "Chapter 16: Neuroradiology & Neurovascular Imaging",
+    "question": "What defines the ischemic penumbra on CT/MR perfusion maps?",
+    "answer": "Prolonged transit time (increased MTT or Tmax >6s) + reduced CBF, but PRESERVED or elevated Cerebral Blood Volume (CBV).",
+    "explanation": "Autoregulatory vasodilation and collateral inflow preserve volume in salvageable tissue.",
+    "highYieldTag": "Perfusion Penumbra"
+  },
+  {
+    "id": "fc-fj-57",
+    "chapterId": 16,
+    "chapterTitle": "Chapter 16: Neuroradiology & Neurovascular Imaging",
+    "question": "What are the TCD peak systolic velocity thresholds for MCA stenosis?",
+    "answer": "Mild: 140â€“209 cm/s; Moderate: 210â€“280 cm/s; Severe: >280 cm/s.",
+    "explanation": "Normal MCA PSV is <140 cm/s (mean velocity ~55-65 cm/s).",
+    "highYieldTag": "TCD MCA Criteria"
+  },
+  {
+    "id": "fc-fj-58",
+    "chapterId": 17,
+    "chapterTitle": "Chapter 17: Vascular Cognitive Disorders",
+    "question": "How does memory impairment in subcortical vascular dementia differ from Alzheimer's disease?",
+    "answer": "Subcortical vascular dementia causes an executive retrieval deficit that improves with cues (spared recognition); Alzheimer's impairs hippocampal encoding/consolidation.",
+    "explanation": "Subcortical dementia is also accompanied by psychomotor slowing and early gait impairment.",
+    "highYieldTag": "Vascular vs AD Memory"
+  },
+  {
+    "id": "fc-fj-59",
+    "chapterId": 18,
+    "chapterTitle": "Chapter 18: Stroke Rehabilitation",
+    "question": "What does each level of the Modified Rankin Scale (mRS) represent?",
+    "answer": "0: Normal; 1: Minor symptoms, no disability; 2: Slight disability (independent in ADLs); 3: Moderate (walks alone, needs help with ADLs); 4: Moderately severe (cannot walk); 5: Severe (bedridden); 6: Dead.",
+    "explanation": "mRS 0-2 defines functional independence in stroke clinical trials.",
+    "highYieldTag": "mRS Scale"
+  },
+  {
+    "id": "fc-fj-60",
+    "chapterId": 18,
+    "chapterTitle": "Chapter 18: Stroke Rehabilitation",
+    "question": "Why is botulinum toxin type A contraindicated in myasthenia gravis?",
+    "answer": "It blocks presynaptic acetylcholine release at the neuromuscular junction, precipitating severe weakness or myasthenic crisis.",
+    "explanation": "Used for post-stroke spasticity; lasts 3-4 months per injection cycle.",
+    "highYieldTag": "Botulinum Contraindication"
+  }
+  ,
+  {
+    "id": "fc-fj-61",
+    "chapterId": 9,
+    "chapterTitle": "Chapter 9: Clinical Cardiology & Stroke",
+    "question": "What is the hallmark of Chagas disease cardiomyopathy on echocardiogram?",
+    "answer": "Biventricular dilated cardiomyopathy with an apical left ventricular aneurysm and mural thrombus (Trypanosoma cruzi).",
+    "explanation": "Major cause of cardioembolic stroke in immigrants from endemic Latin American countries.",
+    "highYieldTag": "Chagas Disease"
+  },
+  {
+    "id": "fc-fj-62",
+    "chapterId": 13,
+    "chapterTitle": "Chapter 13: Intracranial Hemorrhage (ICH)",
+    "question": "What are the 5 components of the 6-point ICH Score (Hemphill et al.)?",
+    "answer": "1. GCS (3-4 = 2 pts, 5-12 = 1 pt, 13-15 = 0 pts) 2. Volume >=30 cc (1 pt) 3. IVH present (1 pt) 4. Infratentorial origin (1 pt) 5. Age >=80 years (1 pt).",
+    "explanation": "Predicts 30-day mortality: 0 = 0%, 1 = 13%, 2 = 26%, 3 = 72%, 4 = 97%, 5-6 = 100%.",
+    "highYieldTag": "ICH Score"
+  },
+  {
+    "id": "fc-fj-63",
+    "chapterId": 11,
+    "chapterTitle": "Chapter 11: Special Populations (Pediatric, Pregnancy & Young Adult)",
+    "question": "Should anticoagulation be started in acute CVT with a hemorrhagic venous infarction?",
+    "answer": "YES. Full-dose anticoagulation (LMWH or UFH) is indicated even in the presence of hemorrhagic venous infarction.",
+    "explanation": "Opening venous outflow relieves venous congestion and stops further hemorrhage.",
+    "highYieldTag": "CVT Anticoagulation"
+  },
+  {
+    "id": "fc-fj-64",
+    "chapterId": 4,
+    "chapterTitle": "Chapter 4: Stroke Syndromes",
+    "question": "Why does topical apraclonidine reverse anisocoria in Horner syndrome?",
+    "answer": "Denervation supersensitivity of alpha-1 adrenergic receptors on the paretic dilator pupillae muscle causes the Horner pupil to dilate.",
+    "explanation": "In normal eyes, apraclonidine's alpha-2 effect predominates with minimal dilation.",
+    "highYieldTag": "Apraclonidine Horner"
+  },
+  {
+    "id": "fc-fj-65",
+    "chapterId": 4,
+    "chapterTitle": "Chapter 4: Stroke Syndromes",
+    "question": "What cardinal signs clinically differentiate AICA from PICA stroke?",
+    "answer": "AICA causes DEAFNESS (labyrinthine artery) and LMN FACIAL PALSY (CN VII); PICA causes DYSPHAGIA/HOARSENESS (nucleus ambiguus).",
+    "explanation": "Both produce vertigo, limb ataxia, ipsilateral Horner's, and crossed sensory loss.",
+    "highYieldTag": "AICA vs PICA"
+  },
+  {
+    "id": "fc-fj-66",
+    "chapterId": 4,
+    "chapterTitle": "Chapter 4: Stroke Syndromes",
+    "question": "What is the hemodynamic mechanism of Subclavian Steal Syndrome?",
+    "answer": "Proximal subclavian stenosis causes retrograde reversal of blood flow in the ipsilateral vertebral artery, siphoning blood from the basilar system during arm exercise.",
+    "explanation": "Presents with arm claudication and exercise-induced brainstem ischemia.",
+    "highYieldTag": "Subclavian Steal"
+  },
+  {
+    "id": "fc-fj-67",
+    "chapterId": 4,
+    "chapterTitle": "Chapter 4: Stroke Syndromes",
+    "question": "What is preserved in Anterior Spinal Artery (ASA) syndrome?",
+    "answer": "Dorsal column vibration and proprioception (perfused independently by the paired posterior spinal arteries).",
+    "explanation": "Paraplegia and loss of pain/temperature sensation below the lesion are present.",
+    "highYieldTag": "ASA Syndrome"
+  },
+  {
+    "id": "fc-fj-68",
+    "chapterId": 8,
+    "chapterTitle": "Chapter 8: Acute Stroke Management & Secondary Prevention",
+    "question": "What is the clinical presentation and fundus appearance of CRAO?",
+    "answer": "Sudden painless monocular vision loss; fundus shows pale, milky retina with a bright cherry-red spot in the fovea.",
+    "explanation": "Treated acutely with ocular digital massage, paracentesis, and IOP-lowering agents.",
+    "highYieldTag": "CRAO"
+  },
+  {
+    "id": "fc-fj-69",
+    "chapterId": 8,
+    "chapterTitle": "Chapter 8: Acute Stroke Management & Secondary Prevention",
+    "question": "What is the characteristic funduscopic appearance of CRVO?",
+    "answer": "'Blood and thunder' fundus: diffuse flame-shaped hemorrhages, dilated tortuous retinal veins, and cotton-wool spots across all 4 quadrants.",
+    "explanation": "Carries high risk of secondary neovascular glaucoma within 90 days.",
+    "highYieldTag": "CRVO"
+  },
+  {
+    "id": "fc-fj-70",
+    "chapterId": 8,
+    "chapterTitle": "Chapter 8: Acute Stroke Management & Secondary Prevention",
+    "question": "What is the clinical scenario and acute fundus appearance in perioperative PION?",
+    "answer": "Painless vision loss after prolonged PRONE spine surgery with hypotension/blood loss; acute funduscopy is completely NORMAL (retrobulbar ischemia).",
+    "explanation": "Optic disc pallor only develops weeks to months later.",
+    "highYieldTag": "PION"
+  },
+  {
+    "id": "fc-fj-71",
+    "chapterId": 7,
+    "chapterTitle": "Chapter 7: Classification of Stroke & Vasculopathy",
+    "question": "What are the clinical hallmarks of Takayasu arteritis?",
+    "answer": "Young Asian females (<40yo), 'pulseless disease' with absent radial pulses, BP discrepancy between arms (>10 mmHg), bruits, and aortic branch stenoses on CT/MRA.",
+    "explanation": "First-line therapy is high-dose systemic corticosteroids.",
+    "highYieldTag": "Takayasu Arteritis"
+  },
+  {
+    "id": "fc-fj-72",
+    "chapterId": 7,
+    "chapterTitle": "Chapter 7: Classification of Stroke & Vasculopathy",
+    "question": "What angiographic finding confirms Polyarteritis Nodosa (PAN)?",
+    "answer": "Multiple saccular microaneurysms (1-5 mm) and segmental stenoses ('string of beads') in mesenteric or renal arteries.",
+    "explanation": "Necrotizing medium-vessel vasculitis associated with Hepatitis B and mononeuritis multiplex.",
+    "highYieldTag": "Polyarteritis Nodosa"
+  },
+  {
+    "id": "fc-fj-73",
+    "chapterId": 7,
+    "chapterTitle": "Chapter 7: Classification of Stroke & Vasculopathy",
+    "question": "What antibody and clinical triad define Granulomatosis with Polyangiitis (GPA)?",
+    "answer": "c-ANCA (anti-proteinase 3 / PR3) + Upper/lower respiratory necrotizing granulomas + Crescentic glomerulonephritis + vasculitic stroke/neuropathy.",
+    "explanation": "Treated with corticosteroids and cyclophosphamide/rituximab.",
+    "highYieldTag": "GPA (Wegener)"
+  },
+  {
+    "id": "fc-fj-74",
+    "chapterId": 7,
+    "chapterTitle": "Chapter 7: Classification of Stroke & Vasculopathy",
+    "question": "What is the definitive and essential therapy for Buerger disease (Thromboangiitis Obliterans)?",
+    "answer": "COMPLETE and permanent cessation of all tobacco and nicotine exposure.",
+    "explanation": "Non-atherosclerotic segmental occlusive disease in young smokers with corkscrew collaterals.",
+    "highYieldTag": "Buerger Disease"
+  },
+  {
+    "id": "fc-fj-75",
+    "chapterId": 10,
+    "chapterTitle": "Chapter 10: Genetic Stroke Syndromes",
+    "question": "What enzyme deficiency, inheritance, and lens finding define classical Homocystinuria?",
+    "answer": "Cystathionine beta-synthase (CBS) deficiency; Autosomal recessive; DOWNWARD and INWARD ectopia lentis + marfanoid habitus + early thromboembolism.",
+    "explanation": "Contrast with Marfan syndrome, which features UPWARD lens subluxation.",
+    "highYieldTag": "Homocystinuria"
+  },
+  {
+    "id": "fc-fj-76",
+    "chapterId": 10,
+    "chapterTitle": "Chapter 10: Genetic Stroke Syndromes",
+    "question": "What gene mutation and hair abnormality define Menkes disease?",
+    "answer": "ATP7A gene (X-linked recessive copper transporter); Kinky, brittle 'steel-wool' hair (pili torti) + extreme cerebral arterial tortuosity + neurodegeneration.",
+    "explanation": "Impaired copper transport disrupts lysyl oxidase crosslinking of collagen/elastin.",
+    "highYieldTag": "Menkes Disease"
+  },
+  {
+    "id": "fc-fj-77",
+    "chapterId": 10,
+    "chapterTitle": "Chapter 10: Genetic Stroke Syndromes",
+    "question": "What gene, skin finding, and retinal sign define Pseudoxanthoma Elasticum (PXE)?",
+    "answer": "ABCC6 gene on chromosome 16p; 'Plucked chicken skin' yellow papules in flexural folds + Angioid streaks in the retina + premature arterial calcification and stroke.",
+    "explanation": "Autosomal recessive metabolic disorder of elastic fiber fragmentation.",
+    "highYieldTag": "PXE"
+  },
+  {
+    "id": "fc-fj-78",
+    "chapterId": 10,
+    "chapterTitle": "Chapter 10: Genetic Stroke Syndromes",
+    "question": "What is the hallmark of Tangier disease?",
+    "answer": "Virtually absent HDL (<5 mg/dL), ABCA1 gene mutation, large orange-yellow pharyngeal tonsils, hepatosplenomegaly, and premature vascular disease.",
+    "explanation": "Defective cellular cholesterol efflux to lipid-free ApoA-I.",
+    "highYieldTag": "Tangier Disease"
+  },
+  {
+    "id": "fc-fj-79",
+    "chapterId": 20,
+    "chapterTitle": "Chapter 20: Stroke Systems of Care & Hospital Designations",
+    "question": "What does the RACE scale evaluate in the prehospital setting?",
+    "answer": "Simplified NIHSS-based scale (facial, arm, leg, gaze, aphasia/agnosia) to triage patients with suspected Large Vessel Occlusion (LVO) directly to Comprehensive Stroke Centers.",
+    "explanation": "A RACE score >=5 has high sensitivity for acute LVO.",
+    "highYieldTag": "RACE Scale"
+  },
+  {
+    "id": "fc-fj-80",
+    "chapterId": 13,
+    "chapterTitle": "Chapter 13: Intracranial Hemorrhage (ICH)",
+    "question": "What is the CT Angiography 'Spot Sign' in acute ICH?",
+    "answer": "Focal contrast extravasation within the hematoma not connected to adjacent vessels; strongly predicts active hematoma expansion and high mortality.",
+    "explanation": "Most sensitive when CTA is obtained within 2 hours of symptom onset.",
+    "highYieldTag": "Spot Sign"
   }
 ];
+

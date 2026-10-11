@@ -120,6 +120,34 @@ export const ChapterReader: React.FC<ChapterReaderProps> = ({
                         </ul>
                       )}
 
+                      {/* High-Yield Comparison Table */}
+                      {topic.table && (
+                        <div className="overflow-x-auto rounded-xl border border-slate-700/60 my-3">
+                          <table className="w-full text-left text-xs text-slate-300">
+                            <thead className="bg-slate-800 text-cyan-400 uppercase tracking-wider text-[11px] border-b border-slate-700/60">
+                              <tr>
+                                {topic.table.headers.map((header, hIdx) => (
+                                  <th key={hIdx} className="px-4 py-2.5 font-bold">
+                                    {header}
+                                  </th>
+                                ))}
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y divide-slate-800">
+                              {topic.table.rows.map((row, rIdx) => (
+                                <tr key={rIdx} className={rIdx % 2 === 0 ? 'bg-slate-900/40' : 'bg-slate-900/80'}>
+                                  {row.map((cell, cIdx) => (
+                                    <td key={cIdx} className="px-4 py-2.5 leading-relaxed">
+                                      {cell}
+                                    </td>
+                                  ))}
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      )}
+
                       {/* Clinical Pearls Banner */}
                       {topic.pearls && topic.pearls.length > 0 && (
                         <div className="bg-amber-500/10 border border-amber-500/30 p-4 rounded-xl space-y-1">

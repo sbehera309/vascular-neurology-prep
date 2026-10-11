@@ -1,4 +1,4 @@
-import { ClinicalTrial } from '../types';
+﻿import { ClinicalTrial } from '../types';
 
 export const trialsData: ClinicalTrial[] = [
   {
@@ -180,5 +180,126 @@ export const trialsData: ClinicalTrial[] = [
     primaryOutcome: "Fatal or nonfatal stroke",
     keyResults: "Atorvastatin 80 mg significantly reduced stroke risk (11.2% vs 13.1%, ARR 2.2%, p = 0.03). Slightly higher incidence of hemorrhagic stroke in statin group.",
     boardTakeaway: "High-intensity statin therapy (Atorvastatin 80mg) is indicated for secondary stroke prevention in LAA/atherosclerotic stroke."
+  }
+  ,
+  {
+    "id": "trial-aruba",
+    "name": "ARUBA",
+    "year": 2014,
+    "category": "ICH/Stroke Prevention",
+    "population": "Adults with unruptured brain arteriovenous malformations (AVMs)",
+    "intervention": "Interventional therapy (neurosurgery, embolization, or stereotactic radiosurgery) + medical management",
+    "control": "Medical management alone",
+    "primaryOutcome": "Death or symptomatic stroke from any cause",
+    "keyResults": "Intervention group had a significantly higher risk of stroke or death (30.7%) compared to medical management alone (10.1%, HR 0.27, p < 0.001). Trial stopped early due to superiority of medical care.",
+    "boardTakeaway": "Medical management alone is SUPERIOR to interventional therapy for unruptured brain AVMs."
+  },
+  {
+    "id": "trial-patch",
+    "name": "PATCH",
+    "year": 2016,
+    "category": "ICH/Stroke Prevention",
+    "population": "Patients with acute spontaneous supratentorial ICH who had used antiplatelet therapy within 7 days",
+    "intervention": "Platelet transfusion within 90 minutes of brain imaging + standard care",
+    "control": "Standard medical care alone",
+    "primaryOutcome": "Shift towards death or dependence on modified Rankin Scale at 3 months",
+    "keyResults": "Platelet transfusion group had higher odds of death or dependence (adjusted OR 1.84, p = 0.011) and higher in-hospital mortality (24% vs 17%).",
+    "boardTakeaway": "Platelet transfusion is HARMFUL in acute spontaneous ICH associated with antiplatelet therapy and should NOT be given."
+  },
+  {
+    "id": "trial-atach2",
+    "name": "ATACH-2",
+    "year": 2016,
+    "category": "ICH/Stroke Prevention",
+    "population": "Acute spontaneous ICH presenting within 4.5 hours with SBP >=180 mmHg",
+    "intervention": "Intensive SBP lowering (target 110-139 mmHg) with IV nicardipine",
+    "control": "Standard SBP lowering (target 140-179 mmHg)",
+    "primaryOutcome": "Death or severe disability (mRS 4-6) at 3 months",
+    "keyResults": "No significant difference in death or disability (38.7% intensive vs 37.7% standard). Intensive group experienced significantly more renal adverse events within 7 days (9.0% vs 4.0%, p = 0.002).",
+    "boardTakeaway": "Target SBP ~140 mmHg in acute ICH; ultra-intensive lowering (<130 mmHg) provides no functional benefit and increases renal injury."
+  },
+  {
+    "id": "trial-progress",
+    "name": "PROGRESS",
+    "year": 2001,
+    "category": "Acute Ischemic",
+    "population": "Patients with prior stroke or TIA (both hypertensive and normotensive)",
+    "intervention": "Perindopril (ACE inhibitor) +/- Indapamide (thiazide diuretic)",
+    "control": "Placebo",
+    "primaryOutcome": "Total stroke (fatal or nonfatal)",
+    "keyResults": "Combination blood pressure lowering reduced relative risk of stroke recurrence by 28% (43% in combination arm), with benefit observed in both hypertensive and normotensive patients.",
+    "boardTakeaway": "Blood pressure reduction with an ACE-inhibitor/diuretic regimen reduces recurrent stroke regardless of baseline BP."
+  },
+  {
+    "id": "trial-wasid",
+    "name": "WASID",
+    "year": 2005,
+    "category": "Antiplatelets",
+    "population": "Patients with TIA or stroke attributed to 50-99% symptomatic intracranial arterial stenosis",
+    "intervention": "Warfarin (target INR 2.0-3.0)",
+    "control": "High-dose Aspirin (1300 mg daily)",
+    "primaryOutcome": "Ischemic stroke, brain hemorrhage, or nonstroke vascular death",
+    "keyResults": "No significant difference in primary endpoint (22.1% aspirin vs 21.8% warfarin). Warfarin arm had significantly higher rates of major hemorrhage (8.3% vs 3.2%) and myocardial infarction/vascular death. Trial stopped early.",
+    "boardTakeaway": "Aspirin is preferred over warfarin for symptomatic intracranial arterial stenosis (ICAD) due to lower bleeding risk."
+  },
+  {
+    "id": "trial-warss",
+    "name": "WARSS",
+    "year": 2001,
+    "category": "Antiplatelets",
+    "population": "Patients with noncardioembolic ischemic stroke",
+    "intervention": "Warfarin (INR 1.4-2.8)",
+    "control": "Aspirin 325 mg daily",
+    "primaryOutcome": "Recurrent ischemic stroke or death within 2 years",
+    "keyResults": "No significant difference in 2-year primary endpoint (17.8% warfarin vs 16.0% aspirin). Major bleeding rates were similar (2.2% vs 1.5%).",
+    "boardTakeaway": "Warfarin is NOT superior to aspirin for secondary prevention of non-cardioembolic ischemic stroke."
+  },
+  {
+    "id": "trial-rely",
+    "name": "RE-LY",
+    "year": 2009,
+    "category": "Cardioembolic/AF",
+    "population": "Patients with nonvalvular atrial fibrillation and at least one risk factor for stroke",
+    "intervention": "Dabigatran 110 mg BID or Dabigatran 150 mg BID",
+    "control": "Warfarin (target INR 2.0-3.0)",
+    "primaryOutcome": "Stroke or systemic embolism",
+    "keyResults": "Dabigatran 150 mg BID was SUPERIOR to warfarin for stroke prevention with similar major bleeding. Dabigatran 110 mg BID was noninferior with lower major bleeding. Both doses dramatically reduced intracranial hemorrhage.",
+    "boardTakeaway": "Dabigatran direct thrombin inhibitor is superior/noninferior to warfarin in AF with half the rate of intracranial hemorrhage."
+  },
+  {
+    "id": "trial-rocket-af",
+    "name": "ROCKET-AF",
+    "year": 2011,
+    "category": "Cardioembolic/AF",
+    "population": "Patients with nonvalvular atrial fibrillation at moderate-to-high stroke risk (CHADS2 >= 2)",
+    "intervention": "Rivaroxaban 20 mg once daily (15 mg if CrCl 30-49)",
+    "control": "Warfarin (target INR 2.0-3.0)",
+    "primaryOutcome": "Stroke or non-CNS systemic embolism",
+    "keyResults": "Rivaroxaban was noninferior to warfarin for stroke prevention, with significant reductions in intracranial hemorrhage and fatal bleeding.",
+    "boardTakeaway": "Rivaroxaban factor Xa inhibitor once daily is noninferior to warfarin with lower intracranial bleed risk."
+  },
+  {
+    "id": "trial-flame",
+    "name": "FLAME",
+    "year": 2011,
+    "category": "Acute Ischemic",
+    "population": "Patients with ischemic stroke and moderate-to-severe motor deficit (Fugl-Meyer <=55) at 5-10 days post-onset",
+    "intervention": "Fluoxetine 20 mg daily + Physical Therapy for 3 months",
+    "control": "Placebo + Physical Therapy",
+    "primaryOutcome": "Change in Fugl-Meyer motor score at 90 days",
+    "keyResults": "Fluoxetine group demonstrated significantly greater motor recovery on Fugl-Meyer scale (adjusted mean improvement 34.0 points vs 24.3 points, p = 0.003).",
+    "boardTakeaway": "Early fluoxetine (SSRI) combined with physical therapy may enhance motor recovery after acute ischemic stroke."
+  },
+  {
+    "id": "trial-excite",
+    "name": "EXCITE",
+    "year": 2006,
+    "category": "Acute Ischemic",
+    "population": "Stroke survivors with persistent mild-to-moderate upper extremity motor deficit 3-9 months post-stroke",
+    "intervention": "Constraint-Induced Movement Therapy (CIMT: restraining nonparetic hand for 90% of waking hours for 2 weeks)",
+    "control": "Usual customary care",
+    "primaryOutcome": "Wolf Motor Function Test and Motor Activity Log at 1 year",
+    "keyResults": "CIMT patients showed statistically and clinically significant improvements in upper extremity motor function that persisted at 12 months.",
+    "boardTakeaway": "CIMT produces durable long-term functional upper extremity motor gains in stroke survivors with baseline wrist/finger extension."
   }
 ];
