@@ -1,4 +1,4 @@
-﻿import { PracticeQuestion } from '../types';
+import { PracticeQuestion } from '../types';
 
 export const questionsData: PracticeQuestion[] = [
   {
@@ -9525,7 +9525,7 @@ export const questionsData: PracticeQuestion[] = [
     ],
     "correctOptionId": "B",
     "explanation": "The standard dose of rivaroxaban (Xarelto) for stroke prevention in nonvalvular atrial fibrillation is 20 mg once daily taken with the evening meal (to ensure optimal bioavailability). In patients with moderate renal impairment (creatinine clearance 15 to 49 mL/min), the dosage must be reduced to 15 mg once daily. Rivaroxaban is avoided if CrCl is <15 mL/min.",
-    "keyTakeaway": "Rivaroxaban: 20 mg daily standard; reduce to 15 mg daily if CrCl 15â€“49 mL/min.",
+    "keyTakeaway": "Rivaroxaban: 20 mg daily standard; reduce to 15 mg daily if CrCl 15-49 mL/min.",
     "tags": ["Rivaroxaban", "DOAC", "Renal Dosing", "Pharmacology"],
     "hint": "The standard 20 mg dose is reduced by 5 mg in moderate renal impairment.",
     "source": "Guideline Recommendation"
@@ -9615,7 +9615,7 @@ export const questionsData: PracticeQuestion[] = [
     "chapterId": 13,
     "chapterTitle": "Chapter 13: Intracranial Hemorrhage (ICH)",
     "vignette": "A 62-year-old male presents with spontaneous putaminal ICH within 3 hours of symptom onset. Initial blood pressure is 210/115 mmHg.",
-    "question": "What did the ATACH-2 (Antihypertensive Treatment of Acute Cerebral Hemorrhage II) trial reveal regarding intensive systolic blood pressure lowering (110â€“139 mmHg) compared to standard lowering (140â€“179 mmHg)?",
+    "question": "What did the ATACH-2 (Antihypertensive Treatment of Acute Cerebral Hemorrhage II) trial reveal regarding intensive systolic blood pressure lowering (110-139 mmHg) compared to standard lowering (140-179 mmHg)?",
     "options": [
       { "id": "A", "text": "Intensive lowering significantly decreased 3-month death and severe disability" },
       { "id": "B", "text": "Intensive lowering did not improve 3-month functional outcome and significantly increased the rate of adverse renal events within 7 days" },
@@ -9909,7 +9909,7 @@ export const questionsData: PracticeQuestion[] = [
     "explanation": "Developmental Venous Anomalies (DVAs, previously called venous angiomas) are the most common intracranial vascular malformations (found in 2.5% to 10% of the population). They consist of radially arranged medullary veins draining into a dilated central vein ('caput medusae' or umbrella appearance). DVAs provide essential physiological venous drainage for normal brain tissue and carry an almost nonexistent risk of hemorrhage. Surgical excision or obliteration is strictly contraindicated because sacrifice of the collecting vein results in catastrophic venous infarction and hemorrhage.",
     "keyTakeaway": "DVA ('caput medusae') = Benign extreme variant of venous drainage; DO NOT RESECT (causes catastrophic venous infarction).",
     "tags": ["DVA", "Caput Medusae", "Vascular Malformations"],
-    "hint": "Anomalous veins that drain normal brain tissueâ€”removal leads to venous infarction.",
+    "hint": "Anomalous veins that drain normal brain tissue - removal leads to venous infarction.",
     "source": "Past Board Exam"
   },
   {
@@ -9967,7 +9967,7 @@ export const questionsData: PracticeQuestion[] = [
     ],
     "correctOptionId": "B",
     "explanation": "In the standard 0 to 3-hour window, patients on warfarin are eligible for IV alteplase if their INR is <=1.7. However, under the stricter criteria established by the ECASS III trial for the extended 3 to 4.5-hour window, ANY oral anticoagulant use is an absolute contraindication, REGARDLESS of the INR. Other additional exclusion criteria in the 3 to 4.5-hour window include: age >80 years, baseline NIHSS >25, combination of previous ischemic stroke and diabetes mellitus, and severe ischemic injury involving >1/3 of the MCA territory.",
-    "keyTakeaway": "ECASS III (3â€“4.5h window) extra exclusions: Any oral anticoagulant (regardless of INR), age >80, prior stroke + diabetes, NIHSS >25.",
+    "keyTakeaway": "ECASS III (3-4.5h window) extra exclusions: Any oral anticoagulant (regardless of INR), age >80, prior stroke + diabetes, NIHSS >25.",
     "tags": ["ECASS III", "tPA Contraindications", "Extended Window", "Warfarin"],
     "hint": "The 3 to 4.5 hour window has stricter exclusions for oral anticoagulants regardless of INR value.",
     "source": "Landmark Trial"
@@ -10179,7 +10179,7 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 68-year-old male with an acute stroke has a noncontrast head CT that is interpreted as normal. An emergency MRI brain is performed.",
     "question": "According to the physical principles of magnetic resonance imaging, what is the earliest time after ischemic stroke onset that signal abnormalities become visible on Diffusion-Weighted Imaging (DWI) versus T2-weighted MRI?",
     "options": [
-      { "id": "A", "text": "DWI is positive within 15â€“30 minutes; T2 hyperintensity appears at ~8 hours" },
+      { "id": "A", "text": "DWI is positive within 15-30 minutes; T2 hyperintensity appears at ~8 hours" },
       { "id": "B", "text": "T2 hyperintensity appears within 10 minutes; DWI appears at 24 hours" },
       { "id": "C", "text": "DWI and T2 both appear simultaneously at 48 hours" },
       { "id": "D", "text": "Gadolinium enhancement appears within 30 minutes; DWI appears at 7 days" },

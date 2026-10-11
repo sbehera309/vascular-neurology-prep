@@ -1,7 +1,7 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { questionsData } from '../data/questions';
 import { PracticeQuestion, ExamAttempt } from '../types';
-import { Clock, Flag, CheckCircle2, XCircle, Award, RotateCcw, ChevronLeft, ChevronRight, LayoutGrid, Filter, BookOpen, Sparkles, Check, AlertCircle } from 'lucide-react';
+import { Clock, Flag, CheckCircle2, XCircle, Award, RotateCcw, ChevronLeft, ChevronRight, LayoutGrid, BookOpen } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 interface BoardMockExamProps {

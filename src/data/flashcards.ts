@@ -1,4 +1,4 @@
-﻿import { Flashcard } from '../types';
+import { Flashcard } from '../types';
 
 export const flashcardsData: Flashcard[] = [
   {
@@ -2004,7 +2004,7 @@ export const flashcardsData: Flashcard[] = [
     "chapterId": 6,
     "chapterTitle": "Chapter 6: Stroke Pathophysiology",
     "question": "What is the threshold of CBF for electrical failure vs membrane pump failure?",
-    "answer": "Electrical failure occurs at 18â€“25 mL/100g/min; Membrane pump failure & infarction occur at <10â€“12 mL/100g/min.",
+    "answer": "Electrical failure occurs at 18-25 mL/100g/min; Membrane pump failure & infarction occur at <10-12 mL/100g/min.",
     "explanation": "Between 10-12 and 18-25 mL/100g/min represents the ischemic penumbra.",
     "highYieldTag": "CBF Thresholds"
   },
@@ -2022,7 +2022,7 @@ export const flashcardsData: Flashcard[] = [
     "chapterId": 6,
     "chapterTitle": "Chapter 6: Stroke Pathophysiology",
     "question": "What is the timeline and mechanism of Cytotoxic vs Vasogenic edema?",
-    "answer": "Cytotoxic: Minutes post-stroke, ATP depletion, Na+/K+ pump failure, intact BBB. Vasogenic: 24â€“72 hours, BBB breakdown by MMPs, extracellular fluid in white matter.",
+    "answer": "Cytotoxic: Minutes post-stroke, ATP depletion, Na+/K+ pump failure, intact BBB. Vasogenic: 24-72 hours, BBB breakdown by MMPs, extracellular fluid in white matter.",
     "explanation": "Cytotoxic edema affects gray matter; vasogenic edema affects white matter.",
     "highYieldTag": "Cerebral Edema"
   },
@@ -2058,7 +2058,7 @@ export const flashcardsData: Flashcard[] = [
     "chapterId": 3,
     "chapterTitle": "Chapter 3: Vascular Neuroanatomy",
     "question": "What anatomical structure protects the macula during central retinal artery occlusion (CRAO)?",
-    "answer": "A patent Cilioretinal Artery (present in 15â€“20% of people, arising from short posterior ciliary arteries).",
+    "answer": "A patent Cilioretinal Artery (present in 15-20% of people, arising from short posterior ciliary arteries).",
     "explanation": "Supplies the fovea/macula independently of the central retinal artery.",
     "highYieldTag": "Cilioretinal Artery"
   },
@@ -2093,9 +2093,8 @@ export const flashcardsData: Flashcard[] = [
     "id": "fc-fj-11",
     "chapterId": 7,
     "chapterTitle": "Chapter 7: Classification of Stroke & Vasculopathy",
-    "vignette": "",
     "question": "What is the most common subtype and angiographic appearance of Fibromuscular Dysplasia (FMD)?",
-    "answer": "Medial fibroplasia (75â€“80% of cases), causing the 'string of beads' appearance, most often in the mid-third of cervical ICA (C1â€“C2).",
+    "answer": "Medial fibroplasia (75-80% of cases), causing the 'string of beads' appearance, most often in the mid-third of cervical ICA (C1-C2).",
     "explanation": "Bilateral in >60% of cases and associated with intracranial aneurysms.",
     "highYieldTag": "FMD"
   },
@@ -2331,7 +2330,7 @@ export const flashcardsData: Flashcard[] = [
     "chapterId": 8,
     "chapterTitle": "Chapter 8: Acute Stroke Management & Secondary Prevention",
     "question": "What are the extended window endovascular thrombectomy criteria in DAWN and DEFUSE 3?",
-    "answer": "DAWN: 6â€“24 hours with clinical-core mismatch. DEFUSE 3: 6â€“16 hours with perfusion-core mismatch (ischemic core <70 cc, mismatch ratio >=1.8, mismatch vol >=15 cc).",
+    "answer": "DAWN: 6-24 hours with clinical-core mismatch. DEFUSE 3: 6-16 hours with perfusion-core mismatch (ischemic core <70 cc, mismatch ratio >=1.8, mismatch vol >=15 cc).",
     "explanation": "Both demonstrated dramatic functional independence benefits (NNT ~2.8).",
     "highYieldTag": "DAWN & DEFUSE 3"
   },
@@ -2449,7 +2448,7 @@ export const flashcardsData: Flashcard[] = [
     "chapterId": 5,
     "chapterTitle": "Chapter 5: Epidemiology & Risk Factors",
     "question": "What is the single most common cause of ischemic stroke worldwide?",
-    "answer": "Intracranial Atherosclerosis (ICAD), accounting for 30â€“50% of strokes in Asian, Hispanic, and Black populations.",
+    "answer": "Intracranial Atherosclerosis (ICAD), accounting for 30-50% of strokes in Asian, Hispanic, and Black populations.",
     "explanation": "Worldwide population distribution makes ICAD the largest global stroke burden.",
     "highYieldTag": "Global Stroke Burden"
   },
@@ -2512,7 +2511,7 @@ export const flashcardsData: Flashcard[] = [
     "chapterId": 16,
     "chapterTitle": "Chapter 16: Neuroradiology & Neurovascular Imaging",
     "question": "What are the TCD peak systolic velocity thresholds for MCA stenosis?",
-    "answer": "Mild: 140â€“209 cm/s; Moderate: 210â€“280 cm/s; Severe: >280 cm/s.",
+    "answer": "Mild: 140-209 cm/s; Moderate: 210-280 cm/s; Severe: >280 cm/s.",
     "explanation": "Normal MCA PSV is <140 cm/s (mean velocity ~55-65 cm/s).",
     "highYieldTag": "TCD MCA Criteria"
   },
