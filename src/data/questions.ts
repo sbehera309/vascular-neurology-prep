@@ -10,26 +10,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Right Middle Cerebral Artery (MCA) M1 segment"
-      },
-      {
-        "id": "B",
-        "text": "Right Anterior Cerebral Artery (ACA)"
-      },
-      {
-        "id": "C",
         "text": "Right Posterior Cerebral Artery (PCA)"
       },
       {
+        "id": "B",
+        "text": "Anterior Inferior Cerebellar Artery (AICA)"
+      },
+      {
+        "id": "C",
+        "text": "Right Anterior Cerebral Artery (ACA)"
+      },
+      {
         "id": "D",
-        "text": "Posterior Inferior Cerebellar Artery (PICA)"
+        "text": "Right Middle Cerebral Artery (MCA) M1 segment"
       },
       {
         "id": "E",
-        "text": "Anterior Inferior Cerebellar Artery (AICA)"
+        "text": "Posterior Inferior Cerebellar Artery (PICA)"
       }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "C",
     "explanation": "Anterior Cerebral Artery (ACA) infarctions classically cause contralateral leg weakness > arm/face weakness (due to leg motor cortex representation on the medial homunculus), urinary incontinence (paracentral lobule), and abulia/transcortical motor aphasia (supplementary motor area / frontal lobe).",
     "keyTakeaway": "ACA stroke = Contralateral leg > arm/face weakness + urinary incontinence + frontal abulia.",
     "tags": [
@@ -53,19 +53,19 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Middle Cerebral Artery (MCA) inferior division"
-      },
-      {
-        "id": "C",
-        "text": "Anterior Choroidal Artery"
-      },
-      {
-        "id": "D",
         "text": "Ophthalmic Artery"
       },
       {
-        "id": "E",
+        "id": "C",
         "text": "Superior Cerebellar Artery"
+      },
+      {
+        "id": "D",
+        "text": "Middle Cerebral Artery (MCA) inferior division"
+      },
+      {
+        "id": "E",
+        "text": "Anterior Choroidal Artery"
       }
     ],
     "correctOptionId": "A",
@@ -88,26 +88,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Anterior Choroidal Artery (AChA)"
+        "text": "Thalamoperforating Artery"
       },
       {
         "id": "B",
-        "text": "Posterior Communicating Artery (PCoA)"
+        "text": "Anterior Choroidal Artery (AChA)"
       },
       {
         "id": "C",
-        "text": "Recurrent Artery of Heubner"
-      },
-      {
-        "id": "D",
         "text": "Ophthalmic Artery"
       },
       {
+        "id": "D",
+        "text": "Recurrent Artery of Heubner"
+      },
+      {
         "id": "E",
-        "text": "Thalamoperforating Artery"
+        "text": "Posterior Communicating Artery (PCoA)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Anterior Choroidal Artery (AChA) stroke classically causes the triad of: 1) Contralateral hemiparesis (posterior limb of internal capsule), 2) Contralateral hemisensory loss (VPL/VPM thalamus or thalamocortical projections), and 3) Contralateral homonymous hemianopia (optic tract / lateral geniculate body). Ipsilateral Horner syndrome may occur due to hypothalamic sympathetic tract involvement.",
     "keyTakeaway": "Anterior Choroidal Artery stroke triad: Hemiparesis + Hemisensory loss + Homonymous hemianopia (+/- Horner's).",
     "tags": [
@@ -127,7 +127,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Recurrent Artery of Heubner (medial striate artery arising from A1/A2 ACA)"
+        "text": "Posterior Communicating Artery"
       },
       {
         "id": "B",
@@ -143,10 +143,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Posterior Communicating Artery"
+        "text": "Recurrent Artery of Heubner (medial striate artery arising from A1/A2 ACA)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "The Recurrent Artery of Heubner (medial striate artery) arises from the A1/A2 ACA junction and supplies the anterior caudate head, anterior limb of internal capsule, and anterior putamen. Infarction causes contralateral face/arm hemiparesis, dysarthria, and abulia/transcortical motor aphasia.",
     "keyTakeaway": "Recurrent Artery of Heubner stroke = Caudate head & anterior capsular infarct -> face/arm hemiparesis + abulia + dysarthria.",
     "tags": [
@@ -166,26 +166,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Superior division of the left Middle Cerebral Artery (MCA)"
-      },
-      {
-        "id": "B",
-        "text": "Inferior division of the left MCA"
-      },
-      {
-        "id": "C",
-        "text": "Main trunk M1 MCA"
-      },
-      {
-        "id": "D",
         "text": "Left Anterior Cerebral Artery"
       },
       {
-        "id": "E",
+        "id": "B",
         "text": "Left Anterior Choroidal Artery"
+      },
+      {
+        "id": "C",
+        "text": "Superior division of the left Middle Cerebral Artery (MCA)"
+      },
+      {
+        "id": "D",
+        "text": "Inferior division of the left MCA"
+      },
+      {
+        "id": "E",
+        "text": "Main trunk M1 MCA"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Superior division MCA strokes supply the frontal and anterior parietal cortices (including Broca's area and precentral motor cortex for face/arm). It causes contralateral face/arm hemiparesis and expressive (Broca) aphasia (if left dominant), sparing leg motor cortex (ACA) and temporal visual/sensory cortex.",
     "keyTakeaway": "Left MCA Superior Division stroke = Contralateral face/arm hemiparesis + Broca's expressive aphasia.",
     "tags": [
@@ -205,11 +205,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Inferior division of the left Middle Cerebral Artery (MCA)"
+        "text": "Superior division of the left MCA"
       },
       {
         "id": "B",
-        "text": "Superior division of the left MCA"
+        "text": "Recurrent Artery of Heubner"
       },
       {
         "id": "C",
@@ -221,10 +221,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Recurrent Artery of Heubner"
+        "text": "Inferior division of the left Middle Cerebral Artery (MCA)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Inferior division MCA strokes supply the temporal and inferior parietal cortices (including Wernicke's auditory area and Meyer's loop optic radiation). It causes Wernicke aphasia and superior quadrantanopia ('pie-in-the-sky'), while MOTOR STRENGTH IS SPARED.",
     "keyTakeaway": "Left MCA Inferior Division stroke = Wernicke aphasia + Superior quadrantanopia (Motor strength is SPARED).",
     "tags": [
@@ -244,11 +244,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Anterior Inferior Cerebellar Artery (AICA)"
+        "text": "Anterior Spinal Artery (ASA)"
       },
       {
         "id": "B",
-        "text": "Posterior Inferior Cerebellar Artery (PICA)"
+        "text": "Posterior Cerebral Artery (PCA)"
       },
       {
         "id": "C",
@@ -256,14 +256,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Posterior Cerebral Artery (PCA)"
+        "text": "Posterior Inferior Cerebellar Artery (PICA)"
       },
       {
         "id": "E",
-        "text": "Anterior Spinal Artery (ASA)"
+        "text": "Anterior Inferior Cerebellar Artery (AICA)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "AICA supplies the lateral lower pons and gives off the internal auditory (labyrinthine) artery supplying the inner ear. AICA stroke causes lateral pontine syndrome: ipsilateral facial weakness, ataxia, Horner's, contralateral body sensory loss AND IPSILATERAL HEARING LOSS/TINNITUS. Hearing loss distinguishes AICA from PICA stroke!",
     "keyTakeaway": "AICA stroke = Lateral pontine syndrome + IPSILATERAL HEARING LOSS (labyrinthine artery branch).",
     "tags": [
@@ -283,15 +283,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Artery of Percheron (solitary thalmo-perforating trunk arising from one P1 PCA)"
+        "text": "Duplicated Anterior Communicating Artery"
       },
       {
         "id": "B",
-        "text": "Bilateral Recurrent Artery of Heubner"
+        "text": "Artery of Percheron (solitary thalmo-perforating trunk arising from one P1 PCA)"
       },
       {
         "id": "C",
-        "text": "Duplicated Anterior Communicating Artery"
+        "text": "Aneurysm of Vein of Galen"
       },
       {
         "id": "D",
@@ -299,10 +299,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Aneurysm of Vein of Galen"
+        "text": "Bilateral Recurrent Artery of Heubner"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "The Artery of Percheron is a rare anatomical variant where a SINGLE solitary paramedian artery arises from one P1 PCA segment to supply BILATERAL paramedian thalami and rostral midbrain. Occlusion causes sudden coma, vertical gaze palsy, and memory impairment.",
     "keyTakeaway": "Artery of Percheron stroke = Solitary P1 branch -> Bilateral paramedian thalamic infarcts -> Sudden coma & vertical gaze palsy.",
     "tags": [
@@ -322,26 +322,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Internal Carotid Artery - Posterior Communicating Artery (ICA-PCoA) junction"
+        "text": "PICA-Vertebral junction"
       },
       {
         "id": "B",
-        "text": "Anterior Communicating Artery (ACoA)"
-      },
-      {
-        "id": "C",
         "text": "Basilar Tip"
       },
       {
+        "id": "C",
+        "text": "Internal Carotid Artery - Posterior Communicating Artery (ICA-PCoA) junction"
+      },
+      {
         "id": "D",
-        "text": "PICA-Vertebral junction"
+        "text": "Anterior Communicating Artery (ACoA)"
       },
       {
         "id": "E",
         "text": "MCA bifurcation"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "An expanding aneurysm at the ICA-PCoA junction compresses the adjacent oculomotor nerve (CN III). Because parasympathetic pupilloconstrictor fibers travel on the outer superficial layer of CN III, extrinsic aneurysmal compression causes early PUPIL DILATION (mydriasis) alongside ptosis and 'down-and-out' eye position. This is a medical emergency requiring stat CTA/MRA!",
     "keyTakeaway": "ICA-PCoA Aneurysm = Painful Third Nerve (CN III) palsy WITH PUPIL DILATION (mydriasis). STAT imaging!",
     "tags": [
@@ -365,19 +365,19 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Lateral Medullary Syndrome (Wallenberg); PICA occlusion"
+        "text": "Claude Syndrome; PCA perforator"
       },
       {
         "id": "C",
-        "text": "Weber Syndrome; PCA occlusion"
-      },
-      {
-        "id": "D",
         "text": "Millard-Gubler Syndrome; Basilar paramedian branch"
       },
       {
+        "id": "D",
+        "text": "Lateral Medullary Syndrome (Wallenberg); PICA occlusion"
+      },
+      {
         "id": "E",
-        "text": "Claude Syndrome; PCA perforator"
+        "text": "Weber Syndrome; PCA occlusion"
       }
     ],
     "correctOptionId": "A",
@@ -400,26 +400,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Central Post-Stroke Pain (Dejerine-Roussy Syndrome)"
-      },
-      {
-        "id": "B",
-        "text": "Trigeminal Neuralgia"
-      },
-      {
-        "id": "C",
         "text": "Complex Regional Pain Syndrome"
       },
       {
-        "id": "D",
+        "id": "B",
         "text": "Phantom Limb Pain"
       },
       {
-        "id": "E",
+        "id": "C",
+        "text": "Central Post-Stroke Pain (Dejerine-Roussy Syndrome)"
+      },
+      {
+        "id": "D",
         "text": "Thalamic Astasia"
+      },
+      {
+        "id": "E",
+        "text": "Trigeminal Neuralgia"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Central Post-Stroke Pain Syndrome (Dejerine-Roussy Syndrome) results from ischemic or hemorrhagic lesions of the sensory thalamus (VPL/VPM nuclei or spinothalamic tracts). It presents weeks-to-months post-stroke with severe, intractable burning neuropathic pain and allodynia on the contralateral side. Treated with Amitriptyline, Gabapentin, or Pregabalin.",
     "keyTakeaway": "Dejerine-Roussy Syndrome = Thalamic VPL stroke -> Delayed contralateral burning neuropathic pain & allodynia.",
     "tags": [
@@ -439,7 +439,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Fetal PCA origin occurs in approx 20% of individuals; PCA territory relies on anterior ICA circulation rather than vertebrobasilar system"
+        "text": "Fetal PCA eliminates stroke risk in PCA territory"
       },
       {
         "id": "B",
@@ -447,18 +447,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Fetal PCA causes mandatory congenital blindness"
+        "text": "Fetal PCA origin occurs in approx 20% of individuals; PCA territory relies on anterior ICA circulation rather than vertebrobasilar system"
       },
       {
         "id": "D",
-        "text": "Fetal PCA is only present in pediatric patients"
+        "text": "Fetal PCA causes mandatory congenital blindness"
       },
       {
         "id": "E",
-        "text": "Fetal PCA eliminates stroke risk in PCA territory"
+        "text": "Fetal PCA is only present in pediatric patients"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Fetal origin of the PCA occurs in 15-20% of people (unilateral or bilateral). In this variant, the PCA arises primarily from the Internal Carotid Artery via a robust PCoA, with an absent/hypoplastic P1 segment. Consequently, ICA emboli or carotid stenosis can cause PCA territory occipital strokes!",
     "keyTakeaway": "Fetal PCA (15-20% population) = PCA supplied by ICA -> Carotid emboli can cause PCA occipital strokes.",
     "tags": [
@@ -478,7 +478,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Left dominant parietal lobe"
+        "text": "Bilateral occipital lobes"
       },
       {
         "id": "B",
@@ -486,15 +486,15 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Left anterior cingulate cortex"
+        "text": "Right cerebellar hemisphere"
       },
       {
         "id": "D",
-        "text": "Bilateral occipital lobes"
+        "text": "Left dominant parietal lobe"
       },
       {
         "id": "E",
-        "text": "Right cerebellar hemisphere"
+        "text": "Left anterior cingulate cortex"
       }
     ],
     "correctOptionId": "B",
@@ -521,7 +521,7 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Balint Syndrome; Bilateral parieto-occipital lobes"
+        "text": "Korsakoff Syndrome; Mammillary bodies"
       },
       {
         "id": "C",
@@ -529,7 +529,7 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Korsakoff Syndrome; Mammillary bodies"
+        "text": "Balint Syndrome; Bilateral parieto-occipital lobes"
       },
       {
         "id": "E",
@@ -560,19 +560,19 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Balint Syndrome"
+        "text": "Fregoli Syndrome"
       },
       {
         "id": "C",
-        "text": "Charles Bonnet Syndrome"
-      },
-      {
-        "id": "D",
         "text": "Capgras Syndrome"
       },
       {
+        "id": "D",
+        "text": "Charles Bonnet Syndrome"
+      },
+      {
         "id": "E",
-        "text": "Fregoli Syndrome"
+        "text": "Balint Syndrome"
       }
     ],
     "correctOptionId": "A",
@@ -595,26 +595,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Balint Syndrome"
-      },
-      {
-        "id": "B",
-        "text": "Gerstmann Syndrome"
-      },
-      {
-        "id": "C",
         "text": "Anton Syndrome"
       },
       {
-        "id": "D",
+        "id": "B",
+        "text": "Wernicke-Korsakoff Syndrome"
+      },
+      {
+        "id": "C",
         "text": "Kluever-Bucy Syndrome"
       },
       {
+        "id": "D",
+        "text": "Gerstmann Syndrome"
+      },
+      {
         "id": "E",
-        "text": "Wernicke-Korsakoff Syndrome"
+        "text": "Balint Syndrome"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Balint Syndrome is caused by bilateral parieto-occipital watershed infarctions (bilateral MCA-PCA borderzone). Triad: 1) Simultanagnosia (inability to perceive more than one object at once), 2) Optic ataxia (impaired visual-guided reaching), and 3) Ocular apraxia (inability to direct voluntary saccades).",
     "keyTakeaway": "Balint Syndrome Triad = Simultanagnosia + Optic Ataxia + Ocular Apraxia (Bilateral parieto-occipital watershed strokes).",
     "tags": [
@@ -634,26 +634,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Transcortical Motor Aphasia"
-      },
-      {
-        "id": "B",
-        "text": "Broca Aphasia"
-      },
-      {
-        "id": "C",
-        "text": "Wernicke Aphasia"
-      },
-      {
-        "id": "D",
         "text": "Conduction Aphasia"
       },
       {
-        "id": "E",
+        "id": "B",
+        "text": "Wernicke Aphasia"
+      },
+      {
+        "id": "C",
         "text": "Transcortical Sensory Aphasia"
+      },
+      {
+        "id": "D",
+        "text": "Transcortical Motor Aphasia"
+      },
+      {
+        "id": "E",
+        "text": "Broca Aphasia"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Transcortical Motor Aphasia is characterized by non-fluent speech, preserved comprehension, and INTACT REPETITION. It is caused by lesions in the left frontal supplementary motor area or anterior watershed zone (ACA-MCA borderzone), sparing Broca's area itself and its arcuate fasciculus connection.",
     "keyTakeaway": "Transcortical Motor Aphasia = Non-fluent speech + Good comprehension + INTACT REPETITION (Left ACA-MCA watershed).",
     "tags": [
@@ -673,26 +673,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Transcortical Sensory Aphasia"
-      },
-      {
-        "id": "B",
         "text": "Wernicke Aphasia"
       },
       {
-        "id": "C",
-        "text": "Broca Aphasia"
+        "id": "B",
+        "text": "Global Aphasia"
       },
       {
-        "id": "D",
+        "id": "C",
         "text": "Conduction Aphasia"
       },
       {
+        "id": "D",
+        "text": "Broca Aphasia"
+      },
+      {
         "id": "E",
-        "text": "Global Aphasia"
+        "text": "Transcortical Sensory Aphasia"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Transcortical Sensory Aphasia features fluent speech, severely impaired comprehension, but INTACT REPETITION. It is caused by lesions in the left posterior parieto-temporal watershed (MCA-PCA borderzone), sparing Wernicke's area itself.",
     "keyTakeaway": "Transcortical Sensory Aphasia = Fluent speech + Poor comprehension + INTACT REPETITION (Left MCA-PCA watershed).",
     "tags": [
@@ -712,26 +712,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Conduction Aphasia; Left Arcuate Fasciculus / supramarginal gyrus"
-      },
-      {
-        "id": "B",
-        "text": "Wernicke Aphasia; Left superior temporal gyrus"
-      },
-      {
-        "id": "C",
         "text": "Broca Aphasia; Left inferior frontal gyrus"
       },
       {
-        "id": "D",
+        "id": "B",
         "text": "Global Aphasia; Total MCA territory"
+      },
+      {
+        "id": "C",
+        "text": "Wernicke Aphasia; Left superior temporal gyrus"
+      },
+      {
+        "id": "D",
+        "text": "Conduction Aphasia; Left Arcuate Fasciculus / supramarginal gyrus"
       },
       {
         "id": "E",
         "text": "Transcortical Motor Aphasia; Supplementary motor area"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Conduction Aphasia is characterized by fluent speech, intact comprehension, but SEVERELY IMPAIRED REPETITION with frequent phonemic paraphasias. It is caused by damage to the arcuate fasciculus or supramarginal gyrus (connecting Wernicke's and Broca's areas).",
     "keyTakeaway": "Conduction Aphasia = Fluent speech + Good comprehension + SEVERELY IMPAIRED REPETITION (Arcuate Fasciculus).",
     "tags": [
@@ -755,19 +755,19 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Wallenberg Syndrome"
+        "text": "Locked-in Syndrome"
       },
       {
         "id": "C",
-        "text": "Weber Syndrome"
-      },
-      {
-        "id": "D",
         "text": "Dejerine Syndrome"
       },
       {
+        "id": "D",
+        "text": "Weber Syndrome"
+      },
+      {
         "id": "E",
-        "text": "Locked-in Syndrome"
+        "text": "Wallenberg Syndrome"
       }
     ],
     "correctOptionId": "A",
@@ -790,7 +790,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Man-in-a-barrel Syndrome; Bilateral anterior watershed (ACA-MCA borderzone) ischemic infarction"
+        "text": "Bilateral radial nerve palsy"
       },
       {
         "id": "B",
@@ -798,18 +798,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Brachial plexus avulsion bilaterally"
+        "text": "Man-in-a-barrel Syndrome; Bilateral anterior watershed (ACA-MCA borderzone) ischemic infarction"
       },
       {
         "id": "D",
-        "text": "Bilateral radial nerve palsy"
+        "text": "Brachial plexus avulsion bilaterally"
       },
       {
         "id": "E",
         "text": "Guillain-Barre Syndrome"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Man-in-a-Barrel Syndrome (brachial bibrachial paresis) is caused by systemic hypotension leading to bilateral anterior watershed (ACA-MCA borderzone) cortical infarctions. The homunculus region for proximal arm/shoulder motor control lies in this vulnerable watershed zone.",
     "keyTakeaway": "Man-in-a-Barrel Syndrome = Proximal shoulder/arm weakness (hands/legs spared) from bilateral ACA-MCA watershed strokes.",
     "tags": [
@@ -829,26 +829,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Wallenberg Syndrome (Lateral Medullary Syndrome); PICA or Vertebral Artery occlusion"
-      },
-      {
-        "id": "B",
-        "text": "Weber Syndrome; P1 PCA occlusion"
-      },
-      {
-        "id": "C",
-        "text": "Dejerine Syndrome (Medial Medullary Syndrome); Anterior Spinal Artery occlusion"
-      },
-      {
-        "id": "D",
         "text": "Millard-Gubler Syndrome; Basilar artery paramedian branch occlusion"
       },
       {
-        "id": "E",
+        "id": "B",
         "text": "Claude Syndrome; PCA penetrating artery occlusion"
+      },
+      {
+        "id": "C",
+        "text": "Wallenberg Syndrome (Lateral Medullary Syndrome); PICA or Vertebral Artery occlusion"
+      },
+      {
+        "id": "D",
+        "text": "Weber Syndrome; P1 PCA occlusion"
+      },
+      {
+        "id": "E",
+        "text": "Dejerine Syndrome (Medial Medullary Syndrome); Anterior Spinal Artery occlusion"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Wallenberg Syndrome (Lateral Medullary Stroke) is caused by occlusion of the PICA or intracranial Vertebral Artery. Features: Ipsilateral facial pain/temp loss (spinal trigeminal nucleus), Ipsilateral Horner syndrome (sympathetic tract), Ipsilateral ataxia (restiform body/cerebellum), Dysphagia/hoarseness (nucleus ambiguus - CN IX/X), and Contralateral body pain/temp loss (spinothalamic tract). Notably, motor strength is SPARED.",
     "keyTakeaway": "Wallenberg Syndrome = Ipsilateral Face + Contralateral Body pain/temp loss + Horner's + Dysphagia/Hoarseness (PICA/VA). Motor strength is spared!",
     "tags": [
@@ -868,11 +868,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Weber Syndrome"
+        "text": "Parinaud Syndrome"
       },
       {
         "id": "B",
-        "text": "Claude Syndrome"
+        "text": "Wallenberg Syndrome"
       },
       {
         "id": "C",
@@ -880,14 +880,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Parinaud Syndrome"
+        "text": "Weber Syndrome"
       },
       {
         "id": "E",
-        "text": "Wallenberg Syndrome"
+        "text": "Claude Syndrome"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Weber Syndrome (ventral midbrain P1 PCA stroke) combines ipsilateral oculomotor nerve (CN III) palsy with contralateral hemiparesis due to damage to fascicular CN III fibers and the corticospinal tract in the cerebral peduncle. Claude syndrome involves red nucleus (ataxia + CN III), Benedikt involves red nucleus/substantia nigra (chorea/athetosis + CN III).",
     "keyTakeaway": "Weber Syndrome = Ipsilateral CN III palsy + Contralateral hemiparesis (ventral midbrain P1 PCA).",
     "tags": [
@@ -907,26 +907,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Millard-Gubler Syndrome (Ventral Pontine Syndrome)"
-      },
-      {
-        "id": "B",
-        "text": "Foville Syndrome"
-      },
-      {
-        "id": "C",
         "text": "Dejerine Syndrome"
       },
       {
-        "id": "D",
+        "id": "B",
+        "text": "Millard-Gubler Syndrome (Ventral Pontine Syndrome)"
+      },
+      {
+        "id": "C",
         "text": "Weber Syndrome"
+      },
+      {
+        "id": "D",
+        "text": "Foville Syndrome"
       },
       {
         "id": "E",
         "text": "Raymond Syndrome"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Millard-Gubler Syndrome (Ventral Pontine Stroke) results from paramedian basilar branch occlusion. Features: Ipsilateral CN VII palsy (facial weakness including forehead), Ipsilateral CN VI palsy (abducens deficit), and Contralateral hemiparesis (corticospinal tract). Foville syndrome adds horizontal gaze palsy (CN VI nucleus/PPRF).",
     "keyTakeaway": "Millard-Gubler Syndrome = Ipsilateral CN VI & VII nerve palsies + Contralateral hemiparesis (ventral pons).",
     "tags": [
@@ -946,26 +946,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Claude Syndrome (dorsal midbrain stroke)"
+        "text": "Wallenberg Syndrome"
       },
       {
         "id": "B",
-        "text": "Weber Syndrome"
+        "text": "Claude Syndrome (dorsal midbrain stroke)"
       },
       {
         "id": "C",
-        "text": "Benedikt Syndrome"
+        "text": "Weber Syndrome"
       },
       {
         "id": "D",
-        "text": "Millard-Gubler Syndrome"
+        "text": "Benedikt Syndrome"
       },
       {
         "id": "E",
-        "text": "Wallenberg Syndrome"
+        "text": "Millard-Gubler Syndrome"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Claude Syndrome is a dorsal midbrain P1 PCA stroke causing ipsilateral CN III palsy (fascicular fibers) AND contralateral ataxia/intention tremor (dorsal red nucleus and superior cerebellar peduncle). Benedikt syndrome adds substantia nigra choreoathetosis.",
     "keyTakeaway": "Claude Syndrome = Ipsilateral CN III palsy + Contralateral ataxia & intention tremor (dorsal red nucleus).",
     "tags": [
@@ -985,26 +985,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Benedikt Syndrome"
-      },
-      {
-        "id": "B",
-        "text": "Weber Syndrome"
-      },
-      {
-        "id": "C",
-        "text": "Claude Syndrome"
-      },
-      {
-        "id": "D",
         "text": "Parinaud Syndrome"
       },
       {
-        "id": "E",
+        "id": "B",
+        "text": "Claude Syndrome"
+      },
+      {
+        "id": "C",
+        "text": "Benedikt Syndrome"
+      },
+      {
+        "id": "D",
         "text": "Foville Syndrome"
+      },
+      {
+        "id": "E",
+        "text": "Weber Syndrome"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Benedikt Syndrome (paramedian midbrain stroke) combines ipsilateral CN III palsy with contralateral chorea, athetosis, and involuntary movements due to involvement of the red nucleus and substantia nigra.",
     "keyTakeaway": "Benedikt Syndrome = Ipsilateral CN III palsy + Contralateral choreoathetosis & tremor (substantia nigra & red nucleus).",
     "tags": [
@@ -1024,26 +1024,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Foville Syndrome"
+        "text": "Raymond Syndrome"
       },
       {
         "id": "B",
-        "text": "Millard-Gubler Syndrome"
-      },
-      {
-        "id": "C",
         "text": "Weber Syndrome"
       },
       {
+        "id": "C",
+        "text": "Millard-Gubler Syndrome"
+      },
+      {
         "id": "D",
-        "text": "Wallenberg Syndrome"
+        "text": "Foville Syndrome"
       },
       {
         "id": "E",
-        "text": "Raymond Syndrome"
+        "text": "Wallenberg Syndrome"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Foville Syndrome (dorsal pontine stroke) features: 1) Ipsilateral facial nerve CN VII palsy, 2) Ipsilateral horizontal conjugate gaze palsy (CN VI nucleus or PPRF), and 3) Contralateral hemiparesis (corticospinal tract). It differs from Millard-Gubler by adding conjugate gaze palsy.",
     "keyTakeaway": "Foville Syndrome = Ipsilateral CN VII palsy + Ipsilateral conjugate gaze palsy + Contralateral hemiparesis (dorsal pons).",
     "tags": [
@@ -1063,11 +1063,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Parinaud Syndrome (Dorsal Midbrain Syndrome); Dorsal tectum / pineal region"
+        "text": "Gerstmann Syndrome; Angular gyrus"
       },
       {
         "id": "B",
-        "text": "Weber Syndrome; Ventral midbrain"
+        "text": "Parinaud Syndrome (Dorsal Midbrain Syndrome); Dorsal tectum / pineal region"
       },
       {
         "id": "C",
@@ -1075,14 +1075,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Gerstmann Syndrome; Angular gyrus"
+        "text": "Horner Syndrome; Sympathetic chain"
       },
       {
         "id": "E",
-        "text": "Horner Syndrome; Sympathetic chain"
+        "text": "Weber Syndrome; Ventral midbrain"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Parinaud Syndrome (Dorsal Midbrain / Tectal Syndrome) triad: 1) Impaired upward vertical gaze, 2) Convergence-retraction nystagmus, and 3) Light-near pupillary dissociation. Caused by compression or infarction of the rostral interstitial nucleus of MLF / posterior commissure in the dorsal midbrain.",
     "keyTakeaway": "Parinaud Syndrome = Upward gaze palsy + Convergence-retraction nystagmus + Light-near dissociation (Dorsal Midbrain Tectum).",
     "tags": [
@@ -1106,19 +1106,19 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Brain death"
+        "text": "Guillain-Barre Syndrome"
       },
       {
         "id": "C",
-        "text": "Persistent vegetative state"
-      },
-      {
-        "id": "D",
         "text": "Akinesia mutism"
       },
       {
+        "id": "D",
+        "text": "Brain death"
+      },
+      {
         "id": "E",
-        "text": "Guillain-Barre Syndrome"
+        "text": "Persistent vegetative state"
       }
     ],
     "correctOptionId": "A",
@@ -1141,7 +1141,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Raymond Syndrome"
+        "text": "Weber Syndrome"
       },
       {
         "id": "B",
@@ -1153,14 +1153,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Weber Syndrome"
+        "text": "Claude Syndrome"
       },
       {
         "id": "E",
-        "text": "Claude Syndrome"
+        "text": "Raymond Syndrome"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Raymond Syndrome (ventral pontine stroke) features ipsilateral abducens (CN VI) nerve palsy and contralateral hemiparesis, SPAIRNG the facial nerve (unlike Millard-Gubler).",
     "keyTakeaway": "Raymond Syndrome = Ipsilateral CN VI palsy + Contralateral hemiparesis (Facial nerve SPARED).",
     "tags": [
@@ -1180,26 +1180,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Destruction of descending sympathetic fibers in the pons leaves parasympathetic Edinger-Westphal tone unopposed"
-      },
-      {
-        "id": "B",
-        "text": "Pupillary light reflex is destroyed in pontine strokes"
-      },
-      {
-        "id": "C",
         "text": "Atropine toxicity"
       },
       {
+        "id": "B",
+        "text": "Occipital lobe ischemia"
+      },
+      {
+        "id": "C",
+        "text": "Pupillary light reflex is destroyed in pontine strokes"
+      },
+      {
         "id": "D",
-        "text": "Direct damage to CN III nucleus"
+        "text": "Destruction of descending sympathetic fibers in the pons leaves parasympathetic Edinger-Westphal tone unopposed"
       },
       {
         "id": "E",
-        "text": "Occipital lobe ischemia"
+        "text": "Direct damage to CN III nucleus"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Pontine lesions interrupt descending sympathetic pathways, producing bilateral Horner-like sympathetic deficit. Parasympathetic pupilloconstrictor fibers (CN III in midbrain) remain intact, resulting in classic 'pinpoint but reactive' pupils.",
     "keyTakeaway": "Pontine lesions cause 'pinpoint but reactive' pupils due to sympathetic tract disruption with intact parasympathetic CN III tone.",
     "tags": [
@@ -1219,26 +1219,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Left Internuclear Ophthalmophthalmoplegia (INO); Left Medial Longitudinal Fasciculus (MLF)"
+        "text": "Right MLF lesion"
       },
       {
         "id": "B",
-        "text": "Right CN VI palsy"
-      },
-      {
-        "id": "C",
         "text": "Left CN III palsy"
       },
       {
+        "id": "C",
+        "text": "Left Internuclear Ophthalmophthalmoplegia (INO); Left Medial Longitudinal Fasciculus (MLF)"
+      },
+      {
         "id": "D",
-        "text": "Right MLF lesion"
+        "text": "Right CN VI palsy"
       },
       {
         "id": "E",
         "text": "Bilateral PPRF lesion"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Internuclear Ophthalmoplegia (INO) is caused by a lesion in the Medial Longitudinal Fasciculus (MLF) on the side of the adduction deficit. Left MLF lesion -> Left eye cannot adduct on rightward gaze, right eye exhibits abducting nystagmus. Convergence is spared because it bypasses the MLF.",
     "keyTakeaway": "INO = Adduction deficit on side of MLF lesion + Nystagmus of abducting eye (Convergence is SPARED).",
     "tags": [
@@ -1262,7 +1262,7 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Lumbar puncture"
+        "text": "Carotid duplex ultrasound"
       },
       {
         "id": "C",
@@ -1274,7 +1274,7 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Carotid duplex ultrasound"
+        "text": "Lumbar puncture"
       }
     ],
     "correctOptionId": "A",
@@ -1297,26 +1297,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Posterior limb of the internal capsule (or ventral pons)"
+        "text": "Globus pallidus externus"
       },
       {
         "id": "B",
-        "text": "Ventral posterolateral (VPL) nucleus of the thalamus"
-      },
-      {
-        "id": "C",
-        "text": "Medial lemniscus in the medulla"
-      },
-      {
-        "id": "D",
         "text": "Nucleus ambiguus"
       },
       {
+        "id": "C",
+        "text": "Posterior limb of the internal capsule (or ventral pons)"
+      },
+      {
+        "id": "D",
+        "text": "Medial lemniscus in the medulla"
+      },
+      {
         "id": "E",
-        "text": "Globus pallidus externus"
+        "text": "Ventral posterolateral (VPL) nucleus of the thalamus"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Pure motor hemiparesis is the most common lacunar stroke syndrome (approx. 50%). It is caused by lipohyalinosis/microatheroma of lenticulostriate penetrating arteries supplying the posterior limb of the internal capsule or basis pontis.",
     "keyTakeaway": "Pure motor hemiparesis lacunar stroke = Posterior limb of internal capsule (lenticulostriate penetrators).",
     "tags": [
@@ -1336,26 +1336,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "CADASIL; NOTCH3 gene mutation on chromosome 19"
+        "text": "Pseudoxanthoma Elasticum; ABCC6 gene mutation"
       },
       {
         "id": "B",
-        "text": "Fabry Disease; GLA gene mutation"
-      },
-      {
-        "id": "C",
-        "text": "MELAS; MT-TL1 mutation"
-      },
-      {
-        "id": "D",
         "text": "CARASIL; HTRA1 gene mutation"
       },
       {
+        "id": "C",
+        "text": "Fabry Disease; GLA gene mutation"
+      },
+      {
+        "id": "D",
+        "text": "MELAS; MT-TL1 mutation"
+      },
+      {
         "id": "E",
-        "text": "Pseudoxanthoma Elasticum; ABCC6 gene mutation"
+        "text": "CADASIL; NOTCH3 gene mutation on chromosome 19"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "CADASIL (Cerebral Autosomal Dominant Arteriopathy with Subcortical Infarcts and Leukoencephalopathy) is caused by autosomal dominant mutations in NOTCH3 (chr 19). Pathognomonic MRI sign: diffuse white matter disease involving the anterior temporal pole and external capsule.",
     "keyTakeaway": "CADASIL = NOTCH3 mutation + Anterior temporal pole MRI hyperintensity + Migraines + Recurrent lacunar strokes.",
     "tags": [
@@ -1375,7 +1375,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Ventral Posterolateral (VPL) nucleus of the thalamus"
+        "text": "Caudate nucleus"
       },
       {
         "id": "B",
@@ -1387,14 +1387,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Caudate nucleus"
+        "text": "Subthalamic nucleus"
       },
       {
         "id": "E",
-        "text": "Subthalamic nucleus"
+        "text": "Ventral Posterolateral (VPL) nucleus of the thalamus"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Pure sensory lacunar stroke is caused by microatheroma of thalamoperforating artery penetrators supplying the VPL (body sensory) or VPM (face sensory) nucleus of the thalamus. Features contralateral sensory loss without motor, visual, or speech deficits.",
     "keyTakeaway": "Pure Sensory Lacunar Stroke = Thalamic VPL/VPM nucleus (thalamoperforating penetrators).",
     "tags": [
@@ -1414,26 +1414,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Ataxic Hemiparesis; Posterior limb of internal capsule or basis pontis"
-      },
-      {
-        "id": "B",
-        "text": "Pure Motor Hemiparesis; Caudate nucleus"
-      },
-      {
-        "id": "C",
-        "text": "Wallenberg Syndrome; Lateral medulla"
-      },
-      {
-        "id": "D",
         "text": "Gerstmann Syndrome; Angular gyrus"
       },
       {
-        "id": "E",
+        "id": "B",
+        "text": "Ataxic Hemiparesis; Posterior limb of internal capsule or basis pontis"
+      },
+      {
+        "id": "C",
         "text": "Dejerine Syndrome; Medulla"
+      },
+      {
+        "id": "D",
+        "text": "Pure Motor Hemiparesis; Caudate nucleus"
+      },
+      {
+        "id": "E",
+        "text": "Wallenberg Syndrome; Lateral medulla"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Ataxic Hemiparesis is a classic lacunar syndrome characterized by weakness and prominent dysmetria/ataxia on the same side. The lesion is located in the posterior limb of the internal capsule, basis pontis, or red nucleus.",
     "keyTakeaway": "Ataxic Hemiparesis = Ipsilateral weakness + cerebellar ataxia (Posterior limb of internal capsule or basis pontis).",
     "tags": [
@@ -1453,26 +1453,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Clumsy Hand-Dysarthria Syndrome"
-      },
-      {
-        "id": "B",
-        "text": "Pure Motor Hemiparesis"
-      },
-      {
-        "id": "C",
         "text": "Ataxic Hemiparesis"
       },
       {
-        "id": "D",
+        "id": "B",
         "text": "Pure Sensory Stroke"
       },
       {
-        "id": "E",
+        "id": "C",
         "text": "Anterior Choroidal Syndrome"
+      },
+      {
+        "id": "D",
+        "text": "Clumsy Hand-Dysarthria Syndrome"
+      },
+      {
+        "id": "E",
+        "text": "Pure Motor Hemiparesis"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Clumsy Hand-Dysarthria Syndrome is a lacunar syndrome featuring severe dysarthria, facial weakness, and upper extremity clumsy dysmetria. Caused by lacunar infarcts in the paramedian pons or anterior limb / genu of the internal capsule.",
     "keyTakeaway": "Clumsy Hand-Dysarthria = Prominent dysarthria + facial weakness + hand clumsiness (Anterior limb internal capsule or pons).",
     "tags": [
@@ -1492,11 +1492,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "HTRA1 gene mutation"
+        "text": "ABCC6 gene mutation"
       },
       {
         "id": "B",
-        "text": "NOTCH3 gene mutation"
+        "text": "HTRA1 gene mutation"
       },
       {
         "id": "C",
@@ -1508,10 +1508,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "ABCC6 gene mutation"
+        "text": "NOTCH3 gene mutation"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "CARASIL (Cerebral Autosomal Recessive Arteriopathy with Subcortical Infarcts and Leukoencephalopathy) is caused by autosomal recessive mutations in HTRA1. Triad: 1) Early-onset lacunar strokes/dementia, 2) Premature alopecia, and 3) Severe lumbar spondylopathy/back pain.",
     "keyTakeaway": "CARASIL = Autosomal Recessive HTRA1 mutation -> Young strokes + Premature Alopecia + Severe Lumbar Spondylosis.",
     "tags": [
@@ -1531,26 +1531,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Binswanger Disease (Subcortical Arteriosclerotic Encephalopathy)"
-      },
-      {
-        "id": "B",
-        "text": "Alzheimer Disease"
-      },
-      {
-        "id": "C",
         "text": "Creutzfeldt-Jakob Disease"
       },
       {
+        "id": "B",
+        "text": "Progressive Supranuclear Palsy"
+      },
+      {
+        "id": "C",
+        "text": "Alzheimer Disease"
+      },
+      {
         "id": "D",
-        "text": "Normal Pressure Hydrocephalus"
+        "text": "Binswanger Disease (Subcortical Arteriosclerotic Encephalopathy)"
       },
       {
         "id": "E",
-        "text": "Progressive Supranuclear Palsy"
+        "text": "Normal Pressure Hydrocephalus"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Binswanger Disease (Subcortical Arteriosclerotic Encephalopathy) is a severe form of small vessel vascular dementia characterized by diffuse white matter leukoaraiosis, gait impairment, executive dysfunction, and pseudobulbar palsy resulting from chronic arteriolosclerosis.",
     "keyTakeaway": "Binswanger Disease = Subcortical small vessel arteriosclerosis -> Confluent leukoaraiosis + Progressive vascular dementia.",
     "tags": [
@@ -1570,26 +1570,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Cerebral Amyloid Angiopathy (CAA); Beta-amyloid deposition in small cortical and leptomeningeal arteries"
-      },
-      {
-        "id": "B",
-        "text": "Hypertensive arteriolosclerosis"
-      },
-      {
-        "id": "C",
         "text": "Saccular aneurysm rupture"
       },
       {
-        "id": "D",
+        "id": "B",
         "text": "AVM malformation"
+      },
+      {
+        "id": "C",
+        "text": "Cerebral Amyloid Angiopathy (CAA); Beta-amyloid deposition in small cortical and leptomeningeal arteries"
+      },
+      {
+        "id": "D",
+        "text": "Hypertensive arteriolosclerosis"
       },
       {
         "id": "E",
         "text": "Cavernous malformation"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Cerebral Amyloid Angiopathy (CAA) is caused by beta-amyloid deposition in cortical and leptomeningeal arterial walls. It characteristically causes LOBAR (superficial) ICH and cortical microbleeds, strictly sparing deep structures (basal ganglia/thalamus). Associated with ApoE epsilon 2 and 4 alleles.",
     "keyTakeaway": "Cerebral Amyloid Angiopathy (CAA) = Beta-amyloid in cortical arteries -> Recurrent LOBAR ICH & cortical microbleeds (spares basal ganglia).",
     "tags": [
@@ -1609,11 +1609,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Lipohyalinosis (or microatheroma)"
+        "text": "Medial fibroplasia"
       },
       {
         "id": "B",
-        "text": "Medial fibroplasia"
+        "text": "Monomorphic arteritis"
       },
       {
         "id": "C",
@@ -1621,14 +1621,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Amyloid angiopathy"
+        "text": "Lipohyalinosis (or microatheroma)"
       },
       {
         "id": "E",
-        "text": "Monomorphic arteritis"
+        "text": "Amyloid angiopathy"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Lipohyalinosis (segmental arterial disorganization with fibrinoid deposit and lipid macrophages) and microatheromas are the microscopic arterial pathologies of small penetrating arteries (< 200 micrometers) caused by chronic hypertension leading to lacunar infarction.",
     "keyTakeaway": "Lipohyalinosis & Microatheromas = Microscopic pathology of hypertensive penetrating arterioles causing lacunar strokes.",
     "tags": [
@@ -1648,26 +1648,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Retinal Vasculopathy with Cerebral Leukodystrophy (RVCL)"
-      },
-      {
-        "id": "B",
-        "text": "CADASIL"
-      },
-      {
-        "id": "C",
         "text": "CARASIL"
       },
       {
-        "id": "D",
+        "id": "B",
         "text": "Fabry Disease"
       },
       {
-        "id": "E",
+        "id": "C",
+        "text": "Retinal Vasculopathy with Cerebral Leukodystrophy (RVCL)"
+      },
+      {
+        "id": "D",
         "text": "SUSAC Syndrome"
+      },
+      {
+        "id": "E",
+        "text": "CADASIL"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "RVCL (Retinal Vasculopathy with Cerebral Leukodystrophy) is an autosomal dominant microvasculopathy caused by TREX1 gene mutations. Features: middle-age onset retinal vasculopathy, brain microvascular lesions (often mass-like with rim enhancement), and systemic vascular disease.",
     "keyTakeaway": "RVCL = Autosomal dominant TREX1 mutation -> Retinal vasculopathy + Pseudotumoral brain leukoencephalopathy.",
     "tags": [
@@ -1691,7 +1691,7 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Primary Angiitis of the CNS (PACNS)"
+        "text": "Temporal Arteritis (GCA)"
       },
       {
         "id": "C",
@@ -1699,7 +1699,7 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Temporal Arteritis (GCA)"
+        "text": "Primary Angiitis of the CNS (PACNS)"
       },
       {
         "id": "E",
@@ -1726,26 +1726,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Small Vessel Occlusion (Lacunar)"
-      },
-      {
-        "id": "B",
-        "text": "Large Artery Atherosclerosis"
-      },
-      {
-        "id": "C",
-        "text": "Cardioembolism"
-      },
-      {
-        "id": "D",
         "text": "Other Determined Etiology"
       },
       {
-        "id": "E",
+        "id": "B",
         "text": "Undetermined Etiology"
+      },
+      {
+        "id": "C",
+        "text": "Large Artery Atherosclerosis"
+      },
+      {
+        "id": "D",
+        "text": "Cardioembolism"
+      },
+      {
+        "id": "E",
+        "text": "Small Vessel Occlusion (Lacunar)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Under TOAST criteria, Small Vessel Occlusion (Lacunar) requires: 1) Clinical lacunar syndrome, 2) Relevant subcortical/brainstem lesion < 1.5 cm on CT/MRI, and 3) Absence of potential cardioembolic source or ipsilateral large artery stenosis >= 50%.",
     "keyTakeaway": "TOAST Small Vessel Occlusion requires subcortical lesion < 1.5 cm without major cardioembolic or stenosis sources.",
     "tags": [
@@ -1765,7 +1765,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Embolic Stroke of Undetermined Source (ESUS); prolonged outpatient cardiac rhythm monitoring (30-day monitor or ILR)"
+        "text": "Definitive cardioembolic stroke; start Warfarin without further testing"
       },
       {
         "id": "B",
@@ -1773,18 +1773,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Large artery stroke; schedule CEA immediately"
+        "text": "Venous stroke; order MRV"
       },
       {
         "id": "D",
-        "text": "Definitive cardioembolic stroke; start Warfarin without further testing"
+        "text": "Embolic Stroke of Undetermined Source (ESUS); prolonged outpatient cardiac rhythm monitoring (30-day monitor or ILR)"
       },
       {
         "id": "E",
-        "text": "Venous stroke; order MRV"
+        "text": "Large artery stroke; schedule CEA immediately"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "ESUS (Embolic Stroke of Undetermined Source) refers to non-lacunar embolic-appearing ischemic strokes where standard evaluation fails to identify a clear source. Guidelines recommend prolonged cardiac monitoring (30-day monitoring or implantable loop recorder ILR) because subclinical paroxysmal AFib is detected in 10-30% of ESUS cases.",
     "keyTakeaway": "ESUS = Non-lacunar embolic stroke without clear source -> Order prolonged cardiac monitoring (ILR) to detect occult AFib.",
     "tags": [
@@ -1804,26 +1804,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Antiphospholipid Syndrome (APLS); Long-term oral anticoagulation with Warfarin (target INR 2.0-3.0)"
+        "text": "Systemic Lupus Erythematosus; High-dose steroids alone"
       },
       {
         "id": "B",
-        "text": "Factor V Leiden mutation; Aspirin 81 mg daily"
+        "text": "Antiphospholipid Syndrome (APLS); Long-term oral anticoagulation with Warfarin (target INR 2.0-3.0)"
       },
       {
         "id": "C",
-        "text": "CADASIL; No treatment available"
-      },
-      {
-        "id": "D",
         "text": "Sepsis; IV antibiotics"
       },
       {
+        "id": "D",
+        "text": "Factor V Leiden mutation; Aspirin 81 mg daily"
+      },
+      {
         "id": "E",
-        "text": "Systemic Lupus Erythematosus; High-dose steroids alone"
+        "text": "CADASIL; No treatment available"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Antiphospholipid Syndrome (APLS) is an autoimmune hypercoagulable state defined by arterial/venous thrombosis or pregnancy morbidity + persistent APL antibodies (Lupus Anticoagulant, Anticardiolipin, Anti-beta2 glycoprotein I). Secondary stroke prevention requires long-term Warfarin (target INR 2-3). DOACs are INFERIOR to Warfarin in triple-positive APLS!",
     "keyTakeaway": "Antiphospholipid Syndrome (APLS) = Recurrent thrombosis/miscarriages + Persistent APL antibodies -> Treat with WARFARIN (INR 2-3).",
     "tags": [
@@ -1843,26 +1843,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Trousseau Syndrome / Non-Bacterial Thrombotic Endocarditis (NBTE); Therapeutic Low Molecular Weight Heparin (LMWH)"
-      },
-      {
-        "id": "B",
-        "text": "Infective endocarditis; IV Penicillin"
-      },
-      {
-        "id": "C",
-        "text": "Rheumatic heart disease; Valve replacement"
-      },
-      {
-        "id": "D",
         "text": "Libman-Sacks endocarditis; Oral Prednisone"
       },
       {
-        "id": "E",
+        "id": "B",
+        "text": "Rheumatic heart disease; Valve replacement"
+      },
+      {
+        "id": "C",
+        "text": "Infective endocarditis; IV Penicillin"
+      },
+      {
+        "id": "D",
         "text": "Bacterial emboli; IV Vancomycin"
+      },
+      {
+        "id": "E",
+        "text": "Trousseau Syndrome / Non-Bacterial Thrombotic Endocarditis (NBTE); Therapeutic Low Molecular Weight Heparin (LMWH)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Trousseau Syndrome (malignancy-associated hypercoagulability) causes Non-Bacterial Thrombotic Endocarditis (NBTE / marantic endocarditis), characterized by sterile fibrin vegetations on cardiac valves leading to multifocal embolic strokes. Treatment is therapeutic LMWH and treating underlying cancer.",
     "keyTakeaway": "Trousseau Syndrome / NBTE = Cancer hypercoagulability + sterile valve vegetations -> Treat with LMWH.",
     "tags": [
@@ -1882,26 +1882,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "High risk of recurrent embolic stroke (independent stroke risk factor); manage with intensive medical therapy (statin + antiplatelet)"
+        "text": "Indication for Warfarin anticoagulation over antiplatelet"
       },
       {
         "id": "B",
-        "text": "Zero stroke risk; incidental finding"
+        "text": "High risk of recurrent embolic stroke (independent stroke risk factor); manage with intensive medical therapy (statin + antiplatelet)"
       },
       {
         "id": "C",
-        "text": "Indication for emergency open aortic arch resection"
+        "text": "Zero stroke risk; incidental finding"
       },
       {
         "id": "D",
-        "text": "Indication for Warfarin anticoagulation over antiplatelet"
+        "text": "Indication for emergency open aortic arch resection"
       },
       {
         "id": "E",
         "text": "Low risk requiring no intervention"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Complex Aortic Arch Atherosclerosis (defined as plaque thickness >= 4 mm or mobile debris) is a major independent source of arterial emboli to the brain. Managed with aggressive medical therapy (high-intensity statin + antiplatelet).",
     "keyTakeaway": "Aortic Arch Atherosclerosis (plaque >= 4 mm) is a major source of embolic stroke -> Treat with statin + antiplatelets.",
     "tags": [
@@ -1921,7 +1921,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Hollenhorst Plaque; Carotid artery bifurcation atherosclerotic plaque"
+        "text": "Cotton wool spot; Diabetic retinopathy"
       },
       {
         "id": "B",
@@ -1929,18 +1929,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Cherry-red spot; Tay-Sachs disease"
+        "text": "Hollenhorst Plaque; Carotid artery bifurcation atherosclerotic plaque"
       },
       {
         "id": "D",
-        "text": "Cotton wool spot; Diabetic retinopathy"
+        "text": "Elschnig spot; Hypertensive retinopathy"
       },
       {
         "id": "E",
-        "text": "Elschnig spot; Hypertensive retinopathy"
+        "text": "Cherry-red spot; Tay-Sachs disease"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "A Hollenhorst Plaque is a bright, yellow, refractile cholesterol microembolus seen in retinal arterioles. It originates from ulcerated atherosclerotic plaque at the ipsilateral carotid artery bifurcation. Mandates immediate carotid duplex ultrasound / CTA evaluation!",
     "keyTakeaway": "Hollenhorst Plaque = Refractile cholesterol microembolus in retinal arteriole -> Indicates ipsilateral carotid atheroma.",
     "tags": [
@@ -1960,7 +1960,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Proceed with mechanical thrombectomy immediately"
+        "text": "Decompressive hemicraniectomy within 6 hours"
       },
       {
         "id": "B",
@@ -1968,18 +1968,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Medical therapy with Aspirin and Heparin infusion"
+        "text": "Repeat CT head in 24 hours before making treatment decisions"
       },
       {
         "id": "D",
-        "text": "Decompressive hemicraniectomy within 6 hours"
+        "text": "Proceed with mechanical thrombectomy immediately"
       },
       {
         "id": "E",
-        "text": "Repeat CT head in 24 hours before making treatment decisions"
+        "text": "Medical therapy with Aspirin and Heparin infusion"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "The DAWN (up to 24h) and DEFUSE 3 (up to 16h) trials proved that mechanical thrombectomy provides dramatic functional benefit for patients presenting in the extended window (6-24 hours) who have an anterior circulation LVO (ICA or M1 MCA) and salvageable penumbral mismatch on perfusion or MRI imaging.",
     "keyTakeaway": "Mechanical thrombectomy is indicated up to 24 hours for anterior circulation LVO with favorable perfusion mismatch (DAWN/DEFUSE 3).",
     "tags": [
@@ -1999,26 +1999,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Intravenous thrombolysis (tPA/TNK) AND immediate transfer for mechanical thrombectomy"
-      },
-      {
-        "id": "B",
-        "text": "Mechanical thrombectomy alone; skip IV thrombolysis"
-      },
-      {
-        "id": "C",
         "text": "IV tPA alone; mechanical thrombectomy is contraindicated in ICA terminus occlusion"
       },
       {
-        "id": "D",
+        "id": "B",
         "text": "IV Heparin bolus plus Aspirin 325 mg"
       },
       {
-        "id": "E",
+        "id": "C",
         "text": "Emergent carotid endarterectomy"
+      },
+      {
+        "id": "D",
+        "text": "Intravenous thrombolysis (tPA/TNK) AND immediate transfer for mechanical thrombectomy"
+      },
+      {
+        "id": "E",
+        "text": "Mechanical thrombectomy alone; skip IV thrombolysis"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "In eligible patients presenting within 4.5 hours of LVO stroke, bridging therapy with IV thrombolysis (Alteplase or Tenecteplase) followed immediately by mechanical thrombectomy remains the recommended standard of care.",
     "keyTakeaway": "Bridging therapy (IV Thrombolysis + Mechanical Thrombectomy) is standard for eligible LVO patients presenting < 4.5 hours.",
     "tags": [
@@ -2042,11 +2042,11 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "TICI 2b (Partial reperfusion >= 50%)"
+        "text": "TICI 2a (Partial reperfusion < 50%)"
       },
       {
         "id": "C",
-        "text": "TICI 2a (Partial reperfusion < 50%)"
+        "text": "TICI 2b (Partial reperfusion >= 50%)"
       },
       {
         "id": "D",
@@ -2077,26 +2077,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Mismatch volume = 98 mL, Mismatch ratio = 9.17"
-      },
-      {
-        "id": "B",
         "text": "Mismatch volume = 110 mL, Mismatch ratio = 1.0"
       },
       {
-        "id": "C",
+        "id": "B",
         "text": "Mismatch volume = 12 mL, Mismatch ratio = 0.5"
       },
       {
-        "id": "D",
+        "id": "C",
         "text": "Mismatch volume = 0 mL, Mismatch ratio = 0"
       },
       {
-        "id": "E",
+        "id": "D",
         "text": "Mismatch volume = 50 mL, Mismatch ratio = 2.0"
+      },
+      {
+        "id": "E",
+        "text": "Mismatch volume = 98 mL, Mismatch ratio = 9.17"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Mismatch volume = Hypoperfused tissue (Tmax > 6s) minus Ischemic core (rCBF < 30%) = 110 - 12 = 98 mL. Mismatch ratio = 110 / 12 = 9.17. Favorable mismatch criteria (DEFUSE 3: mismatch volume >= 15 mL and mismatch ratio >= 1.8) strongly predict salvageable tissue.",
     "keyTakeaway": "Target Mismatch: Mismatch Volume = Tmax > 6s volume minus Core volume (>= 15 mL); Mismatch Ratio >= 1.8.",
     "tags": [
@@ -2116,7 +2116,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Maintain SBP < 140-180 mmHg to prevent reperfusion injury / sICH while avoiding hypoperfusion"
+        "text": "Keep SBP strictly between 180 and 200 mmHg"
       },
       {
         "id": "B",
@@ -2124,18 +2124,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Lower SBP < 90 mmHg"
+        "text": "Maintain SBP < 140-180 mmHg to prevent reperfusion injury / sICH while avoiding hypoperfusion"
       },
       {
         "id": "D",
-        "text": "Keep SBP strictly between 180 and 200 mmHg"
+        "text": "No BP monitoring required"
       },
       {
         "id": "E",
-        "text": "No BP monitoring required"
+        "text": "Lower SBP < 90 mmHg"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Following successful complete reperfusion (TICI 2b/3), lowering SBP targets to < 140-180 mmHg reduces the risk of hyperperfusion syndrome and hemorrhagic transformation, while avoiding excessive hypotension.",
     "keyTakeaway": "Post-successful EVT (TICI 3) BP goal: Maintain SBP < 140-180 mmHg to prevent hyperperfusion hemorrhage.",
     "tags": [
@@ -2155,26 +2155,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "EVT plus medical therapy significantly improved functional independence (mRS 0-3) compared to medical therapy alone, despite large core size"
-      },
-      {
-        "id": "B",
-        "text": "EVT was harmful and increased mortality"
-      },
-      {
-        "id": "C",
-        "text": "EVT showed zero benefit"
-      },
-      {
-        "id": "D",
         "text": "EVT is strictly contraindicated if ASPECTS < 7"
       },
       {
-        "id": "E",
+        "id": "B",
+        "text": "EVT showed zero benefit"
+      },
+      {
+        "id": "C",
+        "text": "EVT was harmful and increased mortality"
+      },
+      {
+        "id": "D",
         "text": "Medical therapy alone was superior"
+      },
+      {
+        "id": "E",
+        "text": "EVT plus medical therapy significantly improved functional independence (mRS 0-3) compared to medical therapy alone, despite large core size"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Landmark trials (SELECT2, ANGEL-ASPECT, RESCUE-JAPAN LIMIT, TENSION) proved that mechanical thrombectomy provides significant functional benefit even in patients with large ischemic cores (ASPECTS 3-5 or core >= 50-70 mL), expanding EVT eligibility.",
     "keyTakeaway": "Large Core EVT Trials (SELECT2/ANGEL-ASPECT): Thrombectomy improves functional outcomes even in ASPECTS 3-5 large core strokes!",
     "tags": [
@@ -2198,19 +2198,19 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Percutaneous intracranial angioplasty and stenting (Wingspan stent) plus medical therapy"
-      },
-      {
-        "id": "C",
         "text": "Immediate EC-IC bypass surgery"
       },
       {
+        "id": "C",
+        "text": "Carotid endarterectomy"
+      },
+      {
         "id": "D",
-        "text": "Warfarin anticoagulation (target INR 2.0-3.0)"
+        "text": "Percutaneous intracranial angioplasty and stenting (Wingspan stent) plus medical therapy"
       },
       {
         "id": "E",
-        "text": "Carotid endarterectomy"
+        "text": "Warfarin anticoagulation (target INR 2.0-3.0)"
       }
     ],
     "correctOptionId": "A",
@@ -2233,7 +2233,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Aspirin was equally effective as Warfarin for stroke prevention with significantly FEWER major bleeding complications and lower mortality"
+        "text": "Warfarin eliminated all recurrent strokes"
       },
       {
         "id": "B",
@@ -2241,7 +2241,7 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Warfarin eliminated all recurrent strokes"
+        "text": "Neither medication provided benefit"
       },
       {
         "id": "D",
@@ -2249,10 +2249,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Neither medication provided benefit"
+        "text": "Aspirin was equally effective as Warfarin for stroke prevention with significantly FEWER major bleeding complications and lower mortality"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "The WASID trial (Warfarin vs Aspirin for Symptomatic Intracranial Disease) showed that Aspirin (1300 mg/day tested, now 81-325 mg) was equally effective as Warfarin (target INR 2-3) for stroke prevention, but Warfarin caused significantly higher adverse events (major bleeding and death). Thus antiplatelet therapy is first-line.",
     "keyTakeaway": "WASID trial: Aspirin is preferred over Warfarin for ICAD due to equal efficacy and lower bleeding/mortality.",
     "tags": [
@@ -2272,15 +2272,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Hemodynamic failure / watershed hypoperfusion distal to severe stenosis"
+        "text": "Cardioembolism"
       },
       {
         "id": "B",
-        "text": "Arterio-arterial thromboembolism"
+        "text": "Venous congestion"
       },
       {
         "id": "C",
-        "text": "Cardioembolism"
+        "text": "Arterio-arterial thromboembolism"
       },
       {
         "id": "D",
@@ -2288,10 +2288,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Venous congestion"
+        "text": "Hemodynamic failure / watershed hypoperfusion distal to severe stenosis"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "ICAD causes stroke via two main mechanisms: 1) Arterio-arterial embolization of plaque thrombus, and 2) Hemodynamic hypoperfusion distal to severe stenosis leading to borderzone watershed infarctions when blood pressure drops.",
     "keyTakeaway": "ICAD mechanisms: Arterio-arterial emboli AND Hemodynamic watershed hypoperfusion.",
     "tags": [
@@ -2311,15 +2311,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Alpha-galactosidase A deficiency; X-linked recessive (Fabry Disease)"
+        "text": "Sphingomyelinase deficiency; Autosomal recessive (Niemann-Pick)"
       },
       {
         "id": "B",
-        "text": "Glucocerebrosidase deficiency; Autosomal recessive (Gaucher Disease)"
+        "text": "Cystathionine beta-synthase deficiency; Autosomal recessive (Homocystinuria)"
       },
       {
         "id": "C",
-        "text": "Sphingomyelinase deficiency; Autosomal recessive (Niemann-Pick)"
+        "text": "Glucocerebrosidase deficiency; Autosomal recessive (Gaucher Disease)"
       },
       {
         "id": "D",
@@ -2327,10 +2327,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Cystathionine beta-synthase deficiency; Autosomal recessive (Homocystinuria)"
+        "text": "Alpha-galactosidase A deficiency; X-linked recessive (Fabry Disease)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Fabry Disease is an X-linked lysosomal storage disorder caused by deficiency of alpha-galactosidase A (GLA gene), leading to accumulation of globotriaosylceramide (Gb3). Key board triads: Acroparesthesias + Angiokeratomas + Hypohidrosis. Causes early stroke, renal failure, and hypertrophic cardiomyopathy.",
     "keyTakeaway": "Fabry Disease = X-linked Alpha-galactosidase A deficiency -> Acroparesthesias, Angiokeratomas, Young Stroke, Renal Failure.",
     "tags": [
@@ -2350,26 +2350,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Moyamoya Disease; Direct or indirect surgical revascularization (STA-MCA bypass or EDAS)"
+        "text": "Primary Angiitis of the CNS; Cyclophosphamide"
       },
       {
         "id": "B",
-        "text": "CADASIL; Gene therapy"
-      },
-      {
-        "id": "C",
         "text": "Fibromuscular Dysplasia; Renal angioplasty"
       },
       {
-        "id": "D",
+        "id": "C",
         "text": "Takayasu Arteritis; High-dose steroids"
       },
       {
+        "id": "D",
+        "text": "CADASIL; Gene therapy"
+      },
+      {
         "id": "E",
-        "text": "Primary Angiitis of the CNS; Cyclophosphamide"
+        "text": "Moyamoya Disease; Direct or indirect surgical revascularization (STA-MCA bypass or EDAS)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Moyamoya Disease features progressive bilateral steno-occlusion of the internal carotid bifurcation and proximal ACA/MCA, with prominent lenticulostriate collaterals ('puff of smoke' / moyamoya appearance on angiography). Hyperventilation (crying, eating hot food) causes cerebral vasoconstriction -> TIA/stroke. Treatment is surgical revascularization (STA-MCA bypass or EDAS/encephaloduroarteriosynangiosis).",
     "keyTakeaway": "Moyamoya Disease = 'Puff of smoke' collaterals on angiography + hyperventilation TIAs -> Treat with surgical revascularization.",
     "tags": [
@@ -2389,15 +2389,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "MELAS (Mitochondrial Encephalomyopathy, Lactic Acidosis, and Stroke-like episodes)"
+        "text": "CADASIL"
       },
       {
         "id": "B",
-        "text": "Fabry Disease"
+        "text": "Leigh Syndrome"
       },
       {
         "id": "C",
-        "text": "CADASIL"
+        "text": "MELAS (Mitochondrial Encephalomyopathy, Lactic Acidosis, and Stroke-like episodes)"
       },
       {
         "id": "D",
@@ -2405,10 +2405,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Leigh Syndrome"
+        "text": "Fabry Disease"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "MELAS is a mitochondrial disorder caused by the MT-TL1 A3243G point mutation. Features: stroke-like cortical lesions that cross arterial territories, lactic acidosis, seizures, and sensorineural hearing loss.",
     "keyTakeaway": "MELAS = MT-TL1 A3243G mitochondrial mutation -> Stroke-like episodes crossing vascular territories + Lactic Acidosis.",
     "tags": [
@@ -2428,7 +2428,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Homocystinuria (Cystathionine beta-synthase deficiency); Pyridoxine (Vitamin B6) + Folate + Vitamin B12"
+        "text": "Tyrosinemia"
       },
       {
         "id": "B",
@@ -2444,10 +2444,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Tyrosinemia"
+        "text": "Homocystinuria (Cystathionine beta-synthase deficiency); Pyridoxine (Vitamin B6) + Folate + Vitamin B12"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Homocystinuria is an autosomal recessive metabolic disorder caused by cystathionine beta-synthase (CBS) deficiency. Features: marfanoid habitus, downward lens dislocation (vs upward in Marfan), intellectual disability, and severe early arterial/venous thromboses. Treated with high-dose Pyridoxine (B6), Folate, and B12.",
     "keyTakeaway": "Homocystinuria = CBS deficiency -> Downward lens ectopia + Marfanoid habitus + Early Thrombosis -> Treat with Vitamin B6 & Folate.",
     "tags": [
@@ -2467,26 +2467,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Carotid Endarterectomy (CEA) within 2 weeks yields maximum absolute risk reduction for 70-99% symptomatic stenosis"
+        "text": "EC-IC bypass surgery within 24 hours"
       },
       {
         "id": "B",
-        "text": "Medical therapy alone with Aspirin for 70-99% stenosis"
-      },
-      {
-        "id": "C",
-        "text": "Carotid artery stenting is mandatory for all symptomatic patients regardless of age"
-      },
-      {
-        "id": "D",
         "text": "CEA is only indicated if stenosis is 100% (complete occlusion)"
       },
       {
+        "id": "C",
+        "text": "Medical therapy alone with Aspirin for 70-99% stenosis"
+      },
+      {
+        "id": "D",
+        "text": "Carotid artery stenting is mandatory for all symptomatic patients regardless of age"
+      },
+      {
         "id": "E",
-        "text": "EC-IC bypass surgery within 24 hours"
+        "text": "Carotid Endarterectomy (CEA) within 2 weeks yields maximum absolute risk reduction for 70-99% symptomatic stenosis"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "NASCET demonstrated that Carotid Endarterectomy (CEA) provides robust absolute risk reduction (17% ARR at 2 years) for symptomatic patients with 70-99% stenosis if performed early (ideally within 2 weeks). CEA is contraindicated in 100% total occlusion.",
     "keyTakeaway": "NASCET: CEA provides high ARR for 70-99% symptomatic carotid stenosis (do early within 14 days!).",
     "tags": [
@@ -2514,11 +2514,11 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Takayasu Arteritis; Aortic arch angiography"
+        "text": "Embolic stroke from cardiac myxoma; TEE"
       },
       {
         "id": "D",
-        "text": "Embolic stroke from cardiac myxoma; TEE"
+        "text": "Takayasu Arteritis; Aortic arch angiography"
       },
       {
         "id": "E",
@@ -2545,26 +2545,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "CEA reduced 5-year stroke risk from 11% to 5.1% (approx 1% per year ARR), but modern intensive medical therapy has further reduced medical stroke rates"
-      },
-      {
-        "id": "B",
         "text": "CEA provided zero benefit in asymptomatic patients"
       },
       {
+        "id": "B",
+        "text": "CEA reduced 5-year stroke risk from 11% to 5.1% (approx 1% per year ARR), but modern intensive medical therapy has further reduced medical stroke rates"
+      },
+      {
         "id": "C",
-        "text": "CEA was harmful"
+        "text": "Aspirin is contraindicated"
       },
       {
         "id": "D",
-        "text": "Carotid stenting is superior to CEA in asymptomatic patients"
+        "text": "CEA was harmful"
       },
       {
         "id": "E",
-        "text": "Aspirin is contraindicated"
+        "text": "Carotid stenting is superior to CEA in asymptomatic patients"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "ACAS and ACST showed that CEA for 60-99% asymptomatic carotid stenosis reduced 5-year stroke risk with a modest ARR of ~1% per year (if perioperative stroke/death risk < 3%). Modern aggressive medical therapy (high-dose statin, DAPT, BP control) has significantly lowered medical stroke rates, making routine revascularization for asymptomatic stenosis controversial.",
     "keyTakeaway": "ACAS/ACST: CEA provides a modest ~1%/year ARR for 60-99% asymptomatic carotid stenosis; modern medical therapy is increasingly preferred.",
     "tags": [
@@ -2584,26 +2584,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "CAS had a higher rate of periprocedural stroke, whereas CEA had a higher rate of periprocedural MI; elderly patients (> 70) had superior outcomes with CEA"
-      },
-      {
-        "id": "B",
-        "text": "CAS was superior in all age groups"
-      },
-      {
-        "id": "C",
-        "text": "CEA had higher stroke rates than CAS"
-      },
-      {
-        "id": "D",
         "text": "CAS is contraindicated in all males"
       },
       {
-        "id": "E",
+        "id": "B",
+        "text": "CEA had higher stroke rates than CAS"
+      },
+      {
+        "id": "C",
         "text": "Both procedures have identical complication profiles"
+      },
+      {
+        "id": "D",
+        "text": "CAS was superior in all age groups"
+      },
+      {
+        "id": "E",
+        "text": "CAS had a higher rate of periprocedural stroke, whereas CEA had a higher rate of periprocedural MI; elderly patients (> 70) had superior outcomes with CEA"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "The CREST trial showed overall equal primary endpoint rates between CEA and CAS. However, CAS had a significantly higher rate of periprocedural STROKE, whereas CEA had a higher rate of periprocedural MI. Older patients (> 70 years) achieved significantly better outcomes with CEA (due to aortic arch vascular tortuosity in CAS).",
     "keyTakeaway": "CREST Trial: CAS has higher periprocedural stroke risk; CEA has higher MI risk. Elderly (> 70) fare better with CEA!",
     "tags": [
@@ -2627,19 +2627,19 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Long-term Warfarin anticoagulation alone without closure"
-      },
-      {
-        "id": "C",
         "text": "Aspirin 81 mg daily alone without closure"
       },
       {
+        "id": "C",
+        "text": "No intervention required"
+      },
+      {
         "id": "D",
-        "text": "Left atrial appendage occlusion"
+        "text": "Long-term Warfarin anticoagulation alone without closure"
       },
       {
         "id": "E",
-        "text": "No intervention required"
+        "text": "Left atrial appendage occlusion"
       }
     ],
     "correctOptionId": "A",
@@ -2662,15 +2662,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "DOACs show superior or non-inferior efficacy for ischemic stroke prevention with a ~50% reduction in intracerebral hemorrhage (ICH)"
-      },
-      {
-        "id": "B",
         "text": "DOACs require frequent INR monitoring"
       },
       {
+        "id": "B",
+        "text": "DOACs show superior or non-inferior efficacy for ischemic stroke prevention with a ~50% reduction in intracerebral hemorrhage (ICH)"
+      },
+      {
         "id": "C",
-        "text": "Warfarin has a lower rate of major bleeding than DOACs"
+        "text": "Warfarin is superior in patients with end-stage renal disease"
       },
       {
         "id": "D",
@@ -2678,10 +2678,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Warfarin is superior in patients with end-stage renal disease"
+        "text": "Warfarin has a lower rate of major bleeding than DOACs"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "DOACs (Apixaban, Dabigatran, Rivaroxaban, Edoxaban) are preferred over Warfarin in non-valvular AFib because meta-analyses of major RCTs demonstrate that DOACs reduce mortality, stroke risk, and most dramatically cut intracranial hemorrhage (ICH) by approximately 50%. Note: DOACs are CONTRAINDICATED in mechanical heart valves.",
     "keyTakeaway": "DOACs > Warfarin in non-valvular AFib: Equal/better stroke reduction with ~50% LOWER risk of ICH!",
     "tags": [
@@ -2701,26 +2701,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "CHA2DS2-VASc = 5 (HTN 1, DM 1, Age 65-74 1, Stroke 2); Oral Anticoagulation (DOAC) strongly indicated"
-      },
-      {
-        "id": "B",
         "text": "CHA2DS2-VASc = 1; Aspirin alone"
       },
       {
+        "id": "B",
+        "text": "CHA2DS2-VASc = 8; Triple therapy"
+      },
+      {
         "id": "C",
-        "text": "CHA2DS2-VASc = 0; No treatment"
+        "text": "CHA2DS2-VASc = 5 (HTN 1, DM 1, Age 65-74 1, Stroke 2); Oral Anticoagulation (DOAC) strongly indicated"
       },
       {
         "id": "D",
-        "text": "CHA2DS2-VASc = 2; Clopidogrel"
+        "text": "CHA2DS2-VASc = 0; No treatment"
       },
       {
         "id": "E",
-        "text": "CHA2DS2-VASc = 8; Triple therapy"
+        "text": "CHA2DS2-VASc = 2; Clopidogrel"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "CHA2DS2-VASc components: CHF (1), HTN (1), Age >= 75 (2), Diabetes (1), Stroke/TIA (2), Vascular disease (1), Age 65-74 (1), Sex category female (1). Here: HTN (1) + DM (1) + Age 68 (1) + Prior Stroke (2) = 5. A score >= 2 in men or >= 3 in women mandates oral anticoagulation (DOAC preferred).",
     "keyTakeaway": "CHA2DS2-VASc >= 2 in men mandates oral anticoagulation with a DOAC.",
     "tags": [
@@ -2740,11 +2740,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "ICH Score = 3 (GCS 11=1, Volume >= 30=1, IVH=1); approx 72% 30-day mortality"
+        "text": "ICH Score = 0; 0% mortality"
       },
       {
         "id": "B",
-        "text": "ICH Score = 0; 0% mortality"
+        "text": "ICH Score = 2; 26% mortality"
       },
       {
         "id": "C",
@@ -2756,10 +2756,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "ICH Score = 2; 26% mortality"
+        "text": "ICH Score = 3 (GCS 11=1, Volume >= 30=1, IVH=1); approx 72% 30-day mortality"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "ICH Score Components: GCS 5-12 = 1 point; Hematoma volume >= 30 mL = 1 point; IVH present = 1 point; Infratentorial origin = 0 (supratentorial); Age >= 80 = 0 (age 72). Total ICH Score = 3. Mortality correlates with score: Score 0=0%, 1=13%, 2=26%, 3=72%, 4=97%, 5-6=100%.",
     "keyTakeaway": "ICH Score components: GCS, Volume (>= 30mL), IVH, Infratentorial location, Age (>= 80). Score 3 = ~72% mortality.",
     "tags": [
@@ -2779,26 +2779,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Idarucizumab (Praxbind)"
+        "text": "Vitamin K1 IV"
       },
       {
         "id": "B",
-        "text": "Andexanet alfa (Andexxa)"
-      },
-      {
-        "id": "C",
-        "text": "Prothrombin Complex Concentrate (4-factor PCC / Kcentra)"
-      },
-      {
-        "id": "D",
         "text": "Protamine sulfate"
       },
       {
+        "id": "C",
+        "text": "Andexanet alfa (Andexxa)"
+      },
+      {
+        "id": "D",
+        "text": "Idarucizumab (Praxbind)"
+      },
+      {
         "id": "E",
-        "text": "Vitamin K1 IV"
+        "text": "Prothrombin Complex Concentrate (4-factor PCC / Kcentra)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Idarucizumab (Praxbind) is a humanized monoclonal antibody fragment that specifically binds Dabigatran (a direct thrombin inhibitor) with 350-fold higher affinity than thrombin, achieving immediate complete reversal. Andexanet alfa is the reversal agent for factor Xa inhibitors (Apixaban, Rivaroxaban).",
     "keyTakeaway": "Dabigatran reversal = Idarucizumab (Praxbind). Factor Xa inhibitor reversal = Andexanet alfa (Andexxa).",
     "tags": [
@@ -2818,26 +2818,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Rapidly lower SBP to 130-140 mmHg within 2 hours (target SBP < 140 mmHg)"
-      },
-      {
-        "id": "B",
         "text": "Keep SBP > 180 mmHg to maintain cerebral perfusion"
       },
       {
-        "id": "C",
+        "id": "B",
         "text": "Lower SBP < 90 mmHg"
       },
       {
+        "id": "C",
+        "text": "Rapidly lower SBP to 130-140 mmHg within 2 hours (target SBP < 140 mmHg)"
+      },
+      {
         "id": "D",
-        "text": "Hold all antihypertensives for 24 hours"
+        "text": "Maintain SBP strictly between 160 and 180 mmHg"
       },
       {
         "id": "E",
-        "text": "Maintain SBP strictly between 160 and 180 mmHg"
+        "text": "Hold all antihypertensives for 24 hours"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "INTERACT2 and ATACH-2 established that rapidly lowering SBP to a target of 130-140 mmHg within 2 hours of presentation is safe and reduces hematoma expansion. ATACH-2 showed that dropping SBP below 120 mmHg increased renal adverse events, so the sweet spot is SBP 130-140 mmHg.",
     "keyTakeaway": "Acute ICH BP Target: Lower SBP rapidly to 130-140 mmHg within 2 hours (INTERACT2/ATACH-2).",
     "tags": [
@@ -2857,26 +2857,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Cerebral vasospasm / Delayed Cerebral Ischemia (DCI); Nimodipine 60 mg orally every 4 hours for 21 days"
-      },
-      {
-        "id": "B",
-        "text": "Hydrocephalus; IV Furosemide"
-      },
-      {
-        "id": "C",
         "text": "Aneurysm rebleeding; IV Aminocaproic acid"
       },
       {
+        "id": "B",
+        "text": "Cerebral salt wasting; IV Hypertonic saline"
+      },
+      {
+        "id": "C",
+        "text": "Cerebral vasospasm / Delayed Cerebral Ischemia (DCI); Nimodipine 60 mg orally every 4 hours for 21 days"
+      },
+      {
         "id": "D",
-        "text": "Seizure activity; IV Levetiracetam loading dose"
+        "text": "Hydrocephalus; IV Furosemide"
       },
       {
         "id": "E",
-        "text": "Cerebral salt wasting; IV Hypertonic saline"
+        "text": "Seizure activity; IV Levetiracetam loading dose"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Delayed Cerebral Ischemia (DCI) due to vasospasm occurs peak post-bleed days 4-14. Oral Nimodipine (60 mg q4h for 21 days) is the ONLY medication proven to improve neurofunctional outcomes in aneurysmal SAH. TCD mean flow velocity > 120 cm/s indicates vasospasm; > 200 cm/s indicates severe vasospasm.",
     "keyTakeaway": "Oral Nimodipine 60 mg q4h x 21 days is mandatory for ALL aneurysmal SAH patients to reduce DCI deficit.",
     "tags": [
@@ -2896,11 +2896,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Endovascular coiling resulted in a significantly higher rate of disability-free survival at 1 year compared to surgical clipping"
+        "text": "Both modalities had identical outcomes"
       },
       {
         "id": "B",
-        "text": "Surgical clipping was superior in all cases"
+        "text": "Endovascular coiling resulted in a significantly higher rate of disability-free survival at 1 year compared to surgical clipping"
       },
       {
         "id": "C",
@@ -2912,10 +2912,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Both modalities had identical outcomes"
+        "text": "Surgical clipping was superior in all cases"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "The ISAT trial (International Subarachnoid Aneurysm Trial) proved that in ruptured intracranial aneurysms suitable for both modalities, endovascular coiling yielded a 7% absolute risk reduction in dependent survival/death at 1 year compared to open surgical clipping.",
     "keyTakeaway": "ISAT Trial: Endovascular coiling > Surgical clipping for 1-year disability-free survival in ruptured aneurysms.",
     "tags": [
@@ -2935,11 +2935,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Abnormal TCD (TAMMV >= 200 cm/s); initiate chronic blood transfusion therapy to maintain HbS < 30%"
+        "text": "Start Warfarin anticoagulation"
       },
       {
         "id": "B",
-        "text": "Normal TCD; continue observation"
+        "text": "Abnormal TCD (TAMMV >= 200 cm/s); initiate chronic blood transfusion therapy to maintain HbS < 30%"
       },
       {
         "id": "C",
@@ -2947,14 +2947,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Indication for emergent surgical EC-IC bypass"
+        "text": "Normal TCD; continue observation"
       },
       {
         "id": "E",
-        "text": "Start Warfarin anticoagulation"
+        "text": "Indication for emergent surgical EC-IC bypass"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "The STOP trial established that pediatric Sickle Cell Disease patients with abnormal TCD velocities (TAMMV >= 200 cm/s) have a > 10% per year risk of primary stroke. Regular chronic exchange/simple blood transfusions (targeting HbS < 30%) reduce stroke risk by over 90%.",
     "keyTakeaway": "STOP Trial: TCD velocity >= 200 cm/s in Sickle Cell Disease -> Start chronic blood transfusions (target HbS < 30%).",
     "tags": [
@@ -2974,26 +2974,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Full-dose therapeutic anticoagulation with LMWH or unfractionated Heparin, despite the presence of hemorrhagic transformation"
-      },
-      {
-        "id": "B",
-        "text": "Hold all anticoagulation due to the hemorrhagic transformation"
-      },
-      {
-        "id": "C",
         "text": "Administer IV tPA systemically"
       },
       {
-        "id": "D",
+        "id": "B",
+        "text": "Full-dose therapeutic anticoagulation with LMWH or unfractionated Heparin, despite the presence of hemorrhagic transformation"
+      },
+      {
+        "id": "C",
         "text": "Aspirin 325 mg daily alone"
       },
       {
-        "id": "E",
+        "id": "D",
         "text": "Emergent decompressive craniectomy only"
+      },
+      {
+        "id": "E",
+        "text": "Hold all anticoagulation due to the hemorrhagic transformation"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "AHA/ASA guidelines explicitly state that therapeutic anticoagulation (LMWH or IV unfractionated heparin) is the first-line treatment for Cerebral Venous Thrombosis (CVT), EVEN IN THE PRESENCE OF hemorrhagic transformation/infarction. Anticoagulation prevents thrombus propagation and restores venous drainage.",
     "keyTakeaway": "Therapeutic anticoagulation is FIRST-LINE for CVT, even if hemorrhagic transformation is present!",
     "tags": [
@@ -3013,26 +3013,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Reversible Cerebral Vasoconstriction Syndrome (RCVS); Calcium Channel Blockers (Nimodipine/Verapamil) and remove triggering agents"
-      },
-      {
-        "id": "B",
         "text": "Primary Angiitis of the CNS (PACNS); High-dose IV Methylprednisolone + Cyclophosphamide"
       },
       {
+        "id": "B",
+        "text": "Reversible Cerebral Vasoconstriction Syndrome (RCVS); Calcium Channel Blockers (Nimodipine/Verapamil) and remove triggering agents"
+      },
+      {
         "id": "C",
-        "text": "Bacterial Meningitis; IV Ceftriaxone + Vancomycin"
+        "text": "Temporal Arteritis; Oral Prednisone 60 mg daily"
       },
       {
         "id": "D",
-        "text": "Temporal Arteritis; Oral Prednisone 60 mg daily"
+        "text": "Bacterial Meningitis; IV Ceftriaxone + Vancomycin"
       },
       {
         "id": "E",
         "text": "Moyamoya Disease; Surgical synangiosis"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "RCVS features thunderclap headaches, reversible multifocal cerebral arterial vasoconstriction, and normal CSF. Distinguished from PACNS (which has insidious onset, abnormal inflammatory CSF, and requires aggressive immunosuppression). RCVS is treated with CCBs (Verpamil/Nimodipine) and trigger avoidance (SSRIs, sympathomimetics).",
     "keyTakeaway": "RCVS = Thunderclap headache + Segmental arterial constriction + Normal CSF -> Treat with CCBs (vs PACNS which has abnormal CSF & requires steroids).",
     "tags": [
@@ -3052,15 +3052,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Decompressive hemicraniectomy"
-      },
-      {
-        "id": "B",
         "text": "High-dose IV Dexamethasone"
       },
       {
-        "id": "C",
+        "id": "B",
         "text": "Hypothermia to 31 degrees C"
+      },
+      {
+        "id": "C",
+        "text": "Immediate intra-arterial tPA infusion"
       },
       {
         "id": "D",
@@ -3068,10 +3068,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Immediate intra-arterial tPA infusion"
+        "text": "Decompressive hemicraniectomy"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Surgical decompressive hemicraniectomy (bone flap >= 12 cm) performed within 48 hours of onset for malignant MCA infarction reduces mortality from 80% to 30% in patients aged <= 60 (DECIMAL, DESTINY, HAMLET trials). Steroids are ineffective and harmful in ischemic brain edema.",
     "keyTakeaway": "Decompressive Hemicraniectomy < 48 hours in malignant MCA stroke reduces mortality from 80% to 30%.",
     "tags": [
@@ -3091,26 +3091,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Dual Antiplatelet Therapy (Aspirin + Clopidogrel) initiated within 24 hours and continued for 21 days, followed by monotherapy"
+        "text": "Clopidogrel + Ticagrelor for 90 days"
       },
       {
         "id": "B",
-        "text": "Aspirin monotherapy indefinitely from day 1"
-      },
-      {
-        "id": "C",
         "text": "Aspirin + Clopidogrel continued indefinitely for 1 year"
       },
       {
+        "id": "C",
+        "text": "Aspirin monotherapy indefinitely from day 1"
+      },
+      {
         "id": "D",
-        "text": "Warfarin anticoagulation for 3 months"
+        "text": "Dual Antiplatelet Therapy (Aspirin + Clopidogrel) initiated within 24 hours and continued for 21 days, followed by monotherapy"
       },
       {
         "id": "E",
-        "text": "Clopidogrel + Ticagrelor for 90 days"
+        "text": "Warfarin anticoagulation for 3 months"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "The CHANCE and POINT trials established that short-term Dual Antiplatelet Therapy (DAPT with Aspirin + Clopidogrel) for 21 days (initiated within 24 hours of high-risk TIA ABCD2 >= 4 or minor stroke NIHSS <= 3) significantly reduces 90-day recurrent ischemic stroke compared to Aspirin alone. Continuing DAPT beyond 21-90 days increases bleeding without additional ischemic benefit.",
     "keyTakeaway": "CHANCE/POINT: DAPT (Aspirin + Clopidogrel) for 21 DAYS in minor stroke (NIHSS <= 3) or high-risk TIA (ABCD2 >= 4).",
     "tags": [
@@ -3130,7 +3130,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Atorvastatin 80 mg daily significantly reduced recurrent stroke and major cardiovascular events in patients without known CHD"
+        "text": "Pravastatin 20 mg is superior to Atorvastatin 80 mg"
       },
       {
         "id": "B",
@@ -3142,14 +3142,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Target LDL should be kept above 130 mg/dL"
+        "text": "Atorvastatin 80 mg daily significantly reduced recurrent stroke and major cardiovascular events in patients without known CHD"
       },
       {
         "id": "E",
-        "text": "Pravastatin 20 mg is superior to Atorvastatin 80 mg"
+        "text": "Target LDL should be kept above 130 mg/dL"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "The SPARCL trial proved that high-dose Atorvastatin (80 mg daily) significantly reduced the absolute risk of recurrent stroke (16% RRR) in patients with recent ischemic stroke or TIA and no known coronary heart disease. Note: target LDL is < 70 mg/dL (or < 55 mg/dL in high-risk patients).",
     "keyTakeaway": "SPARCL trial: High-intensity statin (Atorvastatin 80mg) reduces recurrent stroke in non-cardioembolic stroke.",
     "tags": [
@@ -3169,26 +3169,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "mRS 1 (Slight disability; unable to carry out all previous activities, but able to look after own affairs without assistance)"
+        "text": "mRS 4 (Moderately severe disability; unable to walk unassisted)"
       },
       {
         "id": "B",
-        "text": "mRS 0 (No symptoms at all)"
-      },
-      {
-        "id": "C",
         "text": "mRS 2 (Slight disability; unable to look after own affairs)"
       },
       {
+        "id": "C",
+        "text": "mRS 0 (No symptoms at all)"
+      },
+      {
         "id": "D",
-        "text": "mRS 3 (Moderate disability; requires some help, but able to walk unassisted)"
+        "text": "mRS 1 (Slight disability; unable to carry out all previous activities, but able to look after own affairs without assistance)"
       },
       {
         "id": "E",
-        "text": "mRS 4 (Moderately severe disability; unable to walk unassisted)"
+        "text": "mRS 3 (Moderate disability; requires some help, but able to walk unassisted)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Modified Rankin Scale (mRS) definitions: mRS 0 = No symptoms; mRS 1 = No significant disability despite symptoms (able to carry out all usual duties and activities is mRS 0, unable to carry out all previous activities but independent in daily affairs is mRS 1); mRS 2 = Slight disability (independent in daily living, cannot carry out all previous activities); mRS 3 = Moderate disability (requires help, but walks unassisted); mRS 4 = Moderately severe disability (unable to walk without assistance); mRS 5 = Severe disability (bedridden); mRS 6 = Dead.",
     "keyTakeaway": "mRS 1 = Symptoms present, unable to carry out all previous activities, but fully independent in self-care.",
     "tags": [
@@ -3208,15 +3208,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Autosomal Dominant; Anterior Temporal Pole & External Capsule hyperintensities"
-      },
-      {
-        "id": "B",
         "text": "Autosomal Recessive; Basal ganglia calcification"
       },
       {
-        "id": "C",
+        "id": "B",
         "text": "X-linked Recessive; Cerebellar atrophy"
+      },
+      {
+        "id": "C",
+        "text": "Autosomal Dominant; Anterior Temporal Pole & External Capsule hyperintensities"
       },
       {
         "id": "D",
@@ -3227,7 +3227,7 @@ export const questionsData: PracticeQuestion[] = [
         "text": "Autosomal Dominant; Brainstem infarction"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "CADASIL is an Autosomal Dominant disorder caused by NOTCH3 mutations on chromosome 19. The pathognomonic MRI markers are hyperintensities in the anterior temporal poles and external capsules.",
     "keyTakeaway": "CADASIL = Autosomal Dominant NOTCH3 mutation + Anterior temporal pole MRI hyperintensity.",
     "tags": [
@@ -3247,26 +3247,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Vascular Ehlers-Danlos Syndrome Type IV; COL3A1 mutation"
+        "text": "Loeys-Dietz Syndrome; TGFBR1/2 mutation"
       },
       {
         "id": "B",
-        "text": "Type I EDS"
-      },
-      {
-        "id": "C",
         "text": "Marfan Syndrome; FBN1 mutation"
       },
       {
+        "id": "C",
+        "text": "Vascular Ehlers-Danlos Syndrome Type IV; COL3A1 mutation"
+      },
+      {
         "id": "D",
-        "text": "Loeys-Dietz Syndrome; TGFBR1/2 mutation"
+        "text": "Type I EDS"
       },
       {
         "id": "E",
         "text": "Osteogenesis Imperfecta"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Vascular Ehlers-Danlos Syndrome (vEDS, Type IV) is caused by autosomal dominant mutations in COL3A1 (type III procollagen). It carries a high risk of spontaneous arterial dissection, aneurysm rupture, and bowel/uterine perforation.",
     "keyTakeaway": "Vascular Ehlers-Danlos (Type IV) = COL3A1 mutation -> High risk of spontaneous arterial dissection and rupture.",
     "tags": [
@@ -3286,7 +3286,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Direct carotid artery access with continuous retrograde flow reversal protects the brain from embolic debris during stent deployment"
+        "text": "Replaces need for CEA in 100% total occlusions"
       },
       {
         "id": "B",
@@ -3294,18 +3294,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Can be performed without anesthesia"
+        "text": "Direct carotid artery access with continuous retrograde flow reversal protects the brain from embolic debris during stent deployment"
       },
       {
         "id": "D",
-        "text": "Replaces need for CEA in 100% total occlusions"
+        "text": "Prevents intracranial stenosis"
       },
       {
         "id": "E",
-        "text": "Prevents intracranial stenosis"
+        "text": "Can be performed without anesthesia"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "TCAR (TransCarotid Artery Revascularization) utilizes direct carotid surgical access paired with high-rate retrograde flow reversal, directing embolic debris away from the brain into an arterial filter during stent placement, significantly reducing periprocedural stroke risk.",
     "keyTakeaway": "TCAR uses direct carotid access + dynamic flow reversal to minimize embolic stroke during stenting.",
     "tags": [
@@ -3325,7 +3325,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Subclavian Steal Syndrome; Proximal subclavian artery occlusion causing retrograde flow down the ipsilateral vertebral artery"
+        "text": "Thoracic outlet syndrome"
       },
       {
         "id": "B",
@@ -3333,18 +3333,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Thoracic outlet syndrome"
+        "text": "Subclavian Steal Syndrome; Proximal subclavian artery occlusion causing retrograde flow down the ipsilateral vertebral artery"
       },
       {
         "id": "D",
-        "text": "Raynaud phenomenon"
+        "text": "Vertebrobasilar insufficiency from PICA stroke"
       },
       {
         "id": "E",
-        "text": "Vertebrobasilar insufficiency from PICA stroke"
+        "text": "Raynaud phenomenon"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Subclavian Steal Syndrome occurs when proximal subclavian artery occlusion causes blood to be 'stolen' from the brain by flowing retrogradely down the ipsilateral vertebral artery into the arm during arm exercise, precipitating posterior circulation TIAs.",
     "keyTakeaway": "Subclavian Steal = Proximal subclavian occlusion -> Retrograde vertebral artery flow -> Posterior circulation TIAs on arm exercise.",
     "tags": [
@@ -3364,26 +3364,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Left Atrial Myxoma; Surgical resection of cardiac tumor"
-      },
-      {
-        "id": "B",
-        "text": "Infective endocarditis; IV Vancomycin"
-      },
-      {
-        "id": "C",
         "text": "Libman-Sacks endocarditis; High-dose steroids"
       },
       {
+        "id": "B",
+        "text": "Left Atrial Myxoma; Surgical resection of cardiac tumor"
+      },
+      {
+        "id": "C",
+        "text": "Infective endocarditis; IV Vancomycin"
+      },
+      {
         "id": "D",
-        "text": "Mitral valve prolapse; Aspirin"
+        "text": "Non-bacterial thrombotic endocarditis; LMWH"
       },
       {
         "id": "E",
-        "text": "Non-bacterial thrombotic endocarditis; LMWH"
+        "text": "Mitral valve prolapse; Aspirin"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Left Atrial Myxoma is the most common primary cardiac tumor. Features: constitutional symptoms (fever, weight loss), embolic strokes in young patients, and a characteristic diastolic 'tumor plop' murmur. Treated with surgical resection.",
     "keyTakeaway": "Left Atrial Myxoma = Primary cardiac tumor causing embolic strokes + diastolic tumor plop -> Surgical excision.",
     "tags": [
@@ -3415,11 +3415,11 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Dabigatran 150 mg twice daily"
+        "text": "Aspirin 81 mg daily alone"
       },
       {
         "id": "E",
-        "text": "Aspirin 81 mg daily alone"
+        "text": "Dabigatran 150 mg twice daily"
       }
     ],
     "correctOptionId": "A",
@@ -3442,7 +3442,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Administer 4-Factor Prothrombin Complex Concentrate (4F-PCC / Kcentra 25-50 U/kg IV) AND IV Vitamin K1 (10 mg IV slow push)"
+        "text": "Administer Idarucizumab"
       },
       {
         "id": "B",
@@ -3450,18 +3450,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Administer Cryoprecipitate 10 units"
+        "text": "Hold Warfarin and observe"
       },
       {
         "id": "D",
-        "text": "Administer Idarucizumab"
+        "text": "Administer Cryoprecipitate 10 units"
       },
       {
         "id": "E",
-        "text": "Hold Warfarin and observe"
+        "text": "Administer 4-Factor Prothrombin Complex Concentrate (4F-PCC / Kcentra 25-50 U/kg IV) AND IV Vitamin K1 (10 mg IV slow push)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Per AHA/ASA ICH guidelines, 4-Factor Prothrombin Complex Concentrate (4F-PCC / Kcentra) combined with IV Vitamin K1 (10 mg IV) is preferred over FFP for urgent Warfarin reversal because 4F-PCC normalizes INR within 15-30 minutes without volume overload.",
     "keyTakeaway": "Warfarin ICH Reversal = 4F-PCC (Kcentra) + IV Vitamin K1 (10 mg). 4F-PCC > FFP due to rapid INR correction.",
     "tags": [
@@ -3481,7 +3481,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Andexanet alfa (Andexxa)"
+        "text": "Vitamin K1"
       },
       {
         "id": "B",
@@ -3489,18 +3489,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Protamine sulfate"
+        "text": "Andexanet alfa (Andexxa)"
       },
       {
         "id": "D",
-        "text": "Vitamin K1"
+        "text": "Desmopressin"
       },
       {
         "id": "E",
-        "text": "Desmopressin"
+        "text": "Protamine sulfate"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Andexanet alfa (Andexxa) is a recombinant decoy factor Xa molecule designed to bind and sequester direct factor Xa inhibitors (Apixaban, Rivaroxaban), achieving rapid reversal of anti-Xa activity.",
     "keyTakeaway": "Factor Xa Inhibitor Reversal = Andexanet alfa (Andexxa). Direct Thrombin Inhibitor Reversal = Idarucizumab (Praxbind).",
     "tags": [
@@ -3520,15 +3520,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Cerebral Salt Wasting (CSW); Maintain EUVOLEMIA / hypertonic 3% saline and oral salt tablets (DO NOT fluid restrict!)"
+        "text": "Heart failure; Furosemide"
       },
       {
         "id": "B",
-        "text": "SIADH; Fluid restriction < 1000 mL/day"
+        "text": "Central Diabetes Insipidus; Desmopressin"
       },
       {
         "id": "C",
-        "text": "Central Diabetes Insipidus; Desmopressin"
+        "text": "SIADH; Fluid restriction < 1000 mL/day"
       },
       {
         "id": "D",
@@ -3536,10 +3536,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Heart failure; Furosemide"
+        "text": "Cerebral Salt Wasting (CSW); Maintain EUVOLEMIA / hypertonic 3% saline and oral salt tablets (DO NOT fluid restrict!)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Cerebral Salt Wasting (CSW) causes hyponatremia WITH HYPOVOLEMIA due to renal sodium wasting (brain natriuretic peptide surge). Treatment is fluid resuscitation with isotonic or hypertonic (3%) saline and salt tablets to maintain EUVOLEMIA. Fluid restriction in CSW causes cerebral hypoperfusion and vasospasm infarction!",
     "keyTakeaway": "Cerebral Salt Wasting (CSW) = Hyponatremia + HYPOVOLEMIA in SAH -> Treat with 3% Saline & Salt Tablets (DO NOT fluid restrict!).",
     "tags": [
@@ -3563,7 +3563,7 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Moyamoya Disease"
+        "text": "Pediatric Atherosclerosis"
       },
       {
         "id": "C",
@@ -3571,7 +3571,7 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Pediatric Atherosclerosis"
+        "text": "Moyamoya Disease"
       },
       {
         "id": "E",
@@ -3637,7 +3637,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Initiate high-dose systemic corticosteroids (IV Methylprednisolone or oral Prednisone 60 mg) IMMEDIATELY before temporal artery biopsy"
+        "text": "Order stat head CT"
       },
       {
         "id": "B",
@@ -3645,18 +3645,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Order stat head CT"
-      },
-      {
-        "id": "D",
         "text": "Start Aspirin 81 mg alone"
       },
       {
-        "id": "E",
+        "id": "D",
         "text": "Perform cerebral angiography"
+      },
+      {
+        "id": "E",
+        "text": "Initiate high-dose systemic corticosteroids (IV Methylprednisolone or oral Prednisone 60 mg) IMMEDIATELY before temporal artery biopsy"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Temporal Arteritis (Giant Cell Arteritis GCA) is a granulomatous vasculitis of medium and large arteries. Jaw claudication has > 90% specificity. Anterior Ischemic Optic Neuropathy (AION) can cause sudden permanent blindness. High-dose corticosteroids MUST be started IMMEDIATELY upon suspicion to protect the contralateral eye, without waiting for temporal artery biopsy!",
     "keyTakeaway": "Temporal Arteritis (GCA) = Jaw claudication + Scalp tenderness + High ESR -> Start HIGH-DOSE STEROIDS IMMEDIATELY to prevent blindness!",
     "tags": [
@@ -3676,26 +3676,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "CPP = 59 mmHg (MAP 85 minus ICP 26); CPP is inadequate (goal CPP 60-70 mmHg)"
-      },
-      {
-        "id": "B",
         "text": "CPP = 111 mmHg; CPP is normal"
       },
       {
+        "id": "B",
+        "text": "CPP = 85 mmHg; normal"
+      },
+      {
         "id": "C",
-        "text": "CPP = 26 mmHg; normal"
+        "text": "CPP = 59 mmHg (MAP 85 minus ICP 26); CPP is inadequate (goal CPP 60-70 mmHg)"
       },
       {
         "id": "D",
-        "text": "CPP = 85 mmHg; normal"
+        "text": "CPP = 26 mmHg; normal"
       },
       {
         "id": "E",
         "text": "CPP = 0 mmHg; brain death"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Cerebral Perfusion Pressure (CPP) = MAP minus ICP. Here: 85 - 26 = 59 mmHg. Per Brain Trauma Foundation and Neuro-ICU guidelines, target CPP is 60 to 70 mmHg. A CPP < 60 mmHg indicates cerebral hypoperfusion and requires immediate ICP lowering or MAP elevation.",
     "keyTakeaway": "CPP = MAP minus ICP. Target CPP goal is 60 to 70 mmHg.",
     "tags": [
@@ -3715,11 +3715,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Target LDL < 70 mg/dL (or > 50% LDL reduction)"
+        "text": "Target LDL < 200 mg/dL"
       },
       {
         "id": "B",
-        "text": "Target LDL < 130 mg/dL"
+        "text": "No LDL target required"
       },
       {
         "id": "C",
@@ -3727,14 +3727,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Target LDL < 200 mg/dL"
+        "text": "Target LDL < 70 mg/dL (or > 50% LDL reduction)"
       },
       {
         "id": "E",
-        "text": "No LDL target required"
+        "text": "Target LDL < 130 mg/dL"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "The TST (Treat Stroke to Target) trial and AHA/ASA guidelines recommend targeting an LDL cholesterol level < 70 mg/dL (or >= 50% reduction) using high-intensity statin therapy (Atorvastatin 80mg / Rosuvastatin 40mg) in patients with atherosclerotic ischemic stroke.",
     "keyTakeaway": "Secondary Stroke Prevention Statin Goal: Target LDL < 70 mg/dL (or >= 50% reduction) with high-intensity statin.",
     "tags": [
@@ -3754,7 +3754,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Post-Stroke Depression; Selective Serotonin Reuptake Inhibitors (SSRIs e.g., Escitalopram or Sertraline)"
+        "text": "Psychosis; Haloperidol"
       },
       {
         "id": "B",
@@ -3762,18 +3762,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Psychosis; Haloperidol"
+        "text": "Malingering; Discontinue therapy"
       },
       {
         "id": "D",
-        "text": "Malingering; Discontinue therapy"
+        "text": "Post-Stroke Depression; Selective Serotonin Reuptake Inhibitors (SSRIs e.g., Escitalopram or Sertraline)"
       },
       {
         "id": "E",
         "text": "Normal post-stroke adjustment; No treatment"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Post-Stroke Depression (PSD) affects ~30% of stroke survivors, most commonly with left frontal or basal ganglia lesions. SSRIs (Escitalopram, Sertraline) are first-line treatment, improving mood, functional rehabilitation participation, and motor recovery (FLAME trial).",
     "keyTakeaway": "Post-Stroke Depression (30% prevalence, Left Frontal) -> Treat with SSRIs (Escitalopram/Sertraline).",
     "tags": [
@@ -3793,7 +3793,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "NINDS Recombinant Tissue Plasminogen Activator Stroke Trial"
+        "text": "SAMMPRIS Trial"
       },
       {
         "id": "B",
@@ -3801,18 +3801,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "MR CLEAN Trial"
+        "text": "SPARCL Trial"
       },
       {
         "id": "D",
-        "text": "SAMMPRIS Trial"
+        "text": "NINDS Recombinant Tissue Plasminogen Activator Stroke Trial"
       },
       {
         "id": "E",
-        "text": "SPARCL Trial"
+        "text": "MR CLEAN Trial"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "The 1995 NINDS tPA Trial was the seminal randomized controlled trial proving that IV Alteplase (0.9 mg/kg) administered within 3 hours of symptom onset significantly improved 3-month functional independence (30% relative increase in minimal/no disability).",
     "keyTakeaway": "1995 NINDS tPA Trial: First landmark trial proving IV tPA efficacy within 3 hours for acute ischemic stroke.",
     "tags": [
@@ -3832,26 +3832,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "MR CLEAN Trial"
-      },
-      {
-        "id": "B",
         "text": "NINDS Trial"
       },
       {
+        "id": "B",
+        "text": "MR CLEAN Trial"
+      },
+      {
         "id": "C",
-        "text": "SAMMPRIS Trial"
+        "text": "NASCET Trial"
       },
       {
         "id": "D",
-        "text": "NASCET Trial"
+        "text": "SAMMPRIS Trial"
       },
       {
         "id": "E",
         "text": "SPARCL Trial"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "MR CLEAN (Multicenter Randomized Clinical Trial of Endovascular Treatment for Acute Ischemic Stroke in the Netherlands) published in Jan 2015 was the first positive RCT proving that stent retriever thrombectomy within 6 hours dramatically improves 90-day functional independence (NNT = 2.6). Followed immediately by ESCAPE, EXTEND-IA, SWIFT-PRIME, and REVASCAT.",
     "keyTakeaway": "2015 MR CLEAN Trial: The pivotal landmark trial that inaugurated the modern era of mechanical thrombectomy for LVO!",
     "tags": [
@@ -3871,15 +3871,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "MRI DWI-FLAIR mismatch (positive DWI lesion with no hyperintensity on FLAIR) or CTP perfusion mismatch"
+        "text": "Cerebral angiography"
       },
       {
         "id": "B",
-        "text": "Non-contrast CT head alone"
+        "text": "MRI DWI-FLAIR mismatch (positive DWI lesion with no hyperintensity on FLAIR) or CTP perfusion mismatch"
       },
       {
         "id": "C",
-        "text": "Cerebral angiography"
+        "text": "Non-contrast CT head alone"
       },
       {
         "id": "D",
@@ -3890,7 +3890,7 @@ export const questionsData: PracticeQuestion[] = [
         "text": "Electroencephalogram (EEG)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "The WAKE-UP trial demonstrated that patients with wake-up stroke who have MRI DWI-FLAIR mismatch (acute ischemic lesion visible on DWI but not yet visible on FLAIR, indicating onset < 4.5h) derive significant benefit from IV Alteplase. EXTEND proved benefit up to 9 hours using CTP perfusion mismatch.",
     "keyTakeaway": "WAKE-UP Trial: MRI DWI-FLAIR mismatch identifies wake-up stroke patients eligible for IV thrombolysis.",
     "tags": [
@@ -3910,26 +3910,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Direct transport of the patient from the ambulance stretcher onto the CT scanner table with pre-hospital EMS stroke notification"
+        "text": "Obtaining consent from distant family members before CT"
       },
       {
         "id": "B",
-        "text": "Waiting for lab results before CT scan"
+        "text": "Direct transport of the patient from the ambulance stretcher onto the CT scanner table with pre-hospital EMS stroke notification"
       },
       {
         "id": "C",
-        "text": "Obtaining routine chest X-ray before CT"
-      },
-      {
-        "id": "D",
         "text": "Performing full physical exam before neuroimaging"
       },
       {
+        "id": "D",
+        "text": "Waiting for lab results before CT scan"
+      },
+      {
         "id": "E",
-        "text": "Obtaining consent from distant family members before CT"
+        "text": "Obtaining routine chest X-ray before CT"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Pre-hospital EMS notification, direct transport of the patient from the ambulance onto the CT scanner table ('CT direct'), point-of-care glucose testing, and pre-mixing thrombolytic medication at the CT scanner are key evidence-based interventions that reduce DTN times below 30 minutes.",
     "keyTakeaway": "EMS pre-notification and direct transport to CT scanner table ('CT direct') are key drivers of ultra-rapid DTN times.",
     "tags": [
@@ -3949,15 +3949,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Yes, normal/undetectable dTT and ECT indicate no significant Dabigatran anticoagulant effect, allowing safe tPA administration"
+        "text": "Yes, if SBP < 120 mmHg"
       },
       {
         "id": "B",
-        "text": "No, Dabigatran intake is an absolute contraindication regardless of labs"
+        "text": "Yes, provided Protamine is given"
       },
       {
         "id": "C",
-        "text": "Yes, provided Protamine is given"
+        "text": "No, Dabigatran intake is an absolute contraindication regardless of labs"
       },
       {
         "id": "D",
@@ -3965,10 +3965,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Yes, if SBP < 120 mmHg"
+        "text": "Yes, normal/undetectable dTT and ECT indicate no significant Dabigatran anticoagulant effect, allowing safe tPA administration"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Per AHA/ASA guidelines, if a patient on Dabigatran has documented normal sensitive coagulation tests (dTT or ECT), or anti-Xa activity is undetectable for Xa inhibitors, IV tPA may be considered safe because active anticoagulant effect is absent.",
     "keyTakeaway": "Normal sensitive coagulation assays (dTT/ECT for Dabigatran, anti-Xa for Xa inhibitors) allow safe IV tPA administration.",
     "tags": [
@@ -3992,19 +3992,19 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Sublingual Nifedipine"
-      },
-      {
-        "id": "C",
-        "text": "Oral Lisinopril"
-      },
-      {
-        "id": "D",
         "text": "IV Nitroprusside bolus"
       },
       {
-        "id": "E",
+        "id": "C",
         "text": "Oral Clonidine"
+      },
+      {
+        "id": "D",
+        "text": "Sublingual Nifedipine"
+      },
+      {
+        "id": "E",
+        "text": "Oral Lisinopril"
       }
     ],
     "correctOptionId": "A",
@@ -4031,7 +4031,7 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Middle Cerebral Artery (MCA)"
+        "text": "Superior Cerebellar Artery"
       },
       {
         "id": "C",
@@ -4039,11 +4039,11 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Anterior Choroidal Artery"
+        "text": "Middle Cerebral Artery (MCA)"
       },
       {
         "id": "E",
-        "text": "Superior Cerebellar Artery"
+        "text": "Anterior Choroidal Artery"
       }
     ],
     "correctOptionId": "A",
@@ -4066,26 +4066,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Dual collateral blood supply to the occipital pole from terminal branches of the Middle Cerebral Artery (MCA)"
-      },
-      {
-        "id": "B",
         "text": "Optic nerve decussation at the chiasm"
       },
       {
-        "id": "C",
+        "id": "B",
         "text": "Macular representation in the temporal lobe"
       },
       {
-        "id": "D",
+        "id": "C",
         "text": "Retinal collateral arteries"
+      },
+      {
+        "id": "D",
+        "text": "Dual collateral blood supply to the occipital pole from terminal branches of the Middle Cerebral Artery (MCA)"
       },
       {
         "id": "E",
         "text": "Dual supply from the anterior spinal artery"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Macular vision is represented at the extreme posterior tip of the occipital pole. This region receives dual collateral perfusion from terminal MCA branches in addition to the calcarine branch of the PCA, resulting in classic macular sparing during PCA occlusion.",
     "keyTakeaway": "Macular Sparing in PCA stroke occurs due to dual collateral supply from terminal MCA branches at the occipital pole.",
     "tags": [
@@ -4113,11 +4113,11 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Angular gyrus; Left ACA"
+        "text": "Calcarine sulcus; Left PCA"
       },
       {
         "id": "D",
-        "text": "Calcarine sulcus; Left PCA"
+        "text": "Angular gyrus; Left ACA"
       },
       {
         "id": "E",
@@ -4144,26 +4144,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Broca's area (inferior frontal gyrus); Left MCA superior division"
-      },
-      {
-        "id": "B",
-        "text": "Wernicke's area; Left MCA inferior division"
-      },
-      {
-        "id": "C",
         "text": "Angular gyrus; Left ACA"
       },
       {
+        "id": "B",
+        "text": "Internal capsule"
+      },
+      {
+        "id": "C",
+        "text": "Wernicke's area; Left MCA inferior division"
+      },
+      {
         "id": "D",
-        "text": "Occipital pole; Left PCA"
+        "text": "Broca's area (inferior frontal gyrus); Left MCA superior division"
       },
       {
         "id": "E",
-        "text": "Internal capsule"
+        "text": "Occipital pole; Left PCA"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Broca's aphasia (expressive/non-fluent aphasia) is caused by damage to Broca's area in the posterior inferior frontal gyrus (Brodmann areas 44/45) of the dominant hemisphere, supplied by the superior division of the left MCA.",
     "keyTakeaway": "Broca Aphasia = Inferior frontal gyrus lesion (Left MCA Superior Division).",
     "tags": [
@@ -4183,7 +4183,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Nucleus Ambiguus (CN IX and X motor fibers)"
+        "text": "Inferior Salivatory Nucleus"
       },
       {
         "id": "B",
@@ -4191,18 +4191,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Inferior Salivatory Nucleus"
+        "text": "Nucleus Ambiguus (CN IX and X motor fibers)"
       },
       {
         "id": "D",
-        "text": "Nucleus Tractus Solitarii"
+        "text": "Hypoglossal Nucleus"
       },
       {
         "id": "E",
-        "text": "Hypoglossal Nucleus"
+        "text": "Nucleus Tractus Solitarii"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "In Lateral Medullary (Wallenberg) Syndrome, dysphagia, dysarthria, hoarseness, and loss of gag reflex are caused by ischemic damage to the Nucleus Ambiguus (supplying motor innervations to the pharynx and larynx via CN IX and X).",
     "keyTakeaway": "Wallenberg Syndrome dysphagia & hoarseness = Nucleus Ambiguus damage (CN IX / X).",
     "tags": [
@@ -4222,26 +4222,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Corticospinal tract in the cerebral peduncle"
+        "text": "Superior colliculus"
       },
       {
         "id": "B",
-        "text": "Red nucleus"
-      },
-      {
-        "id": "C",
-        "text": "Substantia nigra"
-      },
-      {
-        "id": "D",
         "text": "Medial lemniscus"
       },
       {
+        "id": "C",
+        "text": "Red nucleus"
+      },
+      {
+        "id": "D",
+        "text": "Corticospinal tract in the cerebral peduncle"
+      },
+      {
         "id": "E",
-        "text": "Superior colliculus"
+        "text": "Substantia nigra"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Weber Syndrome is caused by a ventral midbrain P1 PCA stroke damaging the fascicular CN III nerve fibers AND the descending corticospinal fibers in the cerebral peduncle, resulting in ipsilateral CN III palsy and contralateral hemiparesis.",
     "keyTakeaway": "Weber Syndrome = Ipsilateral CN III palsy + Contralateral hemiparesis (Ventral cerebral peduncle corticospinal tract).",
     "tags": [
@@ -4261,7 +4261,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Lipohyalinosis and microatheroma of small penetrating arteries (e.g. lenticulostriate penetrators)"
+        "text": "Sagittal sinus thrombosis"
       },
       {
         "id": "B",
@@ -4269,18 +4269,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Embolic clot from left atrium"
-      },
-      {
-        "id": "D",
         "text": "Carotid artery dissection"
       },
       {
+        "id": "D",
+        "text": "Embolic clot from left atrium"
+      },
+      {
         "id": "E",
-        "text": "Sagittal sinus thrombosis"
+        "text": "Lipohyalinosis and microatheroma of small penetrating arteries (e.g. lenticulostriate penetrators)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Lacunar strokes (< 1.5 cm) are caused by lipohyalinosis, microatheroma, or fibrinoid necrosis of small deep penetrating arterioles (30 to 300 micrometers in diameter) arising directly from major Circle of Willis arteries.",
     "keyTakeaway": "Lacunar strokes are caused by lipohyalinosis & microatheroma of small deep penetrating arterioles.",
     "tags": [
@@ -4308,15 +4308,15 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Sphingolipid accumulation in lysosomes"
-      },
-      {
-        "id": "D",
         "text": "Fibrinoid necrosis"
       },
       {
-        "id": "E",
+        "id": "D",
         "text": "String-of-beads fibroplasia"
+      },
+      {
+        "id": "E",
+        "text": "Sphingolipid accumulation in lysosomes"
       }
     ],
     "correctOptionId": "A",
@@ -4347,15 +4347,15 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Small Vessel Occlusion"
-      },
-      {
-        "id": "D",
         "text": "Other Determined Etiology"
       },
       {
-        "id": "E",
+        "id": "D",
         "text": "Undetermined Etiology"
+      },
+      {
+        "id": "E",
+        "text": "Small Vessel Occlusion"
       }
     ],
     "correctOptionId": "A",
@@ -4378,11 +4378,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Target INR 2.0 to 3.0"
+        "text": "Target INR 1.5 to 2.0"
       },
       {
         "id": "B",
-        "text": "Target INR 1.5 to 2.0"
+        "text": "Target INR < 1.5"
       },
       {
         "id": "C",
@@ -4390,14 +4390,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Target INR < 1.5"
+        "text": "Target INR 2.0 to 3.0"
       },
       {
         "id": "E",
         "text": "No INR target"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Per AHA/ASA guidelines, secondary prevention of stroke in patients with Antiphospholipid Syndrome (APLS) requires therapeutic oral anticoagulation with Warfarin targeting a standard INR of 2.0 to 3.0 (or 3.0 to 4.0 if recurrent events occur). DOACs are not recommended in triple-positive APLS.",
     "keyTakeaway": "Antiphospholipid Syndrome (APLS) secondary prevention = WARFARIN target INR 2.0-3.0.",
     "tags": [
@@ -4417,26 +4417,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "NNT = 2.6 (dramatically powerful treatment effect)"
-      },
-      {
-        "id": "B",
         "text": "NNT = 25"
       },
       {
-        "id": "C",
+        "id": "B",
         "text": "NNT = 100"
       },
       {
+        "id": "C",
+        "text": "NNT = 2.6 (dramatically powerful treatment effect)"
+      },
+      {
         "id": "D",
-        "text": "NNT = 50"
+        "text": "NNT = 10"
       },
       {
         "id": "E",
-        "text": "NNT = 10"
+        "text": "NNT = 50"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "The HERMES meta-analysis of 5 landmark 2015 trials (MR CLEAN, ESCAPE, EXTEND-IA, SWIFT-PRIME, REVASCAT) demonstrated an astonishing Number Needed to Treat (NNT) of ONLY 2.6 for mechanical thrombectomy to achieve functional independence (mRS 0-2) at 90 days in anterior circulation LVO.",
     "keyTakeaway": "HERMES Meta-Analysis: Mechanical Thrombectomy within 6h has an NNT = 2.6 for functional independence!",
     "tags": [
@@ -4460,19 +4460,19 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "ASPECTS 10 on non-contrast CT only"
-      },
-      {
-        "id": "C",
-        "text": "Absence of all collateral vessels"
-      },
-      {
-        "id": "D",
         "text": "Age < 40 years strictly"
       },
       {
-        "id": "E",
+        "id": "C",
+        "text": "ASPECTS 10 on non-contrast CT only"
+      },
+      {
+        "id": "D",
         "text": "Normal ECG"
+      },
+      {
+        "id": "E",
+        "text": "Absence of all collateral vessels"
       }
     ],
     "correctOptionId": "A",
@@ -4495,7 +4495,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "14.7% in the stenting arm vs 5.8% in the medical therapy arm (stenting had > 2.5x higher 30-day stroke/death rate)"
+        "text": "30% stenting vs 30% medical"
       },
       {
         "id": "B",
@@ -4503,7 +4503,7 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "0% stenting vs 20% medical"
+        "text": "14.7% in the stenting arm vs 5.8% in the medical therapy arm (stenting had > 2.5x higher 30-day stroke/death rate)"
       },
       {
         "id": "D",
@@ -4511,10 +4511,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "30% stenting vs 30% medical"
+        "text": "0% stenting vs 20% medical"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "The SAMMPRIS trial was halted early because percutaneous intracranial stenting (Wingspan stent) resulted in a 14.7% 30-day stroke or death rate compared to only 5.8% in the aggressive medical management arm, proving medical therapy is far safer and superior.",
     "keyTakeaway": "SAMMPRIS: Intracranial stenting had a 14.7% 30-day stroke/death rate vs 5.8% for intensive medical therapy.",
     "tags": [
@@ -4534,26 +4534,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Dual Antiplatelet Therapy (Aspirin + Clopidogrel) for 90 days, High-intensity Statin (Atorvastatin 80mg), and SBP target < 140 mmHg"
+        "text": "Triple antiplatelet therapy for 1 year"
       },
       {
         "id": "B",
-        "text": "Warfarin anticoagulation, Aspirin, and BP < 160"
-      },
-      {
-        "id": "C",
-        "text": "Aspirin monotherapy alone"
-      },
-      {
-        "id": "D",
         "text": "Wingspan stenting, Heparin, and BP < 120"
       },
       {
+        "id": "C",
+        "text": "Warfarin anticoagulation, Aspirin, and BP < 160"
+      },
+      {
+        "id": "D",
+        "text": "Dual Antiplatelet Therapy (Aspirin + Clopidogrel) for 90 days, High-intensity Statin (Atorvastatin 80mg), and SBP target < 140 mmHg"
+      },
+      {
         "id": "E",
-        "text": "Triple antiplatelet therapy for 1 year"
+        "text": "Aspirin monotherapy alone"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "The SAMMPRIS medical regimen comprised: 1) DAPT with Aspirin (325 mg) + Clopidogrel (75 mg) for 90 days, 2) High-intensity statin (Atorvastatin 80 mg daily targeting LDL < 70), and 3) Strict blood pressure control targeting SBP < 140 mmHg (and SBP < 130 if diabetic).",
     "keyTakeaway": "SAMMPRIS Medical Protocol = DAPT (Aspirin + Clopidogrel) x 90 days + High-dose Statin + SBP target < 140 mmHg.",
     "tags": [
@@ -4581,15 +4581,15 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "GLA gene mutation"
+        "text": "TREX1 mutation"
       },
       {
         "id": "D",
-        "text": "HTRA1 mutation"
+        "text": "GLA gene mutation"
       },
       {
         "id": "E",
-        "text": "TREX1 mutation"
+        "text": "HTRA1 mutation"
       }
     ],
     "correctOptionId": "A",
@@ -4612,26 +4612,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Sneddon Syndrome"
-      },
-      {
-        "id": "B",
-        "text": "CADASIL"
-      },
-      {
-        "id": "C",
         "text": "Fabry Disease"
       },
       {
-        "id": "D",
+        "id": "B",
         "text": "Takayasu Arteritis"
+      },
+      {
+        "id": "C",
+        "text": "Sneddon Syndrome"
+      },
+      {
+        "id": "D",
+        "text": "CADASIL"
       },
       {
         "id": "E",
         "text": "Behcet Disease"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Sneddon Syndrome is a rare non-inflammatory arteriopathy characterized by the combination of Livedo Reticularis (widespread reticular skin discoloration) and recurrent cerebrovascular accidents (strokes/TIAs). Up to 50% have antiphospholipid antibodies.",
     "keyTakeaway": "Sneddon Syndrome = Livedo Reticularis + Recurrent Ischemic Strokes (non-inflammatory arteriopathy).",
     "tags": [
@@ -4651,26 +4651,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Perioperative risk must be < 6% for CEA in symptomatic patients (vs < 3% for asymptomatic patients)"
-      },
-      {
-        "id": "B",
-        "text": "Perioperative risk must be < 15%"
-      },
-      {
-        "id": "C",
         "text": "Perioperative risk must be < 1%"
       },
       {
-        "id": "D",
+        "id": "B",
+        "text": "Risk cutoff is 20%"
+      },
+      {
+        "id": "C",
         "text": "No risk cutoff exists"
       },
       {
+        "id": "D",
+        "text": "Perioperative risk must be < 6% for CEA in symptomatic patients (vs < 3% for asymptomatic patients)"
+      },
+      {
         "id": "E",
-        "text": "Risk cutoff is 20%"
+        "text": "Perioperative risk must be < 15%"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Per AHA/ASA guidelines, surgical revascularization (CEA/CAS) for SYMPTOMATIC carotid stenosis is recommended ONLY if the surgeon/center's documented perioperative stroke and death rate is strictly < 6% (< 3% for ASYMPTOMATIC stenosis).",
     "keyTakeaway": "AHA Guidelines: Perioperative stroke/death risk must be < 6% for symptomatic CEA and < 3% for asymptomatic CEA.",
     "tags": [
@@ -4690,11 +4690,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Initiate DOAC at Day 3 post-stroke (Day 1 for TIA, Day 3 for minor stroke, Day 6 for moderate, Day 12 for severe stroke)"
+        "text": "Initiate DOAC immediately on Day 0"
       },
       {
         "id": "B",
-        "text": "Initiate DOAC immediately on Day 0"
+        "text": "Initiate DOAC at Day 3 post-stroke (Day 1 for TIA, Day 3 for minor stroke, Day 6 for moderate, Day 12 for severe stroke)"
       },
       {
         "id": "C",
@@ -4702,14 +4702,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Wait 6 months"
+        "text": "DOACs are contraindicated in minor stroke"
       },
       {
         "id": "E",
-        "text": "DOACs are contraindicated in minor stroke"
+        "text": "Wait 6 months"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "The '1-3-6-12 Day Rule' (supported by ELAN and SAMURAI studies) guides anticoagulation timing post-ischemic stroke in AFib: TIA -> Day 1; Minor stroke (NIHSS < 8) -> Day 3; Moderate stroke (NIHSS 8-15) -> Day 6; Severe stroke (NIHSS >= 16) -> Day 12 to 14 (after repeat imaging confirms no sICH).",
     "keyTakeaway": "1-3-6-12 Day Rule for AFib Anticoagulation: TIA = Day 1, Minor = Day 3, Moderate = Day 6, Severe = Day 12-14.",
     "tags": [
@@ -4729,7 +4729,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "ANTICOAGULATION IS CONTRAINDICATED in active infective endocarditis due to high risk of fatal intracranial hemorrhage from mycotic aneurysm rupture; treat with IV targeted antibiotics"
+        "text": "Start Warfarin target INR 3.0"
       },
       {
         "id": "B",
@@ -4737,18 +4737,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Start Warfarin target INR 3.0"
-      },
-      {
-        "id": "D",
         "text": "Administer IV tPA"
       },
       {
-        "id": "E",
+        "id": "D",
         "text": "Start DAPT for 90 days"
+      },
+      {
+        "id": "E",
+        "text": "ANTICOAGULATION IS CONTRAINDICATED in active infective endocarditis due to high risk of fatal intracranial hemorrhage from mycotic aneurysm rupture; treat with IV targeted antibiotics"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "AHA/ASA guidelines state that therapeutic anticoagulation (Heparin, Warfarin, DOACs) is CONTRAINDICATED in acute ischemic stroke due to Infective Endocarditis because septic emboli cause mycotic aneurysms and vascular erosion, carrying a massive risk of fatal hemorrhagic transformation. Treat with targeted IV antimicrobial therapy.",
     "keyTakeaway": "Infective Endocarditis Embolic Stroke = ANTICOAGULATION IS CONTRAINDICATED! High risk of mycotic aneurysm rupture.",
     "tags": [
@@ -4768,7 +4768,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "IMMEDIATE SURGICAL EVACUATION of the cerebellar hematoma is mandatory"
+        "text": "High-dose IV steroids"
       },
       {
         "id": "B",
@@ -4776,18 +4776,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Lumbar puncture to relieve pressure"
+        "text": "IMMEDIATE SURGICAL EVACUATION of the cerebellar hematoma is mandatory"
       },
       {
         "id": "D",
-        "text": "Observation in step-down unit"
+        "text": "Lumbar puncture to relieve pressure"
       },
       {
         "id": "E",
-        "text": "High-dose IV steroids"
+        "text": "Observation in step-down unit"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Per AHA/ASA ICH guidelines, patients with cerebellar hemorrhage measuring > 3 cm in diameter, OR cerebellar ICH causing brainstem compression or obstructive hydrocephalus, should undergo IMMEDIATE SURGICAL EVACUATION to prevent brainstem herniation and death.",
     "keyTakeaway": "Cerebellar ICH > 3 cm OR with brainstem compression/hydrocephalus = IMMEDIATE SURGICAL EVACUATION MANDATORY!",
     "tags": [
@@ -4811,7 +4811,7 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Discharge home with NSAIDs"
+        "text": "EEG"
       },
       {
         "id": "C",
@@ -4819,11 +4819,11 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Carotid ultrasound"
+        "text": "Discharge home with NSAIDs"
       },
       {
         "id": "E",
-        "text": "EEG"
+        "text": "Carotid ultrasound"
       }
     ],
     "correctOptionId": "A",
@@ -4846,7 +4846,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Chronic monthly blood transfusion therapy targeting HbS < 30%"
+        "text": "Warfarin anticoagulation"
       },
       {
         "id": "B",
@@ -4854,7 +4854,7 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Warfarin anticoagulation"
+        "text": "Observation"
       },
       {
         "id": "D",
@@ -4862,10 +4862,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Observation"
+        "text": "Chronic monthly blood transfusion therapy targeting HbS < 30%"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "The landmark STOP trial proved that chronic monthly blood transfusion therapy (targeting HbS < 30%) in children with Sickle Cell Disease and abnormal TCD (TAMMV >= 200 cm/s) reduced primary stroke risk from 10%/year to < 1%/year (over 90% risk reduction).",
     "keyTakeaway": "STOP Trial: Chronic blood transfusions (target HbS < 30%) reduce stroke risk by > 90% in Sickle Cell Disease with abnormal TCD.",
     "tags": [
@@ -4885,26 +4885,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Therapeutic full-dose anticoagulation with LMWH or unfractionated Heparin"
-      },
-      {
-        "id": "B",
         "text": "Hold all anticoagulation due to the hemorrhage"
       },
       {
-        "id": "C",
-        "text": "Administer IV tPA"
-      },
-      {
-        "id": "D",
+        "id": "B",
         "text": "Perform emergency craniotomy only"
       },
       {
-        "id": "E",
+        "id": "C",
         "text": "Aspirin monotherapy"
+      },
+      {
+        "id": "D",
+        "text": "Therapeutic full-dose anticoagulation with LMWH or unfractionated Heparin"
+      },
+      {
+        "id": "E",
+        "text": "Administer IV tPA"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "AHA/ASA CVT guidelines state that therapeutic full-dose anticoagulation (LMWH or IV Heparin) is the FIRST-LINE treatment for CVT, even when hemorrhagic infarction is present, because anticoagulation reverses the venous outflow obstruction driving the hemorrhage.",
     "keyTakeaway": "CVT First-line Treatment = Therapeutic Anticoagulation (LMWH/Heparin), EVEN WITH hemorrhagic transformation!",
     "tags": [
@@ -4924,26 +4924,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Cerebral Cavernous Malformation (Cavernoma / CCM)"
-      },
-      {
-        "id": "B",
-        "text": "Arteriovenous Malformation (AVM)"
-      },
-      {
-        "id": "C",
         "text": "Developmental Venous Anomaly (DVA)"
       },
       {
-        "id": "D",
+        "id": "B",
         "text": "Capillary Telangiectasia"
       },
       {
-        "id": "E",
+        "id": "C",
         "text": "Berry Aneurysm"
+      },
+      {
+        "id": "D",
+        "text": "Arteriovenous Malformation (AVM)"
+      },
+      {
+        "id": "E",
+        "text": "Cerebral Cavernous Malformation (Cavernoma / CCM)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Cerebral Cavernous Malformations (Cavernomas) have a pathognomonic MRI appearance: a 'popcorn-like' or 'mulberry' reticulated core of mixed signal intensity (T1/T2) surrounded by a complete dark rim of hemosiderin deposition on T2/GRE/SWI.",
     "keyTakeaway": "Cavernous Malformation (Cavernoma) = 'Popcorn' reticulated lesion with dark hemosiderin rim on MRI.",
     "tags": [
@@ -4963,7 +4963,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Target serum sodium 145 to 155 mEq/L and serum osmolality < 320 mOsm/kg"
+        "text": "Target serum osmolality > 380 mOsm/kg"
       },
       {
         "id": "B",
@@ -4971,18 +4971,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Target serum sodium > 170 mEq/L"
+        "text": "No sodium monitoring required"
       },
       {
         "id": "D",
-        "text": "Target serum osmolality > 380 mOsm/kg"
+        "text": "Target serum sodium 145 to 155 mEq/L and serum osmolality < 320 mOsm/kg"
       },
       {
         "id": "E",
-        "text": "No sodium monitoring required"
+        "text": "Target serum sodium > 170 mEq/L"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "When using 3% Hypertonic Saline for cerebral edema and ICP control, guidelines recommend targeting a serum sodium of 145 to 155 mEq/L and maintaining serum osmolality < 320 mOsm/kg to prevent renal toxicity and central pontine myelinolysis.",
     "keyTakeaway": "3% Hypertonic Saline ICP Target: Serum Sodium 145-155 mEq/L & Serum Osmolality < 320 mOsm/kg.",
     "tags": [
@@ -5002,11 +5002,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "DAPT significantly reduced 90-day recurrent ischemic stroke (5.0% vs 6.5%, RRR 25%) with a small increase in major bleeding"
+        "text": "DAPT increased recurrent stroke"
       },
       {
         "id": "B",
-        "text": "DAPT increased recurrent stroke"
+        "text": "DAPT caused 50% mortality"
       },
       {
         "id": "C",
@@ -5014,14 +5014,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "DAPT caused 50% mortality"
+        "text": "Aspirin alone was superior"
       },
       {
         "id": "E",
-        "text": "Aspirin alone was superior"
+        "text": "DAPT significantly reduced 90-day recurrent ischemic stroke (5.0% vs 6.5%, RRR 25%) with a small increase in major bleeding"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "The POINT trial proved that initiating DAPT (Aspirin + Clopidogrel) within 12 hours of high-risk TIA or minor stroke for 21 days reduced 90-day recurrent ischemic stroke by 25% (HR 0.75), establishing short-term DAPT as standard of care.",
     "keyTakeaway": "POINT Trial: 21 days of DAPT (Aspirin + Clopidogrel) reduces recurrent stroke by 25% in minor stroke / high-risk TIA.",
     "tags": [
@@ -5041,26 +5041,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Constraint-Induced Movement Therapy (CIMT)"
-      },
-      {
-        "id": "B",
-        "text": "Transcranial Magnetic Stimulation"
-      },
-      {
-        "id": "C",
         "text": "Functional Electrical Stimulation"
       },
       {
-        "id": "D",
+        "id": "B",
         "text": "Mirror Therapy"
+      },
+      {
+        "id": "C",
+        "text": "Constraint-Induced Movement Therapy (CIMT)"
+      },
+      {
+        "id": "D",
+        "text": "Transcranial Magnetic Stimulation"
       },
       {
         "id": "E",
         "text": "Robotic Arm Training"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Constraint-Induced Movement Therapy (CIMT) involves constraining the non-paretic upper limb to force intensive use of the affected paretic limb during functional tasks, driving robust cortical neuroplasticity and motor recovery in stroke survivors.",
     "keyTakeaway": "Constraint-Induced Movement Therapy (CIMT) = Constraining unimpaired limb to force use of paretic arm -> Drives cortical neuroplasticity.",
     "tags": [
@@ -5080,15 +5080,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "SPARCL Trial (Stroke Prevention by Aggressive Reduction in Cholesterol Levels)"
-      },
-      {
-        "id": "B",
         "text": "NINDS Trial"
       },
       {
+        "id": "B",
+        "text": "CHANCE Trial"
+      },
+      {
         "id": "C",
-        "text": "SAMMPRIS Trial"
+        "text": "SPARCL Trial (Stroke Prevention by Aggressive Reduction in Cholesterol Levels)"
       },
       {
         "id": "D",
@@ -5096,10 +5096,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "CHANCE Trial"
+        "text": "SAMMPRIS Trial"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "The SPARCL trial (2006) proved that high-dose Atorvastatin 80 mg daily reduced 5-year recurrent stroke by 16% (HR 0.84) in patients with recent TIA/stroke and no known coronary heart disease, establishing statins in secondary stroke prevention.",
     "keyTakeaway": "SPARCL Trial (2006): Proved high-dose Atorvastatin 80 mg daily reduces recurrent stroke in non-cardioembolic stroke.",
     "tags": [
@@ -5123,19 +5123,19 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "M1 segment of Middle Cerebral Artery"
-      },
-      {
-        "id": "C",
-        "text": "Anterior Choroidal Artery"
-      },
-      {
-        "id": "D",
         "text": "Ophthalmic Artery"
       },
       {
-        "id": "E",
+        "id": "C",
         "text": "Posterior Communicating Artery"
+      },
+      {
+        "id": "D",
+        "text": "M1 segment of Middle Cerebral Artery"
+      },
+      {
+        "id": "E",
+        "text": "Anterior Choroidal Artery"
       }
     ],
     "correctOptionId": "A",
@@ -5158,11 +5158,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Anterior Choroidal Artery (AChA)"
+        "text": "Basilar tip"
       },
       {
         "id": "B",
-        "text": "Posterior Inferior Cerebellar Artery (PICA)"
+        "text": "Recurrent Artery of Heubner"
       },
       {
         "id": "C",
@@ -5170,14 +5170,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Recurrent Artery of Heubner"
+        "text": "Anterior Choroidal Artery (AChA)"
       },
       {
         "id": "E",
-        "text": "Basilar tip"
+        "text": "Posterior Inferior Cerebellar Artery (PICA)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "The Anterior Choroidal Artery (branch of distal internal carotid artery) supplies the posterior limb of internal capsule, optic tract, and lateral geniculate nucleus. AChA syndrome causes hemiparesis, hemisensory loss, and homonymous hemianopia.",
     "keyTakeaway": "Anterior Choroidal Artery stroke = Hemiparesis + Hemisensory loss + Homonymous hemianopia (no aphasia/neglect).",
     "tags": [
@@ -5201,15 +5201,15 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Inferior division of MCA M2 segment"
+        "text": "M4 cortical penetrating branches"
       },
       {
         "id": "C",
-        "text": "M1 main trunk"
+        "text": "Inferior division of MCA M2 segment"
       },
       {
         "id": "D",
-        "text": "M4 cortical penetrating branches"
+        "text": "M1 main trunk"
       },
       {
         "id": "E",
@@ -5236,26 +5236,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Recurrent Artery of Heubner (Medial Striate Artery)"
-      },
-      {
-        "id": "B",
-        "text": "Lenticulostriate arteries"
-      },
-      {
-        "id": "C",
         "text": "Thalamoperforating arteries"
       },
       {
-        "id": "D",
+        "id": "B",
         "text": "Posterior choroidal artery"
       },
       {
-        "id": "E",
+        "id": "C",
         "text": "Direct ICA branches"
+      },
+      {
+        "id": "D",
+        "text": "Lenticulostriate arteries"
+      },
+      {
+        "id": "E",
+        "text": "Recurrent Artery of Heubner (Medial Striate Artery)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "The Recurrent Artery of Heubner (medial striate artery) originates from the ACA near the ACoA junction and supplies the anterior limb of the internal capsule, anterior caudate nucleus, and anterior putamen.",
     "keyTakeaway": "Recurrent Artery of Heubner = Branch of ACA supplying anterior caudate and anterior internal capsule.",
     "tags": [
@@ -5275,15 +5275,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Posterior superior temporal gyrus (Wernicke area)"
+        "text": "Supplementary motor area"
       },
       {
         "id": "B",
-        "text": "Inferior frontal gyrus (Broca area)"
+        "text": "Angular gyrus"
       },
       {
         "id": "C",
-        "text": "Angular gyrus"
+        "text": "Posterior superior temporal gyrus (Wernicke area)"
       },
       {
         "id": "D",
@@ -5291,10 +5291,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Supplementary motor area"
+        "text": "Inferior frontal gyrus (Broca area)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Wernicke's sensory aphasia results from inferior MCA division infarction affecting the posterior superior temporal gyrus (Brodmann area 22) of the dominant hemisphere.",
     "keyTakeaway": "Wernicke Aphasia = Dominant posterior superior temporal gyrus (inferior MCA division).",
     "tags": [
@@ -5314,7 +5314,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Anosognosia"
+        "text": "Prosopagnosia"
       },
       {
         "id": "B",
@@ -5326,14 +5326,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Prosopagnosia"
+        "text": "Anosognosia"
       },
       {
         "id": "E",
         "text": "Astereognosis"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Anosognosia is the lack of awareness or complete denial of deficit (e.g., claiming a paralyzed limb is normal), classically seen in non-dominant (right) parietal lobe strokes.",
     "keyTakeaway": "Anosognosia = Denial/unawareness of neurological deficit (right parietal stroke).",
     "tags": [
@@ -5353,26 +5353,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Conduction Aphasia"
+        "text": "Anomic Aphasia"
       },
       {
         "id": "B",
-        "text": "Global Aphasia"
-      },
-      {
-        "id": "C",
-        "text": "Transcortical Motor Aphasia"
-      },
-      {
-        "id": "D",
         "text": "Transcortical Sensory Aphasia"
       },
       {
+        "id": "C",
+        "text": "Global Aphasia"
+      },
+      {
+        "id": "D",
+        "text": "Transcortical Motor Aphasia"
+      },
+      {
         "id": "E",
-        "text": "Anomic Aphasia"
+        "text": "Conduction Aphasia"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Conduction aphasia is characterized by prominent impairment in repetition with fluent verbal output and intact comprehension, caused by damage to the arcuate fasciculus / deep parietal white matter.",
     "keyTakeaway": "Conduction Aphasia = Damaged Arcuate Fasciculus -> Severe repetition deficit with fluent speech and normal comprehension.",
     "tags": [
@@ -5396,15 +5396,15 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Balint Syndrome"
+        "text": "Horner Syndrome"
       },
       {
         "id": "C",
-        "text": "Gerstmann Syndrome"
+        "text": "Balint Syndrome"
       },
       {
         "id": "D",
-        "text": "Horner Syndrome"
+        "text": "Gerstmann Syndrome"
       },
       {
         "id": "E",
@@ -5431,26 +5431,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Wallenberg Syndrome (Lateral Medullary Syndrome)"
+        "text": "Foville Syndrome"
       },
       {
         "id": "B",
-        "text": "Dejerine Syndrome (Medial Medullary)"
-      },
-      {
-        "id": "C",
         "text": "Millard-Gubler Syndrome"
       },
       {
+        "id": "C",
+        "text": "Dejerine Syndrome (Medial Medullary)"
+      },
+      {
         "id": "D",
-        "text": "Weber Syndrome"
+        "text": "Wallenberg Syndrome (Lateral Medullary Syndrome)"
       },
       {
         "id": "E",
-        "text": "Foville Syndrome"
+        "text": "Weber Syndrome"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Wallenberg (Lateral Medullary) syndrome is caused by PICA or vertebral artery occlusion affecting the lateral medulla (nucleus ambiguus, spinothalamic tract, spinal trigeminal nucleus, sympathetic fibers).",
     "keyTakeaway": "Wallenberg Syndrome = Lateral Medullary stroke (PICA/VA) -> Vertigo, Horner's, ipsilateral face numbness, contralateral body numbness.",
     "tags": [
@@ -5470,15 +5470,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Ventral Pontine Tegmentum (AICA / Basilar perforators)"
+        "text": "Lateral Medulla"
       },
       {
         "id": "B",
-        "text": "Ventral Midbrain"
+        "text": "Dorsal Midbrain"
       },
       {
         "id": "C",
-        "text": "Lateral Medulla"
+        "text": "Ventral Pontine Tegmentum (AICA / Basilar perforators)"
       },
       {
         "id": "D",
@@ -5486,10 +5486,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Dorsal Midbrain"
+        "text": "Ventral Midbrain"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Millard-Gubler syndrome localizes to the anterolateral lower pons (ventral pontine tegmentum), involving CN VI and VII fascicles and the corticospinal tract.",
     "keyTakeaway": "Millard-Gubler = Ventral lower pons -> Ipsilateral CN VI & VII palsies + Contralateral hemiparesis.",
     "tags": [
@@ -5521,11 +5521,11 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Wallenberg Syndrome"
+        "text": "Nothnagel Syndrome"
       },
       {
         "id": "E",
-        "text": "Nothnagel Syndrome"
+        "text": "Wallenberg Syndrome"
       }
     ],
     "correctOptionId": "A",
@@ -5548,7 +5548,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Locked-in Syndrome"
+        "text": "Brain death"
       },
       {
         "id": "B",
@@ -5556,18 +5556,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Persistent Vegetative State"
+        "text": "Locked-in Syndrome"
       },
       {
         "id": "D",
-        "text": "Stupor"
+        "text": "Persistent Vegetative State"
       },
       {
         "id": "E",
-        "text": "Brain death"
+        "text": "Stupor"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Locked-in syndrome is caused by bilateral ventral pontine infarction. Patients retain full consciousness, cognition, and vertical eye movements/blinking, but suffer complete deefferentation (quadriparesis, aphonia).",
     "keyTakeaway": "Locked-in Syndrome = Bilateral ventral pontine stroke -> Quadriparesis & aphonia with preserved consciousness and vertical eye movement.",
     "tags": [
@@ -5587,26 +5587,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
+        "id": "D",
+        "text": "Administer empiric high-dose steroids to all patients"
+      },
+      {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Delay all diagnostic testing for 48 hours"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Standard care for Lacunar Strokes & Small Vessel Disease requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Lacunar Strokes & Small Vessel Disease management.",
     "tags": [
@@ -5626,7 +5626,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Administer empiric high-dose steroids to all patients"
       },
       {
         "id": "B",
@@ -5634,18 +5634,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
+        "text": "Avoid secondary stroke prevention medications"
       },
       {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "E",
         "text": "Perform non-indicated emergency invasive procedures"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Standard care for Lacunar Strokes & Small Vessel Disease requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Lacunar Strokes & Small Vessel Disease management.",
     "tags": [
@@ -5665,11 +5665,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Delay all diagnostic testing for 48 hours"
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
+        "text": "Avoid secondary stroke prevention medications"
       },
       {
         "id": "C",
@@ -5677,14 +5677,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "E",
         "text": "Perform non-indicated emergency invasive procedures"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Standard care for Lacunar Strokes & Small Vessel Disease requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Lacunar Strokes & Small Vessel Disease management.",
     "tags": [
@@ -5704,11 +5704,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Delay all diagnostic testing for 48 hours"
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
+        "text": "Avoid secondary stroke prevention medications"
       },
       {
         "id": "C",
@@ -5716,14 +5716,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Standard care for Lacunar Strokes & Small Vessel Disease requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Lacunar Strokes & Small Vessel Disease management.",
     "tags": [
@@ -5743,26 +5743,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
-        "id": "E",
+        "id": "B",
+        "text": "Administer empiric high-dose steroids to all patients"
+      },
+      {
+        "id": "C",
+        "text": "Delay all diagnostic testing for 48 hours"
+      },
+      {
+        "id": "D",
         "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
+        "id": "E",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Standard care for TOAST Classification & Stroke Etiologies requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for TOAST Classification & Stroke Etiologies management.",
     "tags": [
@@ -5782,7 +5782,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "B",
@@ -5790,18 +5790,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
+        "id": "D",
+        "text": "Administer empiric high-dose steroids to all patients"
+      },
+      {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Standard care for TOAST Classification & Stroke Etiologies requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for TOAST Classification & Stroke Etiologies management.",
     "tags": [
@@ -5821,7 +5821,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Administer empiric high-dose steroids to all patients"
       },
       {
         "id": "B",
@@ -5829,18 +5829,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Avoid secondary stroke prevention medications"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Standard care for TOAST Classification & Stroke Etiologies requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for TOAST Classification & Stroke Etiologies management.",
     "tags": [
@@ -5860,26 +5860,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
-        "id": "E",
+        "id": "B",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+      },
+      {
+        "id": "C",
+        "text": "Delay all diagnostic testing for 48 hours"
+      },
+      {
+        "id": "D",
         "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
+        "id": "E",
+        "text": "Administer empiric high-dose steroids to all patients"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Standard care for TOAST Classification & Stroke Etiologies requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for TOAST Classification & Stroke Etiologies management.",
     "tags": [
@@ -5899,15 +5899,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Administer empiric high-dose steroids to all patients"
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
+        "text": "Delay all diagnostic testing for 48 hours"
       },
       {
         "id": "D",
@@ -5918,7 +5918,7 @@ export const questionsData: PracticeQuestion[] = [
         "text": "Perform non-indicated emergency invasive procedures"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Standard care for Endovascular Thrombectomy & LVO requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Endovascular Thrombectomy & LVO management.",
     "tags": [
@@ -5938,26 +5938,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
         "text": "Administer empiric high-dose steroids to all patients"
       },
       {
+        "id": "B",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+      },
+      {
+        "id": "C",
+        "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Delay all diagnostic testing for 48 hours"
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Avoid secondary stroke prevention medications"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Standard care for Endovascular Thrombectomy & LVO requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Endovascular Thrombectomy & LVO management.",
     "tags": [
@@ -5977,26 +5977,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
-        "id": "E",
+        "id": "B",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+      },
+      {
+        "id": "C",
+        "text": "Delay all diagnostic testing for 48 hours"
+      },
+      {
+        "id": "D",
         "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
+        "id": "E",
+        "text": "Administer empiric high-dose steroids to all patients"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Standard care for Endovascular Thrombectomy & LVO requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Endovascular Thrombectomy & LVO management.",
     "tags": [
@@ -6016,26 +6016,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
-        "id": "E",
+        "id": "B",
+        "text": "Administer empiric high-dose steroids to all patients"
+      },
+      {
+        "id": "C",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+      },
+      {
+        "id": "D",
         "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
+        "id": "E",
+        "text": "Delay all diagnostic testing for 48 hours"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Standard care for Endovascular Thrombectomy & LVO requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Endovascular Thrombectomy & LVO management.",
     "tags": [
@@ -6055,26 +6055,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
+        "id": "C",
+        "text": "Delay all diagnostic testing for 48 hours"
+      },
+      {
+        "id": "D",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+      },
+      {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Administer empiric high-dose steroids to all patients"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Standard care for Intracranial Atherosclerosis requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Intracranial Atherosclerosis management.",
     "tags": [
@@ -6094,26 +6094,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
         "text": "Administer empiric high-dose steroids to all patients"
       },
       {
-        "id": "D",
+        "id": "B",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
-        "id": "E",
+        "id": "C",
+        "text": "Delay all diagnostic testing for 48 hours"
+      },
+      {
+        "id": "D",
         "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
+        "id": "E",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Standard care for Intracranial Atherosclerosis requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Intracranial Atherosclerosis management.",
     "tags": [
@@ -6133,7 +6133,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "B",
@@ -6141,18 +6141,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
+        "id": "D",
+        "text": "Administer empiric high-dose steroids to all patients"
+      },
+      {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Standard care for Intracranial Atherosclerosis requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Intracranial Atherosclerosis management.",
     "tags": [
@@ -6172,26 +6172,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
         "text": "Delay all diagnostic testing for 48 hours"
       },
       {
-        "id": "C",
+        "id": "B",
         "text": "Administer empiric high-dose steroids to all patients"
       },
       {
-        "id": "D",
+        "id": "C",
         "text": "Avoid secondary stroke prevention medications"
+      },
+      {
+        "id": "D",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "E",
         "text": "Perform non-indicated emergency invasive procedures"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Standard care for Intracranial Atherosclerosis requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Intracranial Atherosclerosis management.",
     "tags": [
@@ -6215,19 +6215,19 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
-        "id": "E",
+        "id": "C",
         "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
+        "id": "D",
+        "text": "Delay all diagnostic testing for 48 hours"
+      },
+      {
+        "id": "E",
+        "text": "Administer empiric high-dose steroids to all patients"
       }
     ],
     "correctOptionId": "A",
@@ -6254,19 +6254,19 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
-        "id": "E",
+        "id": "C",
+        "text": "Delay all diagnostic testing for 48 hours"
+      },
+      {
+        "id": "D",
         "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
+        "id": "E",
+        "text": "Administer empiric high-dose steroids to all patients"
       }
     ],
     "correctOptionId": "A",
@@ -6289,26 +6289,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
         "text": "Delay all diagnostic testing for 48 hours"
       },
       {
-        "id": "C",
+        "id": "B",
         "text": "Administer empiric high-dose steroids to all patients"
       },
       {
-        "id": "D",
+        "id": "C",
         "text": "Avoid secondary stroke prevention medications"
+      },
+      {
+        "id": "D",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "E",
         "text": "Perform non-indicated emergency invasive procedures"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Standard care for Monogenic & Rare Vasculopathies requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Monogenic & Rare Vasculopathies management.",
     "tags": [
@@ -6328,26 +6328,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Avoid secondary stroke prevention medications"
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
         "text": "Administer empiric high-dose steroids to all patients"
       },
       {
+        "id": "C",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+      },
+      {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Delay all diagnostic testing for 48 hours"
       },
       {
         "id": "E",
         "text": "Perform non-indicated emergency invasive procedures"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Standard care for Monogenic & Rare Vasculopathies requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Monogenic & Rare Vasculopathies management.",
     "tags": [
@@ -6367,7 +6367,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "B",
@@ -6375,7 +6375,7 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "D",
@@ -6383,10 +6383,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Administer empiric high-dose steroids to all patients"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Standard care for Carotid & Vertebral Stenosis requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Carotid & Vertebral Stenosis management.",
     "tags": [
@@ -6410,19 +6410,19 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
+        "id": "D",
+        "text": "Administer empiric high-dose steroids to all patients"
+      },
+      {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Delay all diagnostic testing for 48 hours"
       }
     ],
     "correctOptionId": "A",
@@ -6445,26 +6445,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
         "text": "Delay all diagnostic testing for 48 hours"
       },
       {
-        "id": "C",
+        "id": "B",
         "text": "Administer empiric high-dose steroids to all patients"
       },
       {
+        "id": "C",
+        "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Avoid secondary stroke prevention medications"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Standard care for Carotid & Vertebral Stenosis requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Carotid & Vertebral Stenosis management.",
     "tags": [
@@ -6484,26 +6484,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
         "text": "Administer empiric high-dose steroids to all patients"
       },
       {
+        "id": "C",
+        "text": "Delay all diagnostic testing for 48 hours"
+      },
+      {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Avoid secondary stroke prevention medications"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Standard care for Carotid & Vertebral Stenosis requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Carotid & Vertebral Stenosis management.",
     "tags": [
@@ -6531,15 +6531,15 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
-        "id": "E",
+        "id": "D",
         "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
+        "id": "E",
+        "text": "Administer empiric high-dose steroids to all patients"
       }
     ],
     "correctOptionId": "A",
@@ -6562,26 +6562,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
-        "id": "E",
+        "id": "B",
         "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
+        "id": "C",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+      },
+      {
+        "id": "D",
+        "text": "Administer empiric high-dose steroids to all patients"
+      },
+      {
+        "id": "E",
+        "text": "Delay all diagnostic testing for 48 hours"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Standard care for Cardioembolic Stroke & Atrial Fibrillation requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Cardioembolic Stroke & Atrial Fibrillation management.",
     "tags": [
@@ -6601,7 +6601,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Administer empiric high-dose steroids to all patients"
       },
       {
         "id": "B",
@@ -6609,18 +6609,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Avoid secondary stroke prevention medications"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Standard care for Cardioembolic Stroke & Atrial Fibrillation requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Cardioembolic Stroke & Atrial Fibrillation management.",
     "tags": [
@@ -6640,11 +6640,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Avoid secondary stroke prevention medications"
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "C",
@@ -6652,14 +6652,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Delay all diagnostic testing for 48 hours"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Standard care for Cardioembolic Stroke & Atrial Fibrillation requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Cardioembolic Stroke & Atrial Fibrillation management.",
     "tags": [
@@ -6679,7 +6679,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Administer empiric high-dose steroids to all patients"
       },
       {
         "id": "B",
@@ -6687,18 +6687,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Avoid secondary stroke prevention medications"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Standard care for Spontaneous Intracranial Hemorrhage requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Spontaneous Intracranial Hemorrhage management.",
     "tags": [
@@ -6722,7 +6722,7 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "C",
@@ -6730,11 +6730,11 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Delay all diagnostic testing for 48 hours"
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Avoid secondary stroke prevention medications"
       }
     ],
     "correctOptionId": "A",
@@ -6761,11 +6761,11 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
+        "text": "Administer empiric high-dose steroids to all patients"
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
+        "text": "Delay all diagnostic testing for 48 hours"
       },
       {
         "id": "D",
@@ -6796,11 +6796,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Delay all diagnostic testing for 48 hours"
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "C",
@@ -6815,7 +6815,7 @@ export const questionsData: PracticeQuestion[] = [
         "text": "Perform non-indicated emergency invasive procedures"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Standard care for Spontaneous Intracranial Hemorrhage requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Spontaneous Intracranial Hemorrhage management.",
     "tags": [
@@ -6843,11 +6843,11 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
+        "text": "Avoid secondary stroke prevention medications"
       },
       {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Administer empiric high-dose steroids to all patients"
       },
       {
         "id": "E",
@@ -6878,19 +6878,19 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
         "text": "Administer empiric high-dose steroids to all patients"
       },
       {
-        "id": "D",
+        "id": "C",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
-        "id": "E",
+        "id": "D",
         "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
+        "id": "E",
+        "text": "Delay all diagnostic testing for 48 hours"
       }
     ],
     "correctOptionId": "A",
@@ -6913,26 +6913,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
         "text": "Delay all diagnostic testing for 48 hours"
       },
       {
+        "id": "B",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+      },
+      {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Administer empiric high-dose steroids to all patients"
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Avoid secondary stroke prevention medications"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Standard care for Subarachnoid Hemorrhage & Aneurysms requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Subarachnoid Hemorrhage & Aneurysms management.",
     "tags": [
@@ -6952,26 +6952,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
         "text": "Delay all diagnostic testing for 48 hours"
       },
       {
-        "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
+        "id": "B",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
-        "id": "E",
+        "id": "C",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+      },
+      {
+        "id": "D",
         "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
+        "id": "E",
+        "text": "Administer empiric high-dose steroids to all patients"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Standard care for Subarachnoid Hemorrhage & Aneurysms requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Subarachnoid Hemorrhage & Aneurysms management.",
     "tags": [
@@ -7030,26 +7030,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
-        "id": "E",
+        "id": "B",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+      },
+      {
+        "id": "C",
         "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
+        "id": "D",
+        "text": "Administer empiric high-dose steroids to all patients"
+      },
+      {
+        "id": "E",
+        "text": "Delay all diagnostic testing for 48 hours"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Standard care for Pediatric Stroke & Hematology requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Pediatric Stroke & Hematology management.",
     "tags": [
@@ -7069,26 +7069,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
+        "id": "C",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+      },
+      {
+        "id": "D",
+        "text": "Delay all diagnostic testing for 48 hours"
+      },
+      {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Administer empiric high-dose steroids to all patients"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Standard care for Pediatric Stroke & Hematology requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Pediatric Stroke & Hematology management.",
     "tags": [
@@ -7108,15 +7108,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Administer empiric high-dose steroids to all patients"
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
+        "text": "Delay all diagnostic testing for 48 hours"
       },
       {
         "id": "D",
@@ -7127,7 +7127,7 @@ export const questionsData: PracticeQuestion[] = [
         "text": "Perform non-indicated emergency invasive procedures"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Standard care for Pediatric Stroke & Hematology requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Pediatric Stroke & Hematology management.",
     "tags": [
@@ -7147,11 +7147,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
+        "text": "Avoid secondary stroke prevention medications"
       },
       {
         "id": "C",
@@ -7159,14 +7159,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Delay all diagnostic testing for 48 hours"
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Standard care for Cerebral Venous Thrombosis requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Cerebral Venous Thrombosis management.",
     "tags": [
@@ -7186,26 +7186,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
+        "id": "C",
+        "text": "Delay all diagnostic testing for 48 hours"
+      },
+      {
+        "id": "D",
+        "text": "Administer empiric high-dose steroids to all patients"
+      },
+      {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Standard care for Cerebral Venous Thrombosis requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Cerebral Venous Thrombosis management.",
     "tags": [
@@ -7237,11 +7237,11 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Avoid secondary stroke prevention medications"
       }
     ],
     "correctOptionId": "A",
@@ -7268,19 +7268,19 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
+        "id": "D",
+        "text": "Administer empiric high-dose steroids to all patients"
+      },
+      {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Delay all diagnostic testing for 48 hours"
       }
     ],
     "correctOptionId": "A",
@@ -7303,26 +7303,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
         "text": "Administer empiric high-dose steroids to all patients"
       },
       {
+        "id": "B",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+      },
+      {
+        "id": "C",
+        "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Delay all diagnostic testing for 48 hours"
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Avoid secondary stroke prevention medications"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Standard care for Vascular Malformations & Vasculitis requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Vascular Malformations & Vasculitis management.",
     "tags": [
@@ -7342,11 +7342,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Avoid secondary stroke prevention medications"
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "C",
@@ -7354,14 +7354,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Delay all diagnostic testing for 48 hours"
       },
       {
         "id": "E",
         "text": "Perform non-indicated emergency invasive procedures"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Standard care for Vascular Malformations & Vasculitis requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Vascular Malformations & Vasculitis management.",
     "tags": [
@@ -7381,7 +7381,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Avoid secondary stroke prevention medications"
       },
       {
         "id": "B",
@@ -7389,18 +7389,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Administer empiric high-dose steroids to all patients"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Standard care for Vascular Malformations & Vasculitis requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Vascular Malformations & Vasculitis management.",
     "tags": [
@@ -7424,19 +7424,19 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
+        "id": "D",
+        "text": "Delay all diagnostic testing for 48 hours"
+      },
+      {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Administer empiric high-dose steroids to all patients"
       }
     ],
     "correctOptionId": "A",
@@ -7459,11 +7459,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Avoid secondary stroke prevention medications"
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "C",
@@ -7471,14 +7471,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Delay all diagnostic testing for 48 hours"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Standard care for Neuro-ICU & Hemodynamic Management requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Neuro-ICU & Hemodynamic Management management.",
     "tags": [
@@ -7498,7 +7498,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "B",
@@ -7506,18 +7506,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
+        "id": "D",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+      },
+      {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Administer empiric high-dose steroids to all patients"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Standard care for Neuro-ICU & Hemodynamic Management requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Neuro-ICU & Hemodynamic Management management.",
     "tags": [
@@ -7537,26 +7537,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
-        "id": "E",
+        "id": "B",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+      },
+      {
+        "id": "C",
+        "text": "Delay all diagnostic testing for 48 hours"
+      },
+      {
+        "id": "D",
         "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
+        "id": "E",
+        "text": "Administer empiric high-dose steroids to all patients"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Standard care for Neuro-ICU & Hemodynamic Management requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Neuro-ICU & Hemodynamic Management management.",
     "tags": [
@@ -7576,7 +7576,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Administer empiric high-dose steroids to all patients"
       },
       {
         "id": "B",
@@ -7584,18 +7584,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Avoid secondary stroke prevention medications"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Standard care for Neuro-ICU & Hemodynamic Management requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Neuro-ICU & Hemodynamic Management management.",
     "tags": [
@@ -7619,11 +7619,11 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
+        "text": "Administer empiric high-dose steroids to all patients"
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
+        "text": "Delay all diagnostic testing for 48 hours"
       },
       {
         "id": "D",
@@ -7654,26 +7654,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
-        "id": "E",
+        "id": "B",
         "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
+        "id": "C",
+        "text": "Delay all diagnostic testing for 48 hours"
+      },
+      {
+        "id": "D",
+        "text": "Administer empiric high-dose steroids to all patients"
+      },
+      {
+        "id": "E",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Standard care for Secondary Prevention & Antithrombotics requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Secondary Prevention & Antithrombotics management.",
     "tags": [
@@ -7693,26 +7693,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
         "text": "Delay all diagnostic testing for 48 hours"
       },
       {
-        "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
+        "id": "B",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
-        "id": "E",
+        "id": "C",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+      },
+      {
+        "id": "D",
         "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
+        "id": "E",
+        "text": "Administer empiric high-dose steroids to all patients"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Standard care for Secondary Prevention & Antithrombotics requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Secondary Prevention & Antithrombotics management.",
     "tags": [
@@ -7740,15 +7740,15 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Administer empiric high-dose steroids to all patients"
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Avoid secondary stroke prevention medications"
       }
     ],
     "correctOptionId": "A",
@@ -7771,26 +7771,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
         "text": "Delay all diagnostic testing for 48 hours"
       },
       {
-        "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
+        "id": "B",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
-        "id": "E",
+        "id": "C",
         "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
+        "id": "D",
+        "text": "Administer empiric high-dose steroids to all patients"
+      },
+      {
+        "id": "E",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Standard care for Rehabilitation & Prognostication requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Rehabilitation & Prognostication management.",
     "tags": [
@@ -7810,7 +7810,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "B",
@@ -7826,10 +7826,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Standard care for Rehabilitation & Prognostication requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Rehabilitation & Prognostication management.",
     "tags": [
@@ -7849,26 +7849,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
         "text": "Administer empiric high-dose steroids to all patients"
       },
       {
-        "id": "D",
+        "id": "B",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
-        "id": "E",
+        "id": "C",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+      },
+      {
+        "id": "D",
         "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
+        "id": "E",
+        "text": "Delay all diagnostic testing for 48 hours"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Standard care for Rehabilitation & Prognostication requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Rehabilitation & Prognostication management.",
     "tags": [
@@ -7888,26 +7888,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
-      },
-      {
-        "id": "C",
         "text": "Administer empiric high-dose steroids to all patients"
       },
       {
+        "id": "B",
+        "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
+        "id": "C",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+      },
+      {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Delay all diagnostic testing for 48 hours"
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Avoid secondary stroke prevention medications"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Standard care for Rehabilitation & Prognostication requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Rehabilitation & Prognostication management.",
     "tags": [
@@ -7927,15 +7927,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Perform non-indicated emergency invasive procedures"
       },
       {
         "id": "B",
-        "text": "Delay all diagnostic testing for 48 hours"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
+        "text": "Delay all diagnostic testing for 48 hours"
       },
       {
         "id": "D",
@@ -7943,10 +7943,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Perform non-indicated emergency invasive procedures"
+        "text": "Administer empiric high-dose steroids to all patients"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Standard care for Landmark Clinical Trials Master Summary requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Landmark Clinical Trials Master Summary management.",
     "tags": [
@@ -7966,26 +7966,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
-      },
-      {
-        "id": "B",
         "text": "Delay all diagnostic testing for 48 hours"
       },
       {
-        "id": "C",
-        "text": "Administer empiric high-dose steroids to all patients"
-      },
-      {
-        "id": "D",
+        "id": "B",
         "text": "Avoid secondary stroke prevention medications"
       },
       {
-        "id": "E",
+        "id": "C",
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+      },
+      {
+        "id": "D",
         "text": "Perform non-indicated emergency invasive procedures"
+      },
+      {
+        "id": "E",
+        "text": "Administer empiric high-dose steroids to all patients"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Standard care for Landmark Clinical Trials Master Summary requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Landmark Clinical Trials Master Summary management.",
     "tags": [
@@ -8005,7 +8005,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
+        "text": "Avoid secondary stroke prevention medications"
       },
       {
         "id": "B",
@@ -8017,14 +8017,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Avoid secondary stroke prevention medications"
+        "text": "Adhere strictly to standardized guidelines and randomized clinical trial protocol criteria"
       },
       {
         "id": "E",
         "text": "Perform non-indicated emergency invasive procedures"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Standard care for Landmark Clinical Trials Master Summary requires adherence to validated guidelines, precise diagnostic localization, and risk factor modification as demonstrated in landmark clinical trials.",
     "keyTakeaway": "Adhere strictly to guidelines for Landmark Clinical Trials Master Summary management.",
     "tags": [
@@ -8052,15 +8052,15 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "CTA Spot Sign; indicates active arterial contrast extravasation"
+        "text": "Insular Ribbon Sign; indicates chronic parenchymal encephalomalacia"
       },
       {
         "id": "D",
-        "text": "Puff of Smoke Sign; indicates basal collateral vascular network"
+        "text": "CTA Spot Sign; indicates active arterial contrast extravasation"
       },
       {
         "id": "E",
-        "text": "Insular Ribbon Sign; indicates chronic parenchymal encephalomalacia"
+        "text": "Puff of Smoke Sign; indicates basal collateral vascular network"
       }
     ],
     "correctOptionId": "A",
@@ -8085,7 +8085,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Target mismatch present (small ischemic core rCBF < 30%, large hypoperfused penumbra Tmax > 6s); ELIGIBLE for mechanical thrombectomy"
+        "text": "Venous congestion secondary to sagittal sinus occlusion"
       },
       {
         "id": "B",
@@ -8097,14 +8097,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Global cerebral hypoperfusion secondary to cardiogenic shock"
+        "text": "Target mismatch present (small ischemic core rCBF < 30%, large hypoperfused penumbra Tmax > 6s); ELIGIBLE for mechanical thrombectomy"
       },
       {
         "id": "E",
-        "text": "Venous congestion secondary to sagittal sinus occlusion"
+        "text": "Global cerebral hypoperfusion secondary to cardiogenic shock"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "CT Perfusion maps quantify ischemic core (rCBF < 30%) and total hypoperfused territory (Tmax > 6s). The difference represents salvageable ischemic penumbra. Under DEFUSE-3 (6-16h) and DAWN (6-24h) criteria, patients with a target mismatch (mismatch ratio >= 1.8, mismatch volume >= 15 mL, core < 70 mL) derive dramatic clinical benefit from endovascular thrombectomy.",
     "keyTakeaway": "CTP Mismatch = Small core (rCBF < 30%) + Large penumbra (Tmax > 6s) -> Proceed urgently to Mechanical Thrombectomy in 6-24h window.",
     "tags": [
@@ -8126,26 +8126,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Moyamoya Disease ('Puff of Smoke' collateral network); Surgical revascularization (STA-MCA bypass or EDAS)"
-      },
-      {
-        "id": "B",
         "text": "Carotid Artery Dissection; 6 months of oral anticoagulation"
       },
       {
-        "id": "C",
-        "text": "Fibromuscular Dysplasia ('String of Beads'); Percutaneous balloon angioplasty"
-      },
-      {
-        "id": "D",
+        "id": "B",
         "text": "Primary CNS Vasculitis; High-dose IV methylprednisolone and cyclophosphamide"
       },
       {
-        "id": "E",
+        "id": "C",
         "text": "Atherosclerotic ICA occlusion; High-intensity Atorvastatin 80 mg daily"
+      },
+      {
+        "id": "D",
+        "text": "Moyamoya Disease ('Puff of Smoke' collateral network); Surgical revascularization (STA-MCA bypass or EDAS)"
+      },
+      {
+        "id": "E",
+        "text": "Fibromuscular Dysplasia ('String of Beads'); Percutaneous balloon angioplasty"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Moyamoya disease is a progressive steno-occlusive arteriopathy of the terminal internal carotid arteries and proximal Circle of Willis. The compensatory lenticulostriate parenchymal collaterals produce the characteristic 'puff of smoke' appearance on angiogram. Surgical revascularization (direct STA-MCA bypass or indirect EDAS/EDAM) is the definitive therapy.",
     "keyTakeaway": "Moyamoya Disease = Terminal ICA occlusion + 'Puff of Smoke' collaterals -> Treat with surgical revascularization.",
     "tags": [
@@ -8167,15 +8167,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "CTA Spot Sign; predicts active ongoing hematoma expansion and clinical deterioration"
+        "text": "Empty Delta Sign; predicts venous sinus thrombosis"
       },
       {
         "id": "B",
-        "text": "Hyperdense MCA Sign; predicts acute ischemic infarction"
+        "text": "Pneumocephalus; predicts skull base fracture"
       },
       {
         "id": "C",
-        "text": "Empty Delta Sign; predicts venous sinus thrombosis"
+        "text": "CTA Spot Sign; predicts active ongoing hematoma expansion and clinical deterioration"
       },
       {
         "id": "D",
@@ -8183,10 +8183,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Pneumocephalus; predicts skull base fracture"
+        "text": "Hyperdense MCA Sign; predicts acute ischemic infarction"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "The CTA Spot Sign is defined as one or more foci of contrast extravasation within an acute intraparenchymal hematoma on CTA. It is a strong independent predictor of hematoma expansion, early neurological decline, and 30-day mortality. Its presence guides aggressive blood pressure lowering and intensive monitoring.",
     "keyTakeaway": "CTA Spot Sign = Active contrast extravasation in ICH -> High risk of rapid hematoma expansion.",
     "tags": [
@@ -8208,26 +8208,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Cytotoxic edema restricting microscopic water diffusion; Hypointense (dark) on ADC map"
-      },
-      {
-        "id": "B",
         "text": "Vasogenic edema; Hyperintense (bright) on ADC map"
       },
       {
+        "id": "B",
+        "text": "Arterial calcification; No signal on ADC map"
+      },
+      {
         "id": "C",
-        "text": "Chronic gliosis; Isointense on ADC map"
+        "text": "Cytotoxic edema restricting microscopic water diffusion; Hypointense (dark) on ADC map"
       },
       {
         "id": "D",
-        "text": "Subarachnoid blood deposition; Hyperintense on ADC map"
+        "text": "Chronic gliosis; Isointense on ADC map"
       },
       {
         "id": "E",
-        "text": "Arterial calcification; No signal on ADC map"
+        "text": "Subarachnoid blood deposition; Hyperintense on ADC map"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Acute cerebral ischemia causes Na+/K+-ATPase pump failure, resulting in influx of extracellular water into cells (cytotoxic edema). This restricts microscopic Brownian motion of water molecules, yielding bright hyperintensity on DWI and dark hypointensity on the corresponding Apparent Diffusion Coefficient (ADC) map.",
     "keyTakeaway": "Restricted Diffusion = Bright on DWI + Dark on ADC map (Cytotoxic edema from acute cell death).",
     "tags": [
@@ -8249,26 +8249,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Multiple lobar cortical/subcortical microbleeds; Cerebral Amyloid Angiopathy (CAA)"
-      },
-      {
-        "id": "B",
         "text": "Deep basal ganglia hypertensive lacunes; Lipohyalinosis"
       },
       {
-        "id": "C",
+        "id": "B",
         "text": "Multiple cavernous malformations; Familial Cavernomatosis"
       },
       {
+        "id": "C",
+        "text": "Multiple lobar cortical/subcortical microbleeds; Cerebral Amyloid Angiopathy (CAA)"
+      },
+      {
         "id": "D",
-        "text": "Neurocysticercosis lesions; Parasitic infection"
+        "text": "Multiple sclerosis black holes; Demyelination"
       },
       {
         "id": "E",
-        "text": "Multiple sclerosis black holes; Demyelination"
+        "text": "Neurocysticercosis lesions; Parasitic infection"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "SWI and T2*-GRE MRI sequences are highly sensitive to paramagnetic hemosiderin breakdown products ('blooming artifact'). The presence of multiple punctate microbleeds restricted strictly to the lobar cortical and subcortical regions in an elderly patient fulfills the Boston Criteria for Probable Cerebral Amyloid Angiopathy (CAA), carrying a high risk for lobar ICH.",
     "keyTakeaway": "Lobar Microbleeds on SWI/GRE = Cerebral Amyloid Angiopathy (CAA) -> High lobar ICH risk (avoid long-term anticoagulation if possible).",
     "tags": [
@@ -8290,26 +8290,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Aneurysmal Subarachnoid Hemorrhage (SAH); Modified Fisher Grade 3 (thick focal subarachnoid blood in basal cisterns with high vasospasm risk)"
-      },
-      {
-        "id": "B",
-        "text": "Epidural Hematoma; Low vasospasm risk"
-      },
-      {
-        "id": "C",
-        "text": "Acute Ischemic MCA Infarction; No vasospasm risk"
-      },
-      {
-        "id": "D",
         "text": "Subdural Hematoma; Low vasospasm risk"
       },
       {
-        "id": "E",
+        "id": "B",
+        "text": "Aneurysmal Subarachnoid Hemorrhage (SAH); Modified Fisher Grade 3 (thick focal subarachnoid blood in basal cisterns with high vasospasm risk)"
+      },
+      {
+        "id": "C",
+        "text": "Epidural Hematoma; Low vasospasm risk"
+      },
+      {
+        "id": "D",
         "text": "Normal Non-Contrast CT head; Normal vasospasm risk"
+      },
+      {
+        "id": "E",
+        "text": "Acute Ischemic MCA Infarction; No vasospasm risk"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "The non-contrast CT shows hyperdense (bright white) acute blood filling the suprasellar and basal subarachnoid cisterns. Dense diffuse subarachnoid blood corresponds to a high Modified Fisher Grade (Grade 3/4), carrying a significant risk of delayed cerebral ischemia (DCI) from arterial vasospasm between days 4-14.",
     "keyTakeaway": "Basal Cistern SAH on NCCT = Aneurysmal SAH -> Start oral Nimodipine 60 mg q4h for 21 days to mitigate DCI.",
     "tags": [
@@ -8331,15 +8331,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Empty Delta Sign; Therapeutic anticoagulation with LMWH or IV Unfractionated Heparin"
+        "text": "Hyperdense MCA Sign; IV Tenecteplase thrombolysis"
       },
       {
         "id": "B",
-        "text": "CTA Spot Sign; Immediate IV Tranexamic Acid"
+        "text": "Empty Delta Sign; Therapeutic anticoagulation with LMWH or IV Unfractionated Heparin"
       },
       {
         "id": "C",
-        "text": "Hyperdense MCA Sign; IV Tenecteplase thrombolysis"
+        "text": "CTA Spot Sign; Immediate IV Tranexamic Acid"
       },
       {
         "id": "D",
@@ -8350,7 +8350,7 @@ export const questionsData: PracticeQuestion[] = [
         "text": "Double Rim Sign; Surgical abscess drainage"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "The 'Empty Delta Sign' on contrast CT venography or post-contrast T1 MRI is pathognomonic for Superior Sagittal Sinus Thrombosis. It consists of a central dark triangular non-enhancing filling defect (thrombus) surrounded by contrast-enhancing dural sinus collateral walls. AHA/EFNS guidelines mandate therapeutic anticoagulation (LMWH/heparin) as first-line therapy.",
     "keyTakeaway": "Empty Delta Sign = Superior Sagittal Sinus Thrombosis -> Treat with Full Therapeutic Anticoagulation (LMWH/Heparin).",
     "tags": [
@@ -8372,26 +8372,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Confluent FLAIR hyperintensities involving the anterior temporal lobes and external capsule; NOTCH3 mutation"
-      },
-      {
-        "id": "B",
-        "text": "Periventricular Dawson fingers; HLA-DRB1 mutation"
-      },
-      {
-        "id": "C",
         "text": "Bilateral thalamic hyperintensities; GLA gene mutation"
       },
       {
-        "id": "D",
+        "id": "B",
         "text": "Parieto-occipital vasogenic edema; COL4A1 mutation"
       },
       {
-        "id": "E",
+        "id": "C",
+        "text": "Confluent FLAIR hyperintensities involving the anterior temporal lobes and external capsule; NOTCH3 mutation"
+      },
+      {
+        "id": "D",
         "text": "Cerebellar atrophy; HTRA1 mutation"
+      },
+      {
+        "id": "E",
+        "text": "Periventricular Dawson fingers; HLA-DRB1 mutation"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "CADASIL (Cerebral Autosomal Dominant Arteriopathy with Subcortical Infarcts and Leukoencephalopathy) is caused by missense mutations in the NOTCH3 gene on chromosome 19p13. Characteristically, FLAIR MRI displays symmetric confluent subcortical white matter hyperintensities with pathognomonic involvement of the anterior temporal poles and external capsule.",
     "keyTakeaway": "CADASIL = Temporal pole white matter hyperintensities on FLAIR + NOTCH3 gene mutation.",
     "tags": [
@@ -8413,26 +8413,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Flame-shaped arterial occlusion / 'String Sign'; Cervical internal carotid artery dissection"
-      },
-      {
-        "id": "B",
-        "text": "Concentric arterial stenosis; Takayasu arteritis"
-      },
-      {
-        "id": "C",
         "text": "String of beads appearance; Fibromuscular dysplasia"
       },
       {
-        "id": "D",
+        "id": "B",
         "text": "Atherosclerotic ulcerated plaque; Atherosclerosis"
+      },
+      {
+        "id": "C",
+        "text": "Concentric arterial stenosis; Takayasu arteritis"
+      },
+      {
+        "id": "D",
+        "text": "Flame-shaped arterial occlusion / 'String Sign'; Cervical internal carotid artery dissection"
       },
       {
         "id": "E",
         "text": "Pseudoaneurysm sac; Mycotic aneurysm"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Carotid artery dissection occurs when blood penetrates an intimal tear, creating an intramural hematoma within the vessel wall. On catheter DSA or CTA, this appears as smooth tapering luminal narrowing ('string sign') ending in a flame-shaped distal occlusion. Horner syndrome results from disruption of ascending oculosympathetic fibers.",
     "keyTakeaway": "Flame-shaped tapering / String Sign on Angiography = Cervical Carotid Artery Dissection.",
     "tags": [
@@ -8458,19 +8458,19 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Hyperdense MCA Sign; reduces ASPECTS by 3 points"
-      },
-      {
-        "id": "C",
-        "text": "Disappearing Basal Ganglia Sign; reduces ASPECTS by 5 points"
-      },
-      {
-        "id": "D",
         "text": "Sulcal effacement; indicates hemorrhagic transformation"
       },
       {
-        "id": "E",
+        "id": "C",
+        "text": "Hyperdense MCA Sign; reduces ASPECTS by 3 points"
+      },
+      {
+        "id": "D",
         "text": "Midline shift; indicates brain death"
+      },
+      {
+        "id": "E",
+        "text": "Disappearing Basal Ganglia Sign; reduces ASPECTS by 5 points"
       }
     ],
     "correctOptionId": "A",
@@ -8493,26 +8493,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Stroke onset is highly likely < 4.5 hours; IV Thrombolysis (Alteplase) significantly improves functional outcome"
-      },
-      {
-        "id": "B",
-        "text": "Stroke onset is > 24 hours; Thrombolysis is strictly contraindicated"
-      },
-      {
-        "id": "C",
-        "text": "Lesion is chronic encephalomalacia; No treatment indicated"
-      },
-      {
-        "id": "D",
         "text": "Lesion represents vasogenic tumor edema; Start IV Dexamethasone"
       },
       {
-        "id": "E",
+        "id": "B",
+        "text": "Lesion is chronic encephalomalacia; No treatment indicated"
+      },
+      {
+        "id": "C",
         "text": "Lesion represents artifact; Repeat MRI in 48 hours"
+      },
+      {
+        "id": "D",
+        "text": "Stroke onset is highly likely < 4.5 hours; IV Thrombolysis (Alteplase) significantly improves functional outcome"
+      },
+      {
+        "id": "E",
+        "text": "Stroke onset is > 24 hours; Thrombolysis is strictly contraindicated"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "DWI changes occur within minutes of ischemia, whereas FLAIR hyperintensity takes 4.5 to 6 hours to develop. A positive DWI lesion with negative FLAIR ('DWI-FLAIR Mismatch') indicates stroke onset < 4.5h. The WAKE-UP trial proved IV Alteplase improves 90-day functional outcomes in wake-up strokes with DWI-FLAIR mismatch.",
     "keyTakeaway": "DWI-FLAIR Mismatch = Stroke onset < 4.5h in wake-up stroke -> Qualifies for IV Thrombolysis (WAKE-UP trial).",
     "tags": [
@@ -8532,7 +8532,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Malignant MCA Infarction; Emergency Decompressive Hemicraniectomy"
+        "text": "Central Pontine Myelinolysis; Hypertonic saline"
       },
       {
         "id": "B",
@@ -8540,18 +8540,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Epidural Hematoma; Burr hole evacuation"
+        "text": "Malignant MCA Infarction; Emergency Decompressive Hemicraniectomy"
       },
       {
         "id": "D",
-        "text": "Normal Pressure Hydrocephalus; Ventriculoperitoneal shunt"
+        "text": "Epidural Hematoma; Burr hole evacuation"
       },
       {
         "id": "E",
-        "text": "Central Pontine Myelinolysis; Hypertonic saline"
+        "text": "Normal Pressure Hydrocephalus; Ventriculoperitoneal shunt"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Malignant MCA infarction is severe ischemic stroke involving > 50% MCA territory leading to massive space-occupying edema, midline shift, and uncal herniation. Landmark trials (DECIMAL, DESTINY, HAMLET) proved decompressive hemicraniectomy within 48h reduces mortality from 80% to 30% in patients <= 60 years.",
     "keyTakeaway": "Malignant MCA Stroke = Severe cerebral edema > 50% MCA territory -> Decompressive Hemicraniectomy < 48h.",
     "tags": [
@@ -8571,15 +8571,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Cavernous Malformation (Cavernoma)"
+        "text": "Dural Arteriovenous Fistula (dAVF)"
       },
       {
         "id": "B",
-        "text": "Arteriovenous Malformation (AVM)"
+        "text": "Cavernous Malformation (Cavernoma)"
       },
       {
         "id": "C",
-        "text": "Developmental Venous Anomaly (DVA)"
+        "text": "Arteriovenous Malformation (AVM)"
       },
       {
         "id": "D",
@@ -8587,10 +8587,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Dural Arteriovenous Fistula (dAVF)"
+        "text": "Developmental Venous Anomaly (DVA)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Cavernous malformations (cavernomas) consist of dilated sinusoid vascular channels without intervening neural parenchyma. On T2-weighted MRI, they characteristically present as a 'popcorn-like' or 'mulberry-like' reticulated central core of mixed signal intensity surrounded by a dark peripheral ring of hemosiderin blooming.",
     "keyTakeaway": "Cavernoma on MRI = 'Popcorn-like' reticulated core with dark peripheral hemosiderin ring on T2/GRE.",
     "tags": [
@@ -8610,26 +8610,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Time-Averaged Mean Maximum Velocity (TAMMV) >= 200 cm/s"
-      },
-      {
-        "id": "B",
         "text": "TAMMV >= 100 cm/s"
       },
       {
-        "id": "C",
+        "id": "B",
         "text": "TAMMV >= 50 cm/s"
       },
       {
+        "id": "C",
+        "text": "Resistive Index >= 0.90"
+      },
+      {
         "id": "D",
-        "text": "Peak Systolic Velocity <= 30 cm/s"
+        "text": "Time-Averaged Mean Maximum Velocity (TAMMV) >= 200 cm/s"
       },
       {
         "id": "E",
-        "text": "Resistive Index >= 0.90"
+        "text": "Peak Systolic Velocity <= 30 cm/s"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "The landmark STOP trial established that TCD screening measuring Time-Averaged Mean Maximum Velocity (TAMMV) >= 200 cm/s in the distal ICA or MCA trunk identifies children with Sickle Cell Disease at high risk for ischemic stroke (> 10%/year). Initiating chronic blood transfusion therapy reduces primary stroke risk by 90%.",
     "keyTakeaway": "STOP Trial TCD Criteria: TAMMV >= 200 cm/s = High stroke risk -> Start Chronic Transfusion Prophylaxis.",
     "tags": [
@@ -8649,15 +8649,15 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Carotid Web (Atypical Fibromuscular Dysplasia); causes local blood stasis and thrombosis in the recess downstream"
-      },
-      {
-        "id": "B",
         "text": "Atherosclerotic ulcerated plaque; causes lipid core rupture"
       },
       {
-        "id": "C",
+        "id": "B",
         "text": "Carotid body tumor; causes mechanical compression"
+      },
+      {
+        "id": "C",
+        "text": "Subclavian steal syndrome; causes retrograde vertebral flow"
       },
       {
         "id": "D",
@@ -8665,10 +8665,10 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "E",
-        "text": "Subclavian steal syndrome; causes retrograde vertebral flow"
+        "text": "Carotid Web (Atypical Fibromuscular Dysplasia); causes local blood stasis and thrombosis in the recess downstream"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "A Carotid Web is an atypical variant of fibromuscular dysplasia appearing as a thin, shelf-like intimal membrane projecting into the posterior carotid bulb lumen. Blood flow behind the web becomes stagnant, forming thrombi that embolize intracranial arteries. Standard management involves CEA or stenting to prevent recurrences.",
     "keyTakeaway": "Carotid Web = Shelf-like intimal projection in carotid bulb -> Local blood stasis causes recurrent embolic stroke.",
     "tags": [
@@ -8688,26 +8688,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Primary CNS Vasculitis (or active inflammatory arteritis)"
-      },
-      {
-        "id": "B",
         "text": "Intracranial Atherosclerosis (eccentric non-uniform enhancement)"
       },
       {
-        "id": "C",
-        "text": "Reversible Cerebral Vasoconstriction Syndrome (RCVS; no wall enhancement)"
+        "id": "B",
+        "text": "Moyamoya Disease (smooth vessel narrowing without enhancement)"
       },
       {
-        "id": "D",
+        "id": "C",
         "text": "Arterial Dissection (intramural hematoma crescent)"
       },
       {
+        "id": "D",
+        "text": "Primary CNS Vasculitis (or active inflammatory arteritis)"
+      },
+      {
         "id": "E",
-        "text": "Moyamoya Disease (smooth vessel narrowing without enhancement)"
+        "text": "Reversible Cerebral Vasoconstriction Syndrome (RCVS; no wall enhancement)"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "High-Resolution Vessel Wall MRI (VWMRI) distinguishes vasculopathy etiologies: Primary CNS Vasculitis produces smooth, concentric (circumferential) vessel wall enhancement and uniform thickening. In contrast, Intracranial Atherosclerosis causes eccentric (non-uniform) wall thickening with focal plaque enhancement, while RCVS typically lacks wall enhancement.",
     "keyTakeaway": "VWMRI Wall Enhancement: Concentric smooth enhancement = Vasculitis; Eccentric non-uniform enhancement = Atherosclerosis.",
     "tags": [
@@ -8727,7 +8727,7 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Dense Basilar Artery Sign; CTA Head/Neck to confirm acute Basilar Artery Occlusion (BAO)"
+        "text": "CTA Spot Sign; Hematoma evacuation"
       },
       {
         "id": "B",
@@ -8735,18 +8735,18 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "C",
-        "text": "Empty Delta Sign; MR Venography"
+        "text": "Insular Ribbon Sign; Lumbar Puncture"
       },
       {
         "id": "D",
-        "text": "CTA Spot Sign; Hematoma evacuation"
+        "text": "Dense Basilar Artery Sign; CTA Head/Neck to confirm acute Basilar Artery Occlusion (BAO)"
       },
       {
         "id": "E",
-        "text": "Insular Ribbon Sign; Lumbar Puncture"
+        "text": "Empty Delta Sign; MR Venography"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "The 'Dense Basilar Artery Sign' on NCCT indicates acute intraluminal thrombus in the basilar artery. Acute basilar artery occlusion (BAO) is a catastrophic neurovascular emergency causing brainstem ischemia, coma, and high mortality. Immediate CTA/MRA followed by emergency endovascular thrombectomy is required.",
     "keyTakeaway": "Dense Basilar Sign on NCCT = Acute Basilar Artery Occlusion -> Emergency CTA and endovascular thrombectomy.",
     "tags": [
@@ -8770,7 +8770,7 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "Atherosclerotic stenosis; Intracranial stenting"
+        "text": "Moyamoya Disease; EDAS surgery"
       },
       {
         "id": "C",
@@ -8778,7 +8778,7 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Moyamoya Disease; EDAS surgery"
+        "text": "Atherosclerotic stenosis; Intracranial stenting"
       },
       {
         "id": "E",
@@ -8805,26 +8805,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Cortical Superficial Siderosis (cSS); indicative of Cerebral Amyloid Angiopathy and high future lobar ICH risk"
-      },
-      {
-        "id": "B",
-        "text": "Deep lacunar infarction; indicative of lipohyalinosis"
-      },
-      {
-        "id": "C",
         "text": "Acute subdural hematoma; indicative of bridging vein tear"
       },
       {
+        "id": "B",
+        "text": "Bacterial meningitis; indicative of leptomeningeal infection"
+      },
+      {
+        "id": "C",
+        "text": "Deep lacunar infarction; indicative of lipohyalinosis"
+      },
+      {
         "id": "D",
-        "text": "Cavernous malformation; indicative of familial cavernomas"
+        "text": "Cortical Superficial Siderosis (cSS); indicative of Cerebral Amyloid Angiopathy and high future lobar ICH risk"
       },
       {
         "id": "E",
-        "text": "Bacterial meningitis; indicative of leptomeningeal infection"
+        "text": "Cavernous malformation; indicative of familial cavernomas"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Cortical Superficial Siderosis (cSS) appears on T2*-GRE / SWI MRI as curvilinear hypointense signal drop lining the cerebral convexities, caused by chronic or recurrent bleeding into the subarachnoid space from amyloid-laden cortical vessels. It is a key feature of the Boston Criteria v2.0 for CAA.",
     "keyTakeaway": "Cortical Superficial Siderosis (cSS) on GRE/SWI = High-risk feature of Cerebral Amyloid Angiopathy (CAA).",
     "tags": [
@@ -8844,26 +8844,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Brain Arteriovenous Malformation (AVM); Spetzler-Martin Grading System (Size, Eloquence, Venous Drainage)"
-      },
-      {
-        "id": "B",
-        "text": "Dural Arteriovenous Fistula (dAVF); Hunt and Hess Scale"
-      },
-      {
-        "id": "C",
-        "text": "Cavernous Malformation; ICH Score"
-      },
-      {
-        "id": "D",
         "text": "Developmental Venous Anomaly (DVA); ASPECTS Score"
       },
       {
-        "id": "E",
+        "id": "B",
+        "text": "Cavernous Malformation; ICH Score"
+      },
+      {
+        "id": "C",
+        "text": "Brain Arteriovenous Malformation (AVM); Spetzler-Martin Grading System (Size, Eloquence, Venous Drainage)"
+      },
+      {
+        "id": "D",
         "text": "Vein of Galen Malformation; Modified Rankin Scale"
+      },
+      {
+        "id": "E",
+        "text": "Dural Arteriovenous Fistula (dAVF); Hunt and Hess Scale"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Brain Arteriovenous Malformations (AVMs) consist of an abnormal vessel tangle (nidus) with direct arteriovenous shunting without an intervening capillary bed. Surgical resection morbidity/mortality is predicted by the Spetzler-Martin Grade (Score 1-5 based on nidus size <3cm/3-6cm/>6cm, eloquent cortex location, and deep venous drainage).",
     "keyTakeaway": "Brain AVM = Arteriovenous nidus with early venous drainage -> Grade using Spetzler-Martin scale.",
     "tags": [
@@ -8883,26 +8883,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Subdural Hematoma (SDH); disruption of cortical bridging veins"
-      },
-      {
-        "id": "B",
-        "text": "Epidural Hematoma (EDH); laceration of Middle Meningeal Artery"
-      },
-      {
-        "id": "C",
-        "text": "Subarachnoid Hemorrhage (SAH); rupture of saccular aneurysm"
-      },
-      {
-        "id": "D",
         "text": "Intraparenchymal Hemorrhage; lipohyalinosis of penetrating arteries"
       },
       {
-        "id": "E",
+        "id": "B",
         "text": "Cephalohematoma; subperiosteal blood collection"
+      },
+      {
+        "id": "C",
+        "text": "Subdural Hematoma (SDH); disruption of cortical bridging veins"
+      },
+      {
+        "id": "D",
+        "text": "Subarachnoid Hemorrhage (SAH); rupture of saccular aneurysm"
+      },
+      {
+        "id": "E",
+        "text": "Epidural Hematoma (EDH); laceration of Middle Meningeal Artery"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Subdural hematomas (SDH) result from tearing of bridging veins between the cerebral cortex and dural sinuses. On non-contrast CT, SDH appears as a crescentic extra-axial hyperdensity that spreads freely across cranial suture lines (unlike epidural hematomas which are limited by suture attachments).",
     "keyTakeaway": "Subdural Hematoma = Crescentic extra-axial hyperdensity crossing sutures (bridging vein tear).",
     "tags": [
@@ -8926,19 +8926,19 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "B",
-        "text": "TICI 2b (Partial reperfusion >= 50%)"
-      },
-      {
-        "id": "C",
-        "text": "TICI 2a (Partial reperfusion < 50%)"
-      },
-      {
-        "id": "D",
         "text": "TICI 1 (Minimal penetration without distal branch perfusion)"
       },
       {
-        "id": "E",
+        "id": "C",
         "text": "TICI 0 (No perfusion)"
+      },
+      {
+        "id": "D",
+        "text": "TICI 2b (Partial reperfusion >= 50%)"
+      },
+      {
+        "id": "E",
+        "text": "TICI 2a (Partial reperfusion < 50%)"
       }
     ],
     "correctOptionId": "A",
@@ -8961,26 +8961,26 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Reversal Sign (Pseudo-subarachnoid hemorrhage sign)"
-      },
-      {
-        "id": "B",
-        "text": "Empty Delta Sign"
-      },
-      {
-        "id": "C",
-        "text": "CTA Spot Sign"
-      },
-      {
-        "id": "D",
         "text": "Puff of Smoke Sign"
       },
       {
-        "id": "E",
+        "id": "B",
+        "text": "Reversal Sign (Pseudo-subarachnoid hemorrhage sign)"
+      },
+      {
+        "id": "C",
+        "text": "Empty Delta Sign"
+      },
+      {
+        "id": "D",
         "text": "Insular Ribbon Sign"
+      },
+      {
+        "id": "E",
+        "text": "CTA Spot Sign"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "The 'Reversal Sign' (or pseudo-subarachnoid hemorrhage sign) on NCCT is seen in severe global hypoxic-ischemic encephalopathy (HIE). Diffuse cerebral edema decreases cerebral cortical attenuation, making the dura, falx, tentorium, and basal cisterns appear abnormally hyperdense by contrast comparison.",
     "keyTakeaway": "Reversal Sign on NCCT = Severe global Hypoxic-Ischemic Encephalopathy (poor neurological prognosis).",
     "tags": [
@@ -9000,11 +9000,11 @@ export const questionsData: PracticeQuestion[] = [
     "options": [
       {
         "id": "A",
-        "text": "Deep Cerebral Venous Thrombosis (Vein of Galen / Straight Sinus); affects bilateral thalami and basal ganglia"
+        "text": "Transverse sinus thrombosis; affects temporal lobe"
       },
       {
         "id": "B",
-        "text": "Transverse sinus thrombosis; affects temporal lobe"
+        "text": "Sigmoid sinus thrombosis; affects cerebellar hemisphere"
       },
       {
         "id": "C",
@@ -9012,14 +9012,14 @@ export const questionsData: PracticeQuestion[] = [
       },
       {
         "id": "D",
-        "text": "Sigmoid sinus thrombosis; affects cerebellar hemisphere"
+        "text": "Deep Cerebral Venous Thrombosis (Vein of Galen / Straight Sinus); affects bilateral thalami and basal ganglia"
       },
       {
         "id": "E",
         "text": "Cortical vein thrombosis; affects isolated gyri"
       }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Deep Cerebral Venous Thrombosis involves the Internal Cerebral Veins, Vein of Galen, and Straight Sinus. Because these veins drain the deep gray structures, thrombosis classically produces bilateral thalamic and basal ganglia edema/infarction (often with hemorrhagic transformation), presenting with rapid coma or movement disorders.",
     "keyTakeaway": "Deep Cerebral Venous Thrombosis = Bilateral thalamic edema/infarction on MRI (Vein of Galen / Straight Sinus occlusion).",
     "tags": [
@@ -9037,16 +9037,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 68-year-old male with septic shock has a mean arterial pressure that drops to 40 mmHg. Transcranial Doppler and cerebral perfusion monitoring demonstrate failure of normal autoregulation.",
     "question": "When decreased cerebral perfusion causes autoregulatory failure, what physiological response occurs to cerebral blood flow (CBF), cerebral blood volume (CBV), mean transit time (MTT), and oxygen extraction fraction (OEF)?",
     "options": [
-      { "id": "A", "text": "CBF decreases, CBV increases, MTT increases, and OEF increases" },
-      { "id": "B", "text": "CBF increases, CBV decreases, MTT decreases, and OEF decreases" },
-      { "id": "C", "text": "CBF remains unchanged, CBV increases, MTT increases, and OEF decreases" },
-      { "id": "D", "text": "CBF decreases, CBV decreases, MTT decreases, and OEF remains unchanged" },
-      { "id": "E", "text": "CBF decreases, CBV remains unchanged, MTT decreases, and OEF increases" }
+      {
+        "id": "A",
+        "text": "CBF decreases, CBV increases, MTT increases, and OEF increases"
+      },
+      {
+        "id": "B",
+        "text": "CBF decreases, CBV decreases, MTT decreases, and OEF remains unchanged"
+      },
+      {
+        "id": "C",
+        "text": "CBF remains unchanged, CBV increases, MTT increases, and OEF decreases"
+      },
+      {
+        "id": "D",
+        "text": "CBF decreases, CBV remains unchanged, MTT decreases, and OEF increases"
+      },
+      {
+        "id": "E",
+        "text": "CBF increases, CBV decreases, MTT decreases, and OEF decreases"
+      }
     ],
     "correctOptionId": "A",
     "explanation": "With normal cerebral autoregulation, CBF is maintained constant over a mean arterial pressure of 50 to 150 mmHg. Once perfusion pressure falls below the lower limit of autoregulation (autoregulatory failure), CBF drops linearly as a function of pressure. To compensate, maximal vasodilation causes CBV to increase, resulting in increased MTT (MTT = CBV/CBF). To maintain cerebral metabolic rate of oxygen (CMRO2) unchanged, the oxygen extraction fraction (OEF) increases.",
     "keyTakeaway": "Autoregulatory failure = Decreased CBF, Increased CBV, Increased MTT, and Increased OEF to preserve CMRO2.",
-    "tags": ["Autoregulation", "CBF", "Pathophysiology", "OEF"],
+    "tags": [
+      "Autoregulation",
+      "CBF",
+      "Pathophysiology",
+      "OEF"
+    ],
     "hint": "Recall that the brain attempts to maintain oxygen consumption (CMRO2) by extracting more oxygen as blood transit slows.",
     "source": "Past Board Exam"
   },
@@ -9057,16 +9077,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "During a carotid endarterectomy procedure under electroencephalographic (EEG) monitoring, the internal carotid artery is cross-clamped, causing a sudden reduction in regional cerebral blood flow.",
     "question": "Match the regional cerebral blood flow (rCBF) threshold with its corresponding cellular event during progressive ischemia:",
     "options": [
-      { "id": "A", "text": "50-55 mL/100g/min: Normal homeostasis; 35-25: Decreased protein synthesis and increased glycolysis; 18-25: Electrical failure and EEG slowing; <10-12: Ionic membrane gradient failure and infarction" },
-      { "id": "B", "text": "50-55 mL/100g/min: Electrical failure; 35-25: Normal homeostasis; 18-25: Ionic membrane failure; <10-12: Lactic acidosis" },
-      { "id": "C", "text": "50-55 mL/100g/min: Normal; 35-25: Immediate membrane depolarization; 18-25: Increased protein synthesis; <10-12: Apoptosis only" },
-      { "id": "D", "text": "50-55 mL/100g/min: Increased glycolysis; 35-25: Normal homeostasis; 18-25: Electrical failure; <10-12: Cytotoxic edema resolution" },
-      { "id": "E", "text": "50-55 mL/100g/min: Normal; 35-25: Normal; 18-25: Normal; <10-12: Electrical failure only" }
+      {
+        "id": "A",
+        "text": "50-55 mL/100g/min: Normal homeostasis; 35-25: Decreased protein synthesis and increased glycolysis; 18-25: Electrical failure and EEG slowing; <10-12: Ionic membrane gradient failure and infarction"
+      },
+      {
+        "id": "B",
+        "text": "50-55 mL/100g/min: Electrical failure; 35-25: Normal homeostasis; 18-25: Ionic membrane failure; <10-12: Lactic acidosis"
+      },
+      {
+        "id": "C",
+        "text": "50-55 mL/100g/min: Normal; 35-25: Normal; 18-25: Normal; <10-12: Electrical failure only"
+      },
+      {
+        "id": "D",
+        "text": "50-55 mL/100g/min: Normal; 35-25: Immediate membrane depolarization; 18-25: Increased protein synthesis; <10-12: Apoptosis only"
+      },
+      {
+        "id": "E",
+        "text": "50-55 mL/100g/min: Increased glycolysis; 35-25: Normal homeostasis; 18-25: Electrical failure; <10-12: Cytotoxic edema resolution"
+      }
     ],
     "correctOptionId": "A",
     "explanation": "Normal cerebral blood flow is 50-55 mL/100 g/min. With a mild decline to 35-25 mL/100 g/min, protein synthesis decreases and anaerobic glycolysis increases. When CBF drops to 18-25 mL/100 g/min (the threshold of electrical failure), synaptic potentials decline and the EEG slows or flattens. Below 10-12 mL/100 g/min (the membrane failure threshold), transmembrane ionic gradients collapse, leading to massive intracellular calcium/sodium influx, cytotoxic edema, and irreversible infarction.",
     "keyTakeaway": "CBF thresholds: 50-55 normal; 35-25 protein synthesis fails; 18-25 electrical failure/EEG slowing; <10-12 membrane pump failure & infarction.",
-    "tags": ["CBF Thresholds", "Pathophysiology", "Electrical Failure"],
+    "tags": [
+      "CBF Thresholds",
+      "Pathophysiology",
+      "Electrical Failure"
+    ],
     "hint": "The penumbra lies between the threshold of electrical failure (~20 mL/100g/min) and membrane failure (~10 mL/100g/min).",
     "source": "Past Board Exam"
   },
@@ -9077,16 +9116,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A basic science researcher is evaluating excitotoxic neuronal injury in a rodent middle cerebral artery occlusion model.",
     "question": "Which of the following statements best describes the role of glutamate in cerebral ischemia?",
     "options": [
-      { "id": "A", "text": "Glutamate release occurs only after complete cessation of blood flow to 0 mL/100g/min" },
-      { "id": "B", "text": "Glutamate is an excitatory amino acid released when rCBF falls to <20 mL/100g/min, causing neuronal damage via ligand-gated Ca2+ channels" },
-      { "id": "C", "text": "Antagonism of glutamate receptors has translated into robust, highly effective neuroprotection in human clinical trials" },
-      { "id": "D", "text": "Glutamate produces neuronal damage by opening neuronal K+ efflux channels only" },
-      { "id": "E", "text": "Glutamate is synthesized and released exclusively by microglial cells during acute ischemia" }
+      {
+        "id": "A",
+        "text": "Antagonism of glutamate receptors has translated into robust, highly effective neuroprotection in human clinical trials"
+      },
+      {
+        "id": "B",
+        "text": "Glutamate is an excitatory amino acid released when rCBF falls to <20 mL/100g/min, causing neuronal damage via ligand-gated Ca2+ channels"
+      },
+      {
+        "id": "C",
+        "text": "Glutamate release occurs only after complete cessation of blood flow to 0 mL/100g/min"
+      },
+      {
+        "id": "D",
+        "text": "Glutamate is synthesized and released exclusively by microglial cells during acute ischemia"
+      },
+      {
+        "id": "E",
+        "text": "Glutamate produces neuronal damage by opening neuronal K+ efflux channels only"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "Glutamate is an excitatory neurotransmitter that is cleared rapidly by astrocytes under normal conditions. When regional CBF falls below ~20 mL/100 g/min, ATP depletion leads to cellular depolarization and failure of astrocytic glutamate reuptake. Massive extracellular glutamate activates postsynaptic NMDA and AMPA receptors, triggering catastrophic intracellular calcium influx that activates destructive proteases, lipases, and endonucleases. Unfortunately, competitive NMDA antagonists failed in human trials due to toxicity and lack of clinical efficacy.",
     "keyTakeaway": "Excitotoxic glutamate release occurs at rCBF <20 mL/100g/min, causing pathological Ca2+ influx via NMDA receptors.",
-    "tags": ["Excitotoxicity", "Glutamate", "NMDA", "Calcium"],
+    "tags": [
+      "Excitotoxicity",
+      "Glutamate",
+      "NMDA",
+      "Calcium"
+    ],
     "hint": "Think about the excitatory neurotransmitter that binds NMDA receptors and allows lethal calcium entry.",
     "source": "Past Board Exam"
   },
@@ -9097,16 +9156,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A stroke fellow is reviewing the biophysical principles of cerebral edema in a patient who presented 90 minutes after stroke onset compared to a patient presenting on day 3.",
     "question": "Which statement correctly distinguishes cytotoxic edema from vasogenic edema in cerebral ischemia?",
     "options": [
-      { "id": "A", "text": "Cytotoxic edema begins minutes after ischemia due to Na+/K+-ATPase failure with an intact blood-brain barrier; vasogenic edema begins hours to days later due to blood-brain barrier disruption" },
-      { "id": "B", "text": "Cytotoxic edema is caused by blood-brain barrier breakdown and responds dramatically to high-dose intravenous dexamethasone" },
-      { "id": "C", "text": "Vasogenic edema is restricted to the intracellular compartment of gray matter neurons" },
-      { "id": "D", "text": "Cytotoxic edema is readily visible on non-contrast CT within 15 minutes of symptom onset" },
-      { "id": "E", "text": "Vasogenic edema peaks at 1 hour after stroke onset and completely resolves by 24 hours" }
+      {
+        "id": "A",
+        "text": "Cytotoxic edema is caused by blood-brain barrier breakdown and responds dramatically to high-dose intravenous dexamethasone"
+      },
+      {
+        "id": "B",
+        "text": "Vasogenic edema peaks at 1 hour after stroke onset and completely resolves by 24 hours"
+      },
+      {
+        "id": "C",
+        "text": "Vasogenic edema is restricted to the intracellular compartment of gray matter neurons"
+      },
+      {
+        "id": "D",
+        "text": "Cytotoxic edema begins minutes after ischemia due to Na+/K+-ATPase failure with an intact blood-brain barrier; vasogenic edema begins hours to days later due to blood-brain barrier disruption"
+      },
+      {
+        "id": "E",
+        "text": "Cytotoxic edema is readily visible on non-contrast CT within 15 minutes of symptom onset"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Cytotoxic edema develops immediately (within minutes) upon ATP depletion when Na+/K+-ATPase pumps fail, causing intracellular accumulation of sodium and water (primarily in astrocytes and gray matter) while the blood-brain barrier remains intact. This is detected by DWI. Vasogenic edema occurs 24 to 72 hours later due to endothelial dysfunction and breakdown of tight junctions (mediated by matrix metalloproteinases), allowing plasma proteins and fluid to escape into the extracellular white matter space.",
     "keyTakeaway": "Cytotoxic edema = Minutes, ATP pump failure, intact BBB, intracellular (DWI bright). Vasogenic edema = 24-72h, BBB breakdown, extracellular fluid (white matter swelling).",
-    "tags": ["Cerebral Edema", "Cytotoxic", "Vasogenic", "BBB"],
+    "tags": [
+      "Cerebral Edema",
+      "Cytotoxic",
+      "Vasogenic",
+      "BBB"
+    ],
     "hint": "Consider which edema form involves an intact BBB vs a leaky, disrupted capillary barrier.",
     "source": "Past Board Exam"
   },
@@ -9117,16 +9196,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 70-year-old male undergoes successful mechanical thrombectomy with TICI 3 recanalization of an occluded M1 segment 8 hours after onset. However, post-procedure perfusion imaging shows persistent capillary hypoperfusion in the ischemic core.",
     "question": "Which pathophysiologic entity explains the failure of microvascular capillary reperfusion despite complete recanalization of the main upstream arterial trunk?",
     "options": [
-      { "id": "A", "text": "Hyperperfusion syndrome" },
-      { "id": "B", "text": "No-reflow phenomenon" },
-      { "id": "C", "text": "Crossed cerebellar diaschisis" },
-      { "id": "D", "text": "Wallerian degeneration" },
-      { "id": "E", "text": "Cerebral hyperemic steal" }
+      {
+        "id": "A",
+        "text": "Crossed cerebellar diaschisis"
+      },
+      {
+        "id": "B",
+        "text": "Wallerian degeneration"
+      },
+      {
+        "id": "C",
+        "text": "No-reflow phenomenon"
+      },
+      {
+        "id": "D",
+        "text": "Cerebral hyperemic steal"
+      },
+      {
+        "id": "E",
+        "text": "Hyperperfusion syndrome"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "C",
     "explanation": "The 'no-reflow phenomenon' refers to the inability to re-establish microvascular capillary blood flow despite reopening the occluded epicardial or intracranial cerebral artery. It results from ischemic changes in the downstream microvasculature, including endothelial cell swelling, intraluminal endothelial blebs, pericyte constriction, and microthrombi with leukocytes trapped in capillaries.",
     "keyTakeaway": "No-reflow phenomenon = Capillary non-perfusion despite successful epicardial/intracranial arterial recanalization.",
-    "tags": ["No-Reflow", "Reperfusion", "Microvasculature"],
+    "tags": [
+      "No-Reflow",
+      "Reperfusion",
+      "Microvasculature"
+    ],
     "hint": "Occurs when downstream capillary beds remain obstructed even after the primary large vessel is opened.",
     "source": "Past Board Exam"
   },
@@ -9137,16 +9235,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 54-year-old male presents with acute vertigo, nausea, gait ataxia, and sudden unilateral sensorineural hearing loss in the right ear.",
     "question": "The internal auditory (labyrinthine) artery responsible for cochleovestibular perfusion most frequently arises from which parent vessel?",
     "options": [
-      { "id": "A", "text": "Basilar artery" },
-      { "id": "B", "text": "Anterior Inferior Cerebellar Artery (AICA)" },
-      { "id": "C", "text": "Superior Cerebellar Artery (SCA)" },
-      { "id": "D", "text": "Posterior Inferior Cerebellar Artery (PICA)" },
-      { "id": "E", "text": "Vertebral artery" }
+      {
+        "id": "A",
+        "text": "Anterior Inferior Cerebellar Artery (AICA)"
+      },
+      {
+        "id": "B",
+        "text": "Basilar artery"
+      },
+      {
+        "id": "C",
+        "text": "Posterior Inferior Cerebellar Artery (PICA)"
+      },
+      {
+        "id": "D",
+        "text": "Superior Cerebellar Artery (SCA)"
+      },
+      {
+        "id": "E",
+        "text": "Vertebral artery"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "A",
     "explanation": "The internal auditory (labyrinthine) artery is the exclusive arterial blood supply to the inner ear (cochlea and labyrinth). In approximately 85% of individuals, it arises as a branch of the Anterior Inferior Cerebellar Artery (AICA). In 15% it can arise directly from the basilar artery, and rarely from the vertebral artery (5%). This anatomical relationship explains why AICA territory strokes classically feature sudden unilateral hearing loss accompanied by facial palsy and ataxia.",
     "keyTakeaway": "Internal auditory (labyrinthine) artery originates from AICA in 85% of cases; occlusion causes sudden deafness + vertigo.",
-    "tags": ["AICA", "Labyrinthine Artery", "Hearing Loss", "Neuroanatomy"],
+    "tags": [
+      "AICA",
+      "Labyrinthine Artery",
+      "Hearing Loss",
+      "Neuroanatomy"
+    ],
     "hint": "Which cerebellar artery supplies the anterolateral pons, middle cerebellar peduncle, and inner ear?",
     "source": "Past Board Exam"
   },
@@ -9157,16 +9275,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 66-year-old male presents with sudden left hemiparesis and left homonymous hemianopia. On exam, sensation is completely preserved, and higher cortical language/visuospatial function is intact. MRI demonstrates an acute infarct in the posterior limb of the internal capsule and lateral geniculate body.",
     "question": "Which vessel is occluded, and what is its normal vessel of origin?",
     "options": [
-      { "id": "A", "text": "Anterior Choroidal Artery (AChA), arising from the supraclinoid Internal Carotid Artery" },
-      { "id": "B", "text": "Recurrent Artery of Heubner, arising from the A2 segment of the ACA" },
-      { "id": "C", "text": "Thalamoperforating artery, arising from the basilar tip" },
-      { "id": "D", "text": "Lateral lenticulostriate artery, arising from the M1 MCA" },
-      { "id": "E", "text": "Posterior Communicating Artery, arising from the cavernous ICA" }
+      {
+        "id": "A",
+        "text": "Lateral lenticulostriate artery, arising from the M1 MCA"
+      },
+      {
+        "id": "B",
+        "text": "Posterior Communicating Artery, arising from the cavernous ICA"
+      },
+      {
+        "id": "C",
+        "text": "Anterior Choroidal Artery (AChA), arising from the supraclinoid Internal Carotid Artery"
+      },
+      {
+        "id": "D",
+        "text": "Recurrent Artery of Heubner, arising from the A2 segment of the ACA"
+      },
+      {
+        "id": "E",
+        "text": "Thalamoperforating artery, arising from the basilar tip"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "The Anterior Choroidal Artery (AChA) classically arises from the posterior aspect of the supraclinoid internal carotid artery (C4/C5 segment), distal to the origin of the PCOM. Its perforating branches supply the posterior two-thirds of the posterior limb of the internal capsule, medial globus pallidus, tail of the caudate, and lateral geniculate body. AChA infarction classically causes contralateral hemiparesis (posterior limb of internal capsule) and contralateral homonymous hemianopia or sectoranopia (lateral geniculate body) without cortical deficits.",
     "keyTakeaway": "Anterior Choroidal Artery (from supraclinoid ICA) stroke = Contralateral hemiparesis + homonymous visual field defect + preserved cognition/language.",
-    "tags": ["Anterior Choroidal Artery", "Supraclinoid ICA", "Neuroanatomy"],
+    "tags": [
+      "Anterior Choroidal Artery",
+      "Supraclinoid ICA",
+      "Neuroanatomy"
+    ],
     "hint": "Originates from the supraclinoid ICA distal to the PCOM and perfuses the posterior limb of the internal capsule and LGB.",
     "source": "Past Board Exam"
   },
@@ -9177,16 +9314,37 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A neurosurgeon is dissecting the interpeduncular cistern during clipping of a basilar apex aneurysm.",
     "question": "Which cranial nerve exits the ventral brainstem specifically in the interval between the posterior cerebral artery (PCA) and superior cerebellar artery (SCA)?",
     "options": [
-      { "id": "A", "text": "Cranial Nerve III (Oculomotor nerve)" },
-      { "id": "B", "text": "Cranial Nerve IV (Trochlear nerve)" },
-      { "id": "C", "text": "Cranial Nerve V (Trigeminal nerve)" },
-      { "id": "D", "text": "Cranial Nerve VI (Abducens nerve)" },
-      { "id": "E", "text": "Cranial Nerve VII (Facial nerve)" }
+      {
+        "id": "A",
+        "text": "Cranial Nerve IV (Trochlear nerve)"
+      },
+      {
+        "id": "B",
+        "text": "Cranial Nerve VII (Facial nerve)"
+      },
+      {
+        "id": "C",
+        "text": "Cranial Nerve III (Oculomotor nerve)"
+      },
+      {
+        "id": "D",
+        "text": "Cranial Nerve V (Trigeminal nerve)"
+      },
+      {
+        "id": "E",
+        "text": "Cranial Nerve VI (Abducens nerve)"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "The Oculomotor Nerve (CN III) emerges from the interpeduncular fossa on the ventral midbrain and courses anteriorly directly between the Posterior Cerebral Artery (PCA) superiorly and the Superior Cerebellar Artery (SCA) inferiorly. Aneurysms at the PCOM-ICA junction or basilar apex frequently compress the oculomotor nerve at this anatomical crossroad, producing a pupil-involved third nerve palsy.",
     "keyTakeaway": "CN III exits the brainstem between the PCA (above) and SCA (below).",
-    "tags": ["CN III", "PCA", "SCA", "Aneurysm", "Neuroanatomy"],
+    "tags": [
+      "CN III",
+      "PCA",
+      "SCA",
+      "Aneurysm",
+      "Neuroanatomy"
+    ],
     "hint": "This nerve is intimately associated with the posterior communicating and basilar apex arteries.",
     "source": "Past Board Exam"
   },
@@ -9197,16 +9355,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 58-year-old male with severe left internal carotid artery stenosis suffers an acute left MCA stroke and an unexpected left occipital lobe infarct.",
     "question": "Which Circle of Willis anatomical variant explains how internal carotid artery disease caused an infarction in the posterior cerebral artery territory?",
     "options": [
-      { "id": "A", "text": "Azygous anterior cerebral artery" },
-      { "id": "B", "text": "Complete fetal origin of the posterior cerebral artery" },
-      { "id": "C", "text": "Persistent trigeminal artery" },
-      { "id": "D", "text": "Duplication of the middle cerebral artery" },
-      { "id": "E", "text": "Infraoptic origin of the anterior cerebral artery" }
+      {
+        "id": "A",
+        "text": "Azygous anterior cerebral artery"
+      },
+      {
+        "id": "B",
+        "text": "Duplication of the middle cerebral artery"
+      },
+      {
+        "id": "C",
+        "text": "Infraoptic origin of the anterior cerebral artery"
+      },
+      {
+        "id": "D",
+        "text": "Persistent trigeminal artery"
+      },
+      {
+        "id": "E",
+        "text": "Complete fetal origin of the posterior cerebral artery"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "E",
     "explanation": "A fetal origin of the PCA occurs when the embryonic origin of the PCA from the ICA fails to regress. In complete fetal PCA (present in ~10% of individuals), the P1 segment of the PCA is absent or atretic, and the entire PCA territory (occipital and inferior temporal lobes) is supplied directly by the ipsilateral internal carotid artery via an enlarged PCOM. In this anatomical setting, carotid disease or emboli can directly produce 'posterior circulation' occipital infarcts.",
     "keyTakeaway": "Fetal PCA (10% complete, 15% partial) = PCA territory perfused directly by ICA; carotid emboli can cause occipital infarcts.",
-    "tags": ["Fetal PCA", "Circle of Willis", "Neuroanatomy"],
+    "tags": [
+      "Fetal PCA",
+      "Circle of Willis",
+      "Neuroanatomy"
+    ],
     "hint": "The P1 segment is atretic, making the occipital lobe entirely dependent on the internal carotid artery.",
     "source": "Past Board Exam"
   },
@@ -9217,16 +9394,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "An anatomist is detailing the cranial nerve relationships of the cavernous sinus.",
     "question": "Which of the following cranial nerve structures is NOT located within the cavernous sinus or its lateral dural wall?",
     "options": [
-      { "id": "A", "text": "Cranial Nerve III" },
-      { "id": "B", "text": "Cranial Nerve IV" },
-      { "id": "C", "text": "Cranial Nerve V1 (Ophthalmic division)" },
-      { "id": "D", "text": "Cranial Nerve V2 (Maxillary division)" },
-      { "id": "E", "text": "Cranial Nerve V3 (Mandibular division)" }
+      {
+        "id": "A",
+        "text": "Cranial Nerve III"
+      },
+      {
+        "id": "B",
+        "text": "Cranial Nerve IV"
+      },
+      {
+        "id": "C",
+        "text": "Cranial Nerve V1 (Ophthalmic division)"
+      },
+      {
+        "id": "D",
+        "text": "Cranial Nerve V2 (Maxillary division)"
+      },
+      {
+        "id": "E",
+        "text": "Cranial Nerve V3 (Mandibular division)"
+      }
     ],
     "correctOptionId": "E",
     "explanation": "The cavernous sinus contains the internal carotid artery and Cranial Nerve VI (Abducens) within the venous sinus lumen itself. In its lateral dural wall, it carries CN III (Oculomotor), CN IV (Trochlear), CN V1 (Ophthalmic branch), and CN V2 (Maxillary branch). CN V3 (Mandibular branch of the trigeminal nerve) exits the skull through the foramen ovale without ever traversing the cavernous sinus.",
     "keyTakeaway": "Cavernous sinus contains CN VI & ICA inside; CN III, IV, V1, V2 in lateral wall. CN V3 does NOT enter the cavernous sinus.",
-    "tags": ["Cavernous Sinus", "Cranial Nerves", "Neuroanatomy"],
+    "tags": [
+      "Cavernous Sinus",
+      "Cranial Nerves",
+      "Neuroanatomy"
+    ],
     "hint": "Only the third division of the trigeminal nerve bypasses the cavernous sinus completely to exit the foramen ovale.",
     "source": "Past Board Exam"
   },
@@ -9237,16 +9433,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A patient undergoing thoracic aortic stent-graft repair develops acute flaccid paraplegia and loss of pain/temperature below T10.",
     "question": "Which statement regarding the Artery of Adamkiewicz (arteria radicularis magna) is correct?",
     "options": [
-      { "id": "A", "text": "It typically arises from the right side of the aorta between T2 and T5" },
-      { "id": "B", "text": "It most commonly arises from the aorta on the left side (73%) between T9 and T12, exhibiting a characteristic hairpin turn on angiography" },
-      { "id": "C", "text": "It supplies the posterior one-third of the spinal cord and dorsal columns" },
-      { "id": "D", "text": "It is a branch of the superior cerebellar artery" },
-      { "id": "E", "text": "It provides exclusive vascular supply to the cervical spinal cord" }
+      {
+        "id": "A",
+        "text": "It provides exclusive vascular supply to the cervical spinal cord"
+      },
+      {
+        "id": "B",
+        "text": "It typically arises from the right side of the aorta between T2 and T5"
+      },
+      {
+        "id": "C",
+        "text": "It is a branch of the superior cerebellar artery"
+      },
+      {
+        "id": "D",
+        "text": "It most commonly arises from the aorta on the left side (73%) between T9 and T12, exhibiting a characteristic hairpin turn on angiography"
+      },
+      {
+        "id": "E",
+        "text": "It supplies the posterior one-third of the spinal cord and dorsal columns"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "D",
     "explanation": "The Artery of Adamkiewicz (dominant anterior thoracolumbar radicular artery) arises directly from the aorta, most commonly on the left side (73% of individuals) between T9 and T12 (62%). On digital subtraction spinal angiography, it enters the anterior spinal canal and makes a characteristic sharp hairpin turn before joining the anterior spinal artery to supply the lower two-thirds of the spinal cord (T8 to conus medullaris).",
     "keyTakeaway": "Artery of Adamkiewicz: Left-sided (73%), T9-T12, hairpin turn on angiography; supplies anterior lower thoracic cord and conus.",
-    "tags": ["Adamkiewicz", "Spinal Cord", "Neuroanatomy"],
+    "tags": [
+      "Adamkiewicz",
+      "Spinal Cord",
+      "Neuroanatomy"
+    ],
     "hint": "Most common origin is lower thoracic, left side, forming an unmistakable hairpin turn.",
     "source": "Past Board Exam"
   },
@@ -9257,16 +9472,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 58-year-old male presents with acute dizziness, vomiting, dysphagia, hoarseness, right facial numbness, and left arm/leg loss of pain and temperature sensation. Exam reveals right ptosis and miosis, right limb ataxia, and absent gag reflex on the right.",
     "question": "Which structure involvement accounts for this patient's hoarseness and severe dysphagia in lateral medullary (Wallenberg) syndrome?",
     "options": [
-      { "id": "A", "text": "Nucleus ambiguus" },
-      { "id": "B", "text": "Hypoglossal nucleus" },
-      { "id": "C", "text": "Spinal trigeminal nucleus" },
-      { "id": "D", "text": "Inferior olivary nucleus" },
-      { "id": "E", "text": "Medial longitudinal fasciculus" }
+      {
+        "id": "A",
+        "text": "Hypoglossal nucleus"
+      },
+      {
+        "id": "B",
+        "text": "Inferior olivary nucleus"
+      },
+      {
+        "id": "C",
+        "text": "Medial longitudinal fasciculus"
+      },
+      {
+        "id": "D",
+        "text": "Spinal trigeminal nucleus"
+      },
+      {
+        "id": "E",
+        "text": "Nucleus ambiguus"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Wallenberg (lateral medullary) syndrome involves the dorsolateral medulla, most commonly due to vertebral artery occlusion (67%) or PICA occlusion (33%). Involvement of the nucleus ambiguus (which provides motor fibers to CN IX and X) produces severe dysphagia, hoarseness, and vocal cord paralysis, carrying a high risk of aspiration pneumonia. Facial numbness is due to the spinal trigeminal tract/nucleus; contralateral body pain/temp loss is due to the spinothalamic tract; Horner syndrome is from descending sympathetics.",
     "keyTakeaway": "Nucleus ambiguus damage in Wallenberg syndrome causes severe dysphagia and hoarseness (CN IX/X motor).",
-    "tags": ["Wallenberg", "Nucleus Ambiguus", "Brainstem Syndromes"],
+    "tags": [
+      "Wallenberg",
+      "Nucleus Ambiguus",
+      "Brainstem Syndromes"
+    ],
     "hint": "The motor nucleus supplying the pharyngeal and laryngeal muscles via glossopharyngeal and vagus nerves.",
     "source": "Past Board Exam"
   },
@@ -9277,16 +9511,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 69-year-old male with severe right carotid artery stenosis experiences stereotypic episodes of involuntary rhythmic shaking of his left arm and leg whenever he stands up or walks uphill. EEG during an episode shows no epileptiform activity.",
     "question": "What is the diagnosis, and what is the underlying pathophysiologic mechanism?",
     "options": [
-      { "id": "A", "text": "Focal motor seizures due to cortical ischemia" },
-      { "id": "B", "text": "Limb-shaking transient ischemic attack (TIA) due to critical hemodynamic hypoperfusion" },
-      { "id": "C", "text": "Chorea-hyperglycemia syndrome" },
-      { "id": "D", "text": "Hemiballismus from subthalamic nucleus stroke" },
-      { "id": "E", "text": "Functional psychogenic movement disorder" }
+      {
+        "id": "A",
+        "text": "Focal motor seizures due to cortical ischemia"
+      },
+      {
+        "id": "B",
+        "text": "Limb-shaking transient ischemic attack (TIA) due to critical hemodynamic hypoperfusion"
+      },
+      {
+        "id": "C",
+        "text": "Chorea-hyperglycemia syndrome"
+      },
+      {
+        "id": "D",
+        "text": "Hemiballismus from subthalamic nucleus stroke"
+      },
+      {
+        "id": "E",
+        "text": "Functional psychogenic movement disorder"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "Limb-shaking TIAs are brief, involuntary, rhythmic or coarse tremulous shaking movements of an extremity caused by hemodynamic hypoperfusion in the territory of a critically stenosed or occluded carotid artery (or Moyamoya disease). They are typically precipitated by maneuvers that lower cerebral perfusion (standing upright, exercise, walking, hyperventilation, or eating a heavy meal). EEG is normal (non-epileptic), and antiplatelet drugs alone do not prevent them; treatment requires hemodynamic blood pressure support and revascularization (CEA or stenting).",
     "keyTakeaway": "Limb-shaking TIA = Orthostatic/exertional shaking without EEG discharges, pathognomonic for severe carotid stenosis/hypoperfusion.",
-    "tags": ["Limb-Shaking TIA", "Hypoperfusion", "Carotid Stenosis"],
+    "tags": [
+      "Limb-Shaking TIA",
+      "Hypoperfusion",
+      "Carotid Stenosis"
+    ],
     "hint": "These are hemodynamic, non-epileptic events triggered by hypoperfusion.",
     "source": "Past Board Exam"
   },
@@ -9297,16 +9550,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 64-year-old male status post right occipitotemporal ischemic stroke is unable to recognize the faces of his wife and children when they enter the room, but recognizes them immediately as soon as they speak.",
     "question": "What higher cortical deficit is present, and where is the responsible anatomical lesion located?",
     "options": [
-      { "id": "A", "text": "Simultanagnosia; bilateral parieto-occipital watershed cortex" },
-      { "id": "B", "text": "Prosopagnosia; right fusiform (occipitotemporal) gyrus" },
-      { "id": "C", "text": "Astereognosis; contralateral primary sensory cortex" },
-      { "id": "D", "text": "Autotopagnosia; left angular gyrus" },
-      { "id": "E", "text": "Visual anosognosia (Anton syndrome); bilateral calcarine fissures" }
+      {
+        "id": "A",
+        "text": "Simultanagnosia; bilateral parieto-occipital watershed cortex"
+      },
+      {
+        "id": "B",
+        "text": "Autotopagnosia; left angular gyrus"
+      },
+      {
+        "id": "C",
+        "text": "Prosopagnosia; right fusiform (occipitotemporal) gyrus"
+      },
+      {
+        "id": "D",
+        "text": "Visual anosognosia (Anton syndrome); bilateral calcarine fissures"
+      },
+      {
+        "id": "E",
+        "text": "Astereognosis; contralateral primary sensory cortex"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "C",
     "explanation": "Prosopagnosia is the inability to recognize familiar faces with intact voice recognition and visual acuity. When caused by stroke, it typically localizes to the right fusiform gyrus (inferior occipitotemporal cortex) or bilateral fusiform gyri, and is commonly accompanied by a left superior homonymous visual field deficit.",
     "keyTakeaway": "Prosopagnosia (facial agnosia) localizes to the right fusiform (occipitotemporal) gyrus.",
-    "tags": ["Prosopagnosia", "Fusiform Gyrus", "Higher Cortical Function"],
+    "tags": [
+      "Prosopagnosia",
+      "Fusiform Gyrus",
+      "Higher Cortical Function"
+    ],
     "hint": "Specialized facial recognition area on the ventral inferior surface of the temporal lobe.",
     "source": "Past Board Exam"
   },
@@ -9317,16 +9589,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 71-year-old woman with a history of bilateral subcortical strokes exhibits involuntary, uncontrollable episodes of crying or laughing that are incongruent with her actual emotional state. She has severe spastic dysarthria.",
     "question": "What syndrome is present, and what medication combination is FDA-approved for its treatment?",
     "options": [
-      { "id": "A", "text": "Poststroke major depression; treated with high-dose fluoxetine" },
-      { "id": "B", "text": "Pseudobulbar affect (PBA); treated with dextromethorphan and low-dose quinidine (Nuedexta)" },
-      { "id": "C", "text": "Catastrophic reaction; treated with haloperidol" },
-      { "id": "D", "text": "Frontotemporal lobar degeneration; treated with memantine" },
-      { "id": "E", "text": "Gelastic epilepsy; treated with carbamazepine" }
+      {
+        "id": "A",
+        "text": "Catastrophic reaction; treated with haloperidol"
+      },
+      {
+        "id": "B",
+        "text": "Frontotemporal lobar degeneration; treated with memantine"
+      },
+      {
+        "id": "C",
+        "text": "Pseudobulbar affect (PBA); treated with dextromethorphan and low-dose quinidine (Nuedexta)"
+      },
+      {
+        "id": "D",
+        "text": "Gelastic epilepsy; treated with carbamazepine"
+      },
+      {
+        "id": "E",
+        "text": "Poststroke major depression; treated with high-dose fluoxetine"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "C",
     "explanation": "Pseudobulbar affect (PBA, emotional incontinence, or involuntary emotional expression disorder) occurs in up to 50% of stroke and ALS patients due to disruption of descending corticobulbar and fronto-ponto-cerebellar circuits. It causes episodes of laughing or crying that are unprovoked or exaggerated. The combination of dextromethorphan (NMDA receptor antagonist and sigma-1 agonist) and low-dose quinidine (inhibitor of CYP2D6 to prevent dextromethorphan metabolism) is FDA-approved and reduces episodes by 50%. SSRIs and tricyclics are also effective.",
     "keyTakeaway": "Pseudobulbar affect = Disinhibition of emotional expression; treated with dextromethorphan/quinidine (Nuedexta) or SSRIs.",
-    "tags": ["Pseudobulbar Affect", "PBA", "Nuedexta", "Brainstem"],
+    "tags": [
+      "Pseudobulbar Affect",
+      "PBA",
+      "Nuedexta",
+      "Brainstem"
+    ],
     "hint": "Involves an over-the-counter antitussive paired with an antiarrhythmic CYP2D6 inhibitor.",
     "source": "Past Board Exam"
   },
@@ -9337,16 +9629,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 36-year-old woman with no vascular risk factors presents with a transient right-sided hemiparesis. Cerebral angiography demonstrates multifocal areas of alternating luminal narrowing and ectatic widening ('string of beads') involving the middle third of the internal carotid arteries bilaterally.",
     "question": "Which pathologic type of fibromuscular dysplasia (FMD) does this angiographic finding represent, and what wall layer is abnormal?",
     "options": [
-      { "id": "A", "text": "Intimal fibroplasia; tunica intima" },
-      { "id": "B", "text": "Medial fibroplasia; tunica media" },
-      { "id": "C", "text": "Adventitial fibroplasia; tunica adventitia" },
-      { "id": "D", "text": "Endothelial hyperplasia; vascular endothelium" },
-      { "id": "E", "text": "Perimedial elastosis; internal elastic lamina" }
+      {
+        "id": "A",
+        "text": "Adventitial fibroplasia; tunica adventitia"
+      },
+      {
+        "id": "B",
+        "text": "Endothelial hyperplasia; vascular endothelium"
+      },
+      {
+        "id": "C",
+        "text": "Perimedial elastosis; internal elastic lamina"
+      },
+      {
+        "id": "D",
+        "text": "Medial fibroplasia; tunica media"
+      },
+      {
+        "id": "E",
+        "text": "Intimal fibroplasia; tunica intima"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "D",
     "explanation": "Medial fibroplasia is the most common form of fibromuscular dysplasia (FMD), accounting for 75% to 80% of all cases. It produces the classic 'string of beads' pattern on angiography, characterized by alternating zones of fibrous ridge thickening in the tunica media and aneurysmal mural thinning. It most commonly affects the middle third (C1-C2 level) of the internal carotid artery, is bilateral in over 60% of cases, and carries an association with intracranial saccular aneurysms.",
     "keyTakeaway": "Medial fibroplasia = 75-80% of FMD, 'string of beads' in mid-cervical ICA, tunica media involvement.",
-    "tags": ["FMD", "Medial Fibroplasia", "String of Beads", "Vasculopathy"],
+    "tags": [
+      "FMD",
+      "Medial Fibroplasia",
+      "String of Beads",
+      "Vasculopathy"
+    ],
     "hint": "The most common form affects the muscular middle layer of the arterial wall.",
     "source": "Past Board Exam"
   },
@@ -9357,16 +9669,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 29-year-old female presents on postpartum day 10 with excruciating, explosive 'thunderclap' headaches that recur daily. Non-contrast CT and CSF analysis are completely normal. MRA demonstrates diffuse segmental 'sausage-string' vasoconstriction of the Circle of Willis arteries.",
     "question": "What is the diagnosis, and what is the appropriate management strategy?",
     "options": [
-      { "id": "A", "text": "Primary angiitis of the CNS (PACNS); start high-dose cyclophosphamide and IV methylprednisolone" },
-      { "id": "B", "text": "Reversible Cerebral Vasoconstriction Syndrome (RCVS); discontinue vasoactive agents, observe or treat with oral nimodipine/verapamil, avoid corticosteroids" },
-      { "id": "C", "text": "Aneurysmal subarachnoid hemorrhage; perform urgent surgical craniotomy" },
-      { "id": "D", "text": "Bacterial meningitis; initiate broad-spectrum IV vancomycin and ceftriaxone" },
-      { "id": "E", "text": "Cerebral venous thrombosis; initiate full-dose heparin anticoagulation" }
+      {
+        "id": "A",
+        "text": "Aneurysmal subarachnoid hemorrhage; perform urgent surgical craniotomy"
+      },
+      {
+        "id": "B",
+        "text": "Reversible Cerebral Vasoconstriction Syndrome (RCVS); discontinue vasoactive agents, observe or treat with oral nimodipine/verapamil, avoid corticosteroids"
+      },
+      {
+        "id": "C",
+        "text": "Cerebral venous thrombosis; initiate full-dose heparin anticoagulation"
+      },
+      {
+        "id": "D",
+        "text": "Bacterial meningitis; initiate broad-spectrum IV vancomycin and ceftriaxone"
+      },
+      {
+        "id": "E",
+        "text": "Primary angiitis of the CNS (PACNS); start high-dose cyclophosphamide and IV methylprednisolone"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "Reversible Cerebral Vasoconstriction Syndrome (RCVS, Call-Fleming syndrome) is characterized by severe recurrent thunderclap headaches and reversible multifocal arterial vasoconstriction. It is frequently triggered by pregnancy/postpartum state, vasoactive medications (triptans, SSRIs, nasal decongestants), and illicit drugs (cannabis, cocaine). Unlike CNS vasculitis, CSF is typically normal or near-normal, and the course is self-limited over 1-3 months. Management consists of removing triggers and administering calcium channel blockers (verapamil or nimodipine). Corticosteroids worsen outcomes in RCVS and should be avoided.",
     "keyTakeaway": "RCVS: Recurrent thunderclap headaches, normal CSF, reversible beading on MRA, treated with CCBs (avoid steroids!).",
-    "tags": ["RCVS", "Thunderclap Headache", "Vasoconstriction", "Vasculopathy"],
+    "tags": [
+      "RCVS",
+      "Thunderclap Headache",
+      "Vasoconstriction",
+      "Vasculopathy"
+    ],
     "hint": "A benign, reversible vasospastic disorder where steroids are contraindicated.",
     "source": "Past Board Exam"
   },
@@ -9377,16 +9709,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 52-year-old male presents with subacute progressive headache, memory loss, and multifocal ischemic strokes across multiple vascular territories. CSF reveals lymphocytic pleocytosis and elevated protein. Four-vessel cerebral angiography shows nonspecific irregular beading.",
     "question": "Which diagnostic test has the highest specificity for confirming Primary Angiitis of the Central Nervous System (PACNS)?",
     "options": [
-      { "id": "A", "text": "Serum C-reactive protein and ESR" },
-      { "id": "B", "text": "CT angiography of the head and neck" },
-      { "id": "C", "text": "Targeted brain and leptomeningeal biopsy" },
-      { "id": "D", "text": "Serum antineutrophil cytoplasmic antibodies (ANCA)" },
-      { "id": "E", "text": "Transesophageal echocardiogram" }
+      {
+        "id": "A",
+        "text": "Serum C-reactive protein and ESR"
+      },
+      {
+        "id": "B",
+        "text": "Serum antineutrophil cytoplasmic antibodies (ANCA)"
+      },
+      {
+        "id": "C",
+        "text": "Transesophageal echocardiogram"
+      },
+      {
+        "id": "D",
+        "text": "Targeted brain and leptomeningeal biopsy"
+      },
+      {
+        "id": "E",
+        "text": "CT angiography of the head and neck"
+      }
     ],
-    "correctOptionId": "C",
+    "correctOptionId": "D",
     "explanation": "Primary Angiitis of the Central Nervous System (PACNS) is a rare, non-infectious, granulomatous vasculitis confined to small and medium vessels of the parenchyma and leptomeninges. Because catheter angiography has limited sensitivity and specificity (only ~50% sensitive due to involvement of vessels below angiographic resolution), targeted surgical biopsy of the leptomeninges and cortex is the gold standard for definitive diagnosis. CSF is abnormal in 80-90% (elevated protein and pleocytosis).",
     "keyTakeaway": "PACNS gold standard diagnosis is leptomeningeal/cortical brain biopsy; CSF is abnormal in 80-90%; angiography is nonspecific.",
-    "tags": ["PACNS", "CNS Vasculitis", "Brain Biopsy"],
+    "tags": [
+      "PACNS",
+      "CNS Vasculitis",
+      "Brain Biopsy"
+    ],
     "hint": "Tissue confirmation of small-vessel granulomatous inflammation is required.",
     "source": "Past Board Exam"
   },
@@ -9397,16 +9748,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 38-year-old male with a family history of early dementia and strokes presents with severe migraine with aura and mild executive dysfunction. Brain MRI shows confluent T2/FLAIR hyperintensity in the bilateral anterior temporal lobes (O'Sullivan sign) and external capsules.",
     "question": "What is the genetic mode of inheritance, gene mutation, and chromosome locus in this disorder?",
     "options": [
-      { "id": "A", "text": "Autosomal dominant, NOTCH3 mutation on chromosome 19p13" },
-      { "id": "B", "text": "Autosomal recessive, HTRA1 mutation on chromosome 10q26" },
-      { "id": "C", "text": "X-linked recessive, GLA mutation on chromosome Xq22" },
-      { "id": "D", "text": "Maternal inheritance, MTTL1 mutation in mitochondrial DNA" },
-      { "id": "E", "text": "Autosomal dominant, TREX1 mutation on chromosome 3p21" }
+      {
+        "id": "A",
+        "text": "Autosomal recessive, HTRA1 mutation on chromosome 10q26"
+      },
+      {
+        "id": "B",
+        "text": "Autosomal dominant, TREX1 mutation on chromosome 3p21"
+      },
+      {
+        "id": "C",
+        "text": "Maternal inheritance, MTTL1 mutation in mitochondrial DNA"
+      },
+      {
+        "id": "D",
+        "text": "Autosomal dominant, NOTCH3 mutation on chromosome 19p13"
+      },
+      {
+        "id": "E",
+        "text": "X-linked recessive, GLA mutation on chromosome Xq22"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "CADASIL (Cerebral Autosomal Dominant Arteriopathy with Subcortical Infarcts and Leukoencephalopathy) is the most common monogenic cause of ischemic stroke. It is caused by missense mutations in the NOTCH3 gene on chromosome 19p13.2, affecting vascular smooth muscle cells. Characteristic MRI hallmarks include prominent T2/FLAIR white matter hyperintensities in the anterior temporal poles (O'Sullivan sign, 90% sensitivity) and external capsules, sparing the subcortical U-fibers.",
     "keyTakeaway": "CADASIL = Autosomal dominant, NOTCH3 (chr 19p13), anterior temporal pole + external capsule FLAIR hyperintensities.",
-    "tags": ["CADASIL", "NOTCH3", "Genetics", "OSullivan Sign"],
+    "tags": [
+      "CADASIL",
+      "NOTCH3",
+      "Genetics",
+      "OSullivan Sign"
+    ],
     "hint": "Chromosome 19, Notch receptor signaling in vascular smooth muscle.",
     "source": "Past Board Exam"
   },
@@ -9417,16 +9788,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 26-year-old male presents with premature alopecia, severe low back pain from lumbar spondylosis, and an acute lacunar infarction in the internal capsule. Genetic testing confirms CARASIL.",
     "question": "Which gene mutation is responsible for CARASIL, and how does its pathology differ from CADASIL?",
     "options": [
-      { "id": "A", "text": "HTRA1 gene on chromosome 10q; lacks the granular osmophilic material (GOM) characteristic of CADASIL" },
-      { "id": "B", "text": "NOTCH3 gene on chromosome 19; features extensive amyloid deposition" },
-      { "id": "C", "text": "COL4A1 gene on chromosome 13; features capillary telangiectasias" },
-      { "id": "D", "text": "GLA gene on chromosome X; features lipid accumulation in neural crest cells" },
-      { "id": "E", "text": "TREX1 gene on chromosome 3; features pseudotumoral brain masses" }
+      {
+        "id": "A",
+        "text": "COL4A1 gene on chromosome 13; features capillary telangiectasias"
+      },
+      {
+        "id": "B",
+        "text": "GLA gene on chromosome X; features lipid accumulation in neural crest cells"
+      },
+      {
+        "id": "C",
+        "text": "HTRA1 gene on chromosome 10q; lacks the granular osmophilic material (GOM) characteristic of CADASIL"
+      },
+      {
+        "id": "D",
+        "text": "NOTCH3 gene on chromosome 19; features extensive amyloid deposition"
+      },
+      {
+        "id": "E",
+        "text": "TREX1 gene on chromosome 3; features pseudotumoral brain masses"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "CARASIL (Cerebral Autosomal Recessive Arteriopathy with Subcortical Infarcts and Leukoencephalopathy) is caused by homozygous or compound heterozygous mutations in the HTRA1 gene on chromosome 10q, which encodes a serine protease regulating TGF-beta signaling. Unlike CADASIL, CARASIL is autosomal recessive, lacks the pathognomonic GOM deposits on electron microscopy, and uniquely presents with the triad of premature alopecia (teen years), severe spine spondylosis/back pain, and lacunar strokes in the 20s-30s.",
     "keyTakeaway": "CARASIL = Autosomal recessive HTRA1 mutation (chr 10q); alopecia + back pain + young lacunar strokes; NO GOM deposits.",
-    "tags": ["CARASIL", "HTRA1", "Genetics", "Alopecia"],
+    "tags": [
+      "CARASIL",
+      "HTRA1",
+      "Genetics",
+      "Alopecia"
+    ],
     "hint": "Recessive disorder associated with high-temperature requirement serine peptidase A1.",
     "source": "Past Board Exam"
   },
@@ -9437,16 +9828,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 32-year-old male presents with multiple small posterior circulation infarcts. History reveals chronic burning pain in his hands and feet (acroparesthesias), hypohidrosis, angiokeratomas on his trunk, and proteinuria.",
     "question": "What is the diagnosis, and which diagnostic laboratory test is most sensitive in male patients?",
     "options": [
-      { "id": "A", "text": "Fabry disease; measurement of leukocyte alpha-galactosidase A (GLA) activity" },
-      { "id": "B", "text": "CADASIL; skin biopsy for NOTCH3 extracellular domain" },
-      { "id": "C", "text": "Homocystinuria; plasma methionine levels" },
-      { "id": "D", "text": "MELAS; skeletal muscle biopsy for ragged red fibers" },
-      { "id": "E", "text": "HHT; genetic sequencing of endoglin" }
+      {
+        "id": "A",
+        "text": "HHT; genetic sequencing of endoglin"
+      },
+      {
+        "id": "B",
+        "text": "CADASIL; skin biopsy for NOTCH3 extracellular domain"
+      },
+      {
+        "id": "C",
+        "text": "Fabry disease; measurement of leukocyte alpha-galactosidase A (GLA) activity"
+      },
+      {
+        "id": "D",
+        "text": "Homocystinuria; plasma methionine levels"
+      },
+      {
+        "id": "E",
+        "text": "MELAS; skeletal muscle biopsy for ragged red fibers"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Fabry disease is an X-linked recessive lysosomal storage disorder caused by deficient activity of alpha-galactosidase A (GLA). This leads to systemic accumulation of globotriaosylceramide (Gb3) in vascular endothelium, smooth muscle, and renal/cardiac tissues. Clinical hallmarks include burning acroparesthesias, angiokeratomas, hypohidrosis, renal failure, hypertrophic cardiomyopathy, and early vertebrobasilar strokes. Measurement of leukocyte GLA activity has 100% sensitivity in males (female carriers often require genetic sequencing).",
     "keyTakeaway": "Fabry disease: X-linked alpha-galactosidase A deficiency; acroparesthesias, angiokeratomas, renal failure, posterior circulation strokes.",
-    "tags": ["Fabry Disease", "GLA", "X-linked", "Genetics"],
+    "tags": [
+      "Fabry Disease",
+      "GLA",
+      "X-linked",
+      "Genetics"
+    ],
     "hint": "Lysosomal storage disease causing Gb3 accumulation and burning extremity pain.",
     "source": "Past Board Exam"
   },
@@ -9457,16 +9868,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 24-year-old female presents with acute right internal carotid artery dissection following yoga. Examination reveals thin, translucent skin with visible subcutaneous veins and hypermobile finger joints.",
     "question": "Which condition and genetic defect carries the highest predisposition for spontaneous arterial dissection and catastrophic arterial rupture?",
     "options": [
-      { "id": "A", "text": "Marfan syndrome (FBN1 mutation)" },
-      { "id": "B", "text": "Ehlers-Danlos syndrome type IV / vascular type (COL3A1 mutation)" },
-      { "id": "C", "text": "Classical Ehlers-Danlos syndrome (COL5A1 mutation)" },
-      { "id": "D", "text": "Osteogenesis imperfecta (COL1A1 mutation)" },
-      { "id": "E", "text": "Neurofibromatosis type 1 (NF1 mutation)" }
+      {
+        "id": "A",
+        "text": "Marfan syndrome (FBN1 mutation)"
+      },
+      {
+        "id": "B",
+        "text": "Neurofibromatosis type 1 (NF1 mutation)"
+      },
+      {
+        "id": "C",
+        "text": "Classical Ehlers-Danlos syndrome (COL5A1 mutation)"
+      },
+      {
+        "id": "D",
+        "text": "Ehlers-Danlos syndrome type IV / vascular type (COL3A1 mutation)"
+      },
+      {
+        "id": "E",
+        "text": "Osteogenesis imperfecta (COL1A1 mutation)"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "D",
     "explanation": "Ehlers-Danlos syndrome Type IV (vascular type) is an autosomal dominant disorder caused by mutations in the COL3A1 gene on chromosome 2q31, which encodes type III procollagen. It is characterized by thin, translucent skin with visible veins, easy bruising, and a severe fragility of medium-to-large muscular arteries. Patients have an extremely high risk of spontaneous arterial dissection, carotid-cavernous fistulae, aneurysm rupture, and rupture of bowel or gravid uterus (80% suffer a vascular catastrophe by age 40).",
     "keyTakeaway": "Ehlers-Danlos Type IV (vascular) = COL3A1 mutation; translucent skin + visible veins + high risk of spontaneous dissection & arterial rupture.",
-    "tags": ["Ehlers-Danlos", "COL3A1", "Dissection", "Genetics"],
+    "tags": [
+      "Ehlers-Danlos",
+      "COL3A1",
+      "Dissection",
+      "Genetics"
+    ],
     "hint": "Type III collagen defect causing extreme vascular fragility.",
     "source": "Past Board Exam"
   },
@@ -9477,16 +9908,37 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 75-year-old male with a mechanical mitral valve replacement is being treated with warfarin. He asks why he cannot be switched to a direct oral anticoagulant (DOAC) such as dabigatran or apixaban.",
     "question": "What clinical trial evidence dictates the choice of anticoagulation in patients with mechanical prosthetic heart valves?",
     "options": [
-      { "id": "A", "text": "The RE-ALIGN trial showed that dabigatran was associated with excess thromboembolic strokes and major bleeding compared to warfarin; DOACs are contraindicated in mechanical valves" },
-      { "id": "B", "text": "The ARISTOTLE trial showed that apixaban was superior to warfarin in mechanical valves" },
-      { "id": "C", "text": "The ROCKET-AF trial demonstrated that rivaroxaban is safe only in mechanical aortic, but not mitral, valves" },
-      { "id": "D", "text": "DOACs are approved in mechanical valves if combined with dual antiplatelet therapy" },
-      { "id": "E", "text": "Warfarin and DOACs have equivalent safety in mechanical heart valves according to the RELY trial" }
+      {
+        "id": "A",
+        "text": "The ROCKET-AF trial demonstrated that rivaroxaban is safe only in mechanical aortic, but not mitral, valves"
+      },
+      {
+        "id": "B",
+        "text": "The ARISTOTLE trial showed that apixaban was superior to warfarin in mechanical valves"
+      },
+      {
+        "id": "C",
+        "text": "DOACs are approved in mechanical valves if combined with dual antiplatelet therapy"
+      },
+      {
+        "id": "D",
+        "text": "Warfarin and DOACs have equivalent safety in mechanical heart valves according to the RELY trial"
+      },
+      {
+        "id": "E",
+        "text": "The RE-ALIGN trial showed that dabigatran was associated with excess thromboembolic strokes and major bleeding compared to warfarin; DOACs are contraindicated in mechanical valves"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "The RE-ALIGN trial evaluated dabigatran versus warfarin in patients with mechanical heart valves and was stopped prematurely because patients in the dabigatran arm suffered significantly higher rates of thromboembolic stroke, valve thrombosis, and major pericardial/intracranial bleeding. Direct oral anticoagulants (DOACs) are strictly contraindicated in patients with mechanical heart valves. Vitamin K antagonists (warfarin) with an INR goal of 2.5 (aortic) or 3.0 (mitral) plus low-dose aspirin remain mandatory.",
     "keyTakeaway": "DOACs are CONTRAINDICATED in mechanical heart valves (RE-ALIGN trial showed excess stroke and bleeding); Warfarin + Aspirin is required.",
-    "tags": ["Mechanical Valve", "DOACs", "Warfarin", "RE-ALIGN", "Pharmacology"],
+    "tags": [
+      "Mechanical Valve",
+      "DOACs",
+      "Warfarin",
+      "RE-ALIGN",
+      "Pharmacology"
+    ],
     "hint": "The RE-ALIGN trial was stopped early due to excess thrombosis and bleeding on dabigatran.",
     "source": "Landmark Trial"
   },
@@ -9497,16 +9949,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 78-year-old female taking dabigatran 150 mg BID for nonvalvular atrial fibrillation presents to the emergency department with an acute spontaneous right frontal intraparenchymal hemorrhage (volume 28 cc) and midline shift.",
     "question": "What is the specific, FDA-approved reversal agent for dabigatran, and what is its mechanism?",
     "options": [
-      { "id": "A", "text": "Andexanet alfa; acts as a recombinant decoy Factor Xa molecule" },
-      { "id": "B", "text": "Idarucizumab (Praxbind); humanized monoclonal antibody Fab fragment that binds dabigatran with 350-fold higher affinity than thrombin" },
-      { "id": "C", "text": "Protamine sulfate; directly neutralizes dabigatran via electrostatic binding" },
-      { "id": "D", "text": "Vitamin K; induces hepatic synthesis of prothrombin" },
-      { "id": "E", "text": "Fresh frozen plasma; replaces consumed circulating thrombin" }
+      {
+        "id": "A",
+        "text": "Vitamin K; induces hepatic synthesis of prothrombin"
+      },
+      {
+        "id": "B",
+        "text": "Protamine sulfate; directly neutralizes dabigatran via electrostatic binding"
+      },
+      {
+        "id": "C",
+        "text": "Fresh frozen plasma; replaces consumed circulating thrombin"
+      },
+      {
+        "id": "D",
+        "text": "Idarucizumab (Praxbind); humanized monoclonal antibody Fab fragment that binds dabigatran with 350-fold higher affinity than thrombin"
+      },
+      {
+        "id": "E",
+        "text": "Andexanet alfa; acts as a recombinant decoy Factor Xa molecule"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "D",
     "explanation": "Idarucizumab (Praxbind) is a humanized monoclonal antibody Fab fragment specifically developed to reverse the anticoagulant effect of the direct thrombin inhibitor dabigatran. It binds both free and clot-bound dabigatran with an affinity approximately 350 times greater than that of thrombin, neutralizing its anticoagulant activity within minutes. It is dosed as 5 g IV (two consecutive 2.5 g infusions).",
     "keyTakeaway": "Idarucizumab (Praxbind) 5g IV = Specific reversal agent for dabigatran (direct thrombin inhibitor).",
-    "tags": ["Idarucizumab", "Dabigatran", "Anticoagulation Reversal", "Pharmacology"],
+    "tags": [
+      "Idarucizumab",
+      "Dabigatran",
+      "Anticoagulation Reversal",
+      "Pharmacology"
+    ],
     "hint": "Monoclonal antibody Fab fragment specifically approved for Praxbind/Pradaxa.",
     "source": "Guideline Recommendation"
   },
@@ -9517,16 +9989,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "An 82-year-old male with atrial fibrillation and chronic kidney disease has a creatinine clearance of 35 mL/min. His physician intends to prescribe rivaroxaban.",
     "question": "What is the appropriate recommended daily dosage of rivaroxaban in this patient?",
     "options": [
-      { "id": "A", "text": "20 mg once daily with the evening meal" },
-      { "id": "B", "text": "15 mg once daily with the evening meal" },
-      { "id": "C", "text": "10 mg twice daily" },
-      { "id": "D", "text": "2.5 mg twice daily" },
-      { "id": "E", "text": "Rivaroxaban is absolutely contraindicated for CrCl <50 mL/min" }
+      {
+        "id": "A",
+        "text": "2.5 mg twice daily"
+      },
+      {
+        "id": "B",
+        "text": "Rivaroxaban is absolutely contraindicated for CrCl <50 mL/min"
+      },
+      {
+        "id": "C",
+        "text": "15 mg once daily with the evening meal"
+      },
+      {
+        "id": "D",
+        "text": "10 mg twice daily"
+      },
+      {
+        "id": "E",
+        "text": "20 mg once daily with the evening meal"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "C",
     "explanation": "The standard dose of rivaroxaban (Xarelto) for stroke prevention in nonvalvular atrial fibrillation is 20 mg once daily taken with the evening meal (to ensure optimal bioavailability). In patients with moderate renal impairment (creatinine clearance 15 to 49 mL/min), the dosage must be reduced to 15 mg once daily. Rivaroxaban is avoided if CrCl is <15 mL/min.",
     "keyTakeaway": "Rivaroxaban: 20 mg daily standard; reduce to 15 mg daily if CrCl 15-49 mL/min.",
-    "tags": ["Rivaroxaban", "DOAC", "Renal Dosing", "Pharmacology"],
+    "tags": [
+      "Rivaroxaban",
+      "DOAC",
+      "Renal Dosing",
+      "Pharmacology"
+    ],
     "hint": "The standard 20 mg dose is reduced by 5 mg in moderate renal impairment.",
     "source": "Guideline Recommendation"
   },
@@ -9537,16 +10029,37 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 66-year-old female with acute ischemic stroke and Barrett's esophagus is prescribed clopidogrel 75 mg daily. Her gastroenterologist recommends starting omeprazole 40 mg daily for reflux.",
     "question": "What pharmacokinetic drug-drug interaction occurs between omeprazole and clopidogrel, and what is the safest alternative?",
     "options": [
-      { "id": "A", "text": "Omeprazole induces CYP3A4, causing dangerously high clopidogrel levels and severe bleeding" },
-      { "id": "B", "text": "Omeprazole inhibits CYP2C19, decreasing the formation of clopidogrel's active metabolite; switch to pantoprazole or an H2 blocker" },
-      { "id": "C", "text": "Clopidogrel prevents omeprazole absorption, causing gastric ulcer perforation" },
-      { "id": "D", "text": "Omeprazole and clopidogrel have no interaction; both can be co-administered without concern" },
-      { "id": "E", "text": "Omeprazole chelates clopidogrel directly in the stomach lumen" }
+      {
+        "id": "A",
+        "text": "Omeprazole chelates clopidogrel directly in the stomach lumen"
+      },
+      {
+        "id": "B",
+        "text": "Omeprazole inhibits CYP2C19, decreasing the formation of clopidogrel's active metabolite; switch to pantoprazole or an H2 blocker"
+      },
+      {
+        "id": "C",
+        "text": "Omeprazole and clopidogrel have no interaction; both can be co-administered without concern"
+      },
+      {
+        "id": "D",
+        "text": "Omeprazole induces CYP3A4, causing dangerously high clopidogrel levels and severe bleeding"
+      },
+      {
+        "id": "E",
+        "text": "Clopidogrel prevents omeprazole absorption, causing gastric ulcer perforation"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "Clopidogrel is a prodrug requiring two-step hepatic bioactivation by CYP2C19, CYP3A4, and other cytochrome enzymes. Omeprazole and esomeprazole are potent inhibitors of CYP2C19, significantly reducing the generation of clopidogrel's active thiol metabolite and diminishing platelet inhibition. Pantoprazole has much less affinity for CYP2C19 and does not significantly impair clopidogrel activation, making it the preferred PPI when gastric acid suppression is required.",
     "keyTakeaway": "Omeprazole inhibits CYP2C19, reducing clopidogrel activation; Pantoprazole does NOT inhibit CYP2C19 and is safe.",
-    "tags": ["Clopidogrel", "Omeprazole", "CYP2C19", "Pantoprazole", "Pharmacology"],
+    "tags": [
+      "Clopidogrel",
+      "Omeprazole",
+      "CYP2C19",
+      "Pantoprazole",
+      "Pharmacology"
+    ],
     "hint": "Omeprazole blocks the specific P450 enzyme responsible for bioactivating clopidogrel.",
     "source": "Past Board Exam"
   },
@@ -9557,16 +10070,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "An 80-year-old male on warfarin with an INR of 12.0 presents with acute severe headache and is diagnosed with a subdural hematoma on CT.",
     "question": "Which combination therapy provides the fastest, most durable reversal of warfarin-induced coagulopathy in life-threatening bleeding?",
     "options": [
-      { "id": "A", "text": "Fresh frozen plasma (FFP) alone (2 units)" },
-      { "id": "B", "text": "Oral vitamin K 10 mg alone" },
-      { "id": "C", "text": "Four-factor prothrombin complex concentrate (4F-PCC) combined with intravenous Vitamin K (10 mg)" },
-      { "id": "D", "text": "Recombinant Factor VIIa (rFVIIa) alone" },
-      { "id": "E", "text": "Subcutaneous Vitamin K 5 mg combined with FFP" }
+      {
+        "id": "A",
+        "text": "Subcutaneous Vitamin K 5 mg combined with FFP"
+      },
+      {
+        "id": "B",
+        "text": "Fresh frozen plasma (FFP) alone (2 units)"
+      },
+      {
+        "id": "C",
+        "text": "Oral vitamin K 10 mg alone"
+      },
+      {
+        "id": "D",
+        "text": "Four-factor prothrombin complex concentrate (4F-PCC) combined with intravenous Vitamin K (10 mg)"
+      },
+      {
+        "id": "E",
+        "text": "Recombinant Factor VIIa (rFVIIa) alone"
+      }
     ],
-    "correctOptionId": "C",
+    "correctOptionId": "D",
     "explanation": "Four-factor prothrombin complex concentrate (4F-PCC: Kcentra) contains factors II, VII, IX, and X, as well as proteins C and S. It provides the most rapid reversal of warfarin coagulopathy, normalizing the INR in less than 15-30 minutes. However, the half-life of infused Factor VII is short (~6 hours). Therefore, intravenous Vitamin K (10 mg slow IV infusion) MUST be co-administered to stimulate sustained endogenous hepatic synthesis of vitamin K-dependent clotting factors over the subsequent 24 to 48 hours.",
     "keyTakeaway": "Urgent warfarin reversal = 4F-PCC (for rapid immediate reversal) + IV Vitamin K 10 mg (for sustained hepatic synthesis).",
-    "tags": ["Warfarin Reversal", "4F-PCC", "Vitamin K", "Pharmacology"],
+    "tags": [
+      "Warfarin Reversal",
+      "4F-PCC",
+      "Vitamin K",
+      "Pharmacology"
+    ],
     "hint": "Combine immediate replacement of factors II, VII, IX, X with a stimulus for ongoing hepatic factor production.",
     "source": "Guideline Recommendation"
   },
@@ -9577,16 +10110,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 44-year-old woman with an unruptured, incidental 2.5 cm Spetzler-Martin Grade 2 arteriovenous malformation (AVM) in the right frontal lobe is referred for treatment evaluation.",
     "question": "What did the ARUBA (A Randomized Trial of Unruptured Brain Arteriovenous Malformations) trial demonstrate regarding medical management versus interventional eradication?",
     "options": [
-      { "id": "A", "text": "Interventional therapy (surgery/embolization/radiosurgery) was superior to medical management in preventing stroke and death" },
-      { "id": "B", "text": "Medical management alone was superior; interventional therapy was associated with a significantly higher risk of stroke or death (30% vs 10%)" },
-      { "id": "C", "text": "Complete surgical resection had equal outcomes to medical therapy at 1 year" },
-      { "id": "D", "text": "Partial embolization eliminated the risk of future hemorrhage" },
-      { "id": "E", "text": "The trial was terminated early because medical management was harmful" }
+      {
+        "id": "A",
+        "text": "Partial embolization eliminated the risk of future hemorrhage"
+      },
+      {
+        "id": "B",
+        "text": "Complete surgical resection had equal outcomes to medical therapy at 1 year"
+      },
+      {
+        "id": "C",
+        "text": "Medical management alone was superior; interventional therapy was associated with a significantly higher risk of stroke or death (30% vs 10%)"
+      },
+      {
+        "id": "D",
+        "text": "The trial was terminated early because medical management was harmful"
+      },
+      {
+        "id": "E",
+        "text": "Interventional therapy (surgery/embolization/radiosurgery) was superior to medical management in preventing stroke and death"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "C",
     "explanation": "The ARUBA trial was a randomized, multicenter trial comparing medical management alone versus interventional therapy (neurosurgery, embolization, or stereotactic radiosurgery) for unruptured brain AVMs. The trial was halted prematurely after 33 months because the primary endpoint of death or symptomatic stroke was significantly higher in the interventional group (30.7%) compared to the medical group (10.1%, hazard ratio 0.27). The conclusion was that medical management alone is superior to intervention for unruptured brain AVMs over the short-to-medium term.",
     "keyTakeaway": "ARUBA trial: Medical management alone is SUPERIOR to interventional eradication for unruptured brain AVMs.",
-    "tags": ["ARUBA", "AVM", "Landmark Trial", "Clinical Trials"],
+    "tags": [
+      "ARUBA",
+      "AVM",
+      "Landmark Trial",
+      "Clinical Trials"
+    ],
     "hint": "The trial was stopped early because invasive treatment caused significantly more strokes and deaths than conservative care.",
     "source": "Landmark Trial"
   },
@@ -9597,16 +10150,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 71-year-old male on daily aspirin 81 mg presents with an acute spontaneous intracerebral hemorrhage (volume 24 cc) with a Glasgow Coma Scale score of 12. The ICU resident asks whether platelet transfusion should be given to reverse antiplatelet effects.",
     "question": "What did the PATCH (Platelet Transfusion Versus Standard Care After Acute Stroke Due to Spontaneous Cerebral Hemorrhage Associated with Antiplatelet Therapy) trial demonstrate?",
     "options": [
-      { "id": "A", "text": "Platelet transfusion significantly reduced 3-month mortality and hematoma expansion" },
-      { "id": "B", "text": "Platelet transfusion increased the odds of death and dependence at 3 months (24% mortality vs 17% in standard care); platelet transfusion is not recommended" },
-      { "id": "C", "text": "Platelet transfusion was beneficial only if administered within 90 minutes of symptom onset" },
-      { "id": "D", "text": "Platelet transfusion had no effect on outcomes and was completely neutral" },
-      { "id": "E", "text": "Platelet transfusion is indicated only in patients with concurrent thrombocytopenia" }
+      {
+        "id": "A",
+        "text": "Platelet transfusion significantly reduced 3-month mortality and hematoma expansion"
+      },
+      {
+        "id": "B",
+        "text": "Platelet transfusion was beneficial only if administered within 90 minutes of symptom onset"
+      },
+      {
+        "id": "C",
+        "text": "Platelet transfusion increased the odds of death and dependence at 3 months (24% mortality vs 17% in standard care); platelet transfusion is not recommended"
+      },
+      {
+        "id": "D",
+        "text": "Platelet transfusion is indicated only in patients with concurrent thrombocytopenia"
+      },
+      {
+        "id": "E",
+        "text": "Platelet transfusion had no effect on outcomes and was completely neutral"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "C",
     "explanation": "The PATCH trial evaluated whether platelet transfusion improved functional outcomes in patients with spontaneous supratentorial ICH who had been taking antiplatelet therapy. The trial showed that patients who received platelet transfusions had significantly HIGHER odds of death or dependence at 3 months (adjusted OR 1.84, p = 0.011) and higher in-hospital mortality (24% vs 17%). Therefore, routine platelet transfusion is NOT recommended for spontaneous ICH associated with antiplatelet therapy.",
     "keyTakeaway": "PATCH trial: Platelet transfusion in acute ICH associated with antiplatelets is HARMFUL (increases death & disability).",
-    "tags": ["PATCH", "ICH", "Platelet Transfusion", "Landmark Trial"],
+    "tags": [
+      "PATCH",
+      "ICH",
+      "Platelet Transfusion",
+      "Landmark Trial"
+    ],
     "hint": "Transfusing platelets in this setting was actually found to cause harm rather than benefit.",
     "source": "Landmark Trial"
   },
@@ -9617,16 +10190,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 62-year-old male presents with spontaneous putaminal ICH within 3 hours of symptom onset. Initial blood pressure is 210/115 mmHg.",
     "question": "What did the ATACH-2 (Antihypertensive Treatment of Acute Cerebral Hemorrhage II) trial reveal regarding intensive systolic blood pressure lowering (110-139 mmHg) compared to standard lowering (140-179 mmHg)?",
     "options": [
-      { "id": "A", "text": "Intensive lowering significantly decreased 3-month death and severe disability" },
-      { "id": "B", "text": "Intensive lowering did not improve 3-month functional outcome and significantly increased the rate of adverse renal events within 7 days" },
-      { "id": "C", "text": "Intensive lowering increased hematoma expansion by causing cerebral autoregulatory collapse" },
-      { "id": "D", "text": "Intensive lowering is the proven standard of care for all patients with hematomas >60 cc" },
-      { "id": "E", "text": "Intensive lowering was superior when achieved with IV labetalol rather than nicardipine" }
+      {
+        "id": "A",
+        "text": "Intensive lowering significantly decreased 3-month death and severe disability"
+      },
+      {
+        "id": "B",
+        "text": "Intensive lowering did not improve 3-month functional outcome and significantly increased the rate of adverse renal events within 7 days"
+      },
+      {
+        "id": "C",
+        "text": "Intensive lowering was superior when achieved with IV labetalol rather than nicardipine"
+      },
+      {
+        "id": "D",
+        "text": "Intensive lowering increased hematoma expansion by causing cerebral autoregulatory collapse"
+      },
+      {
+        "id": "E",
+        "text": "Intensive lowering is the proven standard of care for all patients with hematomas >60 cc"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "In ATACH-2, patients with acute spontaneous ICH presenting within 4.5 hours were randomized to intensive blood pressure lowering (target SBP 110-139 mmHg) versus standard lowering (target SBP 140-179 mmHg) using IV nicardipine. There was no significant difference in death or disability at 3 months (38.7% intensive vs 37.7% standard). However, intensive lowering caused a statistically significant increase in adverse renal events within the first 7 days (9.0% vs 4.0%). Current guidelines recommend targeting SBP ~140 mmHg (range 130-150 mmHg), avoiding drops below 130 mmHg.",
     "keyTakeaway": "ATACH-2: Intensive SBP lowering to <140 mmHg showed no functional benefit and increased renal adverse events in acute ICH.",
-    "tags": ["ATACH-2", "ICH", "Blood Pressure", "Landmark Trial"],
+    "tags": [
+      "ATACH-2",
+      "ICH",
+      "Blood Pressure",
+      "Landmark Trial"
+    ],
     "hint": "Aggressive lowering failed to improve outcomes and caused kidney injury.",
     "source": "Landmark Trial"
   },
@@ -9637,16 +10230,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A family of an 82-year-old comatose patient with a massive complete right MCA infarction and severe midline shift requests that the medical team administer full-dose intravenous heparin to 'dissolve the clot and restore brain function.' The neurologist explains that heparin has no proven benefit in this setting and carries a high risk of fatal hemorrhagic conversion.",
     "question": "Which foundational principle of biomedical ethics directly justifies the neurologist's decision to decline the family's request for full-dose anticoagulation?",
     "options": [
-      { "id": "A", "text": "Autonomy" },
-      { "id": "B", "text": "Non-maleficence" },
-      { "id": "C", "text": "Distributive justice" },
-      { "id": "D", "text": "Paternalism" },
-      { "id": "E", "text": "Futility doctrine only" }
+      {
+        "id": "A",
+        "text": "Futility doctrine only"
+      },
+      {
+        "id": "B",
+        "text": "Paternalism"
+      },
+      {
+        "id": "C",
+        "text": "Autonomy"
+      },
+      {
+        "id": "D",
+        "text": "Distributive justice"
+      },
+      {
+        "id": "E",
+        "text": "Non-maleficence"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "E",
     "explanation": "Non-maleficence ('primum non nocere' or 'do no harm') requires that healthcare providers refrain from administering interventions that offer no realistic clinical benefit and carry substantial known risks of harm or death. Administering full-dose IV heparin for a massive acute MCA infarct has no proven therapeutic efficacy and exposes the patient to lethal hemorrhagic transformation. Therefore, the principle of non-maleficence ethically obligates the physician to refuse harmful, non-beneficial interventions even when requested by surrogates.",
     "keyTakeaway": "Non-maleficence ('do no harm') ethically justifies withholding treatments with zero proven benefit and substantial potential for harm.",
-    "tags": ["Ethics", "Non-maleficence", "Patient Care"],
+    "tags": [
+      "Ethics",
+      "Non-maleficence",
+      "Patient Care"
+    ],
     "hint": "The ethical duty to avoid inflicting unnecessary harm on patients.",
     "source": "Past Board Exam"
   },
@@ -9657,16 +10269,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 62-year-old competent executive presents 2 hours after acute onset of right hemiparesis and mild expressive aphasia (NIHSS 9). Non-contrast CT is negative for hemorrhage. After a detailed, objective discussion of the risks and benefits of IV alteplase, the patient states: 'I understand the 6% risk of bleeding and the 30% benefit, but I decline thrombolysis and choose to be treated with antiplatelet therapy only.'",
     "question": "What is the physician's ethical obligation regarding this patient's decision?",
     "options": [
-      { "id": "A", "text": "Administer tPA anyway under emergency implied consent" },
-      { "id": "B", "text": "Respect the patient's decision based on the ethical principle of autonomy, document the informed refusal, and provide optimal alternative medical therapy" },
-      { "id": "C", "text": "Declare the patient incompetent due to mild aphasia and seek surrogate consent from the spouse" },
-      { "id": "D", "text": "Coerce the patient by stating death is imminent without thrombolytic therapy" },
-      { "id": "E", "text": "Discharge the patient against medical advice immediately" }
+      {
+        "id": "A",
+        "text": "Respect the patient's decision based on the ethical principle of autonomy, document the informed refusal, and provide optimal alternative medical therapy"
+      },
+      {
+        "id": "B",
+        "text": "Administer tPA anyway under emergency implied consent"
+      },
+      {
+        "id": "C",
+        "text": "Coerce the patient by stating death is imminent without thrombolytic therapy"
+      },
+      {
+        "id": "D",
+        "text": "Declare the patient incompetent due to mild aphasia and seek surrogate consent from the spouse"
+      },
+      {
+        "id": "E",
+        "text": "Discharge the patient against medical advice immediately"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "A",
     "explanation": "Autonomy recognizes the fundamental right of a competent adult patient to make informed decisions about their own healthcare, including the right to accept or refuse any medical intervention (even life-saving treatments). Mild aphasia does not imply decisional incapacity if the patient demonstrates understanding of the choices, risks, and benefits. The physician's ethical responsibility is to ensure the refusal is fully informed, avoid coercion, document the discussion thoroughly, and provide compassionate, evidence-based alternative therapy.",
     "keyTakeaway": "Autonomy grants a competent patient the right to refuse recommended interventions after informed discussion; informed refusal must be respected.",
-    "tags": ["Ethics", "Autonomy", "Informed Consent"],
+    "tags": [
+      "Ethics",
+      "Autonomy",
+      "Informed Consent"
+    ],
     "hint": "The principle of self-determination and the right of competent patients to make their own medical decisions.",
     "source": "Past Board Exam"
   },
@@ -9677,16 +10308,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A rehabilitation physician is assessing stroke survivors with upper extremity hemiparesis for constraint-induced movement therapy (CIMT).",
     "question": "What baseline motor criteria were required for inclusion in the landmark EXCITE (Extremity Constraint-Induced Therapy Evaluation) trial?",
     "options": [
-      { "id": "A", "text": "Complete flaccid plegia of the arm with 0/5 strength" },
-      { "id": "B", "text": "At least 20 degrees of active wrist extension and 10 degrees of active extension of each finger" },
-      { "id": "C", "text": "Full active motor range of motion with only sensory ataxia" },
-      { "id": "D", "text": "Presence of severe flexor spasticity with Ashworth score 4" },
-      { "id": "E", "text": "Severe sensory loss with normal motor strength" }
+      {
+        "id": "A",
+        "text": "Complete flaccid plegia of the arm with 0/5 strength"
+      },
+      {
+        "id": "B",
+        "text": "At least 20 degrees of active wrist extension and 10 degrees of active extension of each finger"
+      },
+      {
+        "id": "C",
+        "text": "Severe sensory loss with normal motor strength"
+      },
+      {
+        "id": "D",
+        "text": "Full active motor range of motion with only sensory ataxia"
+      },
+      {
+        "id": "E",
+        "text": "Presence of severe flexor spasticity with Ashworth score 4"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "Constraint-Induced Movement Therapy (CIMT) involves constraining the unaffected upper extremity in a padded mitt (for up to 90% of waking hours over 2 weeks) combined with repetitive, intensive task practice of the paretic arm. In the EXCITE trial, inclusion required minimal voluntary movement ability: at least 20 degrees of active wrist extension and 10 degrees of active extension at the metacarpophalangeal and interphalangeal joints of each finger. CIMT is ineffective in patients with a completely flaccid, plegic limb or severe joint contractures.",
     "keyTakeaway": "CIMT (EXCITE trial) requires minimum baseline movement: >=20 degrees wrist extension and >=10 degrees finger extension.",
-    "tags": ["CIMT", "EXCITE", "Rehabilitation", "Motor Recovery"],
+    "tags": [
+      "CIMT",
+      "EXCITE",
+      "Rehabilitation",
+      "Motor Recovery"
+    ],
     "hint": "Requires minimal active extension of the wrist and digits to engage in repetitive task practice.",
     "source": "Landmark Trial"
   },
@@ -9697,16 +10348,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 56-year-old female presents 6 weeks following a right thalamic ischemic stroke with excruciating burning, allodynia, and hyperpathia in the left face, arm, and leg. Gentle touch with clothing triggers severe pain.",
     "question": "What central pain syndrome is present, and which initial pharmacologic therapy is guideline-recommended?",
     "options": [
-      { "id": "A", "text": "Trigeminal neuralgia; carbamazepine" },
-      { "id": "B", "text": "Central poststroke pain (Dejerine-Roussy syndrome); tricyclic antidepressants (Amitriptyline) or Gabapentin/Pregabalin" },
-      { "id": "C", "text": "Complex regional pain syndrome type I; high-dose opioids" },
-      { "id": "D", "text": "Fibromyalgia; duloxetine" },
-      { "id": "E", "text": "Post-stroke shoulder subluxation; steroid joint injection" }
+      {
+        "id": "A",
+        "text": "Central poststroke pain (Dejerine-Roussy syndrome); tricyclic antidepressants (Amitriptyline) or Gabapentin/Pregabalin"
+      },
+      {
+        "id": "B",
+        "text": "Post-stroke shoulder subluxation; steroid joint injection"
+      },
+      {
+        "id": "C",
+        "text": "Trigeminal neuralgia; carbamazepine"
+      },
+      {
+        "id": "D",
+        "text": "Fibromyalgia; duloxetine"
+      },
+      {
+        "id": "E",
+        "text": "Complex regional pain syndrome type I; high-dose opioids"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "A",
     "explanation": "Central poststroke pain (CPSP, historically known as Dejerine-Roussy syndrome) develops in 2% to 8% of stroke patients, most commonly following lesions of the ventral posterolateral (VPL) nucleus of the thalamus or the lateral medulla. It presents with burning, dysesthetic, spontaneous pain and allodynia on the contralateral body. First-line pharmacologic agents include tricyclic antidepressants (amitriptyline), gabapentin, and pregabalin. Traditional analgesics and opioids are ineffective. Motor cortex stimulation can be considered for refractory cases.",
     "keyTakeaway": "Central Poststroke Pain (Dejerine-Roussy) = Burning pain & allodynia after VPL thalamic or lateral medullary stroke; treat with Amitriptyline or Gabapentin.",
-    "tags": ["Central Poststroke Pain", "Dejerine-Roussy", "Thalamus", "Rehabilitation"],
+    "tags": [
+      "Central Poststroke Pain",
+      "Dejerine-Roussy",
+      "Thalamus",
+      "Rehabilitation"
+    ],
     "hint": "Thalamic pain syndrome treated with membrane stabilizers or tricyclics, not opioids.",
     "source": "Past Board Exam"
   },
@@ -9717,16 +10388,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 74-year-old woman with severe bilateral carotid atherosclerosis reports that while gardening on bright, sunny afternoons, she experiences an episodic, reversible dimming and dulling of vision in her right eye that resolves upon returning indoors. Fundus examination in the clinic is unremarkable.",
     "question": "What is this classic neurovascular phenomenon described by Furlan, and what does it indicate?",
     "options": [
-      { "id": "A", "text": "Uhthoff phenomenon, indicative of multiple sclerosis" },
-      { "id": "B", "text": "Retinal claudication (visual dulling in bright light), indicative of severe hemodynamic carotid stenosis" },
-      { "id": "C", "text": "Closed-angle glaucoma triggered by pupillary constriction" },
-      { "id": "D", "text": "Solar retinitis from direct foveal phototoxicity" },
-      { "id": "E", "text": "Migraine with visual aura" }
+      {
+        "id": "A",
+        "text": "Migraine with visual aura"
+      },
+      {
+        "id": "B",
+        "text": "Closed-angle glaucoma triggered by pupillary constriction"
+      },
+      {
+        "id": "C",
+        "text": "Uhthoff phenomenon, indicative of multiple sclerosis"
+      },
+      {
+        "id": "D",
+        "text": "Solar retinitis from direct foveal phototoxicity"
+      },
+      {
+        "id": "E",
+        "text": "Retinal claudication (visual dulling in bright light), indicative of severe hemodynamic carotid stenosis"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "E",
     "explanation": "First described by Anthony Furlan in 1979, unilateral visual dulling or loss upon exposure to bright light ('retinal claudication') is a classic sign of severe hemodynamic internal carotid artery occlusive disease. Exposure to bright light stimulates the retina and markedly increases photoreceptor metabolic oxygen demand. When severe upstream carotid stenosis limits compensatory hyperemia, the retina becomes ischemic, causing temporary visual graying or dimming.",
     "keyTakeaway": "Visual loss on bright light exposure (Furlan's sign) = Hemodynamic retinal claudication from severe ipsilateral carotid stenosis.",
-    "tags": ["Furlan Sign", "Carotid Stenosis", "Retinal Claudication", "Neuro-Ophthalmology"],
+    "tags": [
+      "Furlan Sign",
+      "Carotid Stenosis",
+      "Retinal Claudication",
+      "Neuro-Ophthalmology"
+    ],
     "hint": "A metabolic mismatch where bright light increases retinal demand beyond what a severely stenosed carotid can deliver.",
     "source": "Past Board Exam"
   },
@@ -9737,16 +10428,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 58-year-old female with acute left hemiparesis is receiving IV alteplase (tPA). Thirty minutes into the infusion, she develops acute swelling of the right side of her tongue and lips. Her only daily medication is enalapril for hypertension.",
     "question": "What acute complication has occurred, and why is it lateralized to the hemiparetic side?",
     "options": [
-      { "id": "A", "text": "True anaphylaxis; caused by IgE-mediated histamine release from mast cells" },
-      { "id": "B", "text": "Orolingual angioedema; caused by synergistic bradykinin accumulation from tPA-mediated plasmin activation and ACE inhibitor inhibition of bradykinin breakdown" },
-      { "id": "C", "text": "Direct neurogenic Horner syndrome" },
-      { "id": "D", "text": "Acute lingual infarction due to lingual artery thrombosis" },
-      { "id": "E", "text": "Hypoglossal nerve compression by an expanding cervical hematoma" }
+      {
+        "id": "A",
+        "text": "Hypoglossal nerve compression by an expanding cervical hematoma"
+      },
+      {
+        "id": "B",
+        "text": "Acute lingual infarction due to lingual artery thrombosis"
+      },
+      {
+        "id": "C",
+        "text": "Direct neurogenic Horner syndrome"
+      },
+      {
+        "id": "D",
+        "text": "Orolingual angioedema; caused by synergistic bradykinin accumulation from tPA-mediated plasmin activation and ACE inhibitor inhibition of bradykinin breakdown"
+      },
+      {
+        "id": "E",
+        "text": "True anaphylaxis; caused by IgE-mediated histamine release from mast cells"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "D",
     "explanation": "Orolingual angioedema occurs in 1% to 5% of patients receiving IV alteplase and is substantially more common in patients taking ACE inhibitors (risk increased >5-fold). tPA converts plasminogen to plasmin, which activates the kinin pathway to generate bradykinin; concurrent ACE inhibition impairs bradykinin degradation. The angioedema is classically asymmetrical and lateralized to the hemiparetic (ischemic) side, likely due to localized autonomic dysfunction and neuropeptide release. Management requires immediate cessation of tPA, airway stabilization (intubation if needed), and IV antihistamines/epinephrine.",
     "keyTakeaway": "tPA orolingual angioedema is bradykinin-mediated, strongly associated with ACE inhibitors, and lateralized to the hemiparetic side.",
-    "tags": ["tPA Complications", "Angioedema", "ACE Inhibitors", "Bradykinin"],
+    "tags": [
+      "tPA Complications",
+      "Angioedema",
+      "ACE Inhibitors",
+      "Bradykinin"
+    ],
     "hint": "Synergistic excess of bradykinin caused by plasmin generation and ACE inhibition.",
     "source": "Past Board Exam"
   },
@@ -9757,16 +10468,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 26-year-old male beginner surfer in Hawaii spends 3 hours repeatedly lying in a prone position with extreme back hyperextension on a surfboard. Upon returning to the beach, he experiences sudden severe mid-back pain, followed by rapidly progressive bilateral lower extremity weakness, sensory loss below T10, and urinary retention. MRI reveals central cord T2 hyperintensity from T8 to T11.",
     "question": "What is the diagnosis, and what is the presumed etiology?",
     "options": [
-      { "id": "A", "text": "Spinal dural arteriovenous fistula" },
-      { "id": "B", "text": "Surfer's myelopathy (ischemic spinal cord infarction from fibrocartilaginous embolism or spinal hypoperfusion)" },
-      { "id": "C", "text": "Acute transverse myelitis" },
-      { "id": "D", "text": "Jellyfish envenomation neurotoxicity" },
-      { "id": "E", "text": "Anterior spinal artery dissection" }
+      {
+        "id": "A",
+        "text": "Anterior spinal artery dissection"
+      },
+      {
+        "id": "B",
+        "text": "Surfer's myelopathy (ischemic spinal cord infarction from fibrocartilaginous embolism or spinal hypoperfusion)"
+      },
+      {
+        "id": "C",
+        "text": "Spinal dural arteriovenous fistula"
+      },
+      {
+        "id": "D",
+        "text": "Jellyfish envenomation neurotoxicity"
+      },
+      {
+        "id": "E",
+        "text": "Acute transverse myelitis"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "Surfer's myelopathy is a rare, non-traumatic acute spinal cord infarction predominantly affecting novice surfers. It is caused by prolonged, forced hyperextension of the spine while lying prone on the board, which leads to avulsion of nucleus pulposus material that embolizes into spinal radicular vessels (fibrocartilaginous embolism) or severe mechanical stretching and hypoperfusion of the artery of Adamkiewicz. MRI demonstrates central cord T2 hyperintensity and diffusion restriction in the lower thoracic cord and conus.",
     "keyTakeaway": "Surfer's myelopathy = Acute thoracic spinal cord infarction in novice surfers after prolonged spine hyperextension.",
-    "tags": ["Surfers Myelopathy", "Spinal Cord Infarction", "Special Populations"],
+    "tags": [
+      "Surfers Myelopathy",
+      "Spinal Cord Infarction",
+      "Special Populations"
+    ],
     "hint": "Novice surfer syndrome caused by prolonged prone hyperextension and spinal ischemia.",
     "source": "Past Board Exam"
   },
@@ -9777,16 +10507,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 34-year-old female presents with deep vein thrombosis and a non-hemorrhagic ischemic stroke. Laboratory evaluation reveals a prolonged activated partial thromboplastin time (aPTT) of 56 seconds. A 1:1 mixing study with normal pooled plasma fails to correct the prolonged aPTT. Dilute Russell's viper venom time (dRVVT) is significantly elevated.",
     "question": "What thrombophilic abnormality is present, and why is the elevated aPTT considered a paradox?",
     "options": [
-      { "id": "A", "text": "Factor VIII deficiency; causes bleeding in vitro and in vivo" },
-      { "id": "B", "text": "Lupus anticoagulant (antiphospholipid syndrome); prolongs clotting assays in vitro by binding assay phospholipids, but causes thrombosis in vivo" },
-      { "id": "C", "text": "Heparin-induced thrombocytopenia; causes in vitro antibody neutralization" },
-      { "id": "D", "text": "Factor V Leiden mutation; prolongs intrinsic pathway clotting times" },
-      { "id": "E", "text": "Antithrombin III deficiency; inhibits in vitro thrombin generation" }
+      {
+        "id": "A",
+        "text": "Factor VIII deficiency; causes bleeding in vitro and in vivo"
+      },
+      {
+        "id": "B",
+        "text": "Lupus anticoagulant (antiphospholipid syndrome); prolongs clotting assays in vitro by binding assay phospholipids, but causes thrombosis in vivo"
+      },
+      {
+        "id": "C",
+        "text": "Antithrombin III deficiency; inhibits in vitro thrombin generation"
+      },
+      {
+        "id": "D",
+        "text": "Factor V Leiden mutation; prolongs intrinsic pathway clotting times"
+      },
+      {
+        "id": "E",
+        "text": "Heparin-induced thrombocytopenia; causes in vitro antibody neutralization"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "Lupus anticoagulant (LA) is an antiphospholipid antibody directed against phospholipid-protein complexes. In vitro, it binds the reagent phospholipids used in the aPTT and dRVVT assays, artificially delaying clotting and prolonging the clotting time (failing to correct on 1:1 mixing). In vivo, however, lupus anticoagulants promote platelet activation, endothelial dysfunction, and severe hypercoagulability, causing both arterial (stroke, TIA) and venous thrombosis (DVT, PE).",
     "keyTakeaway": "Lupus anticoagulant paradox: Prolongs aPTT in vitro (phospholipid binding), but causes THROMBOSIS in vivo.",
-    "tags": ["Lupus Anticoagulant", "APS", "Thrombophilia", "Hematology"],
+    "tags": [
+      "Lupus Anticoagulant",
+      "APS",
+      "Thrombophilia",
+      "Hematology"
+    ],
     "hint": "The antibody acts as an in vitro anticoagulant on lab assays but as a potent prothrombotic agent in the body.",
     "source": "Past Board Exam"
   },
@@ -9797,16 +10547,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A stroke patient is started on IV unfractionated heparin. Six days later, his platelet count has dropped from 240,000 to 88,000/uL, and he develops acute pain and coldness in his right foot with absent pulses.",
     "question": "What is the diagnosis, and what is the immediate, mandatory management strategy?",
     "options": [
-      { "id": "A", "text": "Immune thrombocytopenic purpura; administer IV immunoglobulin and transfuse 2 units of platelets" },
-      { "id": "B", "text": "Heparin-Induced Thrombocytopenia (HIT Type II); immediately stop all heparin, start a non-heparin direct thrombin inhibitor (Argatroban), and avoid platelet transfusions" },
-      { "id": "C", "text": "Disseminated intravascular coagulation; transfuse fresh frozen plasma and cryoprecipitate" },
-      { "id": "D", "text": "Thrombotic thrombocytopenic purpura; perform emergent plasmapheresis" },
-      { "id": "E", "text": "Warfarin skin necrosis; administer subcutaneous vitamin K" }
+      {
+        "id": "A",
+        "text": "Disseminated intravascular coagulation; transfuse fresh frozen plasma and cryoprecipitate"
+      },
+      {
+        "id": "B",
+        "text": "Immune thrombocytopenic purpura; administer IV immunoglobulin and transfuse 2 units of platelets"
+      },
+      {
+        "id": "C",
+        "text": "Heparin-Induced Thrombocytopenia (HIT Type II); immediately stop all heparin, start a non-heparin direct thrombin inhibitor (Argatroban), and avoid platelet transfusions"
+      },
+      {
+        "id": "D",
+        "text": "Warfarin skin necrosis; administer subcutaneous vitamin K"
+      },
+      {
+        "id": "E",
+        "text": "Thrombotic thrombocytopenic purpura; perform emergent plasmapheresis"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "C",
     "explanation": "Heparin-Induced Thrombocytopenia (HIT Type II) is an immune-mediated disorder caused by IgG antibodies against complexes of platelet factor 4 (PF4) and heparin. It typically develops 4 to 10 days after heparin initiation, characterized by a platelet drop >50% and paradoxical life-threatening arterial and venous thrombosis ('white clot syndrome'). Immediate management is: (1) STOP all heparin (including flushes), (2) initiate a non-heparin direct thrombin inhibitor such as Argatroban or Bivalirudin, (3) do NOT transfuse platelets (fuels thrombosis), and (4) do NOT start warfarin until platelets recover to >150,000/uL.",
     "keyTakeaway": "HIT Type II: Platelets drop >50% at 4-10 days + thrombosis. Discontinue ALL heparin, start Argatroban, NO platelets.",
-    "tags": ["HIT", "Platelet Factor 4", "Argatroban", "Hematology"],
+    "tags": [
+      "HIT",
+      "Platelet Factor 4",
+      "Argatroban",
+      "Hematology"
+    ],
     "hint": "Must switch to a non-heparin direct thrombin inhibitor and avoid transfusing more platelets.",
     "source": "Past Board Exam"
   },
@@ -9817,21 +10587,39 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A noncontrast CT head obtained 45 minutes after acute left hemiparesis shows a bright, tubular vessel in the right Sylvian fissure with a density of 65 Hounsfield units.",
     "question": "What is the diagnostic significance, sensitivity, and specificity of the 'hyperdense artery sign' on unenhanced CT?",
     "options": [
-      { "id": "A", "text": "It is 96% specific for an acute luminal thrombus or embolus, but sensitivity is only approximately 54%" },
-      { "id": "B", "text": "It is 96% sensitive and indicates chronic atherosclerotic calcification" },
-      { "id": "C", "text": "It is an artifact caused by bony beam hardening from the sphenoid ridge" },
-      { "id": "D", "text": "It indicates a ruptured saccular aneurysm in the Sylvian fissure" },
-      { "id": "E", "text": "It is seen in over 90% of all acute middle cerebral artery strokes" }
+      {
+        "id": "A",
+        "text": "It is an artifact caused by bony beam hardening from the sphenoid ridge"
+      },
+      {
+        "id": "B",
+        "text": "It is 96% sensitive and indicates chronic atherosclerotic calcification"
+      },
+      {
+        "id": "C",
+        "text": "It indicates a ruptured saccular aneurysm in the Sylvian fissure"
+      },
+      {
+        "id": "D",
+        "text": "It is 96% specific for an acute luminal thrombus or embolus, but sensitivity is only approximately 54%"
+      },
+      {
+        "id": "E",
+        "text": "It is seen in over 90% of all acute middle cerebral artery strokes"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "The hyperdense artery sign (most commonly the hyperdense MCA sign) on noncontrast CT represents acute thromboembolism in a large cerebral artery. It has very high specificity (>96%) for acute large vessel occlusion, but its sensitivity is modest (~54%), improving with thin (1-3 mm) slices. Therefore, the absence of a hyperdense vessel does NOT rule out large vessel occlusion, and CTA should be performed immediately.",
     "keyTakeaway": "Hyperdense artery sign on noncontrast CT = >96% specific for acute large vessel thrombus, but sensitivity is only ~54%.",
-    "tags": ["Hyperdense MCA", "CT Head", "Neuroradiology", "LVO"],
+    "tags": [
+      "Hyperdense MCA",
+      "CT Head",
+      "Neuroradiology",
+      "LVO"
+    ],
     "hint": "Highly specific for acute clot, but absent in nearly half of LVO cases.",
     "source": "Past Board Exam"
-  }
-
-  ,
+  },
   {
     "id": "q-fj-41",
     "chapterId": 14,
@@ -9839,16 +10627,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 52-year-old female presents with the sudden onset of 'the worst headache of her life' followed by brief loss of consciousness. Noncontrast CT reveals hyperdense blood in the basal cisterns. On exam, she has severe headache and meningismus, but is alert and oriented with no focal motor deficits.",
     "question": "What is this patient's clinical grade according to the Hunt and Hess classification of subarachnoid hemorrhage (SAH)?",
     "options": [
-      { "id": "A", "text": "Grade I" },
-      { "id": "B", "text": "Grade II" },
-      { "id": "C", "text": "Grade III" },
-      { "id": "D", "text": "Grade IV" },
-      { "id": "E", "text": "Grade V" }
+      {
+        "id": "A",
+        "text": "Grade IV"
+      },
+      {
+        "id": "B",
+        "text": "Grade II"
+      },
+      {
+        "id": "C",
+        "text": "Grade V"
+      },
+      {
+        "id": "D",
+        "text": "Grade III"
+      },
+      {
+        "id": "E",
+        "text": "Grade I"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "The Hunt and Hess classification grades clinical severity in aneurysmal SAH: Grade I: Asymptomatic or mild headache, slight nuchal rigidity; Grade II: Moderate to severe headache, nuchal rigidity, no neurological deficit other than cranial nerve palsy; Grade III: Drowsiness, confusion, or mild focal deficit; Grade IV: Stupor, moderate-to-severe hemiparesis, early vegetative disturbance; Grade V: Deep coma, decerebrate posturing, moribund. This patient has severe headache and stiff neck without confusion or motor deficit, fitting Grade II.",
     "keyTakeaway": "Hunt and Hess Grade II = Moderate-to-severe headache + nuchal rigidity, without drowsiness or motor deficit.",
-    "tags": ["Hunt and Hess", "SAH", "Clinical Scale", "Aneurysm"],
+    "tags": [
+      "Hunt and Hess",
+      "SAH",
+      "Clinical Scale",
+      "Aneurysm"
+    ],
     "hint": "Severe headache and stiff neck without altered consciousness or focal weakness corresponds to Grade 2.",
     "source": "Past Board Exam"
   },
@@ -9859,16 +10667,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 48-year-old male with an incidental 8 mm saccular aneurysm of the anterior communicating artery (ACOM) asks about his 5-year rupture risk.",
     "question": "According to the landmark International Study of Unruptured Intracranial Aneurysms (ISUIA), how does aneurysm size and circulation location influence rupture risk?",
     "options": [
-      { "id": "A", "text": "Posterior circulation and PCOM aneurysms have significantly higher rupture rates than anterior circulation aneurysms of the same size" },
-      { "id": "B", "text": "Aneurysms under 7 mm in the anterior circulation without prior SAH have a 10% annual rupture risk" },
-      { "id": "C", "text": "Aneurysm location has no effect on rupture risk; only patient age determines outcome" },
-      { "id": "D", "text": "Aneurysms larger than 25 mm have lower rupture rates than small aneurysms" },
-      { "id": "E", "text": "Prior rupture of a different aneurysm does not alter the natural history of a remaining unruptured aneurysm" }
+      {
+        "id": "A",
+        "text": "Aneurysm location has no effect on rupture risk; only patient age determines outcome"
+      },
+      {
+        "id": "B",
+        "text": "Aneurysms under 7 mm in the anterior circulation without prior SAH have a 10% annual rupture risk"
+      },
+      {
+        "id": "C",
+        "text": "Prior rupture of a different aneurysm does not alter the natural history of a remaining unruptured aneurysm"
+      },
+      {
+        "id": "D",
+        "text": "Aneurysms larger than 25 mm have lower rupture rates than small aneurysms"
+      },
+      {
+        "id": "E",
+        "text": "Posterior circulation and PCOM aneurysms have significantly higher rupture rates than anterior circulation aneurysms of the same size"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "In ISUIA, the 5-year cumulative rupture rate for unruptured intracranial aneurysms was strongly dependent on size and location. For anterior circulation aneurysms (internal carotid, anterior cerebral, middle cerebral), 5-year rupture rates were 0% for <7 mm, 2.6% for 7-12 mm, 14.5% for 13-24 mm, and 40% for >=25 mm. In contrast, posterior circulation (vertebrobasilar, PCA) and posterior communicating artery aneurysms had substantially higher rupture rates across all sizes (2.5% for <7 mm, 14.5% for 7-12 mm, 18.4% for 13-24 mm, and 50% for >=25 mm).",
     "keyTakeaway": "ISUIA trial: Posterior circulation and PCOM aneurysms carry substantially higher rupture risk than anterior circulation aneurysms of identical size.",
-    "tags": ["ISUIA", "Aneurysm Rupture Risk", "Landmark Trial"],
+    "tags": [
+      "ISUIA",
+      "Aneurysm Rupture Risk",
+      "Landmark Trial"
+    ],
     "hint": "The posterior circulation and PCOM carry a much higher rupture risk across all size tiers.",
     "source": "Landmark Trial"
   },
@@ -9879,16 +10706,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 35-year-old male presents with two generalized tonic-clonic seizures. Brain MRI reveals a 2.0 cm well-circumscribed, multilobulated 'mulberry' lesion in the right temporal lobe with a peripheral hemosiderin ring on T2 and GRE sequences. Cerebral angiography is completely normal.",
     "question": "What vascular malformation is present, and what is its annual risk of hemorrhage?",
     "options": [
-      { "id": "A", "text": "Arteriovenous malformation; annual risk 10-15%" },
-      { "id": "B", "text": "Cavernous malformation (cavernoma); annual risk ~0.5% to 2% for supratentorial lesions" },
-      { "id": "C", "text": "Developmental venous anomaly; annual risk 5%" },
-      { "id": "D", "text": "Capillary telangiectasia; annual risk 20%" },
-      { "id": "E", "text": "Dural arteriovenous fistula; annual risk 50%" }
+      {
+        "id": "A",
+        "text": "Capillary telangiectasia; annual risk 20%"
+      },
+      {
+        "id": "B",
+        "text": "Arteriovenous malformation; annual risk 10-15%"
+      },
+      {
+        "id": "C",
+        "text": "Developmental venous anomaly; annual risk 5%"
+      },
+      {
+        "id": "D",
+        "text": "Cavernous malformation (cavernoma); annual risk ~0.5% to 2% for supratentorial lesions"
+      },
+      {
+        "id": "E",
+        "text": "Dural arteriovenous fistula; annual risk 50%"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "D",
     "explanation": "Cavernous malformations (cavernomas) consist of dilated, thin-walled sinusoidal vascular channels lined by endothelium without intervening normal brain parenchyma. Because flow is extremely slow and low pressure, they are angiographically occult (normal cerebral angiogram). MRI demonstrates a classic 'popcorn' or 'mulberry' appearance with core reticulated hyper/hypointensity and a hypointense hemosiderin rim on T2/GRE. The annual risk of hemorrhage in unruptured supratentorial cavernomas is low (~0.5% to 2% per year), but increases up to ~5% per year for brainstem lesions.",
     "keyTakeaway": "Cavernous malformation: Angiographically occult, 'popcorn' MRI with hemosiderin rim, 0.5-2% annual bleed risk (5% in brainstem).",
-    "tags": ["Cavernoma", "Vascular Malformations", "MRI", "Seizures"],
+    "tags": [
+      "Cavernoma",
+      "Vascular Malformations",
+      "MRI",
+      "Seizures"
+    ],
     "hint": "Angiographically occult sinusoidal lesion with surrounding hemosiderin halo.",
     "source": "Past Board Exam"
   },
@@ -9899,16 +10746,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A contrast-enhanced brain MRI obtained for chronic tension headaches reveals a cluster of radiating dilated medullary veins in the left cerebellar hemisphere converging into a single enlarged trans-cortical draining vein ('caput medusae').",
     "question": "What is this vascular entity, and what is the appropriate management?",
     "options": [
-      { "id": "A", "text": "Developmental Venous Anomaly (DVA); leave alone (resection is contraindicated as it drains normal brain parenchyma)" },
-      { "id": "B", "text": "High-grade Arteriovenous Malformation; perform emergency surgical excision" },
-      { "id": "C", "text": "Dural arteriovenous fistula; treat with endovascular transarterial onyx embolization" },
-      { "id": "D", "text": "Cavernous malformation; treat with stereotactic Gamma Knife radiosurgery" },
-      { "id": "E", "text": "Cerebral amyloid angiopathy; initiate lifelong oral anticoagulation" }
+      {
+        "id": "A",
+        "text": "High-grade Arteriovenous Malformation; perform emergency surgical excision"
+      },
+      {
+        "id": "B",
+        "text": "Dural arteriovenous fistula; treat with endovascular transarterial onyx embolization"
+      },
+      {
+        "id": "C",
+        "text": "Cavernous malformation; treat with stereotactic Gamma Knife radiosurgery"
+      },
+      {
+        "id": "D",
+        "text": "Cerebral amyloid angiopathy; initiate lifelong oral anticoagulation"
+      },
+      {
+        "id": "E",
+        "text": "Developmental Venous Anomaly (DVA); leave alone (resection is contraindicated as it drains normal brain parenchyma)"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Developmental Venous Anomalies (DVAs, previously called venous angiomas) are the most common intracranial vascular malformations (found in 2.5% to 10% of the population). They consist of radially arranged medullary veins draining into a dilated central vein ('caput medusae' or umbrella appearance). DVAs provide essential physiological venous drainage for normal brain tissue and carry an almost nonexistent risk of hemorrhage. Surgical excision or obliteration is strictly contraindicated because sacrifice of the collecting vein results in catastrophic venous infarction and hemorrhage.",
     "keyTakeaway": "DVA ('caput medusae') = Benign extreme variant of venous drainage; DO NOT RESECT (causes catastrophic venous infarction).",
-    "tags": ["DVA", "Caput Medusae", "Vascular Malformations"],
+    "tags": [
+      "DVA",
+      "Caput Medusae",
+      "Vascular Malformations"
+    ],
     "hint": "Anomalous veins that drain normal brain tissue - removal leads to venous infarction.",
     "source": "Past Board Exam"
   },
@@ -9919,16 +10785,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A neurovascular surgeon is evaluating a 32-year-old male with an unruptured brain AVM using the Spetzler-Martin grading scale.",
     "question": "Which of the following variables and point allocations comprise the Spetzler-Martin AVM grading system?",
     "options": [
-      { "id": "A", "text": "Size (<3 cm = 1 pt, 3-6 cm = 2 pts, >6 cm = 3 pts), Eloquence of adjacent brain (Non-eloquent = 0 pt, Eloquent = 1 pt), and Venous drainage (Superficial only = 0 pt, Deep = 1 pt)" },
-      { "id": "B", "text": "Patient age (<40 = 1 pt), Size (<3 cm = 1 pt), and Number of arterial feeders (>2 = 2 pts)" },
-      { "id": "C", "text": "History of hemorrhage (Yes = 2 pts), Size (>3 cm = 1 pt), and Presence of aneurysm (1 pt)" },
-      { "id": "D", "text": "Size (<2 cm = 1 pt, >2 cm = 2 pts), Location (Cortical = 0 pt, Subcortical = 1 pt), and GCS score" },
-      { "id": "E", "text": "Hunt-Hess grade + Fisher CT grade" }
+      {
+        "id": "A",
+        "text": "Size (<2 cm = 1 pt, >2 cm = 2 pts), Location (Cortical = 0 pt, Subcortical = 1 pt), and GCS score"
+      },
+      {
+        "id": "B",
+        "text": "Hunt-Hess grade + Fisher CT grade"
+      },
+      {
+        "id": "C",
+        "text": "Patient age (<40 = 1 pt), Size (<3 cm = 1 pt), and Number of arterial feeders (>2 = 2 pts)"
+      },
+      {
+        "id": "D",
+        "text": "Size (<3 cm = 1 pt, 3-6 cm = 2 pts, >6 cm = 3 pts), Eloquence of adjacent brain (Non-eloquent = 0 pt, Eloquent = 1 pt), and Venous drainage (Superficial only = 0 pt, Deep = 1 pt)"
+      },
+      {
+        "id": "E",
+        "text": "History of hemorrhage (Yes = 2 pts), Size (>3 cm = 1 pt), and Presence of aneurysm (1 pt)"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "The Spetzler-Martin AVM grading scale estimates operative morbidity and mortality for surgical resection of brain AVMs: 1. Size: Small (<3 cm) = 1 point; Medium (3-6 cm) = 2 points; Large (>6 cm) = 3 points. 2. Eloquence of adjacent brain: Non-eloquent = 0 points; Eloquent (sensorimotor, language, visual cortex, hypothalamus, thalamus, internal capsule, brainstem, cerebellar peduncles/deep nuclei) = 1 point. 3. Venous drainage: Superficial only = 0 points; Deep venous drainage = 1 point. Total score ranges from Grade I (lowest risk, 1 point) to Grade V (highest surgical risk, 5 points). Grade VI represents inoperable lesions.",
     "keyTakeaway": "Spetzler-Martin Scale = Size (1-3 pts) + Eloquence (0-1 pt) + Deep venous drainage (0-1 pt).",
-    "tags": ["Spetzler-Martin", "AVM Grading", "Vascular Malformations"],
+    "tags": [
+      "Spetzler-Martin",
+      "AVM Grading",
+      "Vascular Malformations"
+    ],
     "hint": "Evaluates three criteria: nidus size, eloquence of brain tissue, and presence of deep venous drainage.",
     "source": "Past Board Exam"
   },
@@ -9939,16 +10824,37 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 64-year-old male with an acute right MCA ischemic stroke has an initial blood pressure of 196/112 mmHg on arrival in the resuscitation bay 75 minutes after symptom onset. Head CT shows no hemorrhage.",
     "question": "What is the recommended blood pressure threshold and first-line intravenous therapy required prior to administering IV alteplase (tPA)?",
     "options": [
-      { "id": "A", "text": "Lower blood pressure to <185/110 mmHg using IV labetalol (10-20 mg) or nicardipine infusion (5 mg/h)" },
-      { "id": "B", "text": "Lower blood pressure to <140/90 mmHg using sublingual nifedipine" },
-      { "id": "C", "text": "Initiate IV sodium nitroprusside immediately with target SBP <120 mmHg" },
-      { "id": "D", "text": "Proceed immediately with tPA infusion regardless of blood pressure" },
-      { "id": "E", "text": "Withhold all antihypertensives for 24 hours under permissive hypertension guidelines" }
+      {
+        "id": "A",
+        "text": "Withhold all antihypertensives for 24 hours under permissive hypertension guidelines"
+      },
+      {
+        "id": "B",
+        "text": "Proceed immediately with tPA infusion regardless of blood pressure"
+      },
+      {
+        "id": "C",
+        "text": "Initiate IV sodium nitroprusside immediately with target SBP <120 mmHg"
+      },
+      {
+        "id": "D",
+        "text": "Lower blood pressure to <185/110 mmHg using IV labetalol (10-20 mg) or nicardipine infusion (5 mg/h)"
+      },
+      {
+        "id": "E",
+        "text": "Lower blood pressure to <140/90 mmHg using sublingual nifedipine"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "To receive IV thrombolytic therapy, blood pressure must be safely lowered to Systolic BP <185 mmHg and Diastolic BP <110 mmHg BEFORE initiating alteplase, and maintained <180/105 mmHg for at least 24 hours post-infusion. First-line guideline agents are IV Labetalol (10-20 mg IV push over 1-2 min, may repeat once) or IV Nicardipine (5 mg/h, titrated up by 2.5 mg/h every 5-15 min to max 15 mg/h). If blood pressure cannot be maintained below 185/110 mmHg, thrombolysis must NOT be administered due to excessive risk of fatal symptomatic ICH.",
     "keyTakeaway": "Pre-tPA blood pressure goal is <185/110 mmHg; maintain <180/105 mmHg for 24h. Preferred agents: IV Labetalol or Nicardipine.",
-    "tags": ["Blood Pressure", "tPA", "Labetalol", "Nicardipine", "Acute Stroke"],
+    "tags": [
+      "Blood Pressure",
+      "tPA",
+      "Labetalol",
+      "Nicardipine",
+      "Acute Stroke"
+    ],
     "hint": "Must be below 185/110 before starting lytics, using labetalol or nicardipine.",
     "source": "Guideline Recommendation"
   },
@@ -9959,16 +10865,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 71-year-old female presents 3.5 hours after sudden left hemiparesis. Noncontrast head CT is negative for hemorrhage. She takes warfarin for nonvalvular atrial fibrillation. Point-of-care INR is 1.4.",
     "question": "According to the ECASS III trial criteria for the extended 3 to 4.5-hour thrombolytic window, is this patient eligible for IV alteplase?",
     "options": [
-      { "id": "A", "text": "Eligible, because her INR is <=1.7" },
-      { "id": "B", "text": "Ineligible, because ANY oral anticoagulant use is an exclusion criterion in the 3 to 4.5-hour window, regardless of the INR" },
-      { "id": "C", "text": "Eligible only if endovascular thrombectomy is not available" },
-      { "id": "D", "text": "Eligible if she is given 4F-PCC prior to tPA infusion" },
-      { "id": "E", "text": "Eligible if alteplase dose is reduced to 0.6 mg/kg" }
+      {
+        "id": "A",
+        "text": "Eligible, because her INR is <=1.7"
+      },
+      {
+        "id": "B",
+        "text": "Ineligible, because ANY oral anticoagulant use is an exclusion criterion in the 3 to 4.5-hour window, regardless of the INR"
+      },
+      {
+        "id": "C",
+        "text": "Eligible only if endovascular thrombectomy is not available"
+      },
+      {
+        "id": "D",
+        "text": "Eligible if alteplase dose is reduced to 0.6 mg/kg"
+      },
+      {
+        "id": "E",
+        "text": "Eligible if she is given 4F-PCC prior to tPA infusion"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "In the standard 0 to 3-hour window, patients on warfarin are eligible for IV alteplase if their INR is <=1.7. However, under the stricter criteria established by the ECASS III trial for the extended 3 to 4.5-hour window, ANY oral anticoagulant use is an absolute contraindication, REGARDLESS of the INR. Other additional exclusion criteria in the 3 to 4.5-hour window include: age >80 years, baseline NIHSS >25, combination of previous ischemic stroke and diabetes mellitus, and severe ischemic injury involving >1/3 of the MCA territory.",
     "keyTakeaway": "ECASS III (3-4.5h window) extra exclusions: Any oral anticoagulant (regardless of INR), age >80, prior stroke + diabetes, NIHSS >25.",
-    "tags": ["ECASS III", "tPA Contraindications", "Extended Window", "Warfarin"],
+    "tags": [
+      "ECASS III",
+      "tPA Contraindications",
+      "Extended Window",
+      "Warfarin"
+    ],
     "hint": "The 3 to 4.5 hour window has stricter exclusions for oral anticoagulants regardless of INR value.",
     "source": "Landmark Trial"
   },
@@ -9979,16 +10905,37 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 66-year-old female presents 10 hours after last known normal with a dense right hemiplegia and severe global aphasia (NIHSS 18). CTA confirms a left M1 MCA occlusion. Automated CT perfusion reveals an ischemic core of 15 cc and a hypoperfused penumbra (Tmax >6s) of 95 cc.",
     "question": "Which landmark clinical trials established the efficacy of mechanical thrombectomy in this extended 6 to 16/24-hour therapeutic window?",
     "options": [
-      { "id": "A", "text": "NINDS and ECASS III" },
-      { "id": "B", "text": "DAWN and DEFUSE 3" },
-      { "id": "C", "text": "MR CLEAN and ESCAPE" },
-      { "id": "D", "text": "SYNTHESIS and IMS III" },
-      { "id": "E", "text": "SAMMPRIS and WASID" }
+      {
+        "id": "A",
+        "text": "DAWN and DEFUSE 3"
+      },
+      {
+        "id": "B",
+        "text": "NINDS and ECASS III"
+      },
+      {
+        "id": "C",
+        "text": "SYNTHESIS and IMS III"
+      },
+      {
+        "id": "D",
+        "text": "SAMMPRIS and WASID"
+      },
+      {
+        "id": "E",
+        "text": "MR CLEAN and ESCAPE"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "A",
     "explanation": "The DAWN trial (up to 24 hours, selecting patients with clinical-core mismatch) and the DEFUSE 3 trial (up to 16 hours, selecting patients with perfusion-core mismatch: ischemic core <70 cc, mismatch ratio >=1.8, and penumbral volume >=15 cc) established that mechanical thrombectomy provides dramatic functional benefits (mRS 0-2 NNT ~2.8) in selected anterior circulation LVO patients presenting in the extended 6 to 24-hour window.",
     "keyTakeaway": "DAWN (up to 24h) and DEFUSE 3 (up to 16h) established thrombectomy efficacy in extended windows using perfusion/clinical-core mismatch.",
-    "tags": ["DAWN", "DEFUSE 3", "Thrombectomy", "Extended Window", "Landmark Trial"],
+    "tags": [
+      "DAWN",
+      "DEFUSE 3",
+      "Thrombectomy",
+      "Extended Window",
+      "Landmark Trial"
+    ],
     "hint": "Pair of 2018 landmark trials extending the EVT window beyond 6 hours.",
     "source": "Landmark Trial"
   },
@@ -9999,16 +10946,37 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 55-year-old male presents with a minor acute ischemic stroke (NIHSS 3) 6 hours after symptom onset. Head CT shows no hemorrhage. He is not currently taking antithrombotic medications.",
     "question": "What is the guideline-recommended antiplatelet strategy and duration based on the CHANCE and POINT clinical trials?",
     "options": [
-      { "id": "A", "text": "Aspirin 325 mg daily alone for 90 days" },
-      { "id": "B", "text": "Dual antiplatelet therapy (DAPT) with Aspirin plus Clopidogrel initiated within 24 hours, continued for 21 days, followed by single antiplatelet therapy" },
-      { "id": "C", "text": "DAPT with Aspirin plus Clopidogrel continued indefinitely for 1 year" },
-      { "id": "D", "text": "Full-dose anticoagulation with apixaban 5 mg BID for 30 days" },
-      { "id": "E", "text": "Prasugrel 10 mg daily combined with aspirin for 21 days" }
+      {
+        "id": "A",
+        "text": "Aspirin 325 mg daily alone for 90 days"
+      },
+      {
+        "id": "B",
+        "text": "Full-dose anticoagulation with apixaban 5 mg BID for 30 days"
+      },
+      {
+        "id": "C",
+        "text": "Dual antiplatelet therapy (DAPT) with Aspirin plus Clopidogrel initiated within 24 hours, continued for 21 days, followed by single antiplatelet therapy"
+      },
+      {
+        "id": "D",
+        "text": "Prasugrel 10 mg daily combined with aspirin for 21 days"
+      },
+      {
+        "id": "E",
+        "text": "DAPT with Aspirin plus Clopidogrel continued indefinitely for 1 year"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "C",
     "explanation": "The CHANCE and POINT trials demonstrated that for patients presenting within 12-24 hours of a high-risk TIA (ABCD2 score >=4) or minor ischemic stroke (NIHSS <=3), short-course dual antiplatelet therapy (DAPT) with aspirin plus clopidogrel significantly reduces the risk of recurrent ischemic stroke during the high-risk early period compared to aspirin monotherapy. Prolonging DAPT beyond 21 days increases major bleeding risk without additional ischemic benefit (as seen in the MATCH and CHARISMA trials). Therefore, guidelines recommend DAPT for 21 days, followed by antiplatelet monotherapy.",
     "keyTakeaway": "CHANCE & POINT: DAPT (Aspirin + Clopidogrel) started within 24h for minor stroke (NIHSS <=3) or high-risk TIA should be continued for 21 DAYS.",
-    "tags": ["DAPT", "CHANCE", "POINT", "Secondary Prevention", "Landmark Trial"],
+    "tags": [
+      "DAPT",
+      "CHANCE",
+      "POINT",
+      "Secondary Prevention",
+      "Landmark Trial"
+    ],
     "hint": "Short-course dual antiplatelet therapy for 3 weeks followed by monotherapy.",
     "source": "Landmark Trial"
   },
@@ -10019,16 +10987,37 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 69-year-old male with a recent nondisabling right hemispheric TIA has 75% internal carotid artery stenosis on digital subtraction angiography. The vascular surgery team considers the timing of carotid endarterectomy (CEA).",
     "question": "What did pooled analyses of NASCET and ECST demonstrate regarding the optimal timing of carotid endarterectomy following a nondisabling stroke or TIA?",
     "options": [
-      { "id": "A", "text": "Surgery should be delayed for at least 6 weeks to allow brain tissue consolidation" },
-      { "id": "B", "text": "Revascularization provides maximum benefit if performed within the first 2 weeks (14 days) of symptom onset" },
-      { "id": "C", "text": "Timing has no impact on surgical stroke reduction; benefit is identical at 6 months" },
-      { "id": "D", "text": "Emergency surgery within 6 hours of onset is required in all patients regardless of medical stability" },
-      { "id": "E", "text": "Surgery is indicated only after 3 months of failed medical therapy" }
+      {
+        "id": "A",
+        "text": "Surgery should be delayed for at least 6 weeks to allow brain tissue consolidation"
+      },
+      {
+        "id": "B",
+        "text": "Revascularization provides maximum benefit if performed within the first 2 weeks (14 days) of symptom onset"
+      },
+      {
+        "id": "C",
+        "text": "Emergency surgery within 6 hours of onset is required in all patients regardless of medical stability"
+      },
+      {
+        "id": "D",
+        "text": "Timing has no impact on surgical stroke reduction; benefit is identical at 6 months"
+      },
+      {
+        "id": "E",
+        "text": "Surgery is indicated only after 3 months of failed medical therapy"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "Subgroup analyses of NASCET and ECST pooled data demonstrated that the number needed to treat (NNT) to prevent one ipsilateral stroke at 5 years with CEA is lowest (NNT = 5) when surgery is performed within 2 weeks of the index nondisabling stroke or TIA. If surgery is delayed beyond 2 to 4 weeks, the NNT rises exponentially (NNT = 125 after 2-4 weeks), because the highest risk of recurrent stroke occurs in the immediate days and weeks following the index event. For neurologically stable patients, carotid revascularization should be performed within 14 days.",
     "keyTakeaway": "CEA for symptomatic carotid stenosis (>70%) provides greatest risk reduction when performed within 2 WEEKS (14 days) of symptom onset (NNT = 5).",
-    "tags": ["NASCET", "CEA", "Timing", "Carotid Stenosis", "Landmark Trial"],
+    "tags": [
+      "NASCET",
+      "CEA",
+      "Timing",
+      "Carotid Stenosis",
+      "Landmark Trial"
+    ],
     "hint": "The highest rate of early stroke recurrence is in the first 14 days, making early surgery within 2 weeks most effective.",
     "source": "Landmark Trial"
   },
@@ -10039,16 +11028,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 71-year-old male with symptomatic severe (80%) internal carotid artery stenosis is being evaluated for Carotid Artery Stenting (CAS) versus Carotid Endarterectomy (CEA).",
     "question": "According to the CREST (Carotid Revascularization Endarterectomy vs. Stenting Trial), how did patient age influence outcomes between CAS and CEA?",
     "options": [
-      { "id": "A", "text": "Patients older than 70 years had significantly better outcomes with CEA; younger patients (<70 years) had slightly better outcomes with CAS" },
-      { "id": "B", "text": "Patients older than 70 years had lower periprocedural stroke rates with CAS" },
-      { "id": "C", "text": "Age had no interaction with outcome in the CREST trial" },
-      { "id": "D", "text": "CAS was superior to CEA in all age groups, but caused more cranial nerve injuries" },
-      { "id": "E", "text": "CEA was contraindicated in patients older than 75 years due to prohibitive myocardial infarction risk" }
+      {
+        "id": "A",
+        "text": "Age had no interaction with outcome in the CREST trial"
+      },
+      {
+        "id": "B",
+        "text": "Patients older than 70 years had lower periprocedural stroke rates with CAS"
+      },
+      {
+        "id": "C",
+        "text": "CAS was superior to CEA in all age groups, but caused more cranial nerve injuries"
+      },
+      {
+        "id": "D",
+        "text": "Patients older than 70 years had significantly better outcomes with CEA; younger patients (<70 years) had slightly better outcomes with CAS"
+      },
+      {
+        "id": "E",
+        "text": "CEA was contraindicated in patients older than 75 years due to prohibitive myocardial infarction risk"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "In the CREST trial, carotid endarterectomy and carotid artery stenting had equivalent rates of the primary composite endpoint (periprocedural stroke, MI, death, or subsequent ipsilateral stroke). However, age was a significant effect modifier: patients over 70 years of age had significantly better outcomes and lower periprocedural stroke rates with CEA (due to tortuous vascular anatomy and aortic arch atherosclerosis predisposing to catheter embolization during stenting), whereas younger patients (<70 years) tended to have slightly better outcomes with CAS. Overall, CEA had lower periprocedural stroke rates, while CAS had lower rates of myocardial infarction.",
     "keyTakeaway": "CREST trial age effect: Patients >70 years benefit more from CEA (lower stroke risk); patients <70 years do equally well or slightly better with CAS.",
-    "tags": ["CREST", "CEA vs CAS", "Carotid Stenting", "Landmark Trial"],
+    "tags": [
+      "CREST",
+      "CEA vs CAS",
+      "Carotid Stenting",
+      "Landmark Trial"
+    ],
     "hint": "Tortuous aortic arch anatomy in elderly patients increases catheter-related stroke risk during stenting.",
     "source": "Landmark Trial"
   },
@@ -10059,16 +11068,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 72-year-old male with persistent nonvalvular atrial fibrillation has a history of hypertension and diabetes mellitus, with an ejection fraction of 50%. He has never had a prior stroke or TIA.",
     "question": "What is this patient's CHA2DS2-VASc score, and what is the guideline-directed antithrombotic recommendation?",
     "options": [
-      { "id": "A", "text": "Score: 1; Aspirin 81 mg daily" },
-      { "id": "B", "text": "Score: 2; Clopidogrel 75 mg daily" },
-      { "id": "C", "text": "Score: 3; Oral anticoagulation (DOAC preferred over warfarin)" },
-      { "id": "D", "text": "Score: 4; Dual antiplatelet therapy with aspirin and clopidogrel" },
-      { "id": "E", "text": "Score: 0; No antithrombotic therapy required" }
+      {
+        "id": "A",
+        "text": "Score: 3; Oral anticoagulation (DOAC preferred over warfarin)"
+      },
+      {
+        "id": "B",
+        "text": "Score: 4; Dual antiplatelet therapy with aspirin and clopidogrel"
+      },
+      {
+        "id": "C",
+        "text": "Score: 0; No antithrombotic therapy required"
+      },
+      {
+        "id": "D",
+        "text": "Score: 1; Aspirin 81 mg daily"
+      },
+      {
+        "id": "E",
+        "text": "Score: 2; Clopidogrel 75 mg daily"
+      }
     ],
-    "correctOptionId": "C",
+    "correctOptionId": "A",
     "explanation": "Calculating CHA2DS2-VASc: Congestive heart failure = 0; Hypertension = 1; Age >=75 (2 pts) or 65-74 (1 pt): age 72 = 1 point; Diabetes = 1; Stroke/TIA/VTE (2 pts) = 0; Vascular disease = 0; Sex category female (1 pt): male = 0. Total score = 1 (HTN) + 1 (Age 65-74) + 1 (DM) = 3. In men with a CHA2DS2-VASc score >=2 (and women >=3), oral anticoagulation is strongly recommended (Class I), with direct oral anticoagulants (DOACs: apixaban, rivaroxaban, dabigatran, edoxaban) preferred over warfarin due to lower intracranial hemorrhage risk.",
     "keyTakeaway": "CHA2DS2-VASc score >=2 in men (>=3 in women) mandates oral anticoagulation; DOACs preferred over warfarin.",
-    "tags": ["CHA2DS2-VASc", "Atrial Fibrillation", "Anticoagulation", "Cardiology"],
+    "tags": [
+      "CHA2DS2-VASc",
+      "Atrial Fibrillation",
+      "Anticoagulation",
+      "Cardiology"
+    ],
     "hint": "Points: 1 for HTN, 1 for age 65-74, 1 for DM = score 3.",
     "source": "Guideline Recommendation"
   },
@@ -10079,16 +11108,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 34-year-old male with an embolic cryptogenic stroke has a moderate-sized patent foramen ovale (PFO) with an atrial septal aneurysm. He has no vascular risk factors. He is evaluated under the RoPE (Risk of Paradoxical Embolism) score.",
     "question": "What clinical features contribute points to the 10-point RoPE score?",
     "options": [
-      { "id": "A", "text": "Presence of hypertension, diabetes, smoking, and prior stroke" },
-      { "id": "B", "text": "ABSENCE of hypertension, diabetes, smoking, and prior stroke; plus young age and cortical stroke on neuroimaging" },
-      { "id": "C", "text": "Atrial septal aneurysm excursion >10 mm and shunt size on bubble study" },
-      { "id": "D", "text": "Serum troponin elevation and prolonged telemetry monitoring duration" },
-      { "id": "E", "text": "D-dimer elevation and lower extremity venous ultrasound findings" }
+      {
+        "id": "A",
+        "text": "Presence of hypertension, diabetes, smoking, and prior stroke"
+      },
+      {
+        "id": "B",
+        "text": "ABSENCE of hypertension, diabetes, smoking, and prior stroke; plus young age and cortical stroke on neuroimaging"
+      },
+      {
+        "id": "C",
+        "text": "Atrial septal aneurysm excursion >10 mm and shunt size on bubble study"
+      },
+      {
+        "id": "D",
+        "text": "Serum troponin elevation and prolonged telemetry monitoring duration"
+      },
+      {
+        "id": "E",
+        "text": "D-dimer elevation and lower extremity venous ultrasound findings"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "The Risk of Paradoxical Embolism (RoPE) score (max 10 points) is a clinical index designed to determine whether a PFO discovered in a cryptogenic stroke patient is pathogenic (causal) versus an incidental bystander. Points are awarded for: (1) No history of hypertension (1 pt), (2) No history of diabetes (1 pt), (3) No history of smoking (1 pt), (4) No prior TIA or stroke (1 pt), (5) Cortical stroke on neuroimaging (1 pt), and (6) Younger age (up to 5 points for age 18-29, 4 pts for 30-39, down to 0 for >=70). Higher scores (9-10) correlate with a 73-88% attributable PFO fraction.",
     "keyTakeaway": "RoPE score awards points for the ABSENCE of traditional vascular risks, cortical infarct, and young age; high score = PFO is likely causal.",
-    "tags": ["RoPE Score", "PFO", "Cryptogenic Stroke", "Cardiology"],
+    "tags": [
+      "RoPE Score",
+      "PFO",
+      "Cryptogenic Stroke",
+      "Cardiology"
+    ],
     "hint": "Points are scored for lack of traditional vascular risk factors and young age.",
     "source": "Past Board Exam"
   },
@@ -10099,16 +11148,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "An 82-year-old male with severe aortic valve stenosis presents with an acute right MCA cortical ischemic stroke. TEE demonstrates an aortic valve area of 0.7 cm2 with heavy calcification.",
     "question": "What is the recommended timing and indication for surgical or transcatheter aortic valve replacement (SAVR or TAVI) in patients with severe aortic stenosis?",
     "options": [
-      { "id": "A", "text": "Valve replacement is indicated for severe aortic stenosis if the patient is symptomatic (angina, syncope, heart failure) or has reduced left ventricular ejection fraction (<50%)" },
-      { "id": "B", "text": "Immediate emergency valve replacement is required in all asymptomatic patients" },
-      { "id": "C", "text": "Anticoagulation with warfarin is the definitive therapy, replacing the need for valve surgery" },
-      { "id": "D", "text": "TAVI is contraindicated if the patient has a history of prior ischemic stroke" },
-      { "id": "E", "text": "Valve replacement should never be considered in patients older than 75 years" }
+      {
+        "id": "A",
+        "text": "Valve replacement is indicated for severe aortic stenosis if the patient is symptomatic (angina, syncope, heart failure) or has reduced left ventricular ejection fraction (<50%)"
+      },
+      {
+        "id": "B",
+        "text": "Valve replacement should never be considered in patients older than 75 years"
+      },
+      {
+        "id": "C",
+        "text": "Immediate emergency valve replacement is required in all asymptomatic patients"
+      },
+      {
+        "id": "D",
+        "text": "TAVI is contraindicated if the patient has a history of prior ischemic stroke"
+      },
+      {
+        "id": "E",
+        "text": "Anticoagulation with warfarin is the definitive therapy, replacing the need for valve surgery"
+      }
     ],
     "correctOptionId": "A",
     "explanation": "Severe aortic stenosis (valve area <1.0 cm2, mean gradient >40 mmHg, or peak velocity >4.0 m/s) is an indication for aortic valve intervention (SAVR or TAVI) when patients become symptomatic (classic triad of exertional dyspnea/heart failure, angina, or syncope) or when asymptomatic patients develop a reduced left ventricular ejection fraction (<50%). Asymptomatic severe AS without LV dysfunction is managed with close clinical and echocardiographic surveillance.",
     "keyTakeaway": "Aortic valve replacement is indicated for severe aortic stenosis when symptomatic or when LVEF drops <50%.",
-    "tags": ["Aortic Stenosis", "TAVI", "Valvular Disease", "Cardiology"],
+    "tags": [
+      "Aortic Stenosis",
+      "TAVI",
+      "Valvular Disease",
+      "Cardiology"
+    ],
     "hint": "Indicated when the patient develops cardinal symptoms or systolic dysfunction.",
     "source": "Past Board Exam"
   },
@@ -10119,16 +11188,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 24-year-old female who is 12 weeks pregnant with a mechanical aortic valve is evaluated for antithrombotic management during pregnancy.",
     "question": "What teratogenic congenital malformations are specifically associated with first-trimester warfarin exposure ('warfarin embryopathy')?",
     "options": [
-      { "id": "A", "text": "Ebstein anomaly and tricuspid atresia" },
-      { "id": "B", "text": "Nasal hypoplasia (saddle nose), stippled epiphyses (chondrodysplasia punctata), and microcephaly/optic atrophy" },
-      { "id": "C", "text": "Neural tube defects (anencephaly, spina bifida)" },
-      { "id": "D", "text": "Renal tubular dysgenesis and pulmonary hypoplasia" },
-      { "id": "E", "text": "Phocomelia and limb reduction deformities" }
+      {
+        "id": "A",
+        "text": "Renal tubular dysgenesis and pulmonary hypoplasia"
+      },
+      {
+        "id": "B",
+        "text": "Phocomelia and limb reduction deformities"
+      },
+      {
+        "id": "C",
+        "text": "Nasal hypoplasia (saddle nose), stippled epiphyses (chondrodysplasia punctata), and microcephaly/optic atrophy"
+      },
+      {
+        "id": "D",
+        "text": "Neural tube defects (anencephaly, spina bifida)"
+      },
+      {
+        "id": "E",
+        "text": "Ebstein anomaly and tricuspid atresia"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "C",
     "explanation": "Warfarin readily crosses the placental barrier and causes warfarin embryopathy in approximately 6% of fetuses exposed during weeks 6 to 12 of gestation. The classic syndrome consists of nasal hypoplasia ('saddle nose'), depressed nasal bridge, stippled epiphyses on radiographs (chondrodysplasia punctata), microcephaly, optic atrophy, and developmental delay. Low-molecular-weight heparin (LMWH) and unfractionated heparin do NOT cross the placenta and are not teratogenic, making adjusted-dose LMWH with anti-Xa monitoring the preferred anticoagulant in early pregnancy.",
     "keyTakeaway": "Warfarin embryopathy (weeks 6-12) = Nasal hypoplasia + stippled epiphyses (chondrodysplasia punctata) + optic atrophy.",
-    "tags": ["Warfarin Embryopathy", "Pregnancy", "Teratogenicity", "Special Populations"],
+    "tags": [
+      "Warfarin Embryopathy",
+      "Pregnancy",
+      "Teratogenicity",
+      "Special Populations"
+    ],
     "hint": "Features nasal hypoplasia and stippled calcifications of the bone epiphyses.",
     "source": "Past Board Exam"
   },
@@ -10139,16 +11228,37 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 32-year-old female at 34 weeks gestation presents with acute onset of severe blood pressure elevation (175/115 mmHg), headache, visual blurring, and 4+ proteinuria. Reflexes are brisk with clonus.",
     "question": "What is the diagnosis, and what are the two immediate drug therapies indicated for acute maternal and fetal protection?",
     "options": [
-      { "id": "A", "text": "Essential hypertension; oral lisinopril and furosemide" },
-      { "id": "B", "text": "Severe preeclampsia; Intravenous labetalol (or hydralazine) for acute blood pressure control PLUS intravenous magnesium sulfate for eclampsia seizure prophylaxis" },
-      { "id": "C", "text": "Pheochromocytoma; phentolamine infusion" },
-      { "id": "D", "text": "RCVS; verapamil infusion and high-dose dexamethasone" },
-      { "id": "E", "text": "Gestational diabetes; regular insulin infusion and bedrest" }
+      {
+        "id": "A",
+        "text": "RCVS; verapamil infusion and high-dose dexamethasone"
+      },
+      {
+        "id": "B",
+        "text": "Pheochromocytoma; phentolamine infusion"
+      },
+      {
+        "id": "C",
+        "text": "Essential hypertension; oral lisinopril and furosemide"
+      },
+      {
+        "id": "D",
+        "text": "Gestational diabetes; regular insulin infusion and bedrest"
+      },
+      {
+        "id": "E",
+        "text": "Severe preeclampsia; Intravenous labetalol (or hydralazine) for acute blood pressure control PLUS intravenous magnesium sulfate for eclampsia seizure prophylaxis"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "E",
     "explanation": "Severe preeclampsia (new-onset BP >=160/110 mmHg after 20 weeks with proteinuria and end-organ symptoms such as visual disturbance or hyperreflexia) requires urgent dual intervention: (1) Urgent parenteral antihypertensive therapy with IV Labetalol, IV Hydralazine, or oral immediate-release Nifedipine to prevent stroke; and (2) Intravenous Magnesium Sulfate (4-6 g loading dose over 20-30 min, then 1-2 g/h infusion) to prevent eclamptic seizures. Definitive treatment is delivery of the fetus and placenta.",
     "keyTakeaway": "Severe preeclampsia = Urgent BP control (IV Labetalol or Hydralazine) + IV Magnesium Sulfate for seizure prevention.",
-    "tags": ["Preeclampsia", "Magnesium Sulfate", "Labetalol", "Pregnancy", "Special Populations"],
+    "tags": [
+      "Preeclampsia",
+      "Magnesium Sulfate",
+      "Labetalol",
+      "Pregnancy",
+      "Special Populations"
+    ],
     "hint": "Pair an approved parenteral antihypertensive with an IV agent for seizure prophylaxis.",
     "source": "Guideline Recommendation"
   },
@@ -10159,16 +11269,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A pregnant patient receiving an intravenous magnesium sulfate infusion for severe preeclampsia becomes obtunded. Exam reveals absent deep tendon patellar reflexes, respiratory rate of 8 breaths/min, and oliguria (<20 mL/h).",
     "question": "What is the diagnosis, and what is the specific intravenous antidote?",
     "options": [
-      { "id": "A", "text": "Magnesium toxicity; Intravenous Calcium Gluconate (1 g IV slow push over 5-10 minutes)" },
-      { "id": "B", "text": "Opioid overdose; Intravenous Naloxone (0.4 mg IV)" },
-      { "id": "C", "text": "Hyperkalemia; Intravenous Insulin and Dextrose" },
-      { "id": "D", "text": "Eclamptic coma; Intravenous Lorazepam (4 mg IV)" },
-      { "id": "E", "text": "Malignant hyperthermia; Intravenous Dantrolene" }
+      {
+        "id": "A",
+        "text": "Hyperkalemia; Intravenous Insulin and Dextrose"
+      },
+      {
+        "id": "B",
+        "text": "Eclamptic coma; Intravenous Lorazepam (4 mg IV)"
+      },
+      {
+        "id": "C",
+        "text": "Opioid overdose; Intravenous Naloxone (0.4 mg IV)"
+      },
+      {
+        "id": "D",
+        "text": "Malignant hyperthermia; Intravenous Dantrolene"
+      },
+      {
+        "id": "E",
+        "text": "Magnesium toxicity; Intravenous Calcium Gluconate (1 g IV slow push over 5-10 minutes)"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "Magnesium toxicity manifests sequentially: loss of deep tendon reflexes occurs at serum levels of 7-10 mEq/L, followed by respiratory depression at 10-13 mEq/L, and cardiac arrest at >15 mEq/L. Magnesium is cleared renally, so oliguria predisposes to rapid toxic accumulation. The immediate antidote is 1 gram of Intravenous Calcium Gluconate (10 mL of 10% solution administered slowly over 5-10 minutes), along with immediate cessation of the magnesium infusion and respiratory support.",
     "keyTakeaway": "Magnesium toxicity: Loss of DTRs + respiratory depression. Antidote is IV Calcium Gluconate 1 g.",
-    "tags": ["Magnesium Toxicity", "Calcium Gluconate", "Preeclampsia", "Antidote"],
+    "tags": [
+      "Magnesium Toxicity",
+      "Calcium Gluconate",
+      "Preeclampsia",
+      "Antidote"
+    ],
     "hint": "Calcium acts as the direct physiological antagonist to magnesium at the neuromuscular junction.",
     "source": "Past Board Exam"
   },
@@ -10179,16 +11309,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 68-year-old male with an acute stroke has a noncontrast head CT that is interpreted as normal. An emergency MRI brain is performed.",
     "question": "According to the physical principles of magnetic resonance imaging, what is the earliest time after ischemic stroke onset that signal abnormalities become visible on Diffusion-Weighted Imaging (DWI) versus T2-weighted MRI?",
     "options": [
-      { "id": "A", "text": "DWI is positive within 15-30 minutes; T2 hyperintensity appears at ~8 hours" },
-      { "id": "B", "text": "T2 hyperintensity appears within 10 minutes; DWI appears at 24 hours" },
-      { "id": "C", "text": "DWI and T2 both appear simultaneously at 48 hours" },
-      { "id": "D", "text": "Gadolinium enhancement appears within 30 minutes; DWI appears at 7 days" },
-      { "id": "E", "text": "DWI is positive only after 24 hours due to T2 shine-through" }
+      {
+        "id": "A",
+        "text": "Gadolinium enhancement appears within 30 minutes; DWI appears at 7 days"
+      },
+      {
+        "id": "B",
+        "text": "DWI and T2 both appear simultaneously at 48 hours"
+      },
+      {
+        "id": "C",
+        "text": "T2 hyperintensity appears within 10 minutes; DWI appears at 24 hours"
+      },
+      {
+        "id": "D",
+        "text": "DWI is positive only after 24 hours due to T2 shine-through"
+      },
+      {
+        "id": "E",
+        "text": "DWI is positive within 15-30 minutes; T2 hyperintensity appears at ~8 hours"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "DWI is the most sensitive imaging sequence for hyperacute ischemic stroke, detecting cytotoxic edema and restricted water motion within 15 to 30 minutes of onset in humans (and within 10 minutes in animal models). In contrast, conventional T2-weighted imaging and FLAIR reflect the accumulation of vasogenic edema and free water, which does not become reliably visible until approximately 6 to 8 hours after stroke onset. T1 parenchymal hypodensity appears between 16 and 24 hours, and parenchymal contrast enhancement from BBB breakdown occurs after 24 hours.",
     "keyTakeaway": "MRI timeline: DWI restricted diffusion within 15-30 min; T2/FLAIR hyperintensity appears at ~8h; contrast enhancement after 24h.",
-    "tags": ["DWI", "T2WI", "MRI Timeline", "Neuroradiology"],
+    "tags": [
+      "DWI",
+      "T2WI",
+      "MRI Timeline",
+      "Neuroradiology"
+    ],
     "hint": "DWI detects cellular cytotoxic edema within minutes, hours before T2 detects vasogenic water.",
     "source": "Past Board Exam"
   },
@@ -10199,16 +11349,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A neurosonologist performs a transcranial Doppler (TCD) study through the transtemporal acoustic window on a patient with acute neurological deficits.",
     "question": "Which intracranial vessels are insonated through the transtemporal window, and what are their normal directions of blood flow relative to the probe?",
     "options": [
-      { "id": "A", "text": "MCA (flow TOWARD probe, depth 30-60 mm), ACA (flow AWAY from probe, depth 60-70 mm), and PCA (bidirectional flow, depth 60-70 mm)" },
-      { "id": "B", "text": "Basilar artery (flow toward probe) and Vertebral artery (flow away from probe)" },
-      { "id": "C", "text": "Ophthalmic artery (flow toward probe) and Carotid siphon (flow away from probe)" },
-      { "id": "D", "text": "Vertebral artery (flow toward probe) and Superior cerebellar artery (flow away from probe)" },
-      { "id": "E", "text": "Distal internal carotid artery only (flow away from probe)" }
+      {
+        "id": "A",
+        "text": "MCA (flow TOWARD probe, depth 30-60 mm), ACA (flow AWAY from probe, depth 60-70 mm), and PCA (bidirectional flow, depth 60-70 mm)"
+      },
+      {
+        "id": "B",
+        "text": "Vertebral artery (flow toward probe) and Superior cerebellar artery (flow away from probe)"
+      },
+      {
+        "id": "C",
+        "text": "Ophthalmic artery (flow toward probe) and Carotid siphon (flow away from probe)"
+      },
+      {
+        "id": "D",
+        "text": "Distal internal carotid artery only (flow away from probe)"
+      },
+      {
+        "id": "E",
+        "text": "Basilar artery (flow toward probe) and Vertebral artery (flow away from probe)"
+      }
     ],
     "correctOptionId": "A",
     "explanation": "Through the transtemporal window (anterior and superior to the pinna), the sound beam insonates: (1) Middle Cerebral Artery (MCA) at depth 30-60 mm with flow TOWARD the transducer (displayed above baseline); (2) Anterior Cerebral Artery (ACA, A1 segment) at depth 60-70 mm with flow AWAY from the transducer (displayed below baseline); (3) Posterior Cerebral Artery (PCA) at depth 60-75 mm, where P1 flows toward and P2 flows away from the transducer; and (4) Terminal ICA bifurcation at depth 55-65 mm (bidirectional). Vertebral and basilar arteries are examined through the transforaminal (suboccipital) window; ophthalmic and carotid siphon through the transorbital window.",
     "keyTakeaway": "Transtemporal TCD: MCA flows TOWARD probe (30-60mm); ACA flows AWAY from probe (60-70mm); PCA is bidirectional (60-75mm).",
-    "tags": ["TCD", "Transtemporal Window", "Neurosonology", "Neuroradiology"],
+    "tags": [
+      "TCD",
+      "Transtemporal Window",
+      "Neurosonology",
+      "Neuroradiology"
+    ],
     "hint": "MCA flows toward the lateral skull probe, while the A1 segment branches medially away from the probe.",
     "source": "Past Board Exam"
   },
@@ -10219,20 +11389,39 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 58-year-old male with an acute left MCA stroke undergoes carotid duplex ultrasound. Examination of the left common carotid artery (CCA) shows a high-resistance 'thump' waveform with a sharp systolic spike and complete reversal/absence of diastolic forward flow. No flow is detected in the internal carotid artery (ICA).",
     "question": "What does this high-resistance, low-diastolic waveform in the common carotid artery indicate?",
     "options": [
-      { "id": "A", "text": "Severe aortic regurgitation" },
-      { "id": "B", "text": "Complete occlusion of the internal carotid artery with absence of low-resistance forward intracranial flow" },
-      { "id": "C", "text": "Normal intracranial low-resistance cerebrovascular bed" },
-      { "id": "D", "text": "Extracranial-intracranial bypass patency" },
-      { "id": "E", "text": "Subclavian steal syndrome" }
+      {
+        "id": "A",
+        "text": "Severe aortic regurgitation"
+      },
+      {
+        "id": "B",
+        "text": "Normal intracranial low-resistance cerebrovascular bed"
+      },
+      {
+        "id": "C",
+        "text": "Subclavian steal syndrome"
+      },
+      {
+        "id": "D",
+        "text": "Extracranial-intracranial bypass patency"
+      },
+      {
+        "id": "E",
+        "text": "Complete occlusion of the internal carotid artery with absence of low-resistance forward intracranial flow"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "E",
     "explanation": "Normally, the brain is a low-resistance vascular bed, so the internal carotid artery exhibits continuous forward flow during both systole and diastole (high end-diastolic velocity). The external carotid artery supplies high-resistance muscles and skin, exhibiting sharp systolic peaks and low/absent diastolic flow. The common carotid artery normally carries a hybrid low-resistance waveform. When the internal carotid artery is completely occluded, the CCA loses its low-resistance intracranial outlet, converting its waveform into a purely high-resistance, 'stump thump' pattern with absent or reversed diastolic flow.",
     "keyTakeaway": "Carotid occlusion: CCA develops high-resistance waveform with absent/reversed diastolic flow ('stump thump').",
-    "tags": ["Carotid Duplex", "Carotid Occlusion", "Waveform", "Neurosonology"],
+    "tags": [
+      "Carotid Duplex",
+      "Carotid Occlusion",
+      "Waveform",
+      "Neurosonology"
+    ],
     "hint": "When the low-resistance ICA pathway is closed, the CCA takes on the high-resistance profile of the external carotid bed.",
     "source": "Past Board Exam"
-  }
-  ,
+  },
   {
     "id": "q-fj-61",
     "chapterId": 8,
@@ -10240,16 +11429,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 68-year-old male with an acute right hemispheric ischemic stroke presents within 2 hours. His medical history includes hypertension, for which he takes amlodipine, and a history of a hip fracture 2 years ago.",
     "question": "Which of the following is considered an absolute contraindication to intravenous alteplase (tPA) according to official FDA and AHA/ASA guidelines?",
     "options": [
-      { "id": "A", "text": "Current or prior intracranial hemorrhage" },
-      { "id": "B", "text": "Recent major non-cardiac surgery 21 days ago" },
-      { "id": "C", "text": "Arterial puncture at a noncompressible site 5 days ago" },
-      { "id": "D", "text": "Concurrent treatment with daily aspirin 325 mg" },
-      { "id": "E", "text": "Age greater than 80 years in a 2-hour window" }
+      {
+        "id": "A",
+        "text": "Recent major non-cardiac surgery 21 days ago"
+      },
+      {
+        "id": "B",
+        "text": "Age greater than 80 years in a 2-hour window"
+      },
+      {
+        "id": "C",
+        "text": "Current or prior intracranial hemorrhage"
+      },
+      {
+        "id": "D",
+        "text": "Arterial puncture at a noncompressible site 5 days ago"
+      },
+      {
+        "id": "E",
+        "text": "Concurrent treatment with daily aspirin 325 mg"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Current or historical intraparenchymal hemorrhage, subarachnoid hemorrhage, active internal bleeding, recent (within 3 months) serious head trauma or intracranial/intraspinal surgery, severe uncontrolled hypertension (>185/110 mmHg unresponsive to medication), and known bleeding diatheses (platelets <100,000, INR >1.7, aPTT >40s, or therapeutic DOAC use within 48h) are absolute contraindications. Major surgery within 14 days and noncompressible arterial puncture have been revised to relative contraindications, requiring individualized risk-benefit assessment.",
     "keyTakeaway": "Prior or active intracranial hemorrhage is an absolute contraindication to IV thrombolysis.",
-    "tags": ["tPA Contraindications", "Acute Stroke", "Safety"],
+    "tags": [
+      "tPA Contraindications",
+      "Acute Stroke",
+      "Safety"
+    ],
     "hint": "Any prior bleeding within the brain parenchyma or subarachnoid space permanently excludes standard IV lytics.",
     "source": "Guideline Recommendation"
   },
@@ -10260,16 +11468,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 73-year-old female presents with acute difficulty reading. When handed a newspaper, she cannot read any sentences or words, but when asked to write a letter to her daughter, she writes a grammatically correct paragraph with flawless spelling. Neuro-ophthalmologic exam confirms a dense right homonymous hemianopia.",
     "question": "Where does visual information normally cross from the right occipital cortex to the left angular gyrus language comprehension center?",
     "options": [
-      { "id": "A", "text": "Anterior commissure" },
-      { "id": "B", "text": "Splenium of the corpus callosum" },
-      { "id": "C", "text": "Genu of the corpus callosum" },
-      { "id": "D", "text": "Optic chiasm" },
-      { "id": "E", "text": "Fornix" }
+      {
+        "id": "A",
+        "text": "Fornix"
+      },
+      {
+        "id": "B",
+        "text": "Splenium of the corpus callosum"
+      },
+      {
+        "id": "C",
+        "text": "Anterior commissure"
+      },
+      {
+        "id": "D",
+        "text": "Optic chiasm"
+      },
+      {
+        "id": "E",
+        "text": "Genu of the corpus callosum"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "In alexia without agraphia (Dejerine syndrome), visual information received by the intact right occipital visual cortex cannot reach the language comprehension areas (left angular gyrus) because transcallosal visual fibers traversing the splenium of the corpus callosum are destroyed, while an infarct of the left calcarine cortex causes the right homonymous hemianopia. Motor writing systems (Exner's area and left premotor cortex) and Broca's area remain connected to language networks, allowing normal spontaneous writing.",
     "keyTakeaway": "Alexia without agraphia: Disconnection of the splenium of the corpus callosum + left occipital visual cortex.",
-    "tags": ["Alexia without Agraphia", "Splenium", "Corpus Callosum", "Neuroanatomy"],
+    "tags": [
+      "Alexia without Agraphia",
+      "Splenium",
+      "Corpus Callosum",
+      "Neuroanatomy"
+    ],
     "hint": "The posterior-most portion of the corpus callosum that carries interhemispheric visual fibers.",
     "source": "Past Board Exam"
   },
@@ -10280,16 +11508,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 62-year-old male with an acute pontine stroke has an examination showing that upon attempted left horizontal gaze, the left eye abducts normally with fine horizontal nystagmus, while the right eye fails to adduct past the midline. Convergence of both eyes is fully preserved.",
     "question": "What is this ocular motility defect, and what brainstem pathway is damaged?",
     "options": [
-      { "id": "A", "text": "Abducens nerve palsy; sixth cranial nerve fascicle" },
-      { "id": "B", "text": "Right Internuclear Ophthalmoplegia (INO); lesion of the right Medial Longitudinal Fasciculus (MLF)" },
-      { "id": "C", "text": "Left INO; lesion of the left MLF" },
-      { "id": "D", "text": "One-and-a-half syndrome; paramedian pontine reticular formation" },
-      { "id": "E", "text": "Oculomotor nerve palsy; third cranial nerve nucleus" }
+      {
+        "id": "A",
+        "text": "Oculomotor nerve palsy; third cranial nerve nucleus"
+      },
+      {
+        "id": "B",
+        "text": "Right Internuclear Ophthalmoplegia (INO); lesion of the right Medial Longitudinal Fasciculus (MLF)"
+      },
+      {
+        "id": "C",
+        "text": "One-and-a-half syndrome; paramedian pontine reticular formation"
+      },
+      {
+        "id": "D",
+        "text": "Abducens nerve palsy; sixth cranial nerve fascicle"
+      },
+      {
+        "id": "E",
+        "text": "Left INO; lesion of the left MLF"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "An internuclear ophthalmoplegia (INO) is named according to the side of the adduction deficit. Failure of the RIGHT eye to adduct on left horizontal gaze with nystagmus of the abducting left eye indicates a lesion in the RIGHT Medial Longitudinal Fasciculus (MLF), which connects the contralateral abducens nucleus to the ipsilateral oculomotor medial rectus subnucleus. Because convergence pathways bypass the MLF, adduction during convergence is classically preserved.",
     "keyTakeaway": "Right INO = Impaired adduction of the right eye with contralateral abduction nystagmus; lesion in the right MLF.",
-    "tags": ["INO", "MLF", "Neuro-Ophthalmology", "Brainstem"],
+    "tags": [
+      "INO",
+      "MLF",
+      "Neuro-Ophthalmology",
+      "Brainstem"
+    ],
     "hint": "The INO is named for the paretic eye that fails to adduct.",
     "source": "Past Board Exam"
   },
@@ -10300,16 +11548,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 58-year-old female presents with acute vertigo and ataxia. Eye movement testing demonstrates that upon attempted horizontal gaze in either direction, neither eye can move to the right, and on left gaze, the right eye fails to adduct while the left eye abducts with nystagmus.",
     "question": "What is this complex ocular motor syndrome, and what combined neuroanatomical structures are damaged in the pons?",
     "options": [
-      { "id": "A", "text": "Bilateral sixth nerve palsies" },
-      { "id": "B", "text": "One-and-a-half syndrome; lesion of the ipsilateral PPRF (or abducens nucleus) PLUS ipsilateral MLF" },
-      { "id": "C", "text": "Parinaud dorsal midbrain syndrome" },
-      { "id": "D", "text": "Progressive supranuclear palsy" },
-      { "id": "E", "text": "Bilateral internuclear ophthalmoplegia" }
+      {
+        "id": "A",
+        "text": "Bilateral sixth nerve palsies"
+      },
+      {
+        "id": "B",
+        "text": "Progressive supranuclear palsy"
+      },
+      {
+        "id": "C",
+        "text": "Bilateral internuclear ophthalmoplegia"
+      },
+      {
+        "id": "D",
+        "text": "One-and-a-half syndrome; lesion of the ipsilateral PPRF (or abducens nucleus) PLUS ipsilateral MLF"
+      },
+      {
+        "id": "E",
+        "text": "Parinaud dorsal midbrain syndrome"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "D",
     "explanation": "The 'one-and-a-half syndrome' consists of a complete conjugate horizontal gaze palsy in one direction ('one') plus an internuclear ophthalmoplegia on gaze in the opposite direction ('half'). It results from a unilateral pontine lesion involving both the ipsilateral Paramedian Pontine Reticular Formation (PPRF) or abducens nucleus (causing the full ipsilateral conjugate gaze palsy) AND the adjacent ipsilateral Medial Longitudinal Fasciculus (MLF, causing the adduction deficit on contralateral gaze). The only remaining horizontal movement is abduction of the contralateral eye.",
     "keyTakeaway": "One-and-a-half syndrome = Unilateral PPRF/CN VI nucleus lesion + ipsilateral MLF in the dorsal pontine tegmentum.",
-    "tags": ["One-and-a-Half Syndrome", "PPRF", "MLF", "Neuro-Ophthalmology"],
+    "tags": [
+      "One-and-a-Half Syndrome",
+      "PPRF",
+      "MLF",
+      "Neuro-Ophthalmology"
+    ],
     "hint": "Combines a lateral conjugate gaze palsy with an internuclear ophthalmoplegia.",
     "source": "Past Board Exam"
   },
@@ -10320,16 +11588,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 64-year-old female presents with acute right-sided weakness, impaired sensation, and dyscalculia. On testing, she cannot perform simple subtraction (acalculia), cannot distinguish her left from right hand, cannot identify her fingers (finger agnosia), and cannot write her signature or name (agraphia).",
     "question": "What classical syndrome is present, and where is the responsible cortical lesion located?",
     "options": [
-      { "id": "A", "text": "Balint syndrome; bilateral posterior parietal cortex" },
-      { "id": "B", "text": "Anton syndrome; bilateral occipital cortex" },
-      { "id": "C", "text": "Gerstmann syndrome; dominant (left) angular gyrus (inferior parietal lobule)" },
-      { "id": "D", "text": "Korsakoff syndrome; bilateral mammillary bodies" },
-      { "id": "E", "text": "Wernicke-Korsakoff syndrome; medial thalami" }
+      {
+        "id": "A",
+        "text": "Korsakoff syndrome; bilateral mammillary bodies"
+      },
+      {
+        "id": "B",
+        "text": "Balint syndrome; bilateral posterior parietal cortex"
+      },
+      {
+        "id": "C",
+        "text": "Gerstmann syndrome; dominant (left) angular gyrus (inferior parietal lobule)"
+      },
+      {
+        "id": "D",
+        "text": "Wernicke-Korsakoff syndrome; medial thalami"
+      },
+      {
+        "id": "E",
+        "text": "Anton syndrome; bilateral occipital cortex"
+      }
     ],
     "correctOptionId": "C",
     "explanation": "Gerstmann syndrome consists of the tetrad of: 1. Agraphia (dysgraphia), 2. Acalculia, 3. Finger agnosia, and 4. Right-left disorientation. It localizes precisely to the inferior parietal lobule of the dominant hemisphere, specifically the left angular gyrus (Brodmann area 39). It is typically caused by an ischemic stroke in the territory of the angular branch of the left middle cerebral artery.",
     "keyTakeaway": "Gerstmann syndrome tetrad (Agraphia, Acalculia, Finger agnosia, Right-left disorientation) = Dominant angular gyrus lesion.",
-    "tags": ["Gerstmann Syndrome", "Angular Gyrus", "Acalculia", "Agraphia"],
+    "tags": [
+      "Gerstmann Syndrome",
+      "Angular Gyrus",
+      "Acalculia",
+      "Agraphia"
+    ],
     "hint": "Dominant inferior parietal lobule lesion causing numerical and body schema confusion.",
     "source": "Past Board Exam"
   },
@@ -10340,16 +11628,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 70-year-old male status post bilateral watershed infarctions between the MCA and PCA territories presents with impaired visual behavior. When reaching for a coffee cup, his hand misses it wildly (optic ataxia); he cannot look voluntarily from one object to another (ocular apraxia); and when shown a picture of a crowded street, he can only see one car and misses the rest of the scene (simultanagnosia).",
     "question": "What syndrome is present, and what is its neuroanatomical localization?",
     "options": [
-      { "id": "A", "text": "Gerstmann syndrome; dominant angular gyrus" },
-      { "id": "B", "text": "Balint syndrome; bilateral posterior parietal-occipital watershed cortex" },
-      { "id": "C", "text": "Anton syndrome; bilateral primary visual calcarine cortex" },
-      { "id": "D", "text": "Capgras delusion; right frontal lobe" },
-      { "id": "E", "text": "Dejerine-Roussy syndrome; posterolateral thalamus" }
+      {
+        "id": "A",
+        "text": "Gerstmann syndrome; dominant angular gyrus"
+      },
+      {
+        "id": "B",
+        "text": "Capgras delusion; right frontal lobe"
+      },
+      {
+        "id": "C",
+        "text": "Dejerine-Roussy syndrome; posterolateral thalamus"
+      },
+      {
+        "id": "D",
+        "text": "Anton syndrome; bilateral primary visual calcarine cortex"
+      },
+      {
+        "id": "E",
+        "text": "Balint syndrome; bilateral posterior parietal-occipital watershed cortex"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "E",
     "explanation": "Balint syndrome consists of the classical triad of: 1. Simultanagnosia (inability to perceive the visual field as a whole, seeing only one object at a time), 2. Optic ataxia (impaired visual guidance of manual reaching), and 3. Ocular apraxia (inability to initiate voluntary saccades to visual targets). It is classically produced by bilateral border-zone (watershed) infarctions involving the posterior parietal and occipital lobes following severe systemic hypotension, cardiac arrest, or bilateral posterior circulation emboli.",
     "keyTakeaway": "Balint syndrome triad (Simultanagnosia, Optic ataxia, Ocular apraxia) = Bilateral parieto-occipital watershed infarctions.",
-    "tags": ["Balint Syndrome", "Simultanagnosia", "Watershed Infarct", "Neuro-Ophthalmology"],
+    "tags": [
+      "Balint Syndrome",
+      "Simultanagnosia",
+      "Watershed Infarct",
+      "Neuro-Ophthalmology"
+    ],
     "hint": "Triad of optic ataxia, ocular apraxia, and simultanagnosia from bilateral border-zone strokes.",
     "source": "Past Board Exam"
   },
@@ -10360,16 +11668,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "An 82-year-old female presents with acute bilateral visual loss following cardiac catheterization. When tested in the clinic, she denies that she is blind, describing imaginary hospital staff and insisting the lights in the room are merely turned off. Her pupils are 3 mm and briskly reactive to direct and consensual light.",
     "question": "What is the diagnosis, and why are her pupillary light reflexes preserved?",
     "options": [
-      { "id": "A", "text": "Functional conversion disorder; normal pathways" },
-      { "id": "B", "text": "Anton syndrome (visual anosognosia); bilateral occipital lobe infarction spares the pretectal pupillary light reflex arc" },
-      { "id": "C", "text": "Acute bilateral ischemic optic neuropathy; spared Edinger-Westphal nuclei" },
-      { "id": "D", "text": "Pituitary apoplexy with chiasmal compression" },
-      { "id": "E", "text": "Bilateral central retinal artery occlusion with cilioretinal sparing" }
+      {
+        "id": "A",
+        "text": "Acute bilateral ischemic optic neuropathy; spared Edinger-Westphal nuclei"
+      },
+      {
+        "id": "B",
+        "text": "Anton syndrome (visual anosognosia); bilateral occipital lobe infarction spares the pretectal pupillary light reflex arc"
+      },
+      {
+        "id": "C",
+        "text": "Functional conversion disorder; normal pathways"
+      },
+      {
+        "id": "D",
+        "text": "Bilateral central retinal artery occlusion with cilioretinal sparing"
+      },
+      {
+        "id": "E",
+        "text": "Pituitary apoplexy with chiasmal compression"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "Anton syndrome (visual anosognosia or cortical blindness with denial of deficit) occurs when bilateral visual calcarine cortices in the occipital lobes are infarcted (typically from basilar apex occlusion or 'top of the basilar' emboli). The patient is completely blind but adamantly denies the deficit and confabulates visual descriptions. Crucially, because the pupillary light reflex fibers leave the optic tract anteriorly to synapse in the midbrain pretectal nuclei, the afferent and efferent pupillary reflex arc is entirely spared in cortical blindness, resulting in normal pupillary light reactions.",
     "keyTakeaway": "Anton syndrome = Cortical blindness with denial of deficit (anosognosia) due to bilateral occipital infarcts; pupillary light reflexes are NORMAL.",
-    "tags": ["Anton Syndrome", "Cortical Blindness", "Anosognosia", "Pupillary Reflex"],
+    "tags": [
+      "Anton Syndrome",
+      "Cortical Blindness",
+      "Anosognosia",
+      "Pupillary Reflex"
+    ],
     "hint": "Bilateral calcarine infarction spares the subcortical midbrain pupillary light reflex arc.",
     "source": "Past Board Exam"
   },
@@ -10380,16 +11708,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A public health epidemiologist analyzes worldwide stroke burden data from the Global Burden of Disease and INTERSTROKE studies.",
     "question": "Which of the following statements regarding the global epidemiology of stroke is correct?",
     "options": [
-      { "id": "A", "text": "Extracranial carotid atherosclerosis is the most common cause of ischemic stroke worldwide" },
-      { "id": "B", "text": "Intracranial atherosclerosis is the most common cause of ischemic stroke worldwide, particularly prevalent in Asian, Hispanic, and African populations" },
-      { "id": "C", "text": "Fewer than 30% of all strokes worldwide are attributable to modifiable risk factors" },
-      { "id": "D", "text": "Stroke is currently the leading cause of death in the United States" },
-      { "id": "E", "text": "Air pollution has no measurable correlation with stroke incidence" }
+      {
+        "id": "A",
+        "text": "Stroke is currently the leading cause of death in the United States"
+      },
+      {
+        "id": "B",
+        "text": "Extracranial carotid atherosclerosis is the most common cause of ischemic stroke worldwide"
+      },
+      {
+        "id": "C",
+        "text": "Intracranial atherosclerosis is the most common cause of ischemic stroke worldwide, particularly prevalent in Asian, Hispanic, and African populations"
+      },
+      {
+        "id": "D",
+        "text": "Fewer than 30% of all strokes worldwide are attributable to modifiable risk factors"
+      },
+      {
+        "id": "E",
+        "text": "Air pollution has no measurable correlation with stroke incidence"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "C",
     "explanation": "Intracranial atherosclerosis (ICAD) is the single most common cause of ischemic stroke worldwide, accounting for up to 30% to 50% of strokes in Asian countries (China, Korea, Japan, South Asia), as well as significant proportions in Black and Hispanic populations. Given the massive populations of these demographic groups, intracranial disease represents the predominant global vascular burden, whereas extracranial carotid disease is more prevalent in Western Caucasian populations. The INTERSTROKE study showed that 10 modifiable risk factors account for ~90% of stroke risk worldwide.",
     "keyTakeaway": "Intracranial atherosclerosis is the MOST COMMON cause of ischemic stroke worldwide (accounting for up to 50% in Asian populations).",
-    "tags": ["Epidemiology", "Intracranial Atherosclerosis", "Global Burden"],
+    "tags": [
+      "Epidemiology",
+      "Intracranial Atherosclerosis",
+      "Global Burden"
+    ],
     "hint": "Large population centers in Asia make this intracranial large-vessel disease the most prevalent globally.",
     "source": "Past Board Exam"
   },
@@ -10400,16 +11747,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 28-year-old female who smokes one pack of cigarettes per day is prescribed an estrogen-containing oral contraceptive pill.",
     "question": "What is the synergistic impact of combining cigarette smoking and estrogen-containing oral contraceptives on the relative risk of ischemic and hemorrhagic stroke?",
     "options": [
-      { "id": "A", "text": "Smoking and oral contraceptives have an additive effect only, increasing stroke risk by 10%" },
-      { "id": "B", "text": "The combination synergistically increases the risk of ischemic stroke by approximately 7.2-fold and hemorrhagic stroke by 3.7-fold" },
-      { "id": "C", "text": "Oral contraceptives protect against the endothelial damage caused by smoking" },
-      { "id": "D", "text": "The combination increases hemorrhagic stroke only, with no effect on ischemic stroke" },
-      { "id": "E", "text": "The combination poses no vascular risk in women under age 35" }
+      {
+        "id": "A",
+        "text": "The combination increases hemorrhagic stroke only, with no effect on ischemic stroke"
+      },
+      {
+        "id": "B",
+        "text": "The combination poses no vascular risk in women under age 35"
+      },
+      {
+        "id": "C",
+        "text": "The combination synergistically increases the risk of ischemic stroke by approximately 7.2-fold and hemorrhagic stroke by 3.7-fold"
+      },
+      {
+        "id": "D",
+        "text": "Oral contraceptives protect against the endothelial damage caused by smoking"
+      },
+      {
+        "id": "E",
+        "text": "Smoking and oral contraceptives have an additive effect only, increasing stroke risk by 10%"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "C",
     "explanation": "While cigarette smoking independently doubles stroke risk and oral contraceptives confer a modest increase in thrombotic risk, their combination has a profound, multiplicative (synergistic) effect. Studies documented in AHA/ASA prevention guidelines show that women who smoke and use oral contraceptives have a 7.2-fold higher relative risk of ischemic stroke and a 3.7-fold higher risk of hemorrhagic stroke compared to non-smoking non-users. Estrogen-containing contraceptives are contraindicated in women who smoke and are >=35 years old.",
     "keyTakeaway": "Smoking + Oral Contraceptives synergistically increase ischemic stroke risk by 7.2x and hemorrhagic stroke risk by 3.7x.",
-    "tags": ["Smoking", "Oral Contraceptives", "Synergy", "Epidemiology"],
+    "tags": [
+      "Smoking",
+      "Oral Contraceptives",
+      "Synergy",
+      "Epidemiology"
+    ],
     "hint": "The combination multiplies risk far beyond simple addition.",
     "source": "Guideline Recommendation"
   },
@@ -10420,16 +11787,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 64-year-old asymptomatic male has a completely occluded right internal carotid artery discovered incidentally on carotid duplex.",
     "question": "According to meta-analyses of asymptomatic carotid occlusion, what is the annual risk of ipsilateral ischemic stroke, and what is the primary cause of mortality in these patients?",
     "options": [
-      { "id": "A", "text": "Annual ipsilateral stroke risk is ~1.3%; majority of deaths are due to coronary artery disease" },
-      { "id": "B", "text": "Annual ipsilateral stroke risk is 15%; majority of deaths are due to fatal cerebral herniation" },
-      { "id": "C", "text": "Annual ipsilateral stroke risk is 0%; these patients have zero future stroke risk" },
-      { "id": "D", "text": "Annual ipsilateral stroke risk is 25%; emergency bypass surgery is mandated" },
-      { "id": "E", "text": "Annual ipsilateral stroke risk is 8%; primary mortality is cancer" }
+      {
+        "id": "A",
+        "text": "Annual ipsilateral stroke risk is 0%; these patients have zero future stroke risk"
+      },
+      {
+        "id": "B",
+        "text": "Annual ipsilateral stroke risk is 15%; majority of deaths are due to fatal cerebral herniation"
+      },
+      {
+        "id": "C",
+        "text": "Annual ipsilateral stroke risk is 25%; emergency bypass surgery is mandated"
+      },
+      {
+        "id": "D",
+        "text": "Annual ipsilateral stroke risk is ~1.3%; majority of deaths are due to coronary artery disease"
+      },
+      {
+        "id": "E",
+        "text": "Annual ipsilateral stroke risk is 8%; primary mortality is cancer"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Meta-analyses demonstrate that patients with asymptomatic carotid artery occlusion have a relatively low annual risk of ipsilateral ischemic stroke (approximately 1.3% per year, and 2.0% for any stroke). However, they have a substantial annual mortality of 7.7%, with more than half of all deaths caused by coronary artery disease and myocardial infarction. Therefore, invasive revascularization (such as EC-IC bypass) is not indicated, and management focuses on aggressive medical therapy and cardiac risk stratification.",
     "keyTakeaway": "Asymptomatic carotid occlusion carries a low annual stroke risk (~1.3%/yr); the primary mortality threat is coronary artery disease.",
-    "tags": ["Carotid Occlusion", "Asymptomatic", "Prognosis", "Epidemiology"],
+    "tags": [
+      "Carotid Occlusion",
+      "Asymptomatic",
+      "Prognosis",
+      "Epidemiology"
+    ],
     "hint": "The low stroke risk does not justify surgical bypass; cardiovascular death from CAD is the main danger.",
     "source": "Past Board Exam"
   },
@@ -10440,16 +11827,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 62-year-old female with persistent atrial fibrillation undergoes electrical cardioversion to normal sinus rhythm.",
     "question": "What is the incidence of embolic stroke associated with cardioversion in patients with atrial fibrillation who are NOT anticoagulated?",
     "options": [
-      { "id": "A", "text": "<0.1%" },
-      { "id": "B", "text": "Approximately 5%" },
-      { "id": "C", "text": "25%" },
-      { "id": "D", "text": "50%" },
-      { "id": "E", "text": "0%, cardioversion never causes stroke" }
+      {
+        "id": "A",
+        "text": "50%"
+      },
+      {
+        "id": "B",
+        "text": "0%, cardioversion never causes stroke"
+      },
+      {
+        "id": "C",
+        "text": "25%"
+      },
+      {
+        "id": "D",
+        "text": "<0.1%"
+      },
+      {
+        "id": "E",
+        "text": "Approximately 5%"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "E",
     "explanation": "Without therapeutic anticoagulation, cardioversion (either electrical or pharmacologic) of atrial fibrillation is associated with approximately a 5% risk of thromboembolism and embolic stroke. When sinus rhythm is restored, the stunned fibrillating atrium recovers contractile function and expels pre-existing or freshly formed thrombi from the left atrial appendage into the systemic circulation. Therefore, guidelines mandate at least 3 weeks of therapeutic anticoagulation prior to cardioversion and continued for at least 4 weeks post-procedure, regardless of baseline CHA2DS2-VASc score.",
     "keyTakeaway": "Unanticoagulated cardioversion in atrial fibrillation carries a ~5% risk of embolic stroke due to atrial stunning and thrombus expulsion.",
-    "tags": ["Cardioversion", "Atrial Fibrillation", "Stroke Risk", "Cardiology"],
+    "tags": [
+      "Cardioversion",
+      "Atrial Fibrillation",
+      "Stroke Risk",
+      "Cardiology"
+    ],
     "hint": "About 1 in 20 patients will suffer an embolic stroke without anticoagulation.",
     "source": "Guideline Recommendation"
   },
@@ -10460,16 +11867,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 48-year-old male with an acute embolic ischemic stroke has a high-grade fever, splinter hemorrhages, and a new systolic murmur. TEE demonstrates a 14 mm mobile mass on the anterior leaflet of the mitral valve. Blood cultures grow Staphylococcus aureus.",
     "question": "What is the guideline-directed management regarding intravenous thrombolysis (tPA) and full-dose anticoagulation in acute stroke secondary to infective endocarditis?",
     "options": [
-      { "id": "A", "text": "IV alteplase and full-dose heparin are both first-line therapies" },
-      { "id": "B", "text": "Both IV thrombolysis and therapeutic anticoagulation are contraindicated due to high risk of fatal hemorrhagic transformation and mycotic aneurysm rupture" },
-      { "id": "C", "text": "Full-dose heparin is indicated to dissolve septic emboli" },
-      { "id": "D", "text": "Endovascular thrombectomy is absolutely contraindicated in all endocarditis cases" },
-      { "id": "E", "text": "Dual antiplatelet therapy should be given as emergency treatment" }
+      {
+        "id": "A",
+        "text": "Endovascular thrombectomy is absolutely contraindicated in all endocarditis cases"
+      },
+      {
+        "id": "B",
+        "text": "Both IV thrombolysis and therapeutic anticoagulation are contraindicated due to high risk of fatal hemorrhagic transformation and mycotic aneurysm rupture"
+      },
+      {
+        "id": "C",
+        "text": "Full-dose heparin is indicated to dissolve septic emboli"
+      },
+      {
+        "id": "D",
+        "text": "Dual antiplatelet therapy should be given as emergency treatment"
+      },
+      {
+        "id": "E",
+        "text": "IV alteplase and full-dose heparin are both first-line therapies"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "Infective endocarditis with stroke carries a very high propensity for severe hemorrhagic transformation, septic arteritis, and rupture of distal mycotic aneurysms. Intravenous thrombolysis (tPA) is contraindicated due to an unacceptably high rate of fatal intracerebral hemorrhage (mortality >20% in registry studies). Full-dose anticoagulation is also contraindicated in native valve infective endocarditis. Treatment consists of appropriate IV bactericidal antibiotics and evaluation for early surgical valve repair/replacement. Mechanical thrombectomy can be considered selectively for emergent LVO.",
     "keyTakeaway": "Infective endocarditis stroke: Both IV tPA and therapeutic anticoagulation are CONTRAINDICATED due to high fatal hemorrhage risk.",
-    "tags": ["Infective Endocarditis", "tPA Contraindications", "Anticoagulation", "Cardiology"],
+    "tags": [
+      "Infective Endocarditis",
+      "tPA Contraindications",
+      "Anticoagulation",
+      "Cardiology"
+    ],
     "hint": "Septic emboli inflame vessel walls, making both lytics and full anticoagulation extremely dangerous.",
     "source": "Guideline Recommendation"
   },
@@ -10480,16 +11907,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 7-year-old boy presents with acute right hemiparesis and facial weakness. Head CT is normal, but brain MRI DWI confirms an acute left internal capsule infarction.",
     "question": "What did the International Pediatric Stroke Study (IPSS) establish regarding the sensitivity of noncontrast CT compared to MRI in diagnosing pediatric acute ischemic stroke?",
     "options": [
-      { "id": "A", "text": "CT is 95% sensitive and is the gold standard in children" },
-      { "id": "B", "text": "Noncontrast CT misses more than 50% of acute ischemic strokes in children; MRI with DWI is the mandatory modality of choice" },
-      { "id": "C", "text": "CT and MRI have identical sensitivity in children" },
-      { "id": "D", "text": "Cranial ultrasound is more sensitive than both CT and MRI in school-aged children" },
-      { "id": "E", "text": "Angiography is required before any MRI imaging can be attempted" }
+      {
+        "id": "A",
+        "text": "Angiography is required before any MRI imaging can be attempted"
+      },
+      {
+        "id": "B",
+        "text": "CT is 95% sensitive and is the gold standard in children"
+      },
+      {
+        "id": "C",
+        "text": "Cranial ultrasound is more sensitive than both CT and MRI in school-aged children"
+      },
+      {
+        "id": "D",
+        "text": "Noncontrast CT misses more than 50% of acute ischemic strokes in children; MRI with DWI is the mandatory modality of choice"
+      },
+      {
+        "id": "E",
+        "text": "CT and MRI have identical sensitivity in children"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "D",
     "explanation": "In the International Pediatric Stroke Study (IPSS) and related pediatric stroke registries, initial noncontrast head CT was negative or unrevealing in over 50% of children with confirmed acute arterial ischemic stroke. Children frequently present with non-localizing symptoms (seizures, lethargy, irritability), and smaller lacunar or posterior fossa strokes are easily missed on CT. Brain MRI with DWI is the gold standard and essential imaging modality for rapid, accurate diagnosis in pediatric stroke.",
     "keyTakeaway": "Initial CT misses >50% of pediatric ischemic strokes; brain MRI with DWI is mandatory.",
-    "tags": ["Pediatric Stroke", "IPSS", "MRI DWI", "Special Populations"],
+    "tags": [
+      "Pediatric Stroke",
+      "IPSS",
+      "MRI DWI",
+      "Special Populations"
+    ],
     "hint": "CT has very poor sensitivity in children, missing over half of acute infarcts.",
     "source": "Past Board Exam"
   },
@@ -10500,16 +11947,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "An 8-year-old girl with a history of chickenpox 6 weeks prior presents with sudden left hemiparesis. MRA reveals focal narrowing and beading of the supraclinoid internal carotid artery and proximal M1 segment.",
     "question": "What is the diagnosis, and which laboratory assay in CSF provides the most sensitive confirmation of Varicella Zoster Virus (VZV) vasculopathy?",
     "options": [
-      { "id": "A", "text": "CSF VZV PCR" },
-      { "id": "B", "text": "Anti-VZV IgG and IgM antibody index in CSF" },
-      { "id": "C", "text": "Serum VZV IgM only" },
-      { "id": "D", "text": "Viral culture of the nasopharynx" },
-      { "id": "E", "text": "Tzanck smear of skin scrapings" }
+      {
+        "id": "A",
+        "text": "Tzanck smear of skin scrapings"
+      },
+      {
+        "id": "B",
+        "text": "Serum VZV IgM only"
+      },
+      {
+        "id": "C",
+        "text": "Anti-VZV IgG and IgM antibody index in CSF"
+      },
+      {
+        "id": "D",
+        "text": "Viral culture of the nasopharynx"
+      },
+      {
+        "id": "E",
+        "text": "CSF VZV PCR"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "C",
     "explanation": "Post-varicella arteriopathy (transient cerebral arteriopathy) typically occurs 2 to 6 weeks after primary varicella infection in children, when the virus travels transaxonally via the ophthalmic branch of the trigeminal nerve to infect the adventitia of intracranial arteries at the Circle of Willis. While CSF VZV PCR is frequently negative in late or subacute stages, measuring the CSF anti-VZV IgG/IgM antibody index (intrathecal antibody synthesis) has significantly higher sensitivity (>90%) for confirming VZV vasculopathy. Treatment is IV acyclovir and corticosteroids.",
     "keyTakeaway": "VZV vasculopathy: Anti-VZV antibody in CSF is MORE SENSITIVE than CSF PCR in subacute cases.",
-    "tags": ["VZV Vasculopathy", "Pediatric Stroke", "CSF Antibody", "Special Populations"],
+    "tags": [
+      "VZV Vasculopathy",
+      "Pediatric Stroke",
+      "CSF Antibody",
+      "Special Populations"
+    ],
     "hint": "PCR is often negative weeks after rash; look for locally synthesized antibodies in CSF.",
     "source": "Past Board Exam"
   },
@@ -10520,16 +11987,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 9-month-old infant presents with macrocephaly, chronic subdural hematomas of varying ages, and retinal hemorrhages. The team investigates for abusive head trauma (shaken baby syndrome).",
     "question": "Which autosomal recessive metabolic disorder caused by glutaryl-CoA dehydrogenase deficiency can present with spontaneous subdural hematomas and macrocephaly, mimicking nonaccidental trauma?",
     "options": [
-      { "id": "A", "text": "Maple syrup urine disease" },
-      { "id": "B", "text": "Glutaric aciduria type 1 (GA1)" },
-      { "id": "C", "text": "Phenylketonuria" },
-      { "id": "D", "text": "Niemann-Pick disease type C" },
-      { "id": "E", "text": "Gaucher disease" }
+      {
+        "id": "A",
+        "text": "Phenylketonuria"
+      },
+      {
+        "id": "B",
+        "text": "Maple syrup urine disease"
+      },
+      {
+        "id": "C",
+        "text": "Niemann-Pick disease type C"
+      },
+      {
+        "id": "D",
+        "text": "Glutaric aciduria type 1 (GA1)"
+      },
+      {
+        "id": "E",
+        "text": "Gaucher disease"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "D",
     "explanation": "Glutaric aciduria type 1 (GA1) is an autosomal recessive metabolic disorder of lysine, hydroxylysine, and tryptophan metabolism caused by deficiency of glutaryl-CoA dehydrogenase. It produces microencephalic macrocephaly, frontotemporal atrophy, and widening of the subarachnoid cerebrospinal fluid spaces. This anatomical stretching of bridging cortical veins predisposes to spontaneous or minimal-trauma subdural hematomas and retinal hemorrhages, frequently mimicking non-accidental abusive head trauma.",
     "keyTakeaway": "Glutaric aciduria type 1 (GA1) causes macrocephaly and spontaneous subdural hematomas, mimicking child abuse.",
-    "tags": ["Glutaric Aciduria", "Subdural Hematoma", "Pediatrics", "Special Populations"],
+    "tags": [
+      "Glutaric Aciduria",
+      "Subdural Hematoma",
+      "Pediatrics",
+      "Special Populations"
+    ],
     "hint": "Enzyme defect leads to accumulation of glutaric acid and enlarged subarachnoid spaces with torn bridging veins.",
     "source": "Past Board Exam"
   },
@@ -10540,16 +12027,37 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 65-year-old male with an acute stroke undergoes dynamic susceptibility contrast CT perfusion (CTP). The perfusion maps show a region in the right temporal lobe with reduced Cerebral Blood Flow (CBF), prolonged Mean Transit Time (MTT), but preserved/elevated Cerebral Blood Volume (CBV).",
     "question": "What tissue state does this perfusion-volume mismatch pattern represent?",
     "options": [
-      { "id": "A", "text": "Irreversibly infarcted ischemic core" },
-      { "id": "B", "text": "Ischemic penumbra (potentially salvageable tissue at risk)" },
-      { "id": "C", "text": "Luxury perfusion with hyperemic reperfusion" },
-      { "id": "D", "text": "Normal autoregulated brain tissue" },
-      { "id": "E", "text": "Intracranial venous hypertension" }
+      {
+        "id": "A",
+        "text": "Irreversibly infarcted ischemic core"
+      },
+      {
+        "id": "B",
+        "text": "Ischemic penumbra (potentially salvageable tissue at risk)"
+      },
+      {
+        "id": "C",
+        "text": "Normal autoregulated brain tissue"
+      },
+      {
+        "id": "D",
+        "text": "Luxury perfusion with hyperemic reperfusion"
+      },
+      {
+        "id": "E",
+        "text": "Intracranial venous hypertension"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "On perfusion imaging (CTP or MRP), the ischemic core is defined by severely reduced Cerebral Blood Volume (CBV <30% or <1.2 mL/100g) and severely reduced CBF, representing tissue where microvascular collapse and irreversible cell death have occurred. The ischemic penumbra is characterized by prolonged transit time (increased MTT or Tmax >6 seconds) and reduced CBF, but PRESERVED or elevated CBV due to compensatory autoregulatory vasodilation and leptomeningeal collateral inflow. A mismatch between CBV core and MTT hypoperfusion defines salvageable penumbral tissue.",
     "keyTakeaway": "Ischemic penumbra on perfusion imaging = Prolonged MTT + reduced CBF + PRESERVED or ELEVATED CBV (autoregulatory vasodilation).",
-    "tags": ["CT Perfusion", "Ischemic Penumbra", "CBV", "MTT", "Neuroradiology"],
+    "tags": [
+      "CT Perfusion",
+      "Ischemic Penumbra",
+      "CBV",
+      "MTT",
+      "Neuroradiology"
+    ],
     "hint": "Collateral vessels dilate to compensate, preserving tissue blood volume even as flow slows.",
     "source": "Past Board Exam"
   },
@@ -10560,16 +12068,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 40-year-old male with acute right MCA stroke undergoes Transcranial Doppler monitoring. The middle cerebral artery mean flow velocity is measured at 245 cm/s.",
     "question": "According to consensus neurosonology velocity criteria, what degree of MCA stenosis does a peak systolic velocity >210 to 280 cm/s represent?",
     "options": [
-      { "id": "A", "text": "Normal velocity (no stenosis)" },
-      { "id": "B", "text": "Mild stenosis" },
-      { "id": "C", "text": "Moderate stenosis" },
-      { "id": "D", "text": "Total occlusion" },
-      { "id": "E", "text": "Brain death" }
+      {
+        "id": "A",
+        "text": "Brain death"
+      },
+      {
+        "id": "B",
+        "text": "Total occlusion"
+      },
+      {
+        "id": "C",
+        "text": "Mild stenosis"
+      },
+      {
+        "id": "D",
+        "text": "Normal velocity (no stenosis)"
+      },
+      {
+        "id": "E",
+        "text": "Moderate stenosis"
+      }
     ],
-    "correctOptionId": "C",
+    "correctOptionId": "E",
     "explanation": "Normal MCA peak systolic velocity is generally <140 cm/s (mean velocity ~55-65 cm/s). On TCD: Mild stenosis produces a peak systolic velocity of 140 to 209 cm/s; Moderate stenosis produces a PSV of 210 to 280 cm/s; Severe stenosis produces a PSV >280 cm/s with significant increases in end-diastolic velocity. When stenosis progresses to critical near-occlusion, velocities fall sharply prior to total occlusion.",
     "keyTakeaway": "TCD MCA stenosis criteria: Mild = PSV 140-209 cm/s; Moderate = PSV 210-280 cm/s; Severe = PSV >280 cm/s.",
-    "tags": ["TCD Stenosis Criteria", "Neurosonology", "Neuroradiology"],
+    "tags": [
+      "TCD Stenosis Criteria",
+      "Neurosonology",
+      "Neuroradiology"
+    ],
     "hint": "Velocities between 210 and 280 cm/s fall into the intermediate moderate stenosis category.",
     "source": "Past Board Exam"
   },
@@ -10580,16 +12107,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 74-year-old hypertensive male has progressive cognitive decline with severe psychomotor slowing, apathy, executive dysfunction, and a wide-based, magnetic shuffling gait. Memory storage and recognition are relatively preserved compared to spontaneous free recall. Brain MRI shows extensive confluent periventricular leukoaraiosis and several subcortical lacunar infarcts.",
     "question": "What is the diagnosis, and which clinical feature distinguishes subcortical vascular dementia from Alzheimer's disease?",
     "options": [
-      { "id": "A", "text": "Alzheimer's disease; rapid progression of rapid eye movement sleep disorder" },
-      { "id": "B", "text": "Subcortical ischemic vascular dementia (Binswanger disease); prominent executive dysfunction, retrieval memory deficit with spared recognition, and early gait disorder" },
-      { "id": "C", "text": "Dementia with Lewy bodies; absence of hallucinations" },
-      { "id": "D", "text": "Frontotemporal dementia; hyperorality and disinhibition" },
-      { "id": "E", "text": "Normal pressure hydrocephalus; absence of incontinence" }
+      {
+        "id": "A",
+        "text": "Normal pressure hydrocephalus; absence of incontinence"
+      },
+      {
+        "id": "B",
+        "text": "Dementia with Lewy bodies; absence of hallucinations"
+      },
+      {
+        "id": "C",
+        "text": "Alzheimer's disease; rapid progression of rapid eye movement sleep disorder"
+      },
+      {
+        "id": "D",
+        "text": "Subcortical ischemic vascular dementia (Binswanger disease); prominent executive dysfunction, retrieval memory deficit with spared recognition, and early gait disorder"
+      },
+      {
+        "id": "E",
+        "text": "Frontotemporal dementia; hyperorality and disinhibition"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "D",
     "explanation": "Subcortical ischemic vascular dementia (Binswanger disease / small vessel vascular dementia) results from lipohyalinosis and arteriolosclerosis of deep penetrating arterioles. It produces disruption of frontosubcortical circuits, manifesting as prominent dysexecutive syndrome, psychomotor slowing, apathy, and early gait apraxia ('vascular parkinsonism'). In contrast to Alzheimer's disease (which impairs memory storage and consolidation in the hippocampus), subcortical vascular dementia causes an executive retrieval deficit where memory improves with cues and recognition is preserved.",
     "keyTakeaway": "Subcortical vascular dementia = Frontosubcortical syndrome with executive dysfunction, retrieval deficit (spared recognition), and early gait impairment.",
-    "tags": ["Vascular Dementia", "Binswanger", "Leukoaraiosis", "Cognitive Disorders"],
+    "tags": [
+      "Vascular Dementia",
+      "Binswanger",
+      "Leukoaraiosis",
+      "Cognitive Disorders"
+    ],
     "hint": "Executive dysfunction with preserved recognition memory and early gait changes indicates subcortical frontostriatal disruption.",
     "source": "Past Board Exam"
   },
@@ -10600,16 +12147,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A stroke physiatrist is scoring post-stroke functional independence across different outcome metrics in clinical research.",
     "question": "Which of the following correctly pairs the stroke scale with its specific domain of measurement?",
     "options": [
-      { "id": "A", "text": "Barthel Index (BI): Basic activities of daily living (feeding, bathing, grooming, mobility; 0-100 scale); Modified Rankin Scale (mRS): Global disability and functional dependence (0-6 scale)" },
-      { "id": "B", "text": "Barthel Index: Cognitive and language impairment only; mRS: Acute stroke deficit severity" },
-      { "id": "C", "text": "mRS: Visual acuity; NIHSS: Long-term quality of life" },
-      { "id": "D", "text": "FIM: Primary screening for depression; GOS: Post-stroke spasticity" },
-      { "id": "E", "text": "Stroke Impact Scale: Exclusively measures walking speed on treadmill" }
+      {
+        "id": "A",
+        "text": "Barthel Index: Cognitive and language impairment only; mRS: Acute stroke deficit severity"
+      },
+      {
+        "id": "B",
+        "text": "FIM: Primary screening for depression; GOS: Post-stroke spasticity"
+      },
+      {
+        "id": "C",
+        "text": "mRS: Visual acuity; NIHSS: Long-term quality of life"
+      },
+      {
+        "id": "D",
+        "text": "Stroke Impact Scale: Exclusively measures walking speed on treadmill"
+      },
+      {
+        "id": "E",
+        "text": "Barthel Index (BI): Basic activities of daily living (feeding, bathing, grooming, mobility; 0-100 scale); Modified Rankin Scale (mRS): Global disability and functional dependence (0-6 scale)"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "E",
     "explanation": "The Barthel Index (BI) is a 10-item instrument measuring independence in basic activities of daily living (ADLs: self-care, grooming, dressing, bowel/bladder, transfers, and mobility) scored from 0 to 100 (100 = completely independent). The modified Rankin Scale (mRS) is a 7-point scale (0 = no symptoms, 1 = no significant disability, 2 = slight disability [independent], 3 = moderate disability [requires assistance, walks unassisted], 4 = moderately severe [cannot walk without assistance], 5 = severe [bedridden], 6 = dead) used as the standard global disability endpoint in stroke trials.",
     "keyTakeaway": "Barthel Index = ADL independence (0-100); mRS = Global disability & handicap (0-6); NIHSS = Neurologic impairment (0-42).",
-    "tags": ["Barthel Index", "mRS", "Stroke Scales", "Rehabilitation"],
+    "tags": [
+      "Barthel Index",
+      "mRS",
+      "Stroke Scales",
+      "Rehabilitation"
+    ],
     "hint": "Barthel measures daily living tasks (100 is best), while Rankin measures overall disability (0 is best, 6 is death).",
     "source": "Past Board Exam"
   },
@@ -10620,20 +12187,39 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 42-year-old male with poststroke hemiplegia develops severe, painful flexor spasticity of the left wrist and fingers (Ashworth Grade 3), interfering with hygiene.",
     "question": "What is the mechanism of action of Botulinum toxin type A in treating post-stroke focal spasticity, and what is a crucial clinical contraindication?",
     "options": [
-      { "id": "A", "text": "Inhibits presynaptic acetylcholine release at the neuromuscular junction; absolutely contraindicated in patients with myasthenia gravis" },
-      { "id": "B", "text": "GABA-B receptor agonist; contraindicated in hypertension" },
-      { "id": "C", "text": "Alpha-2 adrenergic agonist; contraindicated in renal failure" },
-      { "id": "D", "text": "Direct calcium release inhibitor from sarcoplasmic reticulum; contraindicated in heart block" },
-      { "id": "E", "text": "Centrally acting NMDA antagonist; contraindicated in asthma" }
+      {
+        "id": "A",
+        "text": "Inhibits presynaptic acetylcholine release at the neuromuscular junction; absolutely contraindicated in patients with myasthenia gravis"
+      },
+      {
+        "id": "B",
+        "text": "GABA-B receptor agonist; contraindicated in hypertension"
+      },
+      {
+        "id": "C",
+        "text": "Direct calcium release inhibitor from sarcoplasmic reticulum; contraindicated in heart block"
+      },
+      {
+        "id": "D",
+        "text": "Centrally acting NMDA antagonist; contraindicated in asthma"
+      },
+      {
+        "id": "E",
+        "text": "Alpha-2 adrenergic agonist; contraindicated in renal failure"
+      }
     ],
     "correctOptionId": "A",
     "explanation": "Botulinum toxin type A cleaves SNAP-25, a SNARE protein essential for synaptic vesicle fusion, thereby blocking the presynaptic release of acetylcholine at the neuromuscular junction. It is FDA-approved for focal upper and lower limb spasticity. Its effects are reversible, lasting 3 to 4 months. Because it causes neuromuscular blockade, it is absolutely contraindicated in patients with underlying neuromuscular junction disorders, specifically Myasthenia Gravis and Lambert-Eaton syndrome, as it can precipitate life-threatening myasthenic crisis.",
     "keyTakeaway": "Botulinum toxin blocks presynaptic acetylcholine release; FDA-approved for focal spasticity; CONTRAINDICATED in myasthenia gravis.",
-    "tags": ["Botulinum Toxin", "Spasticity", "Myasthenia Gravis", "Rehabilitation"],
+    "tags": [
+      "Botulinum Toxin",
+      "Spasticity",
+      "Myasthenia Gravis",
+      "Rehabilitation"
+    ],
     "hint": "Blocks acetylcholine release at motor endplates and worsens autoimmune neuromuscular junction disease.",
     "source": "Past Board Exam"
-  }
-  ,
+  },
   {
     "id": "q-fj-81",
     "chapterId": 9,
@@ -10641,16 +12227,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 52-year-old immigrant from rural Bolivia presents with progressive shortness of breath and an acute left MCA ischemic stroke. Echocardiogram demonstrates biventricular dilated cardiomyopathy, apical left ventricular aneurysm with mural thrombus, and conduction system disease with right bundle branch block.",
     "question": "What is the causative organism, and what is the underlying diagnosis?",
     "options": [
-      { "id": "A", "text": "Trypanosoma cruzi; Chagas disease" },
-      { "id": "B", "text": "Toxoplasma gondii; Toxoplasmosis" },
-      { "id": "C", "text": "Taenia solium; Neurocysticercosis" },
-      { "id": "D", "text": "Borrelia burgdorferi; Lyme disease" },
-      { "id": "E", "text": "Echinococcus granulosus; Hydatid disease" }
+      {
+        "id": "A",
+        "text": "Trypanosoma cruzi; Chagas disease"
+      },
+      {
+        "id": "B",
+        "text": "Borrelia burgdorferi; Lyme disease"
+      },
+      {
+        "id": "C",
+        "text": "Taenia solium; Neurocysticercosis"
+      },
+      {
+        "id": "D",
+        "text": "Toxoplasma gondii; Toxoplasmosis"
+      },
+      {
+        "id": "E",
+        "text": "Echinococcus granulosus; Hydatid disease"
+      }
     ],
     "correctOptionId": "A",
     "explanation": "Chronic Chagas disease (caused by the protozoan parasite Trypanosoma cruzi, endemic in Latin America) produces severe chronic cardiomyopathy characterized by biventricular enlargement, apical aneurysms (particularly left ventricular apex), mural thrombi, and progressive heart failure. Cardioembolism from apical thrombi is a major cause of ischemic stroke in patients from endemic areas.",
     "keyTakeaway": "Chagas disease (Trypanosoma cruzi) = Dilated cardiomyopathy with apical LV aneurysm, mural thrombus, and cardioembolic stroke.",
-    "tags": ["Chagas Disease", "Cardioembolism", "Cardiology", "Special Populations"],
+    "tags": [
+      "Chagas Disease",
+      "Cardioembolism",
+      "Cardiology",
+      "Special Populations"
+    ],
     "hint": "Reduviid (kissing) bug vector transmits this protozoan causing American trypanosomiasis.",
     "source": "Past Board Exam"
   },
@@ -10661,16 +12267,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 62-year-old male with chronic hypertension is admitted to the neuro-ICU with an acute hypertensive thalamic hemorrhage. The stroke fellow calculates the ICH Score to estimate 30-day mortality.",
     "question": "Which of the following prognostic components is included in the validated 6-point ICH Score developed by Hemphill et al.?",
     "options": [
-      { "id": "A", "text": "Glasgow Coma Scale score, ICH volume (>=30 cc vs <30 cc), Intraventricular hemorrhage, Infratentorial origin, and Age (>=80 years)" },
-      { "id": "B", "text": "Serum glucose, systolic blood pressure, and NIHSS score" },
-      { "id": "C", "text": "Platelet count, INR, and time to hospital arrival" },
-      { "id": "D", "text": "Presence of CTA spot sign and pupil reactivity" },
-      { "id": "E", "text": "Hunt-Hess score and Fisher CT grade" }
+      {
+        "id": "A",
+        "text": "Presence of CTA spot sign and pupil reactivity"
+      },
+      {
+        "id": "B",
+        "text": "Hunt-Hess score and Fisher CT grade"
+      },
+      {
+        "id": "C",
+        "text": "Glasgow Coma Scale score, ICH volume (>=30 cc vs <30 cc), Intraventricular hemorrhage, Infratentorial origin, and Age (>=80 years)"
+      },
+      {
+        "id": "D",
+        "text": "Serum glucose, systolic blood pressure, and NIHSS score"
+      },
+      {
+        "id": "E",
+        "text": "Platelet count, INR, and time to hospital arrival"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "The ICH Score (0 to 6 points) predicts 30-day mortality after intracerebral hemorrhage based on: 1. GCS: 3-4 (2 pts), 5-12 (1 pt), 13-15 (0 pts); 2. ICH Volume: >=30 cm3 (1 pt), <30 cm3 (0 pts); 3. Intraventricular hemorrhage (IVH): Yes (1 pt), No (0 pts); 4. Infratentorial origin: Yes (1 pt), No (0 pts); 5. Age: >=80 years (1 pt), <80 years (0 pts). Mortality correlates directly: Score 0 (0%), Score 1 (13%), Score 2 (26%), Score 3 (72%), Score 4 (97%), and Scores 5-6 (100%).",
     "keyTakeaway": "ICH Score components: GCS (0-2), Volume >=30cc (1), IVH (1), Infratentorial (1), Age >=80 (1). Predicts 30-day mortality.",
-    "tags": ["ICH Score", "Intracerebral Hemorrhage", "Prognosis", "Hemphill"],
+    "tags": [
+      "ICH Score",
+      "Intracerebral Hemorrhage",
+      "Prognosis",
+      "Hemphill"
+    ],
     "hint": "Remember the 5 parameters: GCS, volume cutoff 30cc, IVH, brainstem/cerebellar location, and age cutoff 80.",
     "source": "Guideline Recommendation"
   },
@@ -10681,16 +12307,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 31-year-old female taking third-generation oral contraceptives presents with 10 days of progressive headache, bilateral papilledema, and a focal seizure. Brain MRI reveals superior sagittal sinus and left transverse sinus thrombosis with a small left temporal hemorrhagic venous infarction.",
     "question": "What is the guideline-directed initial treatment for acute cerebral venous thrombosis (CVT) presenting with hemorrhagic venous infarction?",
     "options": [
-      { "id": "A", "text": "Withhold all anticoagulation due to the presence of intracranial hemorrhage" },
-      { "id": "B", "text": "Full-dose therapeutic anticoagulation with subcutaneous LMWH or IV unfractionated heparin, even in the presence of hemorrhagic venous infarction" },
-      { "id": "C", "text": "Immediate surgical craniotomy for clot evacuation" },
-      { "id": "D", "text": "Intravenous high-dose dexamethasone" },
-      { "id": "E", "text": "Aspirin 325 mg daily only" }
+      {
+        "id": "A",
+        "text": "Intravenous high-dose dexamethasone"
+      },
+      {
+        "id": "B",
+        "text": "Full-dose therapeutic anticoagulation with subcutaneous LMWH or IV unfractionated heparin, even in the presence of hemorrhagic venous infarction"
+      },
+      {
+        "id": "C",
+        "text": "Aspirin 325 mg daily only"
+      },
+      {
+        "id": "D",
+        "text": "Immediate surgical craniotomy for clot evacuation"
+      },
+      {
+        "id": "E",
+        "text": "Withhold all anticoagulation due to the presence of intracranial hemorrhage"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "AHA/ASA and European stroke guidelines strongly recommend therapeutic anticoagulation (weight-based LMWH or IV unfractionated heparin) as the first-line therapy for acute cerebral venous thrombosis (CVT), EVEN in the presence of hemorrhagic venous infarction. The hemorrhage in CVT is caused by downstream venous hypertension and congestion; opening the venous outflow by preventing thrombus propagation relieves congestion and stops further hemorrhagic transformation. Anticoagulation is followed by oral anticoagulation for 3 to 6 months.",
     "keyTakeaway": "CVT first-line treatment is full therapeutic anticoagulation (LMWH/UFH), EVEN in the presence of hemorrhagic venous infarction.",
-    "tags": ["CVT", "Cerebral Venous Thrombosis", "Anticoagulation", "Venous Infarct"],
+    "tags": [
+      "CVT",
+      "Cerebral Venous Thrombosis",
+      "Anticoagulation",
+      "Venous Infarct"
+    ],
     "hint": "Counterintuitively, anticoagulation is safe and indicated because relieving venous congestion stops the bleeding.",
     "source": "Guideline Recommendation"
   },
@@ -10701,16 +12347,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 44-year-old male presents with right facial pain and mild right ptosis and miosis following minor neck trauma. When testing pupillary responses in dark vs light, the anisocoria is most pronounced in dim light. Pharmacologic testing with topical 0.5% apraclonidine causes reversal of the anisocoria (dilation of the right pupil and narrowing of the left).",
     "question": "What is the diagnosis, and why does apraclonidine reverse anisocoria in Horner's syndrome?",
     "options": [
-      { "id": "A", "text": "Third nerve palsy; apraclonidine blocks parasympathetic tone" },
-      { "id": "B", "text": "Horner syndrome; denervation supersensitivity of alpha-1 adrenergic receptors on the paretic dilator pupillae muscle" },
-      { "id": "C", "text": "Adie tonic pupil; supersensitivity of muscarinic receptors" },
-      { "id": "D", "text": "Argyll Robertson pupil; bilateral midbrain deafferentation" },
-      { "id": "E", "text": "Physiologic anisocoria; symmetrical response" }
+      {
+        "id": "A",
+        "text": "Horner syndrome; denervation supersensitivity of alpha-1 adrenergic receptors on the paretic dilator pupillae muscle"
+      },
+      {
+        "id": "B",
+        "text": "Third nerve palsy; apraclonidine blocks parasympathetic tone"
+      },
+      {
+        "id": "C",
+        "text": "Argyll Robertson pupil; bilateral midbrain deafferentation"
+      },
+      {
+        "id": "D",
+        "text": "Physiologic anisocoria; symmetrical response"
+      },
+      {
+        "id": "E",
+        "text": "Adie tonic pupil; supersensitivity of muscarinic receptors"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "A",
     "explanation": "Horner syndrome (oculosympathetic paresis: ptosis, miosis, anhidrosis) exhibits greater anisocoria in the dark because the paretic dilator muscle cannot dilate. Apraclonidine is a weak alpha-1 agonist and strong alpha-2 agonist. In a normal pupil, it has minimal dilating effect (alpha-2 predominates). In a Horner pupil, chronic loss of sympathetic innervation leads to denervation supersensitivity of alpha-1 receptors on the pupillary dilator muscle, causing the abnormal pupil to dilate widely and reverse the anisocoria (a positive apraclonidine test).",
     "keyTakeaway": "Horner syndrome: Apraclonidine causes reversal of anisocoria due to alpha-1 denervation supersensitivity in the affected eye.",
-    "tags": ["Horner Syndrome", "Apraclonidine", "Neuro-Ophthalmology", "Autonomics"],
+    "tags": [
+      "Horner Syndrome",
+      "Apraclonidine",
+      "Neuro-Ophthalmology",
+      "Autonomics"
+    ],
     "hint": "Denervated pupil dilator receptors become hypersensitive to weak alpha-1 agonists.",
     "source": "Past Board Exam"
   },
@@ -10721,16 +12387,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 61-year-old female presents with acute severe vertigo, vomiting, right limb ataxia, right Horner syndrome, right facial numbness, and left body thermoanalgesia. On exam, she has prominent right lower motor neuron facial weakness and complete loss of hearing in her right ear.",
     "question": "Which cerebellar artery occlusion produces this specific combination of brainstem deficits (including deafness and peripheral facial palsy), differentiating it from Wallenberg syndrome?",
     "options": [
-      { "id": "A", "text": "Posterior Inferior Cerebellar Artery (PICA)" },
-      { "id": "B", "text": "Anterior Inferior Cerebellar Artery (AICA)" },
-      { "id": "C", "text": "Superior Cerebellar Artery (SCA)" },
-      { "id": "D", "text": "Posterior Cerebral Artery (PCA)" },
-      { "id": "E", "text": "Anterior Spinal Artery (ASA)" }
+      {
+        "id": "A",
+        "text": "Posterior Inferior Cerebellar Artery (PICA)"
+      },
+      {
+        "id": "B",
+        "text": "Anterior Spinal Artery (ASA)"
+      },
+      {
+        "id": "C",
+        "text": "Superior Cerebellar Artery (SCA)"
+      },
+      {
+        "id": "D",
+        "text": "Anterior Inferior Cerebellar Artery (AICA)"
+      },
+      {
+        "id": "E",
+        "text": "Posterior Cerebral Artery (PCA)"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "D",
     "explanation": "AICA (Anterior Inferior Cerebellar Artery) lateral pontine syndrome shares many features with PICA lateral medullary (Wallenberg) syndrome (ataxia, Horner syndrome, crossed sensory loss). However, AICA ischemia uniquely causes: (1) Sudden ipsilateral sensorineural deafness (due to internal auditory / labyrinthine artery infarction supplying the cochlea and inner ear), and (2) Ipsilateral lower motor neuron facial palsy (due to involvement of the CN VII nucleus/fascicle in the lateral caudal pons). In contrast, Wallenberg syndrome (PICA) features hoarseness/dysphagia (CN IX/X nucleus ambiguus) without deafness or full LMN facial palsy.",
     "keyTakeaway": "AICA vs PICA: AICA causes DEAFNESS (labyrinthine artery) and LMN FACIAL PALSY (CN VII), while PICA causes DYSPHAGIA/HOARSENESS (nucleus ambiguus).",
-    "tags": ["AICA vs PICA", "Labyrinthine Artery", "Brainstem Syndromes"],
+    "tags": [
+      "AICA vs PICA",
+      "Labyrinthine Artery",
+      "Brainstem Syndromes"
+    ],
     "hint": "The artery supplying the inner ear and lateral lower pons causes deafness and facial weakness.",
     "source": "Past Board Exam"
   },
@@ -10741,16 +12426,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 64-year-old male experiences left arm cramping and pain when performing repetitive overhead work, accompanied by transient vertigo and blurred vision. Examination reveals a 35 mmHg difference in systolic blood pressure between his right and left arm, and a left supraclavicular bruit.",
     "question": "What vascular syndrome is present, and what is the hemodynamic mechanism of his brainstem symptoms?",
     "options": [
-      { "id": "A", "text": "Thoracic outlet syndrome; compression of the brachial plexus" },
-      { "id": "B", "text": "Subclavian steal syndrome; left subclavian stenosis proximal to the left vertebral artery origin causes reversal of flow in the ipsilateral vertebral artery" },
-      { "id": "C", "text": "Carotid steal syndrome; internal carotid occlusion draws flow from the external carotid" },
-      { "id": "D", "text": "Raynaud phenomenon; distal digital vasospasm" },
-      { "id": "E", "text": "Takayasu arteritis with coronary steal" }
+      {
+        "id": "A",
+        "text": "Takayasu arteritis with coronary steal"
+      },
+      {
+        "id": "B",
+        "text": "Carotid steal syndrome; internal carotid occlusion draws flow from the external carotid"
+      },
+      {
+        "id": "C",
+        "text": "Raynaud phenomenon; distal digital vasospasm"
+      },
+      {
+        "id": "D",
+        "text": "Thoracic outlet syndrome; compression of the brachial plexus"
+      },
+      {
+        "id": "E",
+        "text": "Subclavian steal syndrome; left subclavian stenosis proximal to the left vertebral artery origin causes reversal of flow in the ipsilateral vertebral artery"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "E",
     "explanation": "Subclavian steal syndrome occurs when severe stenosis or occlusion of the subclavian artery PROXIMAL to the origin of the vertebral artery drops pressure in the distal subclavian bed. During exercise of the ipsilateral arm, muscular vasodilation further lowers distal pressure, causing blood to flow retrogradely (reversed) down the ipsilateral vertebral artery away from the basilar system to supply the working arm. This 'steals' blood from the posterior cerebral circulation, triggering transient vertebrobasilar symptoms (vertigo, ataxia, diplopia). Diagnosis is confirmed by brachial BP asymmetry (>15-20 mmHg) and Doppler showing retrograde vertebral flow.",
     "keyTakeaway": "Subclavian steal = Proximal subclavian stenosis causes retrograde vertebral artery flow, arm claudication, and exercise-induced brainstem ischemia.",
-    "tags": ["Subclavian Steal", "Vertebral Artery", "Hemodynamics", "Stroke Syndromes"],
+    "tags": [
+      "Subclavian Steal",
+      "Vertebral Artery",
+      "Hemodynamics",
+      "Stroke Syndromes"
+    ],
     "hint": "Blood is siphoned backwards down the vertebral artery to supply the exercising arm.",
     "source": "Past Board Exam"
   },
@@ -10761,16 +12466,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 68-year-old male awakes with severe mid-thoracic back pain, followed immediately by complete flaccid paralysis of both legs and loss of pain and temperature sensation below T6. On sensory testing, light touch, vibration sense, and joint position sensation in both legs are entirely intact. He has acute urinary retention.",
     "question": "What spinal cord vascular syndrome is present, and why are vibration and proprioception preserved?",
     "options": [
-      { "id": "A", "text": "Posterior spinal artery syndrome; dorsal columns are infarcted" },
-      { "id": "B", "text": "Anterior spinal artery syndrome; the anterior two-thirds of the cord are infarcted, while the dorsal columns are perfused by the paired posterior spinal arteries" },
-      { "id": "C", "text": "Brown-Sequard syndrome; hemisection of the thoracic cord" },
-      { "id": "D", "text": "Central cord syndrome; selective cervical cavitation" },
-      { "id": "E", "text": "Conus medullaris syndrome; isolated sacral nerve root compression" }
+      {
+        "id": "A",
+        "text": "Anterior spinal artery syndrome; the anterior two-thirds of the cord are infarcted, while the dorsal columns are perfused by the paired posterior spinal arteries"
+      },
+      {
+        "id": "B",
+        "text": "Central cord syndrome; selective cervical cavitation"
+      },
+      {
+        "id": "C",
+        "text": "Conus medullaris syndrome; isolated sacral nerve root compression"
+      },
+      {
+        "id": "D",
+        "text": "Brown-Sequard syndrome; hemisection of the thoracic cord"
+      },
+      {
+        "id": "E",
+        "text": "Posterior spinal artery syndrome; dorsal columns are infarcted"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "A",
     "explanation": "Anterior Spinal Artery (ASA) syndrome involves infarction of the anterior two-thirds of the spinal cord (corticospinal tracts, spinothalamic tracts, anterior horn cells, and autonomic pathways). This produces acute paraplegia, loss of pain and temperature sensation below the lesion, autonomic instability, and neurogenic bladder. Crucially, the posterior columns (fasciculus gracilis and cuneatus) occupy the posterior third of the cord, which is perfused by the independent, paired Posterior Spinal Arteries (PSAs), resulting in characteristically preserved vibration and proprioception ('dissociated sensory loss').",
     "keyTakeaway": "Anterior spinal artery syndrome: Paraplegia + loss of pain/temp below lesion, with classic PRESERVATION of dorsal column vibration/proprioception.",
-    "tags": ["Anterior Spinal Artery", "Spinal Cord Stroke", "Dorsal Columns"],
+    "tags": [
+      "Anterior Spinal Artery",
+      "Spinal Cord Stroke",
+      "Dorsal Columns"
+    ],
     "hint": "The paired posterior spinal arteries spare the dorsal columns.",
     "source": "Past Board Exam"
   },
@@ -10781,16 +12505,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 69-year-old male presents to the ED with sudden, painless, complete loss of vision in the right eye that began 45 minutes ago. Funduscopy demonstrates retinal edema with an opaque milky retina and a bright cherry-red spot in the fovea.",
     "question": "What is the diagnosis, and which conservative emergency interventions are commonly attempted to dislodge the embolus into distal arterioles?",
     "options": [
-      { "id": "A", "text": "Central retinal vein occlusion; intravitreal triamcinolone" },
-      { "id": "B", "text": "Central retinal artery occlusion (CRAO); ocular digital massage, anterior chamber paracentesis, and intraocular pressure-lowering agents" },
-      { "id": "C", "text": "Nonarteritic anterior ischemic optic neuropathy; high-dose oral prednisone" },
-      { "id": "D", "text": "Retinal detachment; urgent laser photocoagulation" },
-      { "id": "E", "text": "Optic neuritis; IV methylprednisolone" }
+      {
+        "id": "A",
+        "text": "Retinal detachment; urgent laser photocoagulation"
+      },
+      {
+        "id": "B",
+        "text": "Central retinal vein occlusion; intravitreal triamcinolone"
+      },
+      {
+        "id": "C",
+        "text": "Nonarteritic anterior ischemic optic neuropathy; high-dose oral prednisone"
+      },
+      {
+        "id": "D",
+        "text": "Optic neuritis; IV methylprednisolone"
+      },
+      {
+        "id": "E",
+        "text": "Central retinal artery occlusion (CRAO); ocular digital massage, anterior chamber paracentesis, and intraocular pressure-lowering agents"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "E",
     "explanation": "Central Retinal Artery Occlusion (CRAO) is an ophthalmologic and neurovascular emergency equivalent to an acute stroke of the retina. The retina becomes pale and milky due to cellular edema, while the choroidal vascular bed shows through the thin fovea as a 'cherry-red spot'. Conservative measures to lower intraocular pressure and encourage embolic migration to more distal branches include: ocular digital massage, anterior chamber paracentesis, topical beta-blockers, IV acetazolamide, or sublingual nitroglycerin. Urgent systemic evaluation for carotid stenosis and cardiac embolic sources is mandatory.",
     "keyTakeaway": "CRAO ('stroke of the eye') = Sudden painless vision loss + cherry-red spot; treated with ocular massage and intraocular pressure reduction.",
-    "tags": ["CRAO", "Cherry-Red Spot", "Ocular Massage", "Neuro-Ophthalmology"],
+    "tags": [
+      "CRAO",
+      "Cherry-Red Spot",
+      "Ocular Massage",
+      "Neuro-Ophthalmology"
+    ],
     "hint": "Painless sudden monocular blindness with cherry-red fovea.",
     "source": "Past Board Exam"
   },
@@ -10801,16 +12545,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 71-year-old male with hypertension and diabetes presents with subacute blurring and foggy vision in his left eye over several days. Fundus examination reveals diffuse flame-shaped hemorrhages, dilated tortuous retinal veins, and cotton-wool exudates throughout all four quadrants ('blood and thunder' fundus).",
     "question": "What is the diagnosis, and what is a frequent late vision-threatening complication?",
     "options": [
-      { "id": "A", "text": "Central retinal artery occlusion; optic nerve atrophy" },
-      { "id": "B", "text": "Central retinal vein occlusion (CRVO); neovascular glaucoma" },
-      { "id": "C", "text": "Cytomegalovirus retinitis; retinal necrosis" },
-      { "id": "D", "text": "Giant cell arteritis; ischemic optic neuropathy" },
-      { "id": "E", "text": "Hypertensive retinopathy Grade IV; choroidal detachment" }
+      {
+        "id": "A",
+        "text": "Giant cell arteritis; ischemic optic neuropathy"
+      },
+      {
+        "id": "B",
+        "text": "Central retinal artery occlusion; optic nerve atrophy"
+      },
+      {
+        "id": "C",
+        "text": "Hypertensive retinopathy Grade IV; choroidal detachment"
+      },
+      {
+        "id": "D",
+        "text": "Central retinal vein occlusion (CRVO); neovascular glaucoma"
+      },
+      {
+        "id": "E",
+        "text": "Cytomegalovirus retinitis; retinal necrosis"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "D",
     "explanation": "Central Retinal Vein Occlusion (CRVO) is caused by thrombosis of the central retinal vein at the lamina cribrosa, resulting in severe venous engorgement, diffuse retinal edema, and extensive flame and blot hemorrhages across all four quadrants (the classic 'blood and thunder' appearance). Unlike CRAO, onset is often subacute over days. A major late complication (typically within 3 months, '90-day glaucoma') is iris and angle neovascularization triggered by retinal ischemia, which can precipitate intractable neovascular glaucoma.",
     "keyTakeaway": "CRVO = 'Blood and thunder' fundus with diffuse hemorrhages; carries high risk of late neovascular glaucoma.",
-    "tags": ["CRVO", "Blood and Thunder", "Neovascular Glaucoma", "Neuro-Ophthalmology"],
+    "tags": [
+      "CRVO",
+      "Blood and Thunder",
+      "Neovascular Glaucoma",
+      "Neuro-Ophthalmology"
+    ],
     "hint": "Venous occlusion produces extensive hemorrhages and late neovascularization.",
     "source": "Past Board Exam"
   },
@@ -10821,16 +12585,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 52-year-old male undergoes a 9-hour complex multilevel lumbar spinal fusion in the prone position with significant intraoperative blood loss (2.5 L) and prolonged systemic hypotension. Upon awakening in the recovery unit, he notes bilateral, painless loss of vision. Funduscopic examination on postoperative day 1 is completely normal.",
     "question": "What is the most likely diagnosis of this patient's postoperative vision loss?",
     "options": [
-      { "id": "A", "text": "Anterior ischemic optic neuropathy (AION)" },
-      { "id": "B", "text": "Posterior ischemic optic neuropathy (PION)" },
-      { "id": "C", "text": "Central retinal artery occlusion from fat emboli" },
-      { "id": "D", "text": "Pituitary apoplexy" },
-      { "id": "E", "text": "Cortical blindness from occipital infarcts" }
+      {
+        "id": "A",
+        "text": "Posterior ischemic optic neuropathy (PION)"
+      },
+      {
+        "id": "B",
+        "text": "Pituitary apoplexy"
+      },
+      {
+        "id": "C",
+        "text": "Cortical blindness from occipital infarcts"
+      },
+      {
+        "id": "D",
+        "text": "Central retinal artery occlusion from fat emboli"
+      },
+      {
+        "id": "E",
+        "text": "Anterior ischemic optic neuropathy (AION)"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "A",
     "explanation": "Posterior Ischemic Optic Neuropathy (PION) affects the retrobulbar optic nerve, which receives blood from a pial capillary plexus rather than the short posterior ciliary arteries. Perioperative PION is strongly associated with prolonged spine surgery in the prone position (due to increased orbital venous pressure from dependent head positioning), combined with anemia, hypotension, and large volume fluid resuscitation. Crucially, because the ischemia is retrobulbar, the optic disc appears completely normal on funduscopy during the acute stage, progressing to optic atrophy weeks later.",
     "keyTakeaway": "Perioperative PION = Prone spine surgery + hypotension/blood loss; acute funduscopy is NORMAL (retrobulbar ischemia).",
-    "tags": ["PION", "Perioperative Vision Loss", "Spine Surgery", "Neuro-Ophthalmology"],
+    "tags": [
+      "PION",
+      "Perioperative Vision Loss",
+      "Spine Surgery",
+      "Neuro-Ophthalmology"
+    ],
     "hint": "Infarction of the retrobulbar optic nerve leaves the optic disc looking normal initially.",
     "source": "Past Board Exam"
   },
@@ -10841,16 +12625,35 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 26-year-old Asian woman presents with malaise, fever, weight loss, and exercise-induced claudication of her upper extremities. On physical exam, radial pulses are absent bilaterally ('pulseless disease'), and systolic blood pressure is 85/50 mmHg in the right arm and 145/85 mmHg in the right leg. ESR is 88 mm/h.",
     "question": "What chronic large-vessel inflammatory vasculitis is present, and what is the primary medical therapy?",
     "options": [
-      { "id": "A", "text": "Giant cell arteritis; methotrexate monotherapy" },
-      { "id": "B", "text": "Takayasu arteritis; high-dose corticosteroids (prednisone 1 mg/kg/day)" },
-      { "id": "C", "text": "Polyarteritis nodosa; cyclophosphamide only" },
-      { "id": "D", "text": "Fibromuscular dysplasia; balloon angioplasty" },
-      { "id": "E", "text": "Kawasaki disease; IVIG and aspirin" }
+      {
+        "id": "A",
+        "text": "Giant cell arteritis; methotrexate monotherapy"
+      },
+      {
+        "id": "B",
+        "text": "Fibromuscular dysplasia; balloon angioplasty"
+      },
+      {
+        "id": "C",
+        "text": "Kawasaki disease; IVIG and aspirin"
+      },
+      {
+        "id": "D",
+        "text": "Takayasu arteritis; high-dose corticosteroids (prednisone 1 mg/kg/day)"
+      },
+      {
+        "id": "E",
+        "text": "Polyarteritis nodosa; cyclophosphamide only"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "D",
     "explanation": "Takayasu arteritis ('pulseless disease') is a chronic granulomatous large-vessel vasculitis predominantly affecting young females (<40 years, highest in Asian populations). It causes progressive transmural inflammation and luminal stenoses of the aorta, aortic arch branch vessels (subclavian, common carotid), and pulmonary arteries. Hallmarks include absent upper extremity pulses, discrepancy in BP between arms (>10 mmHg) or between arms and legs, bruits, and constitutional symptoms. Initial treatment is high-dose corticosteroids, with methotrexate or biologics (anti-TNF, tocilizumab) for refractory disease.",
     "keyTakeaway": "Takayasu arteritis = Granulomatous aortitis in young women; absent pulses ('pulseless disease'), treated with corticosteroids.",
-    "tags": ["Takayasu", "Large Vessel Vasculitis", "Pulseless Disease"],
+    "tags": [
+      "Takayasu",
+      "Large Vessel Vasculitis",
+      "Pulseless Disease"
+    ],
     "hint": "Young Asian female with absent arm pulses and aortic branch stenoses.",
     "source": "Past Board Exam"
   },
@@ -10861,16 +12664,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 48-year-old male with chronic hepatitis B presents with foot drop and wrist drop in a multifocal distribution (mononeuritis multiplex), fever, testicular pain, livedo reticularis, and renal infarction without glomerulonephritis.",
     "question": "What is the diagnosis, and which characteristic finding on visceral angiography confirms the disease?",
     "options": [
-      { "id": "A", "text": "Microscopic polyangiitis; diffuse capillaritis" },
-      { "id": "B", "text": "Polyarteritis nodosa (PAN); multiple microaneurysms and smooth segmental stenoses in mesenteric or renal arteries" },
-      { "id": "C", "text": "Granulomatosis with polyangiitis; c-ANCA pulmonary cavitary lesions" },
-      { "id": "D", "text": "Cryoglobulinemic vasculitis; low C4 complement levels" },
-      { "id": "E", "text": "Henoch-Schonlein purpura; IgA glomerular deposition" }
+      {
+        "id": "A",
+        "text": "Granulomatosis with polyangiitis; c-ANCA pulmonary cavitary lesions"
+      },
+      {
+        "id": "B",
+        "text": "Polyarteritis nodosa (PAN); multiple microaneurysms and smooth segmental stenoses in mesenteric or renal arteries"
+      },
+      {
+        "id": "C",
+        "text": "Cryoglobulinemic vasculitis; low C4 complement levels"
+      },
+      {
+        "id": "D",
+        "text": "Microscopic polyangiitis; diffuse capillaritis"
+      },
+      {
+        "id": "E",
+        "text": "Henoch-Schonlein purpura; IgA glomerular deposition"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "Polyarteritis nodosa (PAN) is a systemic necrotizing vasculitis of medium-sized muscular arteries that spares the pulmonary circulation and does NOT cause glomerulonephritis. It is strongly associated with hepatitis B infection. Hallmarks include mononeuritis multiplex (ischemic nerve infarction), hypertension, testicular pain, and livedo reticularis. Visceral (renal or mesenteric) angiography classically shows multiple small saccular microaneurysms (1-5 mm) and alternating stenoses, producing a 'beads on a string' vascular tree.",
     "keyTakeaway": "Polyarteritis nodosa (PAN): Medium-vessel necrotizing vasculitis, mononeuritis multiplex, hepatitis B link, visceral microaneurysms on angiogram.",
-    "tags": ["PAN", "Polyarteritis Nodosa", "Mononeuritis Multiplex", "Vasculitis"],
+    "tags": [
+      "PAN",
+      "Polyarteritis Nodosa",
+      "Mononeuritis Multiplex",
+      "Vasculitis"
+    ],
     "hint": "Medium-vessel necrotizing vasculitis associated with hepatitis B and renal microaneurysms.",
     "source": "Past Board Exam"
   },
@@ -10881,16 +12704,37 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 42-year-old female with long-standing severe asthma, chronic allergic rhinosinusitis, and nasal polyposis presents with foot drop, peripheral eosinophilia (42% eosinophils), and small subcortical cerebral infarcts. Serologies reveal positive perinuclear ANCA (anti-myeloperoxidase).",
     "question": "What is the diagnosis?",
     "options": [
-      { "id": "A", "text": "Granulomatosis with polyangiitis (GPA)" },
-      { "id": "B", "text": "Eosinophilic granulomatosis with polyangiitis (EGPA / Churg-Strauss syndrome)" },
-      { "id": "C", "text": "Hypereosinophilic syndrome" },
-      { "id": "D", "text": "Microscopic polyangiitis" },
-      { "id": "E", "text": "Allergic bronchopulmonary aspergillosis" }
+      {
+        "id": "A",
+        "text": "Allergic bronchopulmonary aspergillosis"
+      },
+      {
+        "id": "B",
+        "text": "Microscopic polyangiitis"
+      },
+      {
+        "id": "C",
+        "text": "Granulomatosis with polyangiitis (GPA)"
+      },
+      {
+        "id": "D",
+        "text": "Eosinophilic granulomatosis with polyangiitis (EGPA / Churg-Strauss syndrome)"
+      },
+      {
+        "id": "E",
+        "text": "Hypereosinophilic syndrome"
+      }
     ],
-    "correctOptionId": "B",
+    "correctOptionId": "D",
     "explanation": "Eosinophilic granulomatosis with polyangiitis (EGPA, formerly Churg-Strauss syndrome) is a necrotizing small-to-medium vessel vasculitis characterized by three phases: (1) Prodromal allergic phase (asthma, allergic rhinitis), (2) Eosinophilic tissue infiltration (peripheral eosinophilia >10% or >1500/uL), and (3) Vasculitic phase (mononeuritis multiplex, purpura, CNS ischemia). Antibodies to myeloperoxidase (p-ANCA) are positive in approximately 40% to 50% of patients. Treatment requires systemic corticosteroids, often combined with cyclophosphamide.",
     "keyTakeaway": "EGPA (Churg-Strauss) = Asthma + severe eosinophilia + mononeuritis multiplex / stroke + p-ANCA (anti-MPO).",
-    "tags": ["EGPA", "Churg-Strauss", "Eosinophilia", "p-ANCA", "Vasculitis"],
+    "tags": [
+      "EGPA",
+      "Churg-Strauss",
+      "Eosinophilia",
+      "p-ANCA",
+      "Vasculitis"
+    ],
     "hint": "Asthma + high eosinophils + vasculitic neuropathy/stroke.",
     "source": "Past Board Exam"
   },
@@ -10901,16 +12745,37 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 36-year-old male with chronic purulent sinusitis, saddle-nose deformity, and recurrent hemoptysis develops right foot drop, hematuria, and an acute cerebral ischemic stroke. Chest radiography reveals multiple bilateral cavitary nodules. Cytoplasmic antineutrophil cytoplasmic antibody (c-ANCA / anti-PR3) is strongly positive.",
     "question": "What is the diagnosis?",
     "options": [
-      { "id": "A", "text": "Granulomatosis with polyangiitis (GPA / Wegener granulomatosis)" },
-      { "id": "B", "text": "Microscopic polyangiitis" },
-      { "id": "C", "text": "Goodpasture disease" },
-      { "id": "D", "text": "Sarcoidosis" },
-      { "id": "E", "text": "Tuberculosis" }
+      {
+        "id": "A",
+        "text": "Tuberculosis"
+      },
+      {
+        "id": "B",
+        "text": "Goodpasture disease"
+      },
+      {
+        "id": "C",
+        "text": "Granulomatosis with polyangiitis (GPA / Wegener granulomatosis)"
+      },
+      {
+        "id": "D",
+        "text": "Sarcoidosis"
+      },
+      {
+        "id": "E",
+        "text": "Microscopic polyangiitis"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "C",
     "explanation": "Granulomatosis with polyangiitis (GPA, formerly Wegener granulomatosis) is a necrotizing granulomatous vasculitis predominantly targeting the upper respiratory tract (chronic sinusitis, saddle-nose deformity, otitis media), lower respiratory tract (cavitary pulmonary nodules, hemoptysis), and kidneys (crescentic necrotizing glomerulonephritis). Neurological involvement includes mononeuritis multiplex, cranial neuropathies, and stroke. Serum c-ANCA (directed against proteinase 3, PR3) is highly specific and positive in over 90% of active cases.",
     "keyTakeaway": "GPA (Wegener) = c-ANCA (anti-PR3) + upper/lower respiratory granulomas + glomerulonephritis + vasculitic neuropathy/stroke.",
-    "tags": ["GPA", "Wegener", "c-ANCA", "PR3", "Vasculitis"],
+    "tags": [
+      "GPA",
+      "Wegener",
+      "c-ANCA",
+      "PR3",
+      "Vasculitis"
+    ],
     "hint": "c-ANCA (PR3) positive with respiratory necrotizing granulomas and glomerulonephritis.",
     "source": "Past Board Exam"
   },
@@ -10921,16 +12786,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 32-year-old male who smokes two packs of cigarettes daily presents with ischemic ulcers and gangrene of his toes, severe claudication, and recurrent migratory superficial thrombophlebitis. Angiography shows non-atherosclerotic segmental occlusion of distal tibial and digital arteries with a 'corkscrew' collateral pattern.",
     "question": "What is the diagnosis, and what is the single most effective therapeutic intervention?",
     "options": [
-      { "id": "A", "text": "Atherosclerosis obliterans; balloon angioplasty" },
-      { "id": "B", "text": "Thromboangiitis obliterans (Buerger disease); complete and permanent smoking cessation" },
-      { "id": "C", "text": "Raynaud phenomenon; calcium channel blockers" },
-      { "id": "D", "text": "Polyarteritis nodosa; IV cyclophosphamide" },
-      { "id": "E", "text": "Takayasu arteritis; surgical bypass" }
+      {
+        "id": "A",
+        "text": "Atherosclerosis obliterans; balloon angioplasty"
+      },
+      {
+        "id": "B",
+        "text": "Thromboangiitis obliterans (Buerger disease); complete and permanent smoking cessation"
+      },
+      {
+        "id": "C",
+        "text": "Polyarteritis nodosa; IV cyclophosphamide"
+      },
+      {
+        "id": "D",
+        "text": "Takayasu arteritis; surgical bypass"
+      },
+      {
+        "id": "E",
+        "text": "Raynaud phenomenon; calcium channel blockers"
+      }
     ],
     "correctOptionId": "B",
     "explanation": "Thromboangiitis obliterans (Buerger disease) is a non-atherosclerotic, highly inflammatory, segmental occlusive vascular disease affecting small- and medium-sized arteries and veins of the extremities in young smokers (<45 years). Hallmarks include distal digital ischemia, rest pain, gangrene, superficial thrombophlebitis, and 'corkscrew' collaterals on angiography. Cerebral involvement can cause transient ischemic attacks or strokes. Complete and absolute cessation of all tobacco and nicotine exposure is the ONLY intervention that halts disease progression and prevents amputation.",
     "keyTakeaway": "Buerger disease (thromboangiitis obliterans): Young heavy smokers, distal gangrene, corkscrew collaterals; treatment is COMPLETE SMOKING CESSATION.",
-    "tags": ["Buerger Disease", "Thromboangiitis Obliterans", "Smoking Cessation", "Vasculopathy"],
+    "tags": [
+      "Buerger Disease",
+      "Thromboangiitis Obliterans",
+      "Smoking Cessation",
+      "Vasculopathy"
+    ],
     "hint": "Young male smoker with ischemic digit ulcers and corkscrew collaterals.",
     "source": "Past Board Exam"
   },
@@ -10941,16 +12826,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 14-year-old boy with a history of intellectual disability, tall slender build, and kyphoscoliosis presents with an acute middle cerebral artery ischemic stroke. Ophthalmologic exam reveals downward and inward dislocation (ectopia lentis) of both lenses. Serum homocysteine is 185 umol/L.",
     "question": "What enzyme deficiency causes classical homocystinuria, and what is its mode of inheritance?",
     "options": [
-      { "id": "A", "text": "Cystathionine beta-synthase (CBS) deficiency; autosomal recessive" },
-      { "id": "B", "text": "MTHFR deficiency; autosomal dominant" },
-      { "id": "C", "text": "Methionine synthase deficiency; X-linked recessive" },
-      { "id": "D", "text": "Fibrillin-1 deficiency; autosomal dominant" },
-      { "id": "E", "text": "Alpha-galactosidase A deficiency; X-linked" }
+      {
+        "id": "A",
+        "text": "MTHFR deficiency; autosomal dominant"
+      },
+      {
+        "id": "B",
+        "text": "Cystathionine beta-synthase (CBS) deficiency; autosomal recessive"
+      },
+      {
+        "id": "C",
+        "text": "Methionine synthase deficiency; X-linked recessive"
+      },
+      {
+        "id": "D",
+        "text": "Fibrillin-1 deficiency; autosomal dominant"
+      },
+      {
+        "id": "E",
+        "text": "Alpha-galactosidase A deficiency; X-linked"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Classical homocystinuria is an autosomal recessive inborn error of methionine metabolism caused by deficiency of Cystathionine Beta-Synthase (CBS), requiring vitamin B6 (pyridoxine) as a cofactor. It causes massive accumulation of homocysteine and methionine in blood and urine. Hallmarks include marfanoid habitus, osteoporosis, intellectual disability, downward and inward lens dislocation (in contrast to Marfan syndrome where lens subluxation is upward and outward), and severe premature arterial and venous thromboembolism.",
     "keyTakeaway": "Homocystinuria = Autosomal recessive CBS deficiency; downward ectopia lentis + marfanoid habitus + early stroke & thrombosis.",
-    "tags": ["Homocystinuria", "CBS", "Ectopia Lentis", "Genetics"],
+    "tags": [
+      "Homocystinuria",
+      "CBS",
+      "Ectopia Lentis",
+      "Genetics"
+    ],
     "hint": "Defect in cystathionine beta-synthase with downward lens subluxation.",
     "source": "Past Board Exam"
   },
@@ -10961,16 +12866,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 3-year-old boy presents with developmental regression, profound hypotonia, intractable seizures, and distinctive kinky, brittle, hypopigmented hair ('steel wool' hair). MRA demonstrates extreme elongation and tortuosity of all major cerebral arteries.",
     "question": "What is the diagnosis, and which gene and cellular transporter is mutated?",
     "options": [
-      { "id": "A", "text": "Menkes disease; ATP7A gene encoding an intracellular copper-transporting ATPase" },
-      { "id": "B", "text": "Wilson disease; ATP7B gene" },
-      { "id": "C", "text": "Canavan disease; ASPA gene" },
-      { "id": "D", "text": "Pelizaeus-Merzbacher disease; PLP1 gene" },
-      { "id": "E", "text": "Alexander disease; GFAP gene" }
+      {
+        "id": "A",
+        "text": "Canavan disease; ASPA gene"
+      },
+      {
+        "id": "B",
+        "text": "Wilson disease; ATP7B gene"
+      },
+      {
+        "id": "C",
+        "text": "Alexander disease; GFAP gene"
+      },
+      {
+        "id": "D",
+        "text": "Menkes disease; ATP7A gene encoding an intracellular copper-transporting ATPase"
+      },
+      {
+        "id": "E",
+        "text": "Pelizaeus-Merzbacher disease; PLP1 gene"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Menkes disease (kinky hair disease) is an X-linked recessive neurodegenerative disorder of copper metabolism caused by mutations in the ATP7A gene, which encodes a transmembrane copper-transporting P-type ATPase. Defective copper absorption impairs copper-dependent enzymes, including lysyl oxidase (needed for collagen/elastin crosslinking), leading to arterial tortuosity, intracranial aneurysms, and subdural hematomas. Clinical hallmarks are coarse, brittle 'kinky' hair (pili torti), hypotonia, seizures, and early childhood mortality.",
     "keyTakeaway": "Menkes disease = X-linked ATP7A copper transporter defect; brittle/kinky hair + cerebral arterial tortuosity + neurodegeneration.",
-    "tags": ["Menkes Disease", "ATP7A", "Copper Metabolism", "Genetics"],
+    "tags": [
+      "Menkes Disease",
+      "ATP7A",
+      "Copper Metabolism",
+      "Genetics"
+    ],
     "hint": "X-linked disorder with kinky steel-wool hair and marked vascular tortuosity.",
     "source": "Past Board Exam"
   },
@@ -10981,16 +12906,36 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 36-year-old female presents with recurrent upper gastrointestinal bleeding, premature coronary artery disease, and an acute lacunar stroke. Funduscopic examination reveals prominent 'angioid streaks' radiating from the optic disc, and inspection of her neck and axillae shows yellowish, cobblestone-like papules ('plucked chicken skin').",
     "question": "What genetic disorder is present, and what gene mutation is responsible?",
     "options": [
-      { "id": "A", "text": "Pseudoxanthoma elasticum (PXE); ABCC6 gene on chromosome 16p13" },
-      { "id": "B", "text": "Ehlers-Danlos syndrome type IV; COL3A1 gene" },
-      { "id": "C", "text": "Marfan syndrome; FBN1 gene" },
-      { "id": "D", "text": "Neurofibromatosis type 1; NF1 gene" },
-      { "id": "E", "text": "Fabry disease; GLA gene" }
+      {
+        "id": "A",
+        "text": "Fabry disease; GLA gene"
+      },
+      {
+        "id": "B",
+        "text": "Marfan syndrome; FBN1 gene"
+      },
+      {
+        "id": "C",
+        "text": "Neurofibromatosis type 1; NF1 gene"
+      },
+      {
+        "id": "D",
+        "text": "Pseudoxanthoma elasticum (PXE); ABCC6 gene on chromosome 16p13"
+      },
+      {
+        "id": "E",
+        "text": "Ehlers-Danlos syndrome type IV; COL3A1 gene"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "D",
     "explanation": "Pseudoxanthoma elasticum (PXE) is an autosomal recessive metabolic disorder caused by mutations in the ABCC6 gene on chromosome 16p13.1, which encodes an ATP-binding cassette transporter. It leads to progressive fragmentation and ectopic calcification of elastic fibers in connective tissues. Triad of findings: (1) Skin: yellow, xanthoma-like papules on flexural surfaces ('plucked chicken skin'); (2) Eyes: 'angioid streaks' (breaks in Bruch's membrane) with retinal hemorrhages; and (3) Vasculature: premature arterial calcification, gastrointestinal hemorrhage, and early stroke.",
     "keyTakeaway": "Pseudoxanthoma elasticum (PXE) = Autosomal recessive ABCC6 mutation; 'plucked chicken skin' + angioid streaks + premature arterial occlusive disease.",
-    "tags": ["PXE", "ABCC6", "Angioid Streaks", "Genetics"],
+    "tags": [
+      "PXE",
+      "ABCC6",
+      "Angioid Streaks",
+      "Genetics"
+    ],
     "hint": "Look for the classic pairing of 'plucked chicken skin' with retinal angioid streaks.",
     "source": "Past Board Exam"
   },
@@ -11001,16 +12946,37 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "A 9-year-old child presents with enlarged, bright orange-yellow pharyngeal tonsils, hepatosplenomegaly, and a mild peripheral sensorineural polyneuropathy. Fasting lipid panel reveals virtually absent High-Density Lipoprotein (HDL <2 mg/dL) and apolipoprotein A-I.",
     "question": "What is the diagnosis, and which ATP-binding cassette transporter gene is mutated?",
     "options": [
-      { "id": "A", "text": "Tangier disease; ABCA1 gene" },
-      { "id": "B", "text": "Abetalipoproteinemia; MTTP gene" },
-      { "id": "C", "text": "Familial hypercholesterolemia; LDLR gene" },
-      { "id": "D", "text": "Niemann-Pick type C; NPC1 gene" },
-      { "id": "E", "text": "Gaucher disease; GBA gene" }
+      {
+        "id": "A",
+        "text": "Gaucher disease; GBA gene"
+      },
+      {
+        "id": "B",
+        "text": "Tangier disease; ABCA1 gene"
+      },
+      {
+        "id": "C",
+        "text": "Familial hypercholesterolemia; LDLR gene"
+      },
+      {
+        "id": "D",
+        "text": "Abetalipoproteinemia; MTTP gene"
+      },
+      {
+        "id": "E",
+        "text": "Niemann-Pick type C; NPC1 gene"
+      }
     ],
-    "correctOptionId": "A",
+    "correctOptionId": "B",
     "explanation": "Tangier disease (familial alpha-lipoprotein deficiency) is a rare autosomal codominant disorder caused by mutations in the ABCA1 gene on chromosome 9q31, which encodes the ATP-binding cassette transporter A1 essential for efflux of cellular cholesterol to lipid-free ApoA-I to form mature HDL. Defective transport causes massive accumulation of cholesteryl esters in reticuloendothelial tissues, producing characteristic enlarged, lobulated orange-yellow tonsils, splenomegaly, peripheral neuropathy, and premature cardiovascular and cerebrovascular disease.",
     "keyTakeaway": "Tangier disease = Autosomal codominant ABCA1 mutation; absent HDL (<5 mg/dL) + large orange tonsils + premature stroke/neuropathy.",
-    "tags": ["Tangier Disease", "ABCA1", "Orange Tonsils", "HDL", "Genetics"],
+    "tags": [
+      "Tangier Disease",
+      "ABCA1",
+      "Orange Tonsils",
+      "HDL",
+      "Genetics"
+    ],
     "hint": "Absence of HDL with striking orange tonsils.",
     "source": "Past Board Exam"
   },
@@ -11021,18 +12987,37 @@ export const questionsData: PracticeQuestion[] = [
     "vignette": "Paramedics are dispatched to a 66-year-old male with acute right hemiparesis and speech arrest that began 25 minutes ago. In the field, they calculate a prehospital stroke severity scale to determine hospital routing.",
     "question": "Which of the following prehospital scales was specifically developed based on the NIHSS to identify patients with Large Vessel Occlusions (LVO) suitable for direct triage to a Comprehensive Stroke Center (CSC)?",
     "options": [
-      { "id": "A", "text": "Cincinnati Prehospital Stroke Scale (CPSS)" },
-      { "id": "B", "text": "Los Angeles Prehospital Stroke Screen (LAPPS)" },
-      { "id": "C", "text": "Rapid Arterial oCclusion Evaluation (RACE) scale" },
-      { "id": "D", "text": "Glasgow Coma Scale (GCS)" },
-      { "id": "E", "text": "FAST scale (Face, Arm, Speech, Time)" }
+      {
+        "id": "A",
+        "text": "FAST scale (Face, Arm, Speech, Time)"
+      },
+      {
+        "id": "B",
+        "text": "Los Angeles Prehospital Stroke Screen (LAPPS)"
+      },
+      {
+        "id": "C",
+        "text": "Cincinnati Prehospital Stroke Scale (CPSS)"
+      },
+      {
+        "id": "D",
+        "text": "Rapid Arterial oCclusion Evaluation (RACE) scale"
+      },
+      {
+        "id": "E",
+        "text": "Glasgow Coma Scale (GCS)"
+      }
     ],
-    "correctOptionId": "C",
+    "correctOptionId": "D",
     "explanation": "The RACE (Rapid Arterial oCclusion Evaluation) scale was specifically designed by simplifying items from the NIHSS (facial palsy, arm motor, leg motor, head/gaze deviation, and aphasia/agnosia) to provide emergency medical technicians with a rapid field tool to identify patients with a high likelihood of large vessel occlusion (LVO). A RACE score >=5 has a sensitivity of 85% and specificity of 68% for LVO, allowing EMS to bypass primary stroke centers and transport directly to an endovascular-capable Comprehensive Stroke Center.",
     "keyTakeaway": "RACE scale: Prehospital stroke scale derived from NIHSS specifically designed to triage suspected LVO to Comprehensive Stroke Centers.",
-    "tags": ["RACE Scale", "LVO Triage", "Prehospital Care", "Systems of Care"],
+    "tags": [
+      "RACE Scale",
+      "LVO Triage",
+      "Prehospital Care",
+      "Systems of Care"
+    ],
     "hint": "Scale scoring arm/leg motor, gaze, and aphasia/agnosia to detect large vessel occlusion.",
     "source": "Guideline Recommendation"
   }
 ];
-
