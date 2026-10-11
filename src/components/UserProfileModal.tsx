@@ -9,6 +9,12 @@ import {
 import { questionsData } from '../data/questions';
 import { registerWithEmail, loginWithEmail, loginWithGoogle, logoutCloudUser, resetPasswordEmail } from '../lib/sync';
 import { isCloudConfigured } from '../lib/firebase';
+import { 
+  registerLocalUser, 
+  loginLocalUser, 
+  resetLocalUserPassword, 
+  createQuickCandidateProfile 
+} from '../lib/auth';
 
 interface UserProfileModalProps {
   isOpen: boolean;
@@ -54,6 +60,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
   const [isAuthLoading, setIsAuthLoading] = useState<boolean>(false);
   const [loginSuccessMsg, setLoginSuccessMsg] = useState<string | null>(null);
   const [recoveryNotice, setRecoveryNotice] = useState<string | null>(null);
+  const [newResetPassword, setNewResetPassword] = useState<string>('');
 
   // Questions tab filter and search state
   const [qSearch, setQSearch] = useState('');
@@ -168,24 +175,21 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
         }
         setLoginSuccessMsg(`Account created for ${newProfile.name}! All completed questions and stats loaded.`);
       } else {
-        // Fallback local persistence mode with deterministic local user ID
-        const localId = `user-local-${btoa(encodeURIComponent(email.toLowerCase().trim())).replace(/=/g, '')}`;
-        const newProfile: UserProfile = {
-          ...userStats.profile,
-          id: localId,
-          name: name || 'Candidate',
-          email: email || 'fellow@stroke-prep.org',
-          targetExamDate: targetDate,
+        // Real local registration with validation and password hashing
+        const newProfile = await registerLocalUser(
+          name,
+          email,
+          password,
           role,
           institution,
-          isLoggedIn: true,
-        };
+          targetDate
+        );
         if (onLogin) {
           onLogin(newProfile);
         } else {
           onUpdateProfile(newProfile);
         }
-        setLoginSuccessMsg(`Account registered in Local Profile Mode! All completed questions and stats loaded.`);
+        setLoginSuccessMsg(`Account created for ${newProfile.name}! All past progress loaded.`);
       }
       setAuthMode('view');
     } catch (err: any) {
@@ -219,20 +223,14 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
         }
         setLoginSuccessMsg(`Signed in as ${newProfile.email}! Study progress and questions loaded.`);
       } else {
-        const localId = `user-local-${btoa(encodeURIComponent(email.toLowerCase().trim())).replace(/=/g, '')}`;
-        const newProfile: UserProfile = {
-          ...userStats.profile,
-          id: localId,
-          name: name || 'Candidate',
-          email: email || 'fellow@stroke-prep.org',
-          isLoggedIn: true,
-        };
+        // Real local authentication: validates email exists and verifies password SHA-256 hash!
+        const newProfile = await loginLocalUser(email, password);
         if (onLogin) {
           onLogin(newProfile);
         } else {
           onUpdateProfile(newProfile);
         }
-        setLoginSuccessMsg(`Signed in as ${newProfile.email} (Local Profile Mode)! All study progress and questions loaded.`);
+        setLoginSuccessMsg(`Welcome back, ${newProfile.name}! All completed questions loaded.`);
       }
       setAuthMode('view');
     } catch (err: any) {
@@ -253,10 +251,15 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
         await resetPasswordEmail(email);
         setResetSuccess(`Password reset email sent to ${email}. Please check your inbox or spam folder.`);
       } else {
-        setResetSuccess('Local storage mode active. Password reset link is not required.');
+        if (!newResetPassword || newResetPassword.trim().length < 4) {
+          throw new Error('Please enter a new password of at least 4 characters.');
+        }
+        await resetLocalUserPassword(email, newResetPassword);
+        setResetSuccess(`Password for ${email} has been updated successfully! You can now sign in.`);
+        setPassword(newResetPassword);
       }
     } catch (err: any) {
-      setAuthError(err.message || 'Failed to send password reset email.');
+      setAuthError(err.message || 'Failed to reset password.');
     } finally {
       setIsAuthLoading(false);
     }
@@ -287,25 +290,18 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
         setLoginSuccessMsg(`Signed in as ${newProfile.name}! All completed questions and stats loaded.`);
         setAuthMode('view');
       } else {
-        // Seamless Local Candidate login without red error
-        const localId = `user-local-${btoa(encodeURIComponent((email || 'google-candidate').toLowerCase().trim())).replace(/=/g, '')}`;
-        const newProfile: UserProfile = {
-          ...userStats.profile,
-          id: localId,
-          name: name || 'Candidate',
-          email: email || 'fellow@stroke-prep.org',
-          isLoggedIn: true,
-        };
+        // 1-Click Fellow Candidate Sign-In: instantly creates or loads candidate profile with full questions
+        const newProfile = await createQuickCandidateProfile(name || 'Dr. Vascular Neurologist');
         if (onLogin) {
           onLogin(newProfile);
         } else {
           onUpdateProfile(newProfile);
         }
-        setLoginSuccessMsg(`Signed in as ${newProfile.name} in Local Profile Mode! All completed questions and stats loaded.`);
+        setLoginSuccessMsg(`Signed in as ${newProfile.name}! All past progress loaded.`);
         setAuthMode('view');
       }
     } catch (err: any) {
-      setAuthError(err.message || 'Google sign in failed.');
+      setAuthError(err.message || 'Sign in failed.');
     } finally {
       setIsAuthLoading(false);
     }
@@ -725,14 +721,33 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
                         </div>
                       </div>
 
+                      {!isCloudConfigured && (
+                        <div>
+                          <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">
+                            New Password
+                          </label>
+                          <div className="relative">
+                            <Lock className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
+                            <input
+                              type="password"
+                              required
+                              value={newResetPassword}
+                              onChange={e => setNewResetPassword(e.target.value)}
+                              placeholder="Minimum 4 characters"
+                              className="w-full bg-slate-800 border border-slate-700 rounded-xl pl-9 pr-3 py-2 text-xs text-slate-100 focus:ring-cyan-500"
+                            />
+                          </div>
+                        </div>
+                      )}
+
                       <div className="flex items-center gap-2 pt-1">
                         <button
                           type="submit"
                           disabled={isAuthLoading}
                           className="flex-1 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-xs rounded-xl shadow-lg transition-all flex items-center justify-center gap-2"
                         >
-                          <Mail className="w-4 h-4" />
-                          {isAuthLoading ? 'Sending link...' : 'Send Password Reset Link'}
+                          <KeyRound className="w-4 h-4" />
+                          {isAuthLoading ? 'Updating...' : isCloudConfigured ? 'Send Password Reset Link' : 'Update Password'}
                         </button>
 
                         <button
@@ -858,23 +873,35 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
                     </form>
                   )}
 
-                  {/* 1-Click Google Sign In */}
+                  {/* Quick Sign-In Option */}
                   {authMode !== 'forgot' && (
                     <div className="pt-2 border-t border-slate-800 space-y-3">
-                      <button
-                        type="button"
-                        onClick={handleGoogleLogin}
-                        disabled={isAuthLoading}
-                        className="w-full py-2.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-2"
-                      >
-                        <svg className="w-4 h-4" viewBox="0 0 24 24">
-                          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
-                          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
-                        </svg>
-                        Sign In with Google
-                      </button>
+                      {isCloudConfigured ? (
+                        <button
+                          type="button"
+                          onClick={handleGoogleLogin}
+                          disabled={isAuthLoading}
+                          className="w-full py-2.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-2"
+                        >
+                          <svg className="w-4 h-4" viewBox="0 0 24 24">
+                            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
+                            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+                          </svg>
+                          Sign In with Google
+                        </button>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={handleGoogleLogin}
+                          disabled={isAuthLoading}
+                          className="w-full py-2.5 bg-gradient-to-r from-cyan-950/60 to-blue-950/60 hover:from-cyan-900/60 hover:to-blue-900/60 border border-cyan-500/40 text-cyan-200 font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-2 shadow"
+                        >
+                          <Sparkles className="w-4 h-4 text-cyan-400" />
+                          1-Click Candidate Sign-In (Instant Access)
+                        </button>
+                      )}
                     </div>
                   )}
                 </div>

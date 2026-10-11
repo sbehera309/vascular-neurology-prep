@@ -162,8 +162,14 @@ export const recoverAllStoredStats = (userId?: string | null, fallbackStats?: Us
   try {
     for (let i = 0; i < localStorage.length; i++) {
       const k = localStorage.key(i);
-      if (k && (k.startsWith('vascneuro_prep_stats') || k === LEGACY_STORAGE_KEY)) {
+      if (!k) continue;
+      if (k.startsWith('vascneuro') || k === LEGACY_STORAGE_KEY) {
         candidateKeys.add(k);
+      } else {
+        const raw = localStorage.getItem(k);
+        if (raw && (raw.includes('completedQuestions') || raw.includes('examAttempts'))) {
+          candidateKeys.add(k);
+        }
       }
     }
   } catch (err) {
@@ -243,15 +249,16 @@ export const loadSessionStats = (userId: string | null, fallback: UserStats): Us
     try {
       for (let i = 0; i < localStorage.length; i++) {
         const k = localStorage.key(i);
-        if (k && (k.startsWith('vascneuro_prep_stats') || k === LEGACY_STORAGE_KEY)) {
-          const raw = localStorage.getItem(k);
-          if (raw) {
+        if (!k) continue;
+        const raw = localStorage.getItem(k);
+        if (raw && (k.startsWith('vascneuro') || raw.includes('completedQuestions'))) {
+          try {
             const parsed = JSON.parse(raw);
             const count = parsed?.completedQuestions ? Object.keys(parsed.completedQuestions).length : 0;
             if (count > maxFoundQCount) {
               maxFoundQCount = count;
             }
-          }
+          } catch {}
         }
       }
     } catch {}

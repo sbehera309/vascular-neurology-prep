@@ -45,6 +45,7 @@ const INITIAL_STATS: UserStats = {
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'dashboard' | 'chapters' | 'flashcards' | 'questions' | 'calculators' | 'trials' | 'exam'>('dashboard');
   const [isProfileModalOpen, setIsProfileModalOpen] = useState<boolean>(false);
+  const [targetQuestionId, setTargetQuestionId] = useState<string | null>(null);
 
   // LocalStorage state persistence keyed by session/user
   const [userStats, setUserStats] = useState<UserStats>(() => {
@@ -55,6 +56,22 @@ export const App: React.FC = () => {
       return INITIAL_STATS;
     }
   });
+
+  // On startup: ensure all questions across historical sessions are recovered into state
+  useEffect(() => {
+    try {
+      const activeUserId = localStorage.getItem(ACTIVE_USER_ID_KEY);
+      const recovered = recoverAllStoredStats(activeUserId, userStats);
+      const recoveredCount = Object.keys(recovered.completedQuestions || {}).length;
+      const currentCount = Object.keys(userStats.completedQuestions || {}).length;
+      if (recoveredCount > currentCount) {
+        setUserStats(recovered);
+        saveSessionStats(recovered);
+      }
+    } catch (e) {
+      console.warn('Error during startup progress recovery:', e);
+    }
+  }, []);
 
   // Save to LocalStorage and Sync to Cloud on change
   useEffect(() => {
@@ -353,7 +370,7 @@ export const App: React.FC = () => {
         ...prev,
         completedQuestions: updatedCompleted,
       };
-      saveSessionStats(newStats);
+      saveSessionStats(newStats, Boolean(remove));
       if (newStats.profile.isLoggedIn && newStats.profile.id && newStats.profile.id !== 'user-default') {
         syncStatsToCloud(newStats.profile.id, newStats);
       }
@@ -408,6 +425,7 @@ export const App: React.FC = () => {
             onCompleteQuestion={handleCompleteQuestion}
             bookmarkedQuestions={userStats.bookmarkedQuestions}
             onToggleBookmarkQuestion={handleToggleBookmarkQuestion}
+            targetQuestionId={targetQuestionId}
           />
         )}
         {activeTab === 'calculators' && <Calculators />}
@@ -433,6 +451,7 @@ export const App: React.FC = () => {
         onRecoverProgress={handleRecoverProgress}
         onUpdateQuestionStatus={handleUpdateQuestionStatus}
         onNavigateToQuestion={(qId) => {
+          setTargetQuestionId(qId);
           setIsProfileModalOpen(false);
           setActiveTab('questions');
         }}

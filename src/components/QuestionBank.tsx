@@ -9,6 +9,7 @@ interface QuestionBankProps {
   onCompleteQuestion: (questionId: string, selectedOption: string, isCorrect: boolean) => void;
   bookmarkedQuestions: string[];
   onToggleBookmarkQuestion: (questionId: string) => void;
+  targetQuestionId?: string | null;
 }
 
 export const QuestionBank: React.FC<QuestionBankProps> = ({
@@ -16,11 +17,28 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
   onCompleteQuestion,
   bookmarkedQuestions,
   onToggleBookmarkQuestion,
+  targetQuestionId,
 }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const [showHint, setShowHint] = useState<boolean>(false);
+
+  // Jump to specific question if targetQuestionId provided
+  useEffect(() => {
+    if (targetQuestionId) {
+      setFilterChapter('all');
+      setFilterSource('all');
+      setFilterStatus('all');
+      const idx = questionsData.findIndex(q => q.id === targetQuestionId);
+      if (idx !== -1) {
+        setCurrentIndex(idx);
+        setSelectedOption(null);
+        setIsSubmitted(false);
+        setShowHint(false);
+      }
+    }
+  }, [targetQuestionId]);
 
   // Filters State
   const [filterChapter, setFilterChapter] = useState<number | 'all'>('all');
