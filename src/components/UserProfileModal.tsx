@@ -10,6 +10,8 @@ interface UserProfileModalProps {
   onClose: () => void;
   userStats: UserStats;
   onUpdateProfile: (profile: Partial<UserProfile>) => void;
+  onLogin?: (profile: UserProfile) => void;
+  onLogout?: () => void;
   onResetProgress: (type: 'all' | 'questions' | 'exams' | 'flashcards') => void;
   onImportData: (data: UserStats) => void;
 }
@@ -19,6 +21,8 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
   onClose,
   userStats,
   onUpdateProfile,
+  onLogin,
+  onLogout,
   onResetProgress,
   onImportData
 }) => {
@@ -64,7 +68,8 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
     try {
       if (isCloudConfigured) {
         const user = await registerWithEmail(email, password, name);
-        onUpdateProfile({
+        const newProfile: UserProfile = {
+          ...userStats.profile,
           id: user.uid,
           name: name || user.displayName || 'Candidate',
           email: user.email || email,
@@ -72,17 +77,30 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
           role,
           institution,
           isLoggedIn: true,
-        });
+        };
+        if (onLogin) {
+          onLogin(newProfile);
+        } else {
+          onUpdateProfile(newProfile);
+        }
       } else {
-        // Fallback local persistence mode
-        onUpdateProfile({
-          name,
-          email,
+        // Fallback local persistence mode with deterministic local user ID
+        const localId = `user-local-${btoa(encodeURIComponent(email.toLowerCase().trim())).replace(/=/g, '')}`;
+        const newProfile: UserProfile = {
+          ...userStats.profile,
+          id: localId,
+          name: name || 'Candidate',
+          email: email || 'fellow@stroke-prep.org',
           targetExamDate: targetDate,
           role,
           institution,
           isLoggedIn: true,
-        });
+        };
+        if (onLogin) {
+          onLogin(newProfile);
+        } else {
+          onUpdateProfile(newProfile);
+        }
       }
       setAuthMode('view');
     } catch (err: any) {
@@ -101,18 +119,32 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
     try {
       if (isCloudConfigured) {
         const user = await loginWithEmail(email, password);
-        onUpdateProfile({
+        const newProfile: UserProfile = {
+          ...userStats.profile,
           id: user.uid,
           name: user.displayName || name || 'Candidate',
           email: user.email || email,
           isLoggedIn: true,
-        });
+        };
+        if (onLogin) {
+          onLogin(newProfile);
+        } else {
+          onUpdateProfile(newProfile);
+        }
       } else {
-        onUpdateProfile({
+        const localId = `user-local-${btoa(encodeURIComponent(email.toLowerCase().trim())).replace(/=/g, '')}`;
+        const newProfile: UserProfile = {
+          ...userStats.profile,
+          id: localId,
           name: name || 'Candidate',
           email: email || 'fellow@stroke-prep.org',
           isLoggedIn: true,
-        });
+        };
+        if (onLogin) {
+          onLogin(newProfile);
+        } else {
+          onUpdateProfile(newProfile);
+        }
       }
       setAuthMode('view');
     } catch (err: any) {
@@ -150,21 +182,35 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
     try {
       if (isCloudConfigured) {
         const user = await loginWithGoogle();
-        onUpdateProfile({
+        const newProfile: UserProfile = {
+          ...userStats.profile,
           id: user.uid,
           name: user.displayName || 'Google Candidate',
           email: user.email || '',
           avatarUrl: user.photoURL || undefined,
           isLoggedIn: true,
-        });
+        };
+        if (onLogin) {
+          onLogin(newProfile);
+        } else {
+          onUpdateProfile(newProfile);
+        }
         setAuthMode('view');
       } else {
         setAuthError('Cloud API keys not active. Switched to local profile mode.');
-        onUpdateProfile({
+        const localId = `user-local-${btoa(encodeURIComponent((email || 'local').toLowerCase().trim())).replace(/=/g, '')}`;
+        const newProfile: UserProfile = {
+          ...userStats.profile,
+          id: localId,
           name: name || 'Local Candidate',
           email,
           isLoggedIn: true,
-        });
+        };
+        if (onLogin) {
+          onLogin(newProfile);
+        } else {
+          onUpdateProfile(newProfile);
+        }
         setAuthMode('view');
       }
     } catch (err: any) {
@@ -176,7 +222,11 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
 
   const handleLogout = async () => {
     await logoutCloudUser();
-    onUpdateProfile({ isLoggedIn: false });
+    if (onLogout) {
+      onLogout();
+    } else {
+      onUpdateProfile({ isLoggedIn: false });
+    }
     setAuthMode('login');
   };
 

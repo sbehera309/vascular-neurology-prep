@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { questionsData } from '../data/questions';
 import { PracticeQuestion, QuestionAttempt } from '../types';
-import { CheckCircle2, XCircle, Bookmark, HelpCircle, ArrowRight, Lightbulb, GraduationCap, BookOpen, FlaskConical, ClipboardList, Eye, Filter } from 'lucide-react';
+import { CheckCircle2, XCircle, Bookmark, HelpCircle, ArrowRight, Lightbulb, GraduationCap, BookOpen, FlaskConical, ClipboardList, Eye, Filter, RotateCcw } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 interface QuestionBankProps {
@@ -265,13 +265,25 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
 
             <div className="flex items-center space-x-3">
               {completedQuestions[currentQuestion.id] && (
-                <span className={`inline-flex items-center gap-1 font-bold ${completedQuestions[currentQuestion.id].isCorrect ? 'text-emerald-400' : 'text-rose-400'}`}>
-                  {completedQuestions[currentQuestion.id].isCorrect ? (
-                    <><CheckCircle2 className="w-3.5 h-3.5" /> Previously Answered Correctly</>
-                  ) : (
-                    <><XCircle className="w-3.5 h-3.5" /> Previously Answered Incorrectly</>
-                  )}
-                </span>
+                <div className="flex items-center gap-2">
+                  <span className={`inline-flex items-center gap-1 font-bold ${completedQuestions[currentQuestion.id].isCorrect ? 'text-emerald-400' : 'text-rose-400'}`}>
+                    {completedQuestions[currentQuestion.id].isCorrect ? (
+                      <><CheckCircle2 className="w-3.5 h-3.5" /> Previously Answered Correctly</>
+                    ) : (
+                      <><XCircle className="w-3.5 h-3.5" /> Previously Answered Incorrectly</>
+                    )}
+                  </span>
+                  <button
+                    onClick={() => {
+                      setIsSubmitted(false);
+                      setSelectedOption(null);
+                    }}
+                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-slate-700 transition-all active:scale-95 shadow-sm"
+                    title="Retry this question"
+                  >
+                    <RotateCcw className="w-3 h-3" /> Retry
+                  </button>
+                </div>
               )}
 
               <button
@@ -465,6 +477,20 @@ export const QuestionBank: React.FC<QuestionBankProps> = ({
                   <p className="text-slate-100 font-semibold leading-relaxed">
                     {currentQuestion.keyTakeaway}
                   </p>
+                </div>
+
+                {/* Retake / Change Answer Button */}
+                <div className="flex justify-end pt-1">
+                  <button
+                    onClick={() => {
+                      setIsSubmitted(false);
+                      setSelectedOption(null);
+                    }}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-slate-700 transition-all active:scale-95 shadow-sm"
+                  >
+                    <RotateCcw className="w-3.5 h-3.5" />
+                    <span>Retake Question / Change Answer</span>
+                  </button>
                 </div>
               </div>
             )}

@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { questionsData } from '../data/questions';
-import { PracticeQuestion, ExamAttempt } from '../types';
+import { PracticeQuestion, ExamAttempt, QuestionAttempt } from '../types';
 import { Clock, Flag, CheckCircle2, XCircle, Award, RotateCcw, ChevronLeft, ChevronRight, LayoutGrid, BookOpen } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 interface BoardMockExamProps {
   onSaveExamAttempt?: (attempt: ExamAttempt) => void;
+  onBatchCompleteQuestions?: (attempts: Record<string, QuestionAttempt>) => void;
 }
 
 export type ExamLengthOption = 25 | 50 | 100 | 200;
 
-export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt }) => {
+export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt, onBatchCompleteQuestions }) => {
   const [examStarted, setExamStarted] = useState<boolean>(false);
   const [examFinished, setExamFinished] = useState<boolean>(false);
   
@@ -132,6 +133,24 @@ export const BoardMockExam: React.FC<BoardMockExamProps> = ({ onSaveExamAttempt 
         percentage: pct,
         passed: pass,
       });
+    }
+
+    if (onBatchCompleteQuestions) {
+      const attempts: Record<string, QuestionAttempt> = {};
+      const now = new Date().toISOString();
+      examQuestions.forEach(q => {
+        const userAns = userAnswers[q.id];
+        if (userAns) {
+          attempts[q.id] = {
+            selectedOption: userAns,
+            isCorrect: userAns === q.correctOptionId,
+            timestamp: now,
+          };
+        }
+      });
+      if (Object.keys(attempts).length > 0) {
+        onBatchCompleteQuestions(attempts);
+      }
     }
 
     if (pass) {
